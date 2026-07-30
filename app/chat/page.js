@@ -362,13 +362,13 @@ export default function OmeTVChatPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 flex-1 min-h-[300px] sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
             
             {/* Local Video Window */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 aspect-video">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50">
               <video
                 ref={localVideoRef}
                 autoPlay
                 playsInline
                 muted
-                className="w-full h-full object-cover transform -scale-x-100"
+                className="w-full h-full object-cover transform -scale-x-100 min-h-[220px]"
               />
 
               {/* Local Overlay Badge */}
@@ -390,12 +390,12 @@ export default function OmeTVChatPage() {
             </div>
 
             {/* Remote Video Window */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 aspect-video">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50">
               <video
                 ref={remoteVideoRef}
                 autoPlay
                 playsInline
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover min-h-[220px]"
               />
 
               {/* Remote Stranger Overlay Tag */}
