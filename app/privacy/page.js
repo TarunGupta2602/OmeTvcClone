@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
 - The right to request information about data collected.
 - The right to request erasure of session metadata or IP logs where applicable.
 - The right to object to processing based on legitimate interest.
-To exercise any privacy rights, contact privacy@parvah.app.`,
+To exercise any privacy rights, contact privacy@parvah.online.`,
     },
     {
       id: 'security',
@@ -81,36 +81,36 @@ To exercise any privacy rights, contact privacy@parvah.app.`,
   ];
 
   return (
-    <main className="flex-1 bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
-        <div className="border-b border-slate-800 pb-8 space-y-3">
-          <span className="text-xs font-semibold text-indigo-400 uppercase tracking-widest">
+        <div className="border-b border-slate-200/80 pb-8 space-y-3">
+          <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest">
             Legal & Compliance
           </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Privacy Policy</h1>
-          <p className="text-sm text-slate-400">
-            Last Updated: <span className="text-slate-300 font-medium">{lastUpdated}</span>
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900">Privacy Policy</h1>
+          <p className="text-sm text-slate-500">
+            Last Updated: <span className="text-slate-700 font-semibold">{lastUpdated}</span>
           </p>
         </div>
 
         {/* Quick Highlights Alert */}
-        <div className="p-4 rounded-xl bg-indigo-950/40 border border-indigo-800/60 flex items-start gap-3">
-          <svg className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="p-5 rounded-2xl bg-indigo-50 border border-indigo-200/80 flex items-start gap-3 shadow-xs">
+          <svg className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <div className="text-xs text-indigo-200 leading-relaxed">
-            <strong className="font-bold text-white">Key Takeaway:</strong> Parvah video and audio streams run directly peer-to-peer (P2P). Your video feed is transmitted directly to your chat partner's browser and is never recorded or stored on our servers.
+          <div className="text-xs text-slate-700 leading-relaxed">
+            <strong className="font-extrabold text-slate-900">Key Takeaway:</strong> Parvah video and audio streams run directly peer-to-peer (P2P). Your video feed is transmitted directly to your chat partner's browser and is never recorded or stored on our servers.
           </div>
         </div>
 
         {/* Policy Sections */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {sections.map((section) => (
-            <section key={section.id} id={section.id} className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 space-y-3">
-              <h2 className="text-lg font-bold text-slate-100">{section.title}</h2>
-              <div className="text-sm text-slate-300 leading-relaxed whitespace-pre-line">
+            <section key={section.id} id={section.id} className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-lg shadow-slate-200/50 space-y-3">
+              <h2 className="text-lg font-extrabold text-slate-900">{section.title}</h2>
+              <div className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
                 {section.content}
               </div>
             </section>
@@ -118,14 +118,14 @@ To exercise any privacy rights, contact privacy@parvah.app.`,
         </div>
 
         {/* Contact Footer Note */}
-        <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="font-bold text-white text-sm">Have Questions About Privacy?</h3>
-            <p className="text-xs text-slate-400 mt-0.5">Contact our Data Privacy Team for assistance.</p>
+            <h3 className="font-extrabold text-slate-900 text-sm">Have Questions About Privacy?</h3>
+            <p className="text-xs text-slate-500 mt-0.5">Contact our Data Privacy Team for assistance.</p>
           </div>
           <Link
             href="/contact"
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs rounded-xl transition"
+            className="px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-md transition"
           >
             Contact Privacy Support
           </Link>

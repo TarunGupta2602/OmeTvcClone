@@ -70,36 +70,36 @@ export default function TermsPage() {
   ];
 
   return (
-    <main className="flex-1 bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
-        <div className="border-b border-slate-800 pb-8 space-y-3">
-          <span className="text-xs font-semibold text-rose-400 uppercase tracking-widest">
+        <div className="border-b border-slate-200/80 pb-8 space-y-3">
+          <span className="text-xs font-bold text-rose-600 uppercase tracking-widest">
             Rules & User Agreement
           </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Terms of Service</h1>
-          <p className="text-sm text-slate-400">
-            Last Updated: <span className="text-slate-300 font-medium">{lastUpdated}</span>
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900">Terms of Service</h1>
+          <p className="text-sm text-slate-500">
+            Last Updated: <span className="text-slate-700 font-semibold">{lastUpdated}</span>
           </p>
         </div>
 
         {/* Mandatory Age Notice */}
-        <div className="p-4 rounded-xl bg-rose-950/40 border border-rose-800/60 flex items-start gap-3">
-          <svg className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="p-5 rounded-2xl bg-rose-50 border border-rose-200 flex items-start gap-3 shadow-xs">
+          <svg className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
-          <div className="text-xs text-rose-200 leading-relaxed">
-            <strong className="font-bold text-white">CRITICAL REQUIREMENT:</strong> You must be 18 years or older to use Parvah. Nudity, harassment, and unauthorized session recordings are strictly prohibited and result in instant permanent bans.
+          <div className="text-xs text-slate-700 leading-relaxed">
+            <strong className="font-extrabold text-slate-900">CRITICAL REQUIREMENT:</strong> You must be 18 years or older to use Parvah. Nudity, harassment, and unauthorized session recordings are strictly prohibited and result in instant permanent bans.
           </div>
         </div>
 
         {/* Sections */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {sections.map((section) => (
-            <section key={section.id} id={section.id} className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 space-y-3">
-              <h2 className="text-lg font-bold text-slate-100">{section.title}</h2>
-              <div className="text-sm text-slate-300 leading-relaxed whitespace-pre-line">
+            <section key={section.id} id={section.id} className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-lg shadow-slate-200/50 space-y-3">
+              <h2 className="text-lg font-extrabold text-slate-900">{section.title}</h2>
+              <div className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
                 {section.content}
               </div>
             </section>
@@ -107,14 +107,14 @@ export default function TermsPage() {
         </div>
 
         {/* Safety Guidelines Redirect Card */}
-        <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="font-bold text-white text-sm">Want to view safety rules in detail?</h3>
-            <p className="text-xs text-slate-400 mt-0.5">Explore our dedicated Community Safety Hub.</p>
+            <h3 className="font-extrabold text-slate-900 text-sm">Want to view safety rules in detail?</h3>
+            <p className="text-xs text-slate-500 mt-0.5">Explore our dedicated Community Safety Hub.</p>
           </div>
           <Link
             href="/safety"
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs rounded-xl transition"
+            className="px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-md transition"
           >
             View Community Guidelines
           </Link>

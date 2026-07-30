@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
         <script
@@ -111,7 +111,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white">
+      <body className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-indigo-50/20 to-rose-50/20 text-slate-900 selection:bg-indigo-600 selection:text-white">
         <Navbar />
         <div className="flex-1 flex flex-col">{children}</div>
         <Footer />
