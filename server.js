@@ -4,16 +4,22 @@ const next = require('next');
 const { Server } = require('socket.io');
 
 const dev = process.env.NODE_ENV !== 'production';
-const hostname = process.env.HOSTNAME || '0.0.0.0';
 const port = parseInt(process.env.PORT, 10) || 3000;
 
-const app = next({ dev, hostname, port });
+// Initialize Next.js app
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  const server = createServer((req, res) => {
-    const parsedUrl = parse(req.url, true);
-    handle(req, res, parsedUrl);
+  const server = createServer(async (req, res) => {
+    try {
+      const parsedUrl = parse(req.url, true);
+      await handle(req, res, parsedUrl);
+    } catch (err) {
+      console.error('Error handling request:', req.url, err);
+      res.statusCode = 500;
+      res.end('Internal Server Error');
+    }
   });
 
   const io = new Server(server, {
@@ -183,8 +189,8 @@ app.prepare().then(() => {
     });
   });
 
-  server.listen(port, hostname, (err) => {
+  server.listen(port, '0.0.0.0', (err) => {
     if (err) throw err;
-    console.log(`> Custom Next.js + Socket.io server ready on http://${hostname}:${port}`);
+    console.log(`> Custom Next.js + Socket.io server ready on http://0.0.0.0:${port}`);
   });
 });
