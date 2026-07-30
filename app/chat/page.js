@@ -302,33 +302,48 @@ export default function OmeTVChatPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
-      {/* Header Bar */}
-      <header className="border-b border-slate-800 bg-slate-900/60 backdrop-blur px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-rose-500 flex items-center justify-center font-bold text-white shadow-lg">
-            O
+    <main className="flex-1 bg-slate-950 text-slate-100 flex flex-col font-sans">
+      {/* Homepage Introduction & H1 Header Section */}
+      <section className="border-b border-slate-800/80 bg-gradient-to-b from-indigo-950/30 via-slate-900/60 to-slate-950 px-4 sm:px-6 py-6">
+        <div className="max-w-7xl mx-auto space-y-3">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-1.5">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[11px] font-semibold text-indigo-400 uppercase tracking-wider">
+                ⚡ Instant Live Matchmaking
+              </span>
+              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-300 to-rose-400 bg-clip-text text-transparent">
+                Parvah — Free Random Video Chat Platform
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-4xl leading-relaxed">
+                Parvah is a free random video chat platform connecting thousands of people worldwide in instant 1-on-1 live WebRTC video and text conversations. Meet strangers, practice languages, make new friends globally, and socialize safely with zero sign-up or registration required.
+              </p>
+            </div>
+
+            {/* Server Connection Status Badge */}
+            <div className="flex items-center gap-2 text-xs bg-slate-900/90 border border-slate-800 px-3.5 py-2 rounded-xl self-start md:self-auto">
+              <span
+                className={`w-2.5 h-2.5 rounded-full ${
+                  isConnected ? 'bg-emerald-500 animate-pulse' : 'bg-rose-500'
+                }`}
+              />
+              <span className="text-slate-300 font-medium">
+                {isConnected ? 'Signaling Server Connected' : 'Connecting to Server...'}
+              </span>
+            </div>
           </div>
-          <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-rose-400 bg-clip-text text-transparent">
-            OmeTV WebRTC Chat
-          </h1>
-        </div>
 
-        {/* Server Connection Status */}
-        <div className="flex items-center gap-2 text-xs">
-          <span
-            className={`w-2.5 h-2.5 rounded-full ${
-              isConnected ? 'bg-emerald-500 animate-pulse' : 'bg-rose-500'
-            }`}
-          />
-          <span className="text-slate-400">
-            {isConnected ? 'Server Connected' : 'Connecting to Server...'}
-          </span>
+          {/* Quick Feature Badges */}
+          <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] text-slate-400">
+            <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">🔒 P2P WebRTC Privacy</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">🛡️ 24/7 Moderated Safety</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">🌐 Global Matchmaking</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">✨ 100% Free Chat</span>
+          </div>
         </div>
-      </header>
+      </section>
 
-      {/* Main Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* Main Chat Workspace Grid Section */}
+      <section className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Video Area (2 cols on large screen) */}
         <div className="lg:col-span-2 flex flex-col gap-4">
           {/* Status Badge */}
@@ -536,7 +551,7 @@ export default function OmeTVChatPage() {
             </button>
           </form>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
