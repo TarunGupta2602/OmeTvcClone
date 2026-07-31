@@ -303,7 +303,7 @@ export default function OmeTVChatPage() {
   };
 
   return (
-    <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 flex flex-col font-sans relative overflow-hidden">
+    <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 flex flex-col font-sans relative overflow-y-auto">
       {/* Soft Ambient Background Mesh */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-indigo-300/20 via-purple-300/20 to-rose-300/20 rounded-full blur-3xl pointer-events-none animate-pulse" />
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-teal-300/15 via-emerald-300/15 to-cyan-300/15 rounded-full blur-3xl pointer-events-none" />
@@ -357,7 +357,7 @@ export default function OmeTVChatPage() {
           <div id="video-container" className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 sm:gap-4 flex-1 min-h-[300px] sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
             
             {/* Local Video Window */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-2 sm:order-1 h-32 sm:h-auto">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-2 sm:order-1 h-1/2 sm:h-auto">
               <video
                 ref={localVideoRef}
                 autoPlay
@@ -385,7 +385,7 @@ export default function OmeTVChatPage() {
             </div>
 
             {/* Remote Video Window */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-1 sm:order-2 flex-1 sm:flex-auto">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-1 sm:order-2 h-1/2 sm:h-auto">
               <video
                 ref={remoteVideoRef}
                 autoPlay
