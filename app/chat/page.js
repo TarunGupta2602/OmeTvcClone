@@ -348,16 +348,16 @@ export default function OmeTVChatPage() {
       </section>
 
       {/* Main Workspace Area */}
-      <section className="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 relative z-10">
+      <section className="flex-1 max-w-7xl w-full mx-auto p-2 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-6 relative z-10">
         
         {/* Video Column (2 Cols on Large Screen) */}
-        <div className="lg:col-span-2 flex flex-col gap-4">
+        <div className="lg:col-span-2 flex flex-col gap-2 sm:gap-4">
           
           {/* Main Dual Video Viewports */}
-          <div id="video-container" className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-3 sm:gap-4 flex-1 min-h-[75vh] sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
+          <div id="video-container" className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-3 sm:gap-4 flex-1 min-h-[50vh] sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px] relative">
             
-            {/* Local Video Window */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-2 sm:order-1 h-[40%] sm:h-auto">
+            {/* Local Video Window - Picture-in-Picture on Mobile */}
+            <div className="relative rounded-xl sm:rounded-3xl overflow-hidden bg-slate-900 border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-2 sm:order-1 h-32 w-48 absolute bottom-4 right-4 z-20 sm:relative sm:h-auto sm:w-auto">
               <video
                 ref={localVideoRef}
                 autoPlay
@@ -384,8 +384,8 @@ export default function OmeTVChatPage() {
               )}
             </div>
 
-            {/* Remote Video Window */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-1 sm:order-2 h-[60%] sm:h-auto">
+            {/* Remote Video Window - Full Screen on Mobile */}
+            <div className="relative rounded-xl sm:rounded-3xl overflow-hidden bg-slate-900 border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-1 sm:order-2 h-full sm:h-auto">
               <video
                 ref={remoteVideoRef}
                 autoPlay
