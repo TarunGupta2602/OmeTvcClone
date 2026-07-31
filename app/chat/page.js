@@ -24,6 +24,12 @@ export default function OmeTVChatPage() {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
 
+  const [isLocalVideoFullscreen, setIsLocalVideoFullscreen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [pipPosition, setPipPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+
   const localVideoRef = useRef(null);
   const remoteVideoRef = useRef(null);
   const localStreamRef = useRef(null);
@@ -32,6 +38,8 @@ export default function OmeTVChatPage() {
   const currentPeerIdRef = useRef(null);
   const currentRoomIdRef = useRef(null);
   const chatBottomRef = useRef(null);
+  const videoContainerRef = useRef(null);
+  const dragRef = useRef(null);
 
   // Initialize camera & microphone
   useEffect(() => {
@@ -243,6 +251,10 @@ export default function OmeTVChatPage() {
     const activeSocket = socketRef.current || socket;
     if (!activeSocket || !isConnected) return;
     setStatus('Searching for a random peer...');
+    setShowHeader(false);
+    if (videoContainerRef.current) {
+      videoContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
     activeSocket.emit('find-match');
   };
 
@@ -258,6 +270,7 @@ export default function OmeTVChatPage() {
     const activeSocket = socketRef.current || socket;
     if (!activeSocket || !isConnected) return;
     cleanupPeerConnection();
+    setShowHeader(true);
     activeSocket.emit('stop-session');
   };
 
@@ -302,6 +315,65 @@ export default function OmeTVChatPage() {
     setInputMessage('');
   };
 
+  const handleDragStart = (e) => {
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    setDragStart({ x: clientX, y: clientY });
+    setIsDragging(true);
+    dragRef.current = { startX: clientX - pipPosition.x, startY: clientY - pipPosition.y };
+  };
+
+  const handleDragMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    
+    const newX = clientX - dragRef.current.startX;
+    const newY = clientY - dragRef.current.startY;
+    
+    // Constrain to screen bounds
+    const maxX = window.innerWidth - 128;
+    const maxY = window.innerHeight - 192;
+    
+    setPipPosition({
+      x: Math.max(0, Math.min(newX, maxX)),
+      y: Math.max(0, Math.min(newY, maxY)),
+    });
+  };
+
+  const handleDragEnd = (e) => {
+    setIsDragging(false);
+    const clientX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+    const clientY = e.changedTouches ? e.changedTouches[0].clientY : e.clientY;
+    
+    // Check if it was a click (minimal movement)
+    const movement = Math.sqrt(Math.pow(clientX - dragStart.x, 2) + Math.pow(clientY - dragStart.y, 2));
+    if (movement < 5) {
+      setIsLocalVideoFullscreen(!isLocalVideoFullscreen);
+    }
+  };
+
+  useEffect(() => {
+    if (isDragging) {
+      window.addEventListener('mousemove', handleDragMove);
+      window.addEventListener('mouseup', handleDragEnd);
+      window.addEventListener('touchmove', handleDragMove);
+      window.addEventListener('touchend', handleDragEnd);
+    } else {
+      window.removeEventListener('mousemove', handleDragMove);
+      window.removeEventListener('mouseup', handleDragEnd);
+      window.removeEventListener('touchmove', handleDragMove);
+      window.removeEventListener('touchend', handleDragEnd);
+    }
+    return () => {
+      window.removeEventListener('mousemove', handleDragMove);
+      window.removeEventListener('mouseup', handleDragEnd);
+      window.removeEventListener('touchmove', handleDragMove);
+      window.removeEventListener('touchend', handleDragEnd);
+    };
+  }, [isDragging]);
+
   return (
     <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 flex flex-col font-sans relative overflow-hidden sm:overflow-y-auto h-screen">
       {/* Soft Ambient Background Mesh */}
@@ -309,7 +381,7 @@ export default function OmeTVChatPage() {
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-teal-300/15 via-emerald-300/15 to-cyan-300/15 rounded-full blur-3xl pointer-events-none" />
 
       {/* Top Banner & Header */}
-      <section className="border-b border-slate-200/60 bg-white/90 backdrop-blur-xl px-3 sm:px-4 md:px-6 py-3 sm:py-4 shadow-lg shadow-slate-200/50">
+      <section className={`border-b border-slate-200/60 bg-white/90 backdrop-blur-xl px-3 sm:px-4 md:px-6 py-3 sm:py-4 shadow-lg shadow-slate-200/50 ${!showHeader ? 'hidden sm:block' : ''}`}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2 flex-wrap">
@@ -354,38 +426,10 @@ export default function OmeTVChatPage() {
         <div className="lg:col-span-2 flex flex-col gap-0 sm:gap-4">
           
           {/* Main Dual Video Viewports */}
-          <div id="video-container" className="flex flex-col sm:grid sm:grid-cols-2 gap-0 sm:gap-3 sm:gap-4 flex-1 sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
+          <div id="video-container" ref={videoContainerRef} className="relative flex-1 sm:grid sm:grid-cols-2 gap-0 sm:gap-3 sm:gap-4 flex-1 sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
             
-            {/* Local Video Window */}
-            <div className="relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-2 sm:order-1 flex-1 sm:h-auto">
-              <video
-                ref={localVideoRef}
-                autoPlay
-                playsInline
-                muted
-                className="w-full h-full object-cover transform -scale-x-100"
-              />
-
-              {/* Local Overlay Badge */}
-              <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 px-3 py-1.5 rounded-xl text-xs font-bold text-white flex items-center gap-2 shadow-lg ring-1 ring-white/10">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-sm shadow-emerald-400/50" />
-                <span>You</span>
-                {isAudioMuted && <span className="text-[10px] text-rose-300 font-normal">(Muted)</span>}
-              </div>
-
-              {/* Camera Off Overlay */}
-              {isVideoMuted && (
-                <div className="absolute inset-0 bg-slate-900/95 backdrop-blur-md flex flex-col items-center justify-center text-slate-300 p-6 text-center space-y-2">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-900/50 to-rose-800/50 border border-rose-700/50 flex items-center justify-center text-rose-300 text-lg shadow-lg shadow-rose-900/30">
-                    📷
-                  </div>
-                  <p className="text-xs font-bold text-white">Camera Off</p>
-                </div>
-              )}
-            </div>
-
-            {/* Remote Video Window */}
-            <div className="relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 order-1 sm:order-2 flex-1 sm:h-auto">
+            {/* Remote Video Window - Full screen on mobile */}
+            <div className={`relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-10' : 'absolute inset-0 z-0'} sm:relative sm:z-auto sm:order-2 sm:flex-1 sm:h-auto`}>
               <video
                 ref={remoteVideoRef}
                 autoPlay
@@ -433,10 +477,50 @@ export default function OmeTVChatPage() {
               )}
             </div>
 
+            {/* Local Video Window - Floating PIP on mobile */}
+            <div 
+              className={`relative sm:rounded-3xl overflow-hidden bg-slate-900 border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-20' : `absolute bottom-20 right-4 z-20 w-32 h-48 rounded-xl sm:relative sm:z-10 sm:order-1 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:border-none`}`}
+              style={!isLocalVideoFullscreen ? { transform: `translate(${pipPosition.x}px, ${pipPosition.y}px)` } : {}}
+              onMouseDown={handleDragStart}
+              onTouchStart={handleDragStart}
+            >
+              <video
+                ref={localVideoRef}
+                autoPlay
+                playsInline
+                muted
+                className="w-full h-full object-cover transform -scale-x-100"
+              />
+
+              {/* Local Overlay Badge */}
+              <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 px-3 py-1.5 rounded-xl text-xs font-bold text-white flex items-center gap-2 shadow-lg ring-1 ring-white/10">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-sm shadow-emerald-400/50" />
+                <span>You</span>
+                {isAudioMuted && <span className="text-[10px] text-rose-300 font-normal">(Muted)</span>}
+              </div>
+
+              {/* Camera Off Overlay */}
+              {isVideoMuted && (
+                <div className="absolute inset-0 bg-slate-900/95 backdrop-blur-md flex flex-col items-center justify-center text-slate-300 p-6 text-center space-y-2">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-900/50 to-rose-800/50 border border-rose-700/50 flex items-center justify-center text-rose-300 text-lg shadow-lg shadow-rose-900/30">
+                    📷
+                  </div>
+                  <p className="text-xs font-bold text-white">Camera Off</p>
+                </div>
+              )}
+
+              {/* Tap to expand hint */}
+              {!isLocalVideoFullscreen && (
+                <div className="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] text-white font-semibold">
+                  Tap to expand
+                </div>
+              )}
+            </div>
+
           </div>
 
           {/* Action Control Dock */}
-          <div className="p-3 sm:p-4 rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 flex flex-wrap items-center justify-between gap-3 sm:gap-4 ring-1 ring-slate-200/50">
+          <div className="fixed bottom-0 left-0 right-0 z-30 p-3 sm:p-4 sm:relative sm:rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 flex flex-wrap items-center justify-between gap-3 sm:gap-4 ring-1 ring-slate-200/50 sm:mt-4">
             
             {/* Primary Action Buttons */}
             <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
