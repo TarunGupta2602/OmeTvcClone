@@ -481,8 +481,9 @@ export default function OmeTVChatPage() {
             <div 
               className={`relative sm:rounded-3xl overflow-hidden bg-slate-900 border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-20' : `absolute bottom-20 right-4 z-20 w-32 h-48 rounded-xl sm:relative sm:z-10 sm:order-1 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:border-none`}`}
               style={!isLocalVideoFullscreen ? { transform: `translate(${pipPosition.x}px, ${pipPosition.y}px)` } : {}}
-              onMouseDown={!isLocalVideoFullscreen ? handleDragStart : (e) => handleDragEnd(e)}
-              onTouchStart={!isLocalVideoFullscreen ? handleDragStart : (e) => handleDragEnd(e)}
+              onClick={() => setIsLocalVideoFullscreen(!isLocalVideoFullscreen)}
+              onMouseDown={!isLocalVideoFullscreen ? handleDragStart : undefined}
+              onTouchStart={!isLocalVideoFullscreen ? handleDragStart : undefined}
             >
               <video
                 ref={localVideoRef}
