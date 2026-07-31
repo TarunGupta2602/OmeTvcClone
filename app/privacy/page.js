@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy | Parvah',
+  title: 'Privacy Policy | Free Random Video Chat Platform',
   description:
-    'Read Parvah\'s Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data.',
+    'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data when you talk to strangers online.',
   openGraph: {
-    title: 'Privacy Policy | Parvah',
+    title: 'Privacy Policy | Free Random Video Chat Platform',
     description:
-      'Learn how Parvah uses peer-to-peer WebRTC connections to ensure your video calls are private, end-to-end direct, and never stored on our servers.',
+      'Learn how our platform uses peer-to-peer WebRTC connections to ensure your video calls are private, end-to-end direct, and never stored on our servers.',
     url: 'https://parvah.online/privacy',
-    siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Privacy Policy' }],
+    siteName: 'StrangerLive',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Privacy Policy' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | Parvah',
-    description: 'Learn how Parvah safeguards your privacy with end-to-end peer-to-peer WebRTC video chat.',
+    title: 'Privacy Policy | Free Random Video Chat Platform',
+    description: 'Learn how our platform safeguards your privacy with end-to-end peer-to-peer WebRTC video chat.',
     images: ['/og-image.png'],
   },
 };

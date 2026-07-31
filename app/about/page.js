@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Us | Parvah Free Random Video Chat',
+  title: 'About Us | Free Random Video Chat with Strangers',
   description:
-    'Learn about Parvah, the WebRTC-powered free random video chat platform connecting people globally with real-time matching and strict community safety.',
+    'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety. Talk to strangers online instantly.',
   openGraph: {
-    title: 'About Us | Parvah - Free Random Video Chat',
+    title: 'About Us | Free Random Video Chat with Strangers',
     description:
-      'Discover how Parvah connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering.',
+      'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering. Talk to girls and strangers online.',
     url: 'https://parvah.online/about',
-    siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Parvah Free Video Chat' }],
+    siteName: 'StrangerLive',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Free Random Video Chat' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us | Parvah - Free Random Video Chat',
-    description: 'Discover how Parvah connects people worldwide through instant 1-on-1 WebRTC random video chat.',
+    title: 'About Us | Free Random Video Chat with Strangers',
+    description: 'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat. Talk to strangers online.',
     images: ['/og-image.png'],
   },
 };

@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Terms of Service | Parvah',
+  title: 'Terms of Service | Free Random Video Chat Platform',
   description:
-    'Terms of Service for Parvah outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements.',
+    'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements when talking to strangers.',
   openGraph: {
-    title: 'Terms of Service | Parvah',
+    title: 'Terms of Service | Free Random Video Chat Platform',
     description:
-      'Review the Terms of Service for using Parvah, including strict 18+ adult policies, user conduct guidelines, and safety enforcement.',
+      'Review the Terms of Service for using our platform, including strict 18+ adult policies, user conduct guidelines, and safety enforcement.',
     url: 'https://parvah.online/terms',
-    siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Terms of Service' }],
+    siteName: 'StrangerLive',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Terms of Service' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Service | Parvah',
-    description: 'Review Parvah Terms of Service and user community rules.',
+    title: 'Terms of Service | Free Random Video Chat Platform',
+    description: 'Review our Terms of Service and user community rules for random video chat.',
     images: ['/og-image.png'],
   },
 };

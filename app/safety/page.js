@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Community Guidelines & Safety | Parvah',
+  title: 'Community Guidelines & Safety | Free Random Video Chat',
   description:
-    'Read Parvah zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips to stay secure online.',
+    'Read our zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips to stay secure online when talking to strangers.',
   openGraph: {
-    title: 'Community Guidelines & Safety | Parvah',
+    title: 'Community Guidelines & Safety | Free Random Video Chat',
     description:
-      'Explore the 5 Golden Rules of Conduct on Parvah, user safety tips, and reporting workflows for a secure video chat experience.',
+      'Explore the 5 Golden Rules of Conduct, user safety tips, and reporting workflows for a secure video chat experience with strangers.',
     url: 'https://parvah.online/safety',
-    siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Safety Guidelines' }],
+    siteName: 'StrangerLive',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Community Guidelines & Safety | Parvah',
-    description: 'Explore Parvah zero-tolerance community safety guidelines and user reporting.',
+    title: 'Community Guidelines & Safety | Free Random Video Chat',
+    description: 'Explore zero-tolerance community safety guidelines and user reporting for random video chat.',
     images: ['/og-image.png'],
   },
 };

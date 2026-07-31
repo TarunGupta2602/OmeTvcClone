@@ -1,21 +1,21 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contact Us | Parvah',
-  description: 'Get in touch with the Parvah team for support, safety inquiries, or general questions.',
+  title: 'Contact Us | Free Random Video Chat Support',
+  description: 'Get in touch with our team for support, safety inquiries, or general questions about our free random video chat platform. Talk to strangers online safely.',
   openGraph: {
-    title: 'Contact Us | Parvah',
-    description: 'Get in touch with the Parvah team for support, safety inquiries, or general questions.',
+    title: 'Contact Us | Free Random Video Chat Support',
+    description: 'Get in touch with our team for support, safety inquiries, or general questions about our random video chat platform.',
     url: 'https://parvah.online/contact',
-    siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Contact' }],
+    siteName: 'StrangerLive',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Contact Support' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us | Parvah',
-    description: 'Get in touch with the Parvah team for support, safety inquiries, or general questions.',
+    title: 'Contact Us | Free Random Video Chat Support',
+    description: 'Get in touch with our team for support, safety inquiries, or general questions about our random video chat.',
     images: ['/og-image.png'],
   },
 };
