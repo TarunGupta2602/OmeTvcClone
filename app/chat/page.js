@@ -417,7 +417,7 @@ export default function OmeTVChatPage() {
       </section>
 
       {/* Main Workspace Area */}
-      <section className="flex-1 max-w-7xl w-full mx-auto p-0 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-6 relative z-10 h-screen sm:h-auto overflow-hidden sm:overflow-visible">
+      <section className="flex-1 max-w-7xl w-full mx-auto p-0 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-6 relative z-10 h-[calc(100vh-40px)] sm:h-auto overflow-hidden sm:overflow-visible">
         
         {/* Video Column (2 Cols on Large Screen) */}
         <div className="lg:col-span-2 flex flex-col gap-0 sm:gap-4 h-full overflow-hidden sm:overflow-visible">
@@ -478,9 +478,8 @@ export default function OmeTVChatPage() {
             <div 
               className={`relative sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-none sm:shadow-2xl sm:shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-20' : `absolute bottom-20 right-4 z-20 w-32 h-48 rounded-xl sm:relative sm:z-10 sm:order-1 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:border-none sm:inset-auto sm:bottom-auto sm:right-auto sm:shadow-2xl sm:shadow-slate-300/50`}`}
               style={!isLocalVideoFullscreen ? { transform: `translate(${pipPosition.x}px, ${pipPosition.y}px)` } : {}}
-              onClick={() => setIsLocalVideoFullscreen(!isLocalVideoFullscreen)}
-              onMouseDown={!isLocalVideoFullscreen ? handleDragStart : undefined}
-              onTouchStart={!isLocalVideoFullscreen ? handleDragStart : undefined}
+              onMouseDown={handleDragStart}
+              onTouchStart={handleDragStart}
             >
               <video
                 ref={localVideoRef}
