@@ -420,16 +420,16 @@ export default function OmeTVChatPage() {
       </section>
 
       {/* Main Workspace Area */}
-      <section className="flex-1 max-w-7xl w-full mx-auto p-0 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-6 relative z-10">
+      <section className="flex-1 max-w-7xl w-full mx-auto p-0 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-6 relative z-10 h-[calc(100vh-80px)] sm:h-auto">
         
         {/* Video Column (2 Cols on Large Screen) */}
-        <div className="lg:col-span-2 flex flex-col gap-0 sm:gap-4">
+        <div className="lg:col-span-2 flex flex-col gap-0 sm:gap-4 h-full">
           
           {/* Main Dual Video Viewports */}
-          <div id="video-container" ref={videoContainerRef} className="relative flex-1 sm:grid sm:grid-cols-2 gap-0 sm:gap-3 sm:gap-4 flex-1 sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
+          <div id="video-container" ref={videoContainerRef} className="relative flex-1 h-full sm:grid sm:grid-cols-2 gap-0 sm:gap-3 sm:gap-4 sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
             
-            {/* Remote Video Window - Full screen on mobile */}
-            <div className={`relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-10' : 'absolute inset-0 z-0'} sm:relative sm:z-auto sm:order-2 sm:flex-1 sm:h-auto`}>
+            {/* Remote Video Window - Full screen on mobile when local is not fullscreen */}
+            <div className={`relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute bottom-20 right-4 z-10 w-32 h-48 rounded-xl' : 'absolute inset-0 z-0'} sm:relative sm:z-auto sm:order-2 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none`}>
               <video
                 ref={remoteVideoRef}
                 autoPlay
@@ -481,8 +481,8 @@ export default function OmeTVChatPage() {
             <div 
               className={`relative sm:rounded-3xl overflow-hidden bg-slate-900 border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-20' : `absolute bottom-20 right-4 z-20 w-32 h-48 rounded-xl sm:relative sm:z-10 sm:order-1 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:border-none`}`}
               style={!isLocalVideoFullscreen ? { transform: `translate(${pipPosition.x}px, ${pipPosition.y}px)` } : {}}
-              onMouseDown={handleDragStart}
-              onTouchStart={handleDragStart}
+              onMouseDown={!isLocalVideoFullscreen ? handleDragStart : (e) => handleDragEnd(e)}
+              onTouchStart={!isLocalVideoFullscreen ? handleDragStart : (e) => handleDragEnd(e)}
             >
               <video
                 ref={localVideoRef}
@@ -509,12 +509,10 @@ export default function OmeTVChatPage() {
                 </div>
               )}
 
-              {/* Tap to expand hint */}
-              {!isLocalVideoFullscreen && (
-                <div className="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] text-white font-semibold">
-                  Tap to expand
-                </div>
-              )}
+              {/* Tap to expand/minimize hint */}
+              <div className="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] text-white font-semibold">
+                {isLocalVideoFullscreen ? 'Tap to minimize' : 'Tap to expand'}
+              </div>
             </div>
 
           </div>
