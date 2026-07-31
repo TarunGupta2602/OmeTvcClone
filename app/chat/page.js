@@ -381,9 +381,9 @@ export default function OmeTVChatPage() {
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-teal-300/15 via-emerald-300/15 to-cyan-300/15 rounded-full blur-3xl pointer-events-none" />
 
       {/* Top Banner & Header */}
-      <section className={`border-b border-slate-200/60 bg-white/90 backdrop-blur-xl px-3 sm:px-4 md:px-6 py-3 sm:py-4 shadow-lg shadow-slate-200/50 ${!showHeader ? 'hidden sm:block' : ''}`}>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
-          <div className="space-y-1">
+      <section className={`border-b border-slate-200/60 bg-white/90 backdrop-blur-xl px-3 sm:px-4 md:px-6 py-2 sm:py-3 shadow-lg shadow-slate-200/50 ${!showHeader ? 'hidden sm:block' : ''}`}>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2 sm:gap-4">
+          <div className="space-y-0.5">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="inline-flex items-center gap-1.5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider shadow-sm shadow-indigo-500/10 ring-1 ring-indigo-500/20">
                 <span className="w-2 h-2 rounded-full bg-indigo-600 animate-ping"></span>
@@ -391,16 +391,13 @@ export default function OmeTVChatPage() {
               </span>
               <span className="text-[10px] sm:text-xs text-slate-500 font-medium">• Free & Anonymous</span>
             </div>
-            <h1 className="text-lg sm:text-xl md:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-2">
+            <h1 className="text-base sm:text-lg md:text-xl font-black tracking-tight text-slate-900 flex items-center gap-2">
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 bg-clip-text text-transparent">
                 Parvah
               </span>
               <span className="text-slate-400 hidden sm:inline">—</span>
-              <span className="text-slate-800 text-sm sm:text-base">Free Random Video Chat Platform</span>
+              <span className="text-slate-800 text-xs sm:text-sm">Free Random Video Chat Platform</span>
             </h1>
-            <p className="text-[10px] sm:text-xs text-slate-600 max-w-3xl leading-relaxed hidden sm:block">
-              Connect instantly with random strangers worldwide in 1-on-1 video and text chat with zero sign-up required.
-            </p>
           </div>
 
           {/* Controls & Server Status */}
@@ -426,10 +423,10 @@ export default function OmeTVChatPage() {
         <div className="lg:col-span-2 flex flex-col gap-0 sm:gap-4 h-full">
           
           {/* Main Dual Video Viewports */}
-          <div id="video-container" ref={videoContainerRef} className="relative flex-1 h-full sm:grid sm:grid-cols-2 gap-0 sm:gap-3 sm:gap-4 sm:min-h-[350px] md:min-h-[420px] lg:min-h-[480px]">
+          <div id="video-container" ref={videoContainerRef} className="relative flex-1 h-full sm:grid sm:grid-cols-2 gap-0 sm:gap-0 sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px]">
             
             {/* Remote Video Window - Full screen on mobile when local is not fullscreen */}
-            <div className={`relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute bottom-20 right-4 z-10 w-32 h-48 rounded-xl' : 'absolute inset-0 z-0'} sm:relative sm:z-auto sm:order-2 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none`}>
+            <div className={`relative rounded-none sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute bottom-20 right-4 z-10 w-32 h-48 rounded-xl' : 'absolute inset-0 z-0'} sm:relative sm:z-auto sm:order-2 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:inset-auto sm:bottom-auto sm:right-auto`}>
               <video
                 ref={remoteVideoRef}
                 autoPlay
@@ -479,7 +476,7 @@ export default function OmeTVChatPage() {
 
             {/* Local Video Window - Floating PIP on mobile */}
             <div 
-              className={`relative sm:rounded-3xl overflow-hidden bg-slate-900 border border-white shadow-2xl shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-20' : `absolute bottom-20 right-4 z-20 w-32 h-48 rounded-xl sm:relative sm:z-10 sm:order-1 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:border-none`}`}
+              className={`relative sm:rounded-3xl overflow-hidden bg-slate-900 border-none sm:border border-white shadow-none sm:shadow-2xl sm:shadow-slate-300/50 flex items-center justify-center group transition-all duration-300 ring-1 ring-slate-200/50 ${isLocalVideoFullscreen ? 'absolute inset-0 z-20' : `absolute bottom-20 right-4 z-20 w-32 h-48 rounded-xl sm:relative sm:z-10 sm:order-1 sm:flex-1 sm:h-auto sm:w-auto sm:h-auto sm:rounded-none sm:border-none sm:inset-auto sm:bottom-auto sm:right-auto sm:shadow-2xl sm:shadow-slate-300/50`}`}
               style={!isLocalVideoFullscreen ? { transform: `translate(${pipPosition.x}px, ${pipPosition.y}px)` } : {}}
               onClick={() => setIsLocalVideoFullscreen(!isLocalVideoFullscreen)}
               onMouseDown={!isLocalVideoFullscreen ? handleDragStart : undefined}
@@ -510,8 +507,8 @@ export default function OmeTVChatPage() {
                 </div>
               )}
 
-              {/* Tap to expand/minimize hint */}
-              <div className="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] text-white font-semibold">
+              {/* Tap to expand/minimize hint - mobile only */}
+              <div className="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] text-white font-semibold sm:hidden">
                 {isLocalVideoFullscreen ? 'Tap to minimize' : 'Tap to expand'}
               </div>
             </div>
