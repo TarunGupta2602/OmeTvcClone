@@ -417,7 +417,7 @@ export default function OmeTVChatPage() {
       </section>
 
       {/* Main Workspace Area */}
-      <section className="flex-1 max-w-7xl w-full mx-auto p-0 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-6 relative z-10 h-[calc(100vh-60px)] sm:h-auto overflow-hidden sm:overflow-visible">
+      <section className="flex-1 max-w-7xl w-full mx-auto p-0 sm:p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-6 relative z-10 h-screen sm:h-auto overflow-hidden sm:overflow-visible">
         
         {/* Video Column (2 Cols on Large Screen) */}
         <div className="lg:col-span-2 flex flex-col gap-0 sm:gap-4 h-full overflow-hidden sm:overflow-visible">
