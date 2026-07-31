@@ -30,12 +30,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-rose-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform ring-2 ring-indigo-500/20">
-              P
-            </div>
             <div className="flex flex-col">
               <span className="text-xl font-black tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 bg-clip-text text-transparent">
-                Parvah
+                StrangerLive
               </span>
               <span className="text-[10px] text-slate-500 tracking-wider uppercase font-bold -mt-1">
                 Free Random Video Chat

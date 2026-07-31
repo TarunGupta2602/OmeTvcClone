@@ -1,0 +1,38 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="55%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="256" rx="112" fill="url(#glow)"/>
+
+  <!-- bold rounded P monogram -->
+  <path d="M 168 118
+           L 168 394
+           L 224 394
+           L 224 292
+           L 288 292
+           C 348 292 392 250 392 204
+           C 392 158 348 118 288 118
+           Z
+           M 224 172
+           L 284 172
+           C 314 172 336 186 336 204
+           C 336 222 314 238 284 238
+           L 224 238
+           Z"
+        fill="#FFFFFF"/>
+
+  <!-- live/connect pulse dot -->
+  <circle cx="372" cy="366" r="30" fill="#22D3AA"/>
+  <circle cx="372" cy="366" r="30" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+</svg>
