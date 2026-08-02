@@ -22,6 +22,7 @@ export const metadata = {
   description:
     'Free random video chat platform to talk to strangers and girls online. Instant 1-on-1 live webcam chat with no registration required. Connect with thousands of people worldwide for safe, fast video conversations.',
   applicationName: 'StrangerLive',
+  category: 'social',
   keywords: [
     'random video chat',
     'chat with strangers',
@@ -61,6 +62,7 @@ export const metadata = {
     siteName: 'StrangerLive',
     locale: 'en_US',
     type: 'website',
+    category: 'social',
     images: [
       {
         url: '/og-image.png',
