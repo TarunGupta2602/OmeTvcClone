@@ -4,6 +4,9 @@ export const metadata = {
   title: 'Privacy Policy | Free Random Video Chat Platform',
   description:
     'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data when you talk to strangers online.',
+  alternates: {
+    canonical: 'https://parvah.online/privacy',
+  },
   openGraph: {
     title: 'Privacy Policy | Free Random Video Chat Platform',
     description:
@@ -19,6 +22,20 @@ export const metadata = {
     title: 'Privacy Policy | Free Random Video Chat Platform',
     description: 'Learn how our platform safeguards your privacy with end-to-end peer-to-peer WebRTC video chat.',
     images: ['/og-image.png'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'PrivacyPolicy',
+  name: 'Privacy Policy - StrangerLive',
+  description: 'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data.',
+  url: 'https://parvah.online/privacy',
+  dateModified: '2026-07-30',
+  publisher: {
+    '@type': 'Organization',
+    name: 'StrangerLive',
+    url: 'https://parvah.online',
   },
 };
 
@@ -81,7 +98,12 @@ To exercise any privacy rights, contact privacy@parvah.online.`,
   ];
 
   return (
-    <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -133,5 +155,6 @@ To exercise any privacy rights, contact privacy@parvah.online.`,
 
       </div>
     </main>
+    </>
   );
 }

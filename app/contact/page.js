@@ -3,6 +3,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Contact Us | Free Random Video Chat Support',
   description: 'Get in touch with our team for support, safety inquiries, or general questions about our free random video chat platform. Talk to strangers online safely.',
+  alternates: {
+    canonical: 'https://parvah.online/contact',
+  },
   openGraph: {
     title: 'Contact Us | Free Random Video Chat Support',
     description: 'Get in touch with our team for support, safety inquiries, or general questions about our random video chat platform.',
@@ -20,9 +23,47 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Us - StrangerLive',
+  description: 'Get in touch with our team for support, safety inquiries, or general questions about our free random video chat platform.',
+  url: 'https://parvah.online/contact',
+  publisher: {
+    '@type': 'Organization',
+    name: 'StrangerLive',
+    url: 'https://parvah.online',
+  },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      email: 'support@parvah.online',
+      contactType: 'customer service',
+      areaServed: 'Worldwide',
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'safety@parvah.online',
+      contactType: 'safety',
+      areaServed: 'Worldwide',
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'business@parvah.online',
+      contactType: 'sales',
+      areaServed: 'Worldwide',
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
-    <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 py-8 sm:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 py-8 sm:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
       {/* Soft Ambient Background Mesh */}
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-indigo-300/15 via-purple-300/15 to-rose-300/15 rounded-full blur-3xl pointer-events-none fixed" />
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-teal-300/10 via-emerald-300/10 to-cyan-300/10 rounded-full blur-3xl pointer-events-none fixed" />
@@ -114,5 +155,6 @@ export default function ContactPage() {
 
       </div>
     </main>
+    </>
   );
 }

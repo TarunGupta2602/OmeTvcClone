@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://parvah.online'),
+  alternates: {
+    canonical: 'https://parvah.online',
+  },
   title: {
     default: 'Free Random Video Chat with Strangers | Talk to Girls Online | Live Webcam Chat',
     template: '%s | Free Random Video Chat',

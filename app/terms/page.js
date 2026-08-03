@@ -4,6 +4,9 @@ export const metadata = {
   title: 'Terms of Service | Free Random Video Chat Platform',
   description:
     'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements when talking to strangers.',
+  alternates: {
+    canonical: 'https://parvah.online/terms',
+  },
   openGraph: {
     title: 'Terms of Service | Free Random Video Chat Platform',
     description:
@@ -19,6 +22,20 @@ export const metadata = {
     title: 'Terms of Service | Free Random Video Chat Platform',
     description: 'Review our Terms of Service and user community rules for random video chat.',
     images: ['/og-image.png'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TermsOfService',
+  name: 'Terms of Service - StrangerLive',
+  description: 'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements.',
+  url: 'https://parvah.online/terms',
+  dateModified: '2026-07-30',
+  publisher: {
+    '@type': 'Organization',
+    name: 'StrangerLive',
+    url: 'https://parvah.online',
   },
 };
 
@@ -70,7 +87,12 @@ export default function TermsPage() {
   ];
 
   return (
-    <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -122,5 +144,6 @@ export default function TermsPage() {
 
       </div>
     </main>
+    </>
   );
 }

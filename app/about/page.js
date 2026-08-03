@@ -4,6 +4,9 @@ export const metadata = {
   title: 'About Us | Free Random Video Chat with Strangers',
   description:
     'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety. Talk to strangers online instantly.',
+  alternates: {
+    canonical: 'https://parvah.online/about',
+  },
   openGraph: {
     title: 'About Us | Free Random Video Chat with Strangers',
     description:
@@ -19,6 +22,30 @@ export const metadata = {
     title: 'About Us | Free Random Video Chat with Strangers',
     description: 'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat. Talk to strangers online.',
     images: ['/og-image.png'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About StrangerLive - Free Random Video Chat',
+  description: 'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety.',
+  url: 'https://parvah.online/about',
+  publisher: {
+    '@type': 'Organization',
+    name: 'StrangerLive',
+    url: 'https://parvah.online',
+  },
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'StrangerLive',
+    applicationCategory: 'Social',
+    operatingSystem: 'Web Browser',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
   },
 };
 
@@ -74,7 +101,12 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="flex-1 bg-slate-50 text-slate-900">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex-1 bg-slate-50 text-slate-900">
       {/* Hero Header */}
       <section className="relative overflow-hidden border-b border-slate-200/80 bg-white py-20 px-4 sm:px-6 lg:px-8 text-center shadow-xs">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_center,rgba(99,102,241,0.08),transparent_50%)] pointer-events-none" />
@@ -213,5 +245,6 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

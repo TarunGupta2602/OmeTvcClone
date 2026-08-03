@@ -4,6 +4,9 @@ export const metadata = {
   title: 'Community Guidelines & Safety | Free Random Video Chat',
   description:
     'Read our zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips to stay secure online when talking to strangers.',
+  alternates: {
+    canonical: 'https://parvah.online/safety',
+  },
   openGraph: {
     title: 'Community Guidelines & Safety | Free Random Video Chat',
     description:
@@ -19,6 +22,19 @@ export const metadata = {
     title: 'Community Guidelines & Safety | Free Random Video Chat',
     description: 'Explore zero-tolerance community safety guidelines and user reporting for random video chat.',
     images: ['/og-image.png'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SafetyPage',
+  name: 'Community Guidelines & Safety - StrangerLive',
+  description: 'Read our zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips.',
+  url: 'https://parvah.online/safety',
+  publisher: {
+    '@type': 'Organization',
+    name: 'StrangerLive',
+    url: 'https://parvah.online',
   },
 };
 
@@ -95,7 +111,12 @@ export default function SafetyPage() {
   ];
 
   return (
-    <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 py-8 sm:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 py-8 sm:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
       {/* Soft Ambient Background Mesh */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-indigo-300/15 via-purple-300/15 to-rose-300/15 rounded-full blur-3xl pointer-events-none fixed" />
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-teal-300/10 via-emerald-300/10 to-cyan-300/10 rounded-full blur-3xl pointer-events-none fixed" />
@@ -221,5 +242,6 @@ export default function SafetyPage() {
 
       </div>
     </main>
+    </>
   );
 }
