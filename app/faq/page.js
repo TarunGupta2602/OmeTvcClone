@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import FAQContent from './FAQContent';
 
 export const metadata = {
   title: 'FAQ | Free Random Video Chat Questions & Answers',
@@ -27,42 +28,102 @@ const faqs = [
   {
     question: 'Is StrangerLive free to use?',
     answer: 'Yes, StrangerLive is completely free to use. No registration, credit card, or payment is required to start video chatting with strangers.',
+    category: 'General',
   },
   {
     question: 'Do I need to register to use the platform?',
     answer: 'No registration is required. Simply visit the website, grant camera and microphone permissions, and click "Start Match" to begin chatting instantly.',
+    category: 'General',
   },
   {
     question: 'Is StrangerLive safe to use?',
     answer: 'We prioritize safety with strict community guidelines, automated moderation, and user reporting tools. However, as with any online platform, users should exercise caution and never share personal information.',
+    category: 'Safety',
   },
   {
     question: 'What are the age requirements?',
     answer: 'StrangerLive is strictly for users aged 18 and older. Minors are prohibited from using the platform. We enforce this policy through automated systems and user reports.',
+    category: 'Safety',
   },
   {
     question: 'Can I use StrangerLive on mobile?',
     answer: 'Yes, StrangerLive works on all devices including smartphones, tablets, and desktop computers. The platform is optimized for both iOS and Android browsers.',
+    category: 'Technical',
   },
   {
     question: 'How do I report inappropriate behavior?',
     answer: 'Use the report button during or immediately after a chat session. Our moderation team reviews all reports and takes appropriate action including permanent bans for violations.',
+    category: 'Safety',
   },
   {
     question: 'Are video chats recorded or stored?',
     answer: 'No. All video and audio streams use peer-to-peer WebRTC technology, meaning they travel directly between users\' browsers. We do not record, store, or monitor video content.',
+    category: 'Privacy',
   },
   {
     question: 'Can I choose who I match with?',
     answer: 'Matches are random to ensure equal opportunities for all users. You can use the "Next" button to skip to a new stranger at any time.',
+    category: 'General',
   },
   {
     question: 'What browsers are supported?',
     answer: 'StrangerLive works on all modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version for the best experience.',
+    category: 'Technical',
   },
   {
     question: 'Is my IP address visible to others?',
     answer: 'No, your IP address is not shared with other users. Only our signaling server uses it temporarily to establish the peer-to-peer connection.',
+    category: 'Privacy',
+  },
+  {
+    question: 'How does the matching algorithm work?',
+    answer: 'Our matching system pairs users randomly based on availability. When you click "Start Match", our system finds another user who is also looking to chat and connects you instantly.',
+    category: 'Technical',
+  },
+  {
+    question: 'Can I use StrangerLive without a camera?',
+    answer: 'While a camera is required for video chat, you can choose to disable your camera if you prefer audio-only conversations. However, most users expect video during chats.',
+    category: 'Technical',
+  },
+  {
+    question: 'What happens if I get banned?',
+    answer: 'If you violate our community guidelines, your account may be temporarily or permanently banned. You can appeal bans by contacting our support team with your details.',
+    category: 'Safety',
+  },
+  {
+    question: 'How do I improve my video quality?',
+    answer: 'Ensure you have a stable internet connection, good lighting, and a working webcam. Close other applications that might be using bandwidth, and use a modern browser for best results.',
+    category: 'Technical',
+  },
+  {
+    question: 'Can I chat with people from specific countries?',
+    answer: 'Matches are random and not filtered by location. This allows you to meet people from all around the world, making the experience more diverse and interesting.',
+    category: 'General',
+  },
+  {
+    question: 'Is there a time limit on conversations?',
+    answer: 'No, there is no time limit on conversations. You can chat as long as both parties want to continue. Simply click "Next" when you\'re ready to move on.',
+    category: 'General',
+  },
+  {
+    question: 'How do I delete my data?',
+    answer: 'Since we don\'t store personal data or video content, there\'s nothing to delete. Your session data is automatically cleared when you leave the platform.',
+    category: 'Privacy',
+  },
+  {
+    question: 'Can I use StrangerLive for business purposes?',
+    answer: 'StrangerLive is designed for personal social interactions. For business video conferencing, we recommend using dedicated business communication platforms.',
+    category: 'General',
+  },
+  {
+    question: 'What should I do if I encounter a bug?',
+    answer: 'If you experience technical issues, try refreshing the page or using a different browser. If the problem persists, please contact our support team with details about the issue.',
+    category: 'Technical',
+  },
+  {
+    question: 'Are there any hidden fees or subscriptions?',
+    answer: 'Absolutely not. StrangerLive is completely free with no hidden fees, subscriptions, or premium tiers. All features are available to every user at no cost.',
+    category: 'General',
   },
 ];
 
@@ -111,32 +172,7 @@ export default function FAQPage() {
             </p>
           </div>
 
-          {/* FAQ Accordion */}
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <details
-                key={index}
-                className="group p-6 rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50"
-              >
-                <summary className="flex items-center justify-between cursor-pointer list-none">
-                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 pr-4">
-                    {faq.question}
-                  </h3>
-                  <svg
-                    className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <p className="mt-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
+          <FAQContent faqs={faqs} />
 
           {/* CTA Section */}
           <div className="p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 text-white shadow-2xl space-y-6 text-center">

@@ -285,7 +285,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = blogPosts[params.slug];
+  const slug = (await params).slug;
+  const post = blogPosts[slug];
   
   if (!post) {
     return {
@@ -293,7 +294,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const url = `https://parvah.online/blog/${params.slug}`;
+  const url = `https://parvah.online/blog/${slug}`;
   
   return {
     title: post.title,
@@ -323,14 +324,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPost({ params }) {
-  const post = blogPosts[params.slug];
+export default async function BlogPost({ params }) {
+  const slug = (await params).slug;
+  const post = blogPosts[slug];
 
   if (!post) {
     notFound();
   }
 
-  const url = `https://parvah.online/blog/${params.slug}`;
+  const url = `https://parvah.online/blog/${slug}`;
   
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -385,28 +387,46 @@ export default function BlogPost({ params }) {
         </Link>
 
         {/* Header */}
-        <header className="mb-8 space-y-4">
-          <div className="flex items-center gap-3">
-            <span className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider">
+        <header className="mb-8 space-y-6">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-xs font-bold uppercase tracking-wider shadow-sm">
               {post.category}
             </span>
-            <span className="text-xs text-slate-400">{post.date}</span>
-            <span className="text-xs text-slate-400">•</span>
-            <span className="text-xs text-slate-400">{post.readTime}</span>
+            <div className="flex items-center gap-2 text-xs text-slate-500">
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                {post.date}
+              </span>
+              <span className="text-slate-300">•</span>
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {post.readTime}
+              </span>
+            </div>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             {post.title}
           </h1>
-          <p className="text-lg text-slate-600 leading-relaxed">{post.excerpt}</p>
-          <div className="flex items-center gap-2 text-xs text-slate-500">
-            <span className="font-semibold">By {post.author}</span>
+          <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">{post.excerpt}</p>
+          <div className="flex items-center gap-3 pt-2">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
+              {post.author.charAt(0)}
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-900">{post.author}</p>
+              <p className="text-xs text-slate-500">Published on {post.date}</p>
+            </div>
           </div>
         </header>
 
         {/* Content */}
         <div className="prose prose-slate prose-lg max-w-none">
           <div
-            className="p-8 rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50"
+            className="p-8 sm:p-12 rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50 prose-headings:font-extrabold prose-headings:text-slate-900 prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3 prose-p:text-slate-700 prose-p:leading-relaxed prose-p:text-base prose-ul:text-slate-700 prose-li:text-slate-700 prose-li:mb-2 prose-strong:text-indigo-600 prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
@@ -427,24 +447,38 @@ export default function BlogPost({ params }) {
 
         {/* Related Posts */}
         <div className="mt-12">
-          <h3 className="text-xl font-extrabold text-slate-900 mb-6">More Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h3 className="text-2xl font-extrabold text-slate-900 mb-6">More Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(blogPosts)
-              .filter(([slug]) => slug !== params.slug)
+              .filter(([postSlug]) => postSlug !== slug)
               .slice(0, 2)
-              .map(([slug, relatedPost]) => (
+              .map(([postSlug, relatedPost]) => (
                 <Link
-                  key={slug}
-                  href={`/blog/${slug}`}
-                  className="group p-6 rounded-2xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all"
+                  key={postSlug}
+                  href={`/blog/${postSlug}`}
+                  className="group p-6 rounded-2xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1 transition-all duration-300"
                 >
-                  <span className="px-2 py-1 rounded-full bg-indigo-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider">
-                    {relatedPost.category}
-                  </span>
-                  <h4 className="text-base font-extrabold text-slate-900 mt-2 mb-2 group-hover:text-indigo-600 transition-colors">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-2 py-1 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider">
+                      {relatedPost.category}
+                    </span>
+                    <span className="text-[10px] text-slate-400 flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {relatedPost.readTime}
+                    </span>
+                  </div>
+                  <h4 className="text-base font-extrabold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">
                     {relatedPost.title}
                   </h4>
-                  <p className="text-xs text-slate-600 line-clamp-2">{relatedPost.excerpt}</p>
+                  <p className="text-xs text-slate-600 line-clamp-2 mb-4">{relatedPost.excerpt}</p>
+                  <div className="flex items-center gap-2 text-indigo-600 text-xs font-bold group-hover:gap-3 transition-all">
+                    Read
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </Link>
               ))}
           </div>

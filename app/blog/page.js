@@ -30,6 +30,8 @@ const blogPosts = [
     excerpt: 'Learn the best practices for staying safe while video chatting with strangers online. Protect your privacy and have fun responsibly.',
     date: '2026-08-01',
     category: 'Safety',
+    readTime: '5 min read',
+    featured: true,
   },
   {
     slug: 'omegle-alternatives-why-strangerlive-is-better',
@@ -37,6 +39,8 @@ const blogPosts = [
     excerpt: 'Discover why StrangerLive is the best alternative to Omegle for random video chat. Compare features, safety, and user experience.',
     date: '2026-07-28',
     category: 'Comparison',
+    readTime: '6 min read',
+    featured: false,
   },
   {
     slug: 'tips-for-making-meaningful-connections-online',
@@ -44,6 +48,8 @@ const blogPosts = [
     excerpt: 'Learn how to have genuine conversations and build real connections while video chatting with strangers from around the world.',
     date: '2026-07-25',
     category: 'Tips',
+    readTime: '4 min read',
+    featured: false,
   },
   {
     slug: 'understanding-webrtc-technology',
@@ -51,6 +57,8 @@ const blogPosts = [
     excerpt: 'A technical deep dive into WebRTC technology and how it enables secure peer-to-peer video connections without storing your data.',
     date: '2026-07-20',
     category: 'Technology',
+    readTime: '7 min read',
+    featured: false,
   },
   {
     slug: 'video-chat-etiquette-guide',
@@ -58,6 +66,8 @@ const blogPosts = [
     excerpt: 'Master the art of polite and engaging video conversations with these essential etiquette tips for random video chat platforms.',
     date: '2026-07-15',
     category: 'Tips',
+    readTime: '5 min read',
+    featured: false,
   },
 ];
 
@@ -85,31 +95,80 @@ export default function BlogPage() {
           </p>
         </div>
 
+        {/* Featured Post */}
+        {blogPosts.filter(p => p.featured).map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group relative p-8 rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-rose-600 text-white shadow-2xl hover:shadow-indigo-500/30 transition-all overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider">
+                  Featured
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-xs font-semibold">
+                  {post.category}
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black mb-3 group-hover:scale-105 transition-transform">
+                {post.title}
+              </h2>
+              <p className="text-slate-100 text-sm leading-relaxed mb-4 max-w-2xl">
+                {post.excerpt}
+              </p>
+              <div className="flex items-center gap-4 text-xs text-white/80">
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {post.date}
+                </span>
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {post.readTime}
+                </span>
+              </div>
+            </div>
+          </Link>
+        ))}
+
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post) => (
+          {blogPosts.filter(p => !p.featured).map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group p-6 rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all"
+              className="group p-6 rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-sm border border-slate-200/60 shadow-xl shadow-slate-300/50 ring-1 ring-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="px-2 py-1 rounded-full bg-indigo-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider">
+                <span className="px-2 py-1 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider">
                   {post.category}
                 </span>
-                <span className="text-[10px] text-slate-400">{post.date}</span>
+                <span className="text-[10px] text-slate-400 flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {post.readTime}
+                </span>
               </div>
-              <h3 className="text-base sm:text-lg font-extrabold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+              <h3 className="text-base sm:text-lg font-extrabold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3 mb-4">
                 {post.excerpt}
               </p>
-              <div className="mt-4 flex items-center gap-2 text-indigo-600 text-xs font-bold group-hover:gap-3 transition-all">
-                Read More
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-slate-400">{post.date}</span>
+                <div className="flex items-center gap-2 text-indigo-600 text-xs font-bold group-hover:gap-3 transition-all">
+                  Read
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
               </div>
             </Link>
           ))}
