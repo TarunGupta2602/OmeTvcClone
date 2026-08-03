@@ -12,6 +12,8 @@ export default function Navbar() {
     { name: 'Chat Now', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Safety & Rules', href: '/safety' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
@@ -21,6 +23,8 @@ export default function Navbar() {
     { name: 'Chat', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Safety', href: '/safety' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 

@@ -34,6 +34,12 @@ export default function Footer() {
                 <Link href="/about" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">About Parvah</Link>
               </li>
               <li>
+                <Link href="/faq" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">FAQ</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Blog</Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Contact & Support</Link>
               </li>
             </ul>
