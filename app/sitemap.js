@@ -2,6 +2,14 @@ export default function sitemap() {
   const baseUrl = 'https://parvah.online';
   const currentDate = new Date().toISOString();
 
+  const blogPosts = [
+    'how-to-stay-safe-on-video-chat-platforms',
+    'omegle-alternatives-why-strangerlive-is-better',
+    'tips-for-making-meaningful-connections-online',
+    'understanding-webrtc-technology',
+    'video-chat-etiquette-guide',
+  ];
+
   return [
     {
       url: baseUrl,
@@ -57,5 +65,11 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    ...blogPosts.map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    })),
   ];
 }
