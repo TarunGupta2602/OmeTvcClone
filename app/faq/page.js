@@ -3,7 +3,7 @@ import FAQContent from './FAQContent';
 
 export const metadata = {
   title: 'FAQ | Free Random Video Chat Questions & Answers',
-  description: 'Frequently asked questions about our free random video chat platform. Learn how to use StrangerLive, safety tips, technical requirements, and account policies.',
+  description: 'Frequently asked questions about our free random video chat platform. Learn how to use Parvah, safety tips, technical requirements, and account policies.',
   alternates: {
     canonical: 'https://parvah.online/faq',
   },
@@ -11,7 +11,7 @@ export const metadata = {
     title: 'FAQ | Free Random Video Chat Questions & Answers',
     description: 'Find answers to common questions about random video chat, safety, and platform features.',
     url: 'https://parvah.online/faq',
-    siteName: 'StrangerLive',
+    siteName: 'Parvah',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
     locale: 'en_US',
     type: 'website',
@@ -26,8 +26,8 @@ export const metadata = {
 
 const faqs = [
   {
-    question: 'Is StrangerLive free to use?',
-    answer: 'Yes, StrangerLive is completely free to use. No registration, credit card, or payment is required to start video chatting with strangers.',
+    question: 'Is Parvah free to use?',
+    answer: 'Yes, Parvah is completely free to use. No registration, credit card, or payment is required to start video chatting with strangers.',
     category: 'General',
   },
   {
@@ -36,23 +36,23 @@ const faqs = [
     category: 'General',
   },
   {
-    question: 'Is StrangerLive safe to use?',
-    answer: 'We prioritize safety with strict community guidelines, automated moderation, and user reporting tools. However, as with any online platform, users should exercise caution and never share personal information.',
+    question: 'Is Parvah safe to use?',
+    answer: 'Parvah uses an age gate on first visit and a report button during chats. Always exercise caution, never share personal information, and use Next to skip uncomfortable conversations.',
     category: 'Safety',
   },
   {
     question: 'What are the age requirements?',
-    answer: 'StrangerLive is strictly for users aged 18 and older. Minors are prohibited from using the platform. We enforce this policy through automated systems and user reports.',
+    answer: 'Parvah is strictly for users aged 18 and older. Minors are prohibited from using the platform. We enforce this policy through automated systems and user reports.',
     category: 'Safety',
   },
   {
-    question: 'Can I use StrangerLive on mobile?',
-    answer: 'Yes, StrangerLive works on all devices including smartphones, tablets, and desktop computers. The platform is optimized for both iOS and Android browsers.',
+    question: 'Can I use Parvah on mobile?',
+    answer: 'Yes, Parvah works on all devices including smartphones, tablets, and desktop computers. The platform is optimized for both iOS and Android browsers.',
     category: 'Technical',
   },
   {
     question: 'How do I report inappropriate behavior?',
-    answer: 'Use the report button during or immediately after a chat session. Our moderation team reviews all reports and takes appropriate action including permanent bans for violations.',
+    answer: 'Click the Report button during an active chat session to flag a user. Reports are logged with session metadata and reviewed by our safety team. You can also email safety@parvah.online.',
     category: 'Safety',
   },
   {
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     question: 'What browsers are supported?',
-    answer: 'StrangerLive works on all modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version for the best experience.',
+    answer: 'Parvah works on all modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version for the best experience.',
     category: 'Technical',
   },
   {
@@ -81,7 +81,7 @@ const faqs = [
     category: 'Technical',
   },
   {
-    question: 'Can I use StrangerLive without a camera?',
+    question: 'Can I use Parvah without a camera?',
     answer: 'While a camera is required for video chat, you can choose to disable your camera if you prefer audio-only conversations. However, most users expect video during chats.',
     category: 'Technical',
   },
@@ -111,8 +111,8 @@ const faqs = [
     category: 'Privacy',
   },
   {
-    question: 'Can I use StrangerLive for business purposes?',
-    answer: 'StrangerLive is designed for personal social interactions. For business video conferencing, we recommend using dedicated business communication platforms.',
+    question: 'Can I use Parvah for business purposes?',
+    answer: 'Parvah is designed for personal social interactions. For business video conferencing, we recommend using dedicated business communication platforms.',
     category: 'General',
   },
   {
@@ -122,7 +122,7 @@ const faqs = [
   },
   {
     question: 'Are there any hidden fees or subscriptions?',
-    answer: 'Absolutely not. StrangerLive is completely free with no hidden fees, subscriptions, or premium tiers. All features are available to every user at no cost.',
+    answer: 'Absolutely not. Parvah is completely free with no hidden fees, subscriptions, or premium tiers. All features are available to every user at no cost.',
     category: 'General',
   },
 ];
@@ -130,7 +130,7 @@ const faqs = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  name: 'FAQ - StrangerLive',
+  name: 'FAQ - Parvah',
   description: 'Frequently asked questions about our free random video chat platform.',
   url: 'https://parvah.online/faq',
   mainEntity: faqs.map((faq) => ({
@@ -168,7 +168,7 @@ export default function FAQPage() {
               </span>
             </h1>
             <p className="text-xs sm:text-sm text-slate-600">
-              Find answers to common questions about StrangerLive, safety, and how to use our platform.
+              Find answers to common questions about Parvah, safety, and how to use our platform.
             </p>
           </div>
 

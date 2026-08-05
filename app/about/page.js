@@ -1,18 +1,19 @@
 import Link from 'next/link';
+import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 export const metadata = {
   title: 'About Us | Free Random Video Chat with Strangers',
   description:
     'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety. Talk to strangers online instantly.',
   alternates: {
-    canonical: 'https://parvah.online/about',
+    canonical: `${SITE_URL}/about`,
   },
   openGraph: {
     title: 'About Us | Free Random Video Chat with Strangers',
     description:
-      'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering. Talk to girls and strangers online.',
-    url: 'https://parvah.online/about',
-    siteName: 'StrangerLive',
+      'Discover how Parvah connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering.',
+    url: `${SITE_URL}/about`,
+    siteName: 'Parvah',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Free Random Video Chat' }],
     locale: 'en_US',
     type: 'website',
@@ -28,17 +29,17 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About StrangerLive - Free Random Video Chat',
+  name: 'About Parvah - Free Random Video Chat',
   description: 'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety.',
   url: 'https://parvah.online/about',
   publisher: {
     '@type': 'Organization',
-    name: 'StrangerLive',
+    name: 'Parvah',
     url: 'https://parvah.online',
   },
   mainEntity: {
     '@type': 'SoftwareApplication',
-    name: 'StrangerLive',
+    name: 'Parvah',
     applicationCategory: 'Social',
     operatingSystem: 'Web Browser',
     offers: {
@@ -84,7 +85,7 @@ export default function AboutPage() {
     {
       title: 'Strict Safety & Community Standards',
       description:
-        'We prioritize user safety with strict automated and community reporting tools, prohibiting inappropriate conduct to maintain a friendly space for all.',
+        'We prioritize user safety with community guidelines, user reporting tools, and manual safety review. Report inappropriate behavior using the in-chat Report button.',
       icon: (
         <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -94,10 +95,10 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { label: 'Instant Connections', value: '100K+' },
-    { label: 'Average Match Latency', value: '< 50ms' },
-    { label: 'Global Coverage', value: '190+ Countries' },
-    { label: 'End-to-End P2P Privacy', value: '100%' },
+    { label: 'WebRTC P2P Video', value: 'Direct' },
+    { label: 'Registration Required', value: 'None' },
+    { label: 'Platform Cost', value: 'Free' },
+    { label: 'Privacy Model', value: 'P2P' },
   ];
 
   return (
@@ -164,7 +165,7 @@ export default function AboutPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-            Why Millions Choose Parvah
+            Why Choose Parvah
           </h2>
           <p className="text-sm text-slate-600">
             Engineered for high performance, maximum privacy, and intuitive user experiences.

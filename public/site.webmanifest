@@ -1,7 +1,7 @@
 {
-  "name": "StrangerLive - Free Random Video Chat with Strangers",
-  "short_name": "StrangerLive",
-  "description": "Free random video chat platform to talk to strangers and girls online. Instant 1-on-1 live webcam chat with no registration required.",
+  "name": "Parvah - Free Random Video Chat",
+  "short_name": "Parvah",
+  "description": "Free random video chat platform to talk to strangers online. Instant 1-on-1 live webcam chat with no registration required.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

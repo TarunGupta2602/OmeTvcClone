@@ -12,7 +12,7 @@ export const metadata = {
     description:
       'Learn how our platform uses peer-to-peer WebRTC connections to ensure your video calls are private, end-to-end direct, and never stored on our servers.',
     url: 'https://parvah.online/privacy',
-    siteName: 'StrangerLive',
+    siteName: 'Parvah',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Privacy Policy' }],
     locale: 'en_US',
     type: 'website',
@@ -28,13 +28,13 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'PrivacyPolicy',
-  name: 'Privacy Policy - StrangerLive',
+  name: 'Privacy Policy - Parvah',
   description: 'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data.',
   url: 'https://parvah.online/privacy',
   dateModified: '2026-07-30',
   publisher: {
     '@type': 'Organization',
-    name: 'StrangerLive',
+    name: 'Parvah',
     url: 'https://parvah.online',
   },
 };
@@ -60,12 +60,12 @@ export default function PrivacyPolicyPage() {
 - Connection Metadata: Temporary socket session IDs, room identifiers, and timestamps required for pairing.
 - Technical Data: IP address, browser type, operating system, and WebRTC capability flags.
 - Text Chat Logs: Messages sent in active text chat sessions are held transiently in memory during the match to deliver messages and are discarded upon disconnect.
-- Safety & Moderation Reports: Reports submitted by users regarding inappropriate conduct, along with associated session metadata for moderation evaluation.`,
+- In-Chat Safety Actions: When you report a user, they are blocked and skipped locally. We do not store report details on our servers.`,
     },
     {
       id: 'cookies',
       title: '4. Cookies & Local Storage',
-      content: `We use local browser storage and essential cookies solely for technical functionality, such as storing user interface preferences (e.g. audio/video mute states) and preventing spam or bot activity. We do not use third-party tracking cookies to target advertisements.`,
+      content: `We use essential local storage for UI preferences (e.g. age confirmation, cookie consent, mute states). We use Google Tag Manager for analytics to improve the platform. You can accept or decline non-essential analytics via our cookie banner. We do not sell your data or use third-party ad tracking cookies.`,
     },
     {
       id: 'data-use',
@@ -73,7 +73,6 @@ export default function PrivacyPolicyPage() {
       content: `We use collected technical data to:
 - Establish fast WebRTC peer-to-peer connections via signaling.
 - Prevent spam, bot abuse, DDoS attacks, and unauthorized access.
-- Enforce Community Guidelines and investigate reported safety violations.
 - Maintain and improve system reliability and server stability.`,
     },
     {

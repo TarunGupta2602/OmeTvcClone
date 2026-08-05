@@ -1,37 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Parvah
+
+Free random video chat platform — an Omegle / OmeTV alternative built with Next.js, WebRTC, and Socket.io.
+
+## Features
+
+- 1-on-1 random video chat with WebRTC peer-to-peer connections (STUN + ICE)
+- Text chat during video sessions
+- Age gate (18+), report/block & skip
+- SEO-optimized pages: About, FAQ, Safety, Blog, Privacy, Terms, Contact
+- RSS feed at `/blog/rss.xml`
+- No database, no contact form, no TURN relay — minimal infrastructure
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+cd ometv
+npm install
+cp .env.example .env.local   # optional — only CORS/port if needed
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Only needed for production Socket.io CORS:
 
-## Learn More
+```env
+ALLOWED_ORIGINS=https://parvah.online
+PORT=3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+WebRTC uses built-in public STUN servers (Google, Cloudflare). No TURN credentials required.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm start
+```
 
-## Deploy on Vercel
+Requires the custom `server.js` for Socket.io signaling.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# OmeTvcClone
+- Next.js 16, React 19, Tailwind CSS 4
+- Socket.io for matchmaking & signaling
+- WebRTC (STUN/ICE) for P2P video/audio

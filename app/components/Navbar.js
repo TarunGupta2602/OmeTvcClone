@@ -36,7 +36,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="flex flex-col">
               <span className="text-xl font-black tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 bg-clip-text text-transparent">
-                StrangerLive
+                Parvah
               </span>
               <span className="text-[10px] text-slate-500 tracking-wider uppercase font-bold -mt-1">
                 Free Random Video Chat

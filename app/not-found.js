@@ -1,13 +1,15 @@
 import Link from 'next/link';
+import { SITE_URL } from '../lib/constants';
 
 export const metadata = {
   title: '404 - Page Not Found | Parvah',
   description:
     'The requested page could not be found on Parvah. Return home to launch free video chat or explore our community guides.',
+  robots: { index: false, follow: true },
   openGraph: {
     title: '404 - Page Not Found | Parvah',
     description: 'Page not found on Parvah. Return to homepage or start random video chat now.',
-    url: 'https://parvah.online/404',
+    url: `${SITE_URL}/404`,
     siteName: 'Parvah',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah 404 Page' }],
     locale: 'en_US',

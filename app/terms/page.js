@@ -12,7 +12,7 @@ export const metadata = {
     description:
       'Review the Terms of Service for using our platform, including strict 18+ adult policies, user conduct guidelines, and safety enforcement.',
     url: 'https://parvah.online/terms',
-    siteName: 'StrangerLive',
+    siteName: 'Parvah',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Terms of Service' }],
     locale: 'en_US',
     type: 'website',
@@ -28,13 +28,13 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TermsOfService',
-  name: 'Terms of Service - StrangerLive',
+  name: 'Terms of Service - Parvah',
   description: 'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements.',
   url: 'https://parvah.online/terms',
   dateModified: '2026-07-30',
   publisher: {
     '@type': 'Organization',
-    name: 'StrangerLive',
+    name: 'Parvah',
     url: 'https://parvah.online',
   },
 };

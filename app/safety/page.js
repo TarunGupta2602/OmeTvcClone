@@ -12,7 +12,7 @@ export const metadata = {
     description:
       'Explore the 5 Golden Rules of Conduct, user safety tips, and reporting workflows for a secure video chat experience with strangers.',
     url: 'https://parvah.online/safety',
-    siteName: 'StrangerLive',
+    siteName: 'Parvah',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
     locale: 'en_US',
     type: 'website',
@@ -28,12 +28,12 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SafetyPage',
-  name: 'Community Guidelines & Safety - StrangerLive',
+  name: 'Community Guidelines & Safety - Parvah',
   description: 'Read our zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips.',
   url: 'https://parvah.online/safety',
   publisher: {
     '@type': 'Organization',
-    name: 'StrangerLive',
+    name: 'Parvah',
     url: 'https://parvah.online',
   },
 };
@@ -44,7 +44,7 @@ export default function SafetyPage() {
       number: '01',
       title: 'Zero Tolerance for Nudity & Sexual Content',
       description:
-        'Explicit sexual behavior, nudity, or inappropriate attire is strictly forbidden. Automated filters and human moderators instantly issue permanent hardware and IP bans for violations.',
+        'Explicit sexual behavior, nudity, or inappropriate conduct is forbidden. Use the Report button during chat or contact safety@parvah.online. Violations may result in session termination and bans.',
       icon: (
         <svg className="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
@@ -164,7 +164,7 @@ export default function SafetyPage() {
           <div className="border-b border-slate-200/60 pb-3 sm:pb-4">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900">The 5 Golden Rules of Conduct</h2>
             <p className="text-[10px] sm:text-xs text-slate-500 mt-1">
-              Violations are reviewed by automated moderation systems and lead to immediate bans.
+              Violations are reviewed by our safety team. Use the Report button during chat.
             </p>
           </div>
 
@@ -220,7 +220,7 @@ export default function SafetyPage() {
           <div className="space-y-1 sm:space-y-2">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">How Reporting & Enforcement Works</h2>
             <p className="text-[10px] sm:text-xs text-slate-600 leading-relaxed">
-              When you submit a report during a chat session, our automated safety engine logs room parameters and flags the user's connection. Violators undergo immediate session termination and hardware ban processing.
+              When you submit a report during a chat session, we log session metadata (room ID, timestamp, reason) for manual review by our safety team. Serious violations may result in bans.
             </p>
           </div>
 

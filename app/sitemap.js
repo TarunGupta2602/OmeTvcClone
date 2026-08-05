@@ -1,75 +1,43 @@
-export default function sitemap() {
-  const baseUrl = 'https://parvah.online';
-  const currentDate = new Date().toISOString();
+import { SITE_URL } from '../lib/constants';
+import { blogPostsList } from '../data/blogPosts';
+import { BLOG_CATEGORIES } from '../lib/blogCategories';
+import { getBlogCoverPath } from '../lib/blogImages';
 
-  const blogPosts = [
-    'how-to-stay-safe-on-video-chat-platforms',
-    'omegle-alternatives-why-strangerlive-is-better',
-    'tips-for-making-meaningful-connections-online',
-    'understanding-webrtc-technology',
-    'video-chat-etiquette-guide',
+export default function sitemap() {
+  const staticPages = [
+    { path: '', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/omegle-alternative', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/ometv-alternative', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/random-video-chat', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/about', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/safety', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/contact', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/privacy', priority: 0.5, changeFrequency: 'monthly' },
+    { path: '/terms', priority: 0.5, changeFrequency: 'monthly' },
+    { path: '/faq', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   ];
 
   return [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
+    ...staticPages.map(({ path, priority, changeFrequency }) => ({
+      url: `${SITE_URL}${path}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency,
+      priority,
+      ...(path === '' ? { images: [`${SITE_URL}/og-image.png`] } : {}),
+    })),
+    ...BLOG_CATEGORIES.map((cat) => ({
+      url: `${SITE_URL}/blog/category/${cat.slug}`,
+      lastModified: new Date().toISOString(),
       changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/safety`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/community-guidelines`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    ...blogPosts.map((slug) => ({
-      url: `${baseUrl}/blog/${slug}`,
-      lastModified: currentDate,
+      priority: 0.65,
+    })),
+    ...blogPostsList.map((post) => ({
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified: post.date,
       changeFrequency: 'monthly',
       priority: 0.6,
+      images: [`${SITE_URL}${getBlogCoverPath(post.slug)}`],
     })),
   ];
 }

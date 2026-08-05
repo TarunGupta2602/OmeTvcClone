@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-lg font-extrabold text-slate-900 tracking-tight">Parvah</span>
             </Link>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Instant 1-on-1 free random video chat connecting millions of users worldwide safely and effortlessly.
+              Instant 1-on-1 free random video chat connecting people worldwide safely and effortlessly.
             </p>
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 text-[11px] font-bold text-rose-600 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
@@ -38,6 +38,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/blog" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Blog</Link>
+              </li>
+              <li>
+                <Link href="/omegle-alternative" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Omegle Alternative</Link>
+              </li>
+              <li>
+                <Link href="/ometv-alternative" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">OmeTV Alternative</Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Contact & Support</Link>
