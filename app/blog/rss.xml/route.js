@@ -5,7 +5,7 @@ export async function GET() {
   const items = blogPostsList
     .map((post) => {
       const full = blogPostsMap[post.slug];
-      const imageUrl = `${SITE_URL}/blog/${post.slug}/opengraph-image`;
+      const imageUrl = `${SITE_URL}/blog/covers/${post.slug}.svg`;
       return `
     <item>
       <title><![CDATA[${full.title}]]></title>
@@ -14,8 +14,8 @@ export async function GET() {
       <pubDate>${new Date(full.date).toUTCString()}</pubDate>
       <description><![CDATA[${full.excerpt}]]></description>
       <category>${full.category}</category>
-      <enclosure url="${imageUrl}" type="image/png" length="0"/>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="${imageUrl}" medium="image" type="image/png"/>
+      <enclosure url="${imageUrl}" type="image/svg+xml" length="0"/>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="${imageUrl}" medium="image" type="image/svg+xml"/>
     </item>`;
     })
     .join('');

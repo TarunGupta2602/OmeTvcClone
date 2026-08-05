@@ -70,7 +70,7 @@ export async function generateMetadata({ params }) {
           width: 1200,
           height: 630,
           alt: post.imageAlt,
-          type: 'image/png',
+          type: 'image/svg+xml',
         },
       ],
     },
@@ -162,7 +162,12 @@ export default async function BlogPostPage({ params }) {
 
         {/* Featured cover image — unique per post, SEO-optimized alt */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 -mt-2 pb-8">
-          <BlogPostCover slug={slug} alt={post.imageAlt} title={post.title} />
+          <BlogPostCover
+            title={post.title}
+            category={post.category}
+            readTime={post.readTime}
+            alt={post.imageAlt}
+          />
         </div>
 
         <div className="max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14">
@@ -186,7 +191,12 @@ export default async function BlogPostPage({ params }) {
                     className="group flex gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition"
                   >
                     <div className="relative w-24 h-14 flex-shrink-0 rounded-lg overflow-hidden hidden sm:block">
-                      <BlogCardThumbnail slug={prev.slug} alt={prev.title} compact />
+                      <BlogCardThumbnail
+                        title={prev.title}
+                        category={prev.category}
+                        readTime={prev.readTime}
+                        compact
+                      />
                     </div>
                     <div>
                       <span className="text-xs font-medium text-slate-400">← Previous</span>
@@ -204,7 +214,12 @@ export default async function BlogPostPage({ params }) {
                     className="group flex gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition sm:flex-row-reverse sm:text-right"
                   >
                     <div className="relative w-24 h-14 flex-shrink-0 rounded-lg overflow-hidden hidden sm:block">
-                      <BlogCardThumbnail slug={next.slug} alt={next.title} compact />
+                      <BlogCardThumbnail
+                        title={next.title}
+                        category={next.category}
+                        readTime={next.readTime}
+                        compact
+                      />
                     </div>
                     <div>
                       <span className="text-xs font-medium text-slate-400">Next →</span>
@@ -242,7 +257,12 @@ export default async function BlogPostPage({ params }) {
                       href={`/blog/${r.slug}`}
                       className="group flex flex-col overflow-hidden rounded-xl bg-white border border-slate-200 hover:border-indigo-200 transition"
                     >
-                      <BlogCardThumbnail slug={r.slug} alt={r.title} className="rounded-none rounded-t-xl" />
+                      <BlogCardThumbnail
+                        title={r.title}
+                        category={r.category}
+                        readTime={r.readTime}
+                        className="rounded-none rounded-t-xl"
+                      />
                       <div className="p-4">
                         <span className="text-[11px] font-semibold uppercase tracking-wide text-indigo-600">
                           {r.category}

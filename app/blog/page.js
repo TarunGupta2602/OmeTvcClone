@@ -41,7 +41,7 @@ const blogJsonLd = {
     headline: post.title,
     url: `${SITE_URL}/blog/${post.slug}`,
     datePublished: post.date,
-    image: `${SITE_URL}/blog/${post.slug}/opengraph-image`,
+    image: `${SITE_URL}/blog/covers/${post.slug}.svg`,
   })),
 };
 
