@@ -1,5 +1,4 @@
-import ChatLoader from './components/ChatLoader';
-import HomeSEO from './components/HomeSEO';
+import HomePageClient from './components/HomePageClient';
 import { SITE_URL, SITE_DESCRIPTION, SITE_NAME } from '../lib/constants';
 import { buildFaqSchema } from '../lib/seo';
 
@@ -47,8 +46,7 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <ChatLoader />
-      <HomeSEO />
+      <HomePageClient />
     </>
   );
 }
