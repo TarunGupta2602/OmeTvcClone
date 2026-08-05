@@ -18,28 +18,30 @@ export default function ReportModal({ onClose, onReported }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitting(true);
-    // No server storage — block/skip is handled by the parent via onReported
     onReported?.({ reason, details });
     onClose();
     setSubmitting(false);
   };
 
   return (
-    <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4">
-      <div className="max-w-md w-full p-6 rounded-2xl bg-white shadow-2xl space-y-4 ring-1 ring-slate-200">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-black text-slate-900">Report User</h3>
+    <div className="fixed inset-0 z-[80] flex items-end sm:items-center justify-center bg-slate-950/70 backdrop-blur-sm p-0 sm:p-4">
+      <div className="max-w-md w-full p-6 rounded-t-3xl sm:rounded-2xl bg-white shadow-2xl space-y-4 border border-slate-200/80 max-h-[90dvh] overflow-y-auto">
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-rose-600">Safety</p>
+            <h3 className="text-lg font-black text-slate-900">Report User</h3>
+          </div>
           <button
             type="button"
             onClick={onClose}
-            className="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition"
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition"
             aria-label="Close report dialog"
           >
             ✕
           </button>
         </div>
 
-        <p className="text-xs text-slate-600">
+        <p className="text-xs text-slate-600 leading-relaxed">
           This user will be blocked and skipped. Nothing is stored on our servers. For serious violations, email{' '}
           <a href="mailto:safety@parvah.online" className="text-indigo-600 font-semibold hover:underline">
             safety@parvah.online
@@ -74,7 +76,7 @@ export default function ReportModal({ onClose, onReported }) {
             />
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 pt-1">
             <button
               type="button"
               onClick={onClose}
@@ -85,7 +87,7 @@ export default function ReportModal({ onClose, onReported }) {
             <button
               type="submit"
               disabled={submitting}
-              className="flex-1 py-2.5 rounded-xl font-black text-xs text-white bg-rose-600 hover:bg-rose-700 disabled:opacity-50 transition"
+              className="flex-1 py-2.5 rounded-xl font-black text-xs text-white bg-rose-600 hover:bg-rose-700 disabled:opacity-50 transition shadow-md shadow-rose-500/25"
             >
               Block & Skip
             </button>

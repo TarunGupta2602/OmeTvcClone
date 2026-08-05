@@ -8,15 +8,16 @@ import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext'
 
 function ShellInner({ children }) {
   const pathname = usePathname();
-  const { chatMode } = useChatLayout();
-  const isChatPage = pathname === '/';
-  const hideChrome = isChatPage && chatMode;
+  const { chatMode, lobbyMode } = useChatLayout();
+  const isHome = pathname === '/';
+  const hideChrome = isHome && chatMode;
+  const hideFooter = isHome && (chatMode || lobbyMode);
 
   return (
     <>
-      {!hideChrome && <Navbar />}
+      {!hideChrome && <Navbar minimal={isHome && lobbyMode && !chatMode} />}
       <div className="flex-1 flex flex-col">{children}</div>
-      {!hideChrome && <Footer />}
+      {!hideFooter && <Footer />}
       <CookieConsent />
     </>
   );
