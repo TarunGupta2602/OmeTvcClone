@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE_URL } from '../lib/constants';
 
 export const metadata = {
-  title: '404 - Page Not Found | Parvah',
+  title: '404 — Page Not Found',
   description:
-    'The requested page could not be found on Parvah. Return home to launch free video chat or explore our community guides.',
+    'This page does not exist on Parvah. Return home to start free random video chat, read our safety guides, or contact support for help.',
   robots: { index: false, follow: true },
   openGraph: {
-    title: '404 - Page Not Found | Parvah',
+    title: '404 — Page Not Found | Parvah',
     description: 'Page not found on Parvah. Return to homepage or start random video chat now.',
     url: `${SITE_URL}/404`,
     siteName: 'Parvah',
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '404 - Page Not Found | Parvah',
+    title: '404 — Page Not Found | Parvah',
     description: 'Page not found on Parvah. Return home to start video chatting.',
     images: ['/og-image.png'],
   },

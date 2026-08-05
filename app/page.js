@@ -4,7 +4,7 @@ import { SITE_URL, SITE_DESCRIPTION, SITE_NAME } from '../lib/constants';
 import { buildFaqSchema } from '../lib/seo';
 
 export const metadata = {
-  title: 'Free Random Video Chat with Strangers | Live Webcam Chat',
+  title: 'Free Random Video Chat with Strangers',
   description: SITE_DESCRIPTION,
   alternates: {
     canonical: SITE_URL,

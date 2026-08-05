@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 export const metadata = {
-  title: 'About Us | Free Random Video Chat with Strangers',
+  title: 'About Parvah — Free Random Video Chat',
   description:
-    'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety. Talk to strangers online instantly.',
+    'Learn how Parvah connects people worldwide with instant WebRTC random video chat, smart matchmaking, and strict community safety — no registration required.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
   openGraph: {
-    title: 'About Us | Free Random Video Chat with Strangers',
+    title: 'About Parvah — Free Random Video Chat',
     description:
       'Discover how Parvah connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering.',
     url: `${SITE_URL}/about`,
@@ -20,7 +20,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us | Free Random Video Chat with Strangers',
+    title: 'About Parvah — Free Random Video Chat',
     description: 'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat. Talk to strangers online.',
     images: ['/og-image.png'],
   },
@@ -31,16 +31,16 @@ const jsonLd = {
   '@type': 'AboutPage',
   name: 'About Parvah - Free Random Video Chat',
   description: 'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety.',
-  url: 'https://parvah.online/about',
+  url: `${SITE_URL}/about`,
   publisher: {
     '@type': 'Organization',
-    name: 'Parvah',
-    url: 'https://parvah.online',
+    name: SITE_NAME,
+    url: SITE_URL,
   },
   mainEntity: {
     '@type': 'SoftwareApplication',
-    name: 'Parvah',
-    applicationCategory: 'Social',
+    name: SITE_NAME,
+    applicationCategory: 'SocialNetworkingApplication',
     operatingSystem: 'Web Browser',
     offers: {
       '@type': 'Offer',

@@ -4,10 +4,10 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Best Omegle Alternative — Free Random Video Chat';
 const description =
-  'Parvah is a free Omegle alternative for instant 1-on-1 random video chat. No registration, WebRTC privacy, 18+ age gate, and built-in reporting — start chatting in seconds.';
+  'Parvah is a free Omegle alternative for instant random video chat. No signup, WebRTC privacy, 18+ age gate, and built-in reporting — start in seconds.';
 
 export const metadata = {
-  title: 'Omegle Alternative | Free Random Video Chat with Strangers',
+  title: 'Omegle Alternative — Free Video Chat',
   description,
   alternates: { canonical: `${SITE_URL}/omegle-alternative` },
   openGraph: {

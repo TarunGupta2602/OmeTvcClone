@@ -1,26 +1,26 @@
 import Link from 'next/link';
+import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 export const metadata = {
-  title: 'Terms of Service | Free Random Video Chat Platform',
+  title: 'Terms of Service',
   description:
-    'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements when talking to strangers.',
+    'Parvah Terms of Service: 18+ age requirement, community conduct rules, zero-tolerance content policies, and user agreements for random video chat.',
   alternates: {
-    canonical: 'https://parvah.online/terms',
+    canonical: `${SITE_URL}/terms`,
   },
   openGraph: {
-    title: 'Terms of Service | Free Random Video Chat Platform',
-    description:
-      'Review the Terms of Service for using our platform, including strict 18+ adult policies, user conduct guidelines, and safety enforcement.',
-    url: 'https://parvah.online/terms',
-    siteName: 'Parvah',
+    title: 'Terms of Service | Parvah',
+    description: 'Terms of Service and community rules for using Parvah random video chat.',
+    url: `${SITE_URL}/terms`,
+    siteName: SITE_NAME,
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Terms of Service' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Service | Free Random Video Chat Platform',
-    description: 'Review our Terms of Service and user community rules for random video chat.',
+    title: 'Terms of Service | Parvah',
+    description: 'Terms of Service and community rules for using Parvah random video chat.',
     images: ['/og-image.png'],
   },
 };
@@ -30,12 +30,12 @@ const jsonLd = {
   '@type': 'TermsOfService',
   name: 'Terms of Service - Parvah',
   description: 'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements.',
-  url: 'https://parvah.online/terms',
+  url: `${SITE_URL}/terms`,
   dateModified: '2026-07-30',
   publisher: {
     '@type': 'Organization',
-    name: 'Parvah',
-    url: 'https://parvah.online',
+    name: SITE_NAME,
+    url: SITE_URL,
   },
 };
 

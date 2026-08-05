@@ -46,6 +46,9 @@ export default function Footer() {
                 <Link href="/ometv-alternative" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">OmeTV Alternative</Link>
               </li>
               <li>
+                <Link href="/random-video-chat" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Random Video Chat</Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-indigo-600 hover:pl-1 transition-all duration-200 inline-block">Contact & Support</Link>
               </li>
             </ul>

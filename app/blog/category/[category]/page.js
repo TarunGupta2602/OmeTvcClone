@@ -4,6 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../../../lib/constants';
 import { blogPostsList } from '../../../../data/blogPosts';
 import { BLOG_CATEGORIES, getCategoryBySlug, filterPostsByCategory } from '../../../../lib/blogCategories';
 import { BlogCard } from '../../../components/BlogCard';
+import { buildCollectionPageSchema } from '../../../../lib/seo';
 
 export function generateStaticParams() {
   return BLOG_CATEGORIES.map((cat) => ({ category: cat.slug }));
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }) {
   const category = getCategoryBySlug(categorySlug);
   if (!category) return {};
 
-  const title = `${category.label} Articles | Parvah Blog`;
+  const title = `${category.label} — Parvah Blog`;
   const description = category.description;
 
   return {
@@ -40,9 +41,17 @@ export default async function BlogCategoryPage({ params }) {
   if (!category) notFound();
 
   const posts = filterPostsByCategory(blogPostsList, categorySlug);
+  const pageUrl = `${SITE_URL}/blog/category/${category.slug}`;
+  const jsonLd = buildCollectionPageSchema({
+    title: `${category.label} — Parvah Blog`,
+    description: category.description,
+    url: pageUrl,
+  });
 
   return (
-    <main className="flex-1 bg-slate-50 min-h-screen py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <main className="flex-1 bg-slate-50 min-h-screen py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-10">
         <div className="space-y-4">
           <Link href="/blog" className="text-sm font-semibold text-indigo-600 hover:underline">
@@ -81,5 +90,6 @@ export default async function BlogCategoryPage({ params }) {
         )}
       </div>
     </main>
+    </>
   );
 }

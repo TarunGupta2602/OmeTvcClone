@@ -5,9 +5,9 @@ import { BLOG_CATEGORIES } from '../../lib/blogCategories';
 import { BlogCard } from '../components/BlogCard';
 
 export const metadata = {
-  title: 'Blog | Video Chat Tips, Safety Guides & Omegle Alternatives',
+  title: 'Blog — Video Chat Tips & Safety Guides',
   description:
-    'Parvah blog: expert guides on random video chat safety, Omegle & OmeTV alternatives, WebRTC privacy, webcam troubleshooting, and online connection tips.',
+    'Parvah blog: guides on random video chat safety, Omegle & OmeTV alternatives, WebRTC privacy, webcam fixes, and tips for talking to strangers online.',
   alternates: {
     canonical: `${SITE_URL}/blog`,
     types: { 'application/rss+xml': `${SITE_URL}/blog/rss.xml` },

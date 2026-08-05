@@ -4,10 +4,10 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Free Random Video Chat with Strangers Online';
 const description =
-  'Start free random video chat with strangers on Parvah. Live 1-on-1 webcam conversations, no signup, WebRTC peer-to-peer privacy, and safety tools built for adults 18+.';
+  'Start free random video chat with strangers on Parvah. Live 1-on-1 webcam chat, no signup, WebRTC peer-to-peer privacy, and safety tools for adults 18+.';
 
 export const metadata = {
-  title: 'Random Video Chat | Free Live Webcam Chat with Strangers',
+  title: 'Random Video Chat with Strangers',
   description,
   alternates: { canonical: `${SITE_URL}/random-video-chat` },
   openGraph: {

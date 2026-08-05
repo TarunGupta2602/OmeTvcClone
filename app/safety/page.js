@@ -1,42 +1,41 @@
 import Link from 'next/link';
+import { SITE_URL, SITE_NAME } from '../../lib/constants';
+import { buildWebPageSchema } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Community Guidelines & Safety | Free Random Video Chat',
+  title: 'Safety Guidelines for Video Chat',
   description:
-    'Read our zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips to stay secure online when talking to strangers.',
+    'Parvah community guidelines: 18+ only, zero tolerance for harassment and explicit content, report tools, and tips to stay safe when chatting with strangers.',
   alternates: {
-    canonical: 'https://parvah.online/safety',
+    canonical: `${SITE_URL}/safety`,
   },
   openGraph: {
-    title: 'Community Guidelines & Safety | Free Random Video Chat',
+    title: 'Safety Guidelines for Video Chat',
     description:
-      'Explore the 5 Golden Rules of Conduct, user safety tips, and reporting workflows for a secure video chat experience with strangers.',
-    url: 'https://parvah.online/safety',
-    siteName: 'Parvah',
+      'Zero-tolerance safety rules, anti-harassment policies, and reporting tips for secure random video chat on Parvah.',
+    url: `${SITE_URL}/safety`,
+    siteName: SITE_NAME,
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Community Guidelines & Safety | Free Random Video Chat',
-    description: 'Explore zero-tolerance community safety guidelines and user reporting for random video chat.',
+    title: 'Safety Guidelines for Video Chat',
+    description: 'Zero-tolerance safety rules and reporting tips for secure random video chat on Parvah.',
     images: ['/og-image.png'],
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'SafetyPage',
-  name: 'Community Guidelines & Safety - Parvah',
-  description: 'Read our zero-tolerance safety rules, anti-harassment policies, 18+ requirement, and video chat safety tips.',
-  url: 'https://parvah.online/safety',
-  publisher: {
-    '@type': 'Organization',
-    name: 'Parvah',
-    url: 'https://parvah.online',
-  },
-};
+const pageTitle = 'Safety Guidelines for Video Chat';
+const pageDescription =
+  'Parvah community guidelines: 18+ only, zero tolerance for harassment and explicit content, report tools, and tips to stay safe when chatting with strangers.';
+
+const jsonLd = buildWebPageSchema({
+  title: pageTitle,
+  description: pageDescription,
+  url: `${SITE_URL}/safety`,
+});
 
 export default function SafetyPage() {
   const rules = [

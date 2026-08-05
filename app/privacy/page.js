@@ -1,26 +1,27 @@
 import Link from 'next/link';
+import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 export const metadata = {
-  title: 'Privacy Policy | Free Random Video Chat Platform',
+  title: 'Privacy Policy',
   description:
-    'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data when you talk to strangers online.',
+    'How Parvah protects your privacy with WebRTC peer-to-peer video chat. Learn what data we collect, cookie usage, and your rights when talking to strangers online.',
   alternates: {
-    canonical: 'https://parvah.online/privacy',
+    canonical: `${SITE_URL}/privacy`,
   },
   openGraph: {
-    title: 'Privacy Policy | Free Random Video Chat Platform',
+    title: 'Privacy Policy | Parvah',
     description:
-      'Learn how our platform uses peer-to-peer WebRTC connections to ensure your video calls are private, end-to-end direct, and never stored on our servers.',
-    url: 'https://parvah.online/privacy',
-    siteName: 'Parvah',
+      'Parvah uses peer-to-peer WebRTC — video is not stored on our servers. Read our full privacy policy.',
+    url: `${SITE_URL}/privacy`,
+    siteName: SITE_NAME,
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Privacy Policy' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | Free Random Video Chat Platform',
-    description: 'Learn how our platform safeguards your privacy with end-to-end peer-to-peer WebRTC video chat.',
+    title: 'Privacy Policy | Parvah',
+    description: 'Parvah uses peer-to-peer WebRTC — video is not stored on our servers.',
     images: ['/og-image.png'],
   },
 };
@@ -30,12 +31,12 @@ const jsonLd = {
   '@type': 'PrivacyPolicy',
   name: 'Privacy Policy - Parvah',
   description: 'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data.',
-  url: 'https://parvah.online/privacy',
+  url: `${SITE_URL}/privacy`,
   dateModified: '2026-07-30',
   publisher: {
     '@type': 'Organization',
-    name: 'Parvah',
-    url: 'https://parvah.online',
+    name: SITE_NAME,
+    url: SITE_URL,
   },
 };
 

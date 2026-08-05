@@ -4,10 +4,10 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Best OmeTV Alternative — Free Live Webcam Chat';
 const description =
-  'Looking for an OmeTV alternative? Parvah delivers free random video chat with strangers — browser-based, no app install, WebRTC privacy, and instant matching worldwide.';
+  'Looking for an OmeTV alternative? Parvah offers free random video chat in your browser — no app, no signup, WebRTC privacy, and instant matching worldwide.';
 
 export const metadata = {
-  title: 'OmeTV Alternative | Free Live Random Webcam Chat',
+  title: 'OmeTV Alternative — Free Webcam Chat',
   description,
   alternates: { canonical: `${SITE_URL}/ometv-alternative` },
   openGraph: {
@@ -69,6 +69,7 @@ export default function OmetvAlternativePage() {
         relatedLinks={[
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
           { href: '/random-video-chat', label: 'Random Video Chat' },
+          { href: '/blog/ometv-vs-omegle-vs-parvah-comparison', label: 'OmeTV vs Omegle vs Parvah' },
           { href: '/safety', label: 'Safety Guidelines' },
         ]}
       />

@@ -2,21 +2,7 @@
 
 import Link from 'next/link';
 import { SUPPORT_EMAIL, SAFETY_EMAIL } from '../../lib/constants';
-
-const faqs = [
-  {
-    q: 'How do I report an abusive or inappropriate user on Parvah?',
-    a: 'During an active chat, click the Report User button. This blocks the user and skips to a new match. For serious safety concerns, email safety@parvah.online with details.',
-  },
-  {
-    q: 'Why is my camera or microphone not connecting?',
-    a: 'Ensure browser permissions are allowed for camera and mic access. Check that no other application (Zoom, Teams, Skype) is currently holding exclusive lock on your web camera.',
-  },
-  {
-    q: 'Are video chats recorded by Parvah?',
-    a: 'No. All video and audio streams are transmitted directly peer-to-peer (P2P) between user browsers using WebRTC encryption and are never recorded or stored.',
-  },
-];
+import { CONTACT_FAQS } from '../../data/contactFaqs';
 
 export default function ContactPageContent() {
   return (
@@ -67,7 +53,7 @@ export default function ContactPageContent() {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>
           <div className="space-y-3">
-            {faqs.map((faq) => (
+            {CONTACT_FAQS.map((faq) => (
               <div key={faq.q} className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
                 <h3 className="text-sm font-bold text-slate-900">{faq.q}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>

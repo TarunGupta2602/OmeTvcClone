@@ -35,10 +35,10 @@ export async function generateMetadata({ params }) {
   if (!raw) return { title: 'Blog Post Not Found' };
 
   const post = enrichPost(slug, raw);
-  const seoTitle = `${post.title} | Parvah Blog`;
+  const seoTitle = post.seoTitle;
 
   return {
-    title: post.title,
+    title: seoTitle,
     description: post.excerpt,
     keywords: post.keywords,
     authors: [{ name: post.author, url: SITE_URL }],

@@ -1,25 +1,27 @@
 import Link from 'next/link';
 import FAQContent from './FAQContent';
+import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 export const metadata = {
-  title: 'FAQ | Free Random Video Chat Questions & Answers',
-  description: 'Frequently asked questions about our free random video chat platform. Learn how to use Parvah, safety tips, technical requirements, and account policies.',
+  title: 'FAQ — Video Chat Questions & Answers',
+  description:
+    'Answers about Parvah random video chat: pricing, safety, camera setup, WebRTC privacy, age requirements, and how to talk to strangers online free.',
   alternates: {
-    canonical: 'https://parvah.online/faq',
+    canonical: `${SITE_URL}/faq`,
   },
   openGraph: {
-    title: 'FAQ | Free Random Video Chat Questions & Answers',
-    description: 'Find answers to common questions about random video chat, safety, and platform features.',
-    url: 'https://parvah.online/faq',
-    siteName: 'Parvah',
+    title: 'FAQ — Video Chat Questions & Answers',
+    description: 'Common questions about free random video chat, safety, and how Parvah works.',
+    url: `${SITE_URL}/faq`,
+    siteName: SITE_NAME,
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ | Free Random Video Chat Questions & Answers',
-    description: 'Find answers to common questions about random video chat, safety, and platform features.',
+    title: 'FAQ — Video Chat Questions & Answers',
+    description: 'Common questions about free random video chat, safety, and how Parvah works.',
     images: ['/og-image.png'],
   },
 };
@@ -132,7 +134,7 @@ const jsonLd = {
   '@type': 'FAQPage',
   name: 'FAQ - Parvah',
   description: 'Frequently asked questions about our free random video chat platform.',
-  url: 'https://parvah.online/faq',
+  url: `${SITE_URL}/faq`,
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,

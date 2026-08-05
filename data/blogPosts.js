@@ -1,6 +1,7 @@
 export const blogPostsMap = {
   'how-to-stay-safe-on-video-chat-platforms': {
     title: 'How to Stay Safe on Video Chat Platforms: Essential Tips',
+    seoTitle: 'Video Chat Safety Tips',
     excerpt: 'Learn the best practices for staying safe while video chatting with strangers online. Protect your privacy and have fun responsibly on Parvah.',
     date: '2026-08-01',
     category: 'Safety',
@@ -246,6 +247,7 @@ export const blogPostsMap = {
 
   'video-chat-etiquette-guide': {
     title: 'Video Chat Etiquette: Being a Good Online Conversationalist',
+    seoTitle: 'Video Chat Etiquette Guide',
     excerpt: 'Master the art of polite and engaging video conversations with these essential etiquette tips for random video chat on Parvah.',
     date: '2026-07-15',
     category: 'Tips',
@@ -310,6 +312,7 @@ export const blogPostsMap = {
 
   'ometv-vs-omegle-vs-parvah-comparison': {
     title: 'OmeTV vs Omegle vs Parvah: Which Random Video Chat Is Best?',
+    seoTitle: 'OmeTV vs Omegle vs Parvah Compared',
     excerpt: 'Compare OmeTV, Omegle, and Parvah side by side on privacy, safety, registration, and video technology to find the best random chat platform.',
     date: '2026-07-10',
     category: 'Comparison',
@@ -717,6 +720,7 @@ export const blogPostsMap = {
 
   'best-omegle-alternatives-2026': {
     title: 'Best Omegle Alternatives in 2026',
+    seoTitle: 'Best Omegle Alternatives 2026',
     excerpt: 'Omegle is gone. Here are the best random video chat alternatives in 2026—and why Parvah leads with WebRTC P2P, no registration, and strong safety tools.',
     date: '2026-06-01',
     category: 'Comparison',
