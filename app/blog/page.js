@@ -110,6 +110,27 @@ export default function BlogPage() {
               Start Free Video Chat
             </Link>
           </div>
+
+          <nav aria-labelledby="blog-archive-heading" className="rounded-2xl bg-white border border-slate-200 p-6 sm:p-8">
+            <h2 id="blog-archive-heading" className="text-lg font-bold text-slate-900 mb-4">
+              All articles ({blogPostsList.length})
+            </h2>
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
+              {blogPostsList.map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} className="text-indigo-600 hover:underline">
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs text-slate-500">
+              Sitemap:{' '}
+              <a href="/sitemap.xml" className="text-indigo-600 hover:underline">
+                parvah.online/sitemap.xml
+              </a>
+            </p>
+          </nav>
         </div>
       </main>
     </>

@@ -11,7 +11,7 @@ function ShellInner({ children }) {
   const { chatMode, lobbyMode } = useChatLayout();
   const isHome = pathname === '/';
   const hideChrome = isHome && chatMode;
-  const hideFooter = isHome && (chatMode || lobbyMode);
+  const hideFooter = isHome && chatMode;
 
   return (
     <>

@@ -1,4 +1,5 @@
 import HomePageClient from './components/HomePageClient';
+import HomeCrawlLinks from './components/HomeCrawlLinks';
 import { SITE_URL, SITE_DESCRIPTION, SITE_NAME } from '../lib/constants';
 import { buildFaqSchema } from '../lib/seo';
 
@@ -47,6 +48,7 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <HomePageClient />
+      <HomeCrawlLinks />
     </>
   );
 }
