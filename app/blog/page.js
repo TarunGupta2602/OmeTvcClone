@@ -10,7 +10,10 @@ export const metadata = {
     'Parvah blog: guides on random video chat safety, Omegle & OmeTV alternatives, WebRTC privacy, webcam fixes, and tips for talking to strangers online.',
   alternates: {
     canonical: `${SITE_URL}/blog`,
-    types: { 'application/rss+xml': `${SITE_URL}/blog/rss.xml` },
+    types: {
+      'application/rss+xml': `${SITE_URL}/blog/rss.xml`,
+      'application/xml': `${SITE_URL}/sitemap.xml`,
+    },
   },
   openGraph: {
     title: 'Parvah Blog | Video Chat Tips & Safety Guides',
@@ -26,23 +29,32 @@ export const metadata = {
 
 const blogJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Blog',
-  '@id': `${SITE_URL}/blog#blog`,
-  name: 'Parvah Blog',
-  description: 'Video chat safety guides, Omegle alternatives, and WebRTC tips from Parvah.',
-  url: `${SITE_URL}/blog`,
-  publisher: {
-    '@type': 'Organization',
-    name: SITE_NAME,
-    url: SITE_URL,
-  },
-  blogPost: blogPostsList.map((post) => ({
-    '@type': 'BlogPosting',
-    headline: post.title,
-    url: `${SITE_URL}/blog/${post.slug}`,
-    datePublished: post.date,
-    image: `${SITE_URL}/blog/covers/${post.slug}.svg`,
-  })),
+  '@graph': [
+    {
+      '@type': 'Blog',
+      '@id': `${SITE_URL}/blog#blog`,
+      name: 'Parvah Blog',
+      description: 'Video chat safety guides, Omegle alternatives, and WebRTC tips from Parvah.',
+      url: `${SITE_URL}/blog`,
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${SITE_URL}/blog#post-list`,
+      name: 'Parvah Blog Articles',
+      numberOfItems: blogPostsList.length,
+      itemListElement: blogPostsList.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${SITE_URL}/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  ],
 };
 
 export default function BlogPage() {

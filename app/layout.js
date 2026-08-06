@@ -135,6 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="alternate" type="application/rss+xml" title="Parvah Blog RSS" href="/blog/rss.xml" />
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-indigo-50/20 to-rose-50/20 text-slate-900 selection:bg-indigo-600 selection:text-white">
