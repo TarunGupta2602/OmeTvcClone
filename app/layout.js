@@ -86,6 +86,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 const jsonLd = [

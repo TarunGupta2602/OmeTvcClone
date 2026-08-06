@@ -1,0 +1,20 @@
+# Render Blueprint — Parvah (Next.js + custom Socket.io server)
+# Docs: https://render.com/docs/infrastructure-as-code
+
+services:
+  - type: web
+    name: parvah
+    runtime: node
+    plan: starter # free tier spins down — bad for WebRTC + slow for Googlebot first crawl
+    region: singapore # or closest to your users
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        value: https://parvah.online
+      - key: GOOGLE_SITE_VERIFICATION
+        sync: false # paste code from Search Console → HTML tag method
+    autoDeploy: true

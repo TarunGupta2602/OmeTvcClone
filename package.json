@@ -6,7 +6,6 @@
     "dev": "node server.js",
     "build": "node scripts/generate-blog-covers.mjs && node scripts/generate-sitemap.mjs && next build",
     "start": "NODE_ENV=production node server.js",
-    "postbuild": "node scripts/ping-sitemap.mjs || true",
     "lint": "eslint"
   },
   "dependencies": {
