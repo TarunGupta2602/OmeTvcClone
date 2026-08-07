@@ -17,10 +17,10 @@ export default function HomeSEO() {
   ];
 
   return (
-    <section className="border-t border-slate-200/60 bg-white/80 backdrop-blur-sm py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+    <section className="border-t border-slate-200/60 bg-white/80 backdrop-blur-sm py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
+          <h2 className="text-xl sm:text-3xl font-black text-slate-900 leading-tight">
             Free Random Video Chat — Talk to Strangers Online Safely
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">

@@ -11,8 +11,8 @@ export function hasAgeConfirmation() {
 
 export default function AgeGate({ onConfirm }) {
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/90 backdrop-blur-md p-4">
-      <div className="max-w-md w-full p-8 rounded-3xl bg-white shadow-2xl space-y-6 text-center border border-slate-200/80">
+    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-slate-950/90 backdrop-blur-md p-0 sm:p-4">
+      <div className="max-w-md w-full p-6 sm:p-8 rounded-t-3xl sm:rounded-3xl bg-white shadow-2xl space-y-6 text-center border border-slate-200/80 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
         <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-600 to-red-600 text-white font-black text-2xl flex items-center justify-center shadow-lg shadow-rose-500/30">
           18+
         </div>

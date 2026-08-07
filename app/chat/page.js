@@ -362,8 +362,10 @@ export default function OmeTVChatPage() {
     const clientY = e.touches ? e.touches[0].clientY : e.clientY;
     const newX = clientX - dragRef.current.startX;
     const newY = clientY - dragRef.current.startY;
-    const maxX = window.innerWidth - 128;
-    const maxY = window.innerHeight - 192;
+    const pipW = Math.min(window.innerWidth * 0.26, 108);
+    const controlReserve = window.innerWidth < 640 ? 140 + (window.visualViewport?.offsetTop || 0) : 192;
+    const maxX = window.innerWidth - pipW - 12;
+    const maxY = window.innerHeight - controlReserve;
     setPipPosition({
       x: Math.max(0, Math.min(newX, maxX)),
       y: Math.max(0, Math.min(newY, maxY)),
@@ -444,34 +446,40 @@ export default function OmeTVChatPage() {
         </header>
       )}
 
-      {/* Mobile top bar — active chat */}
-      {isImmersive && (
-        <div className="chat-topbar-mobile">
-          <span className="chat-topbar-brand">Parvah</span>
-          <span className="chat-topbar-status">{status}</span>
-        </div>
-      )}
-
-      {/* Mobile tabs */}
+      {/* Mobile chrome — compact header + tab switcher */}
       {!isLobby && (
-        <div className="chat-mobile-tabs">
-          {[
-            { id: 'video', label: 'Video', icon: IconVideo },
-            { id: 'chat', label: 'Chat', icon: IconMessage },
-          ].map(({ id, label, icon: Icon }) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => setMobileTab(id)}
-              className={`chat-mobile-tab ${mobileTab === id ? 'chat-mobile-tab-active' : ''}`}
-            >
-              <Icon className="w-4 h-4 shrink-0" />
-              {label}
-              {id === 'chat' && unreadCount > 0 && mobileTab !== 'chat' && (
-                <span className="chat-mobile-tab-badge">{unreadCount > 9 ? '9+' : unreadCount}</span>
-              )}
+        <div className="chat-mobile-chrome">
+          <div className="chat-mobile-chrome-row">
+            <span className="chat-topbar-brand">Parvah</span>
+            <span className="chat-topbar-status-pill">
+              <span className={`chat-live-dot ${inRoom ? 'chat-live-dot-you' : ''}`} />
+              {inRoom ? 'Connected' : isSearching ? 'Matching…' : 'Ready'}
+            </span>
+            <button type="button" onClick={handleStopSession} className="chat-mobile-end-btn">
+              End
             </button>
-          ))}
+          </div>
+          <div className="chat-mobile-tabs">
+            <div className="chat-mobile-tabs-inner">
+              {[
+                { id: 'video', label: 'Video', icon: IconVideo },
+                { id: 'chat', label: 'Chat', icon: IconMessage },
+              ].map(({ id, label, icon: Icon }) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setMobileTab(id)}
+                  className={`chat-mobile-tab ${mobileTab === id ? 'chat-mobile-tab-active' : ''}`}
+                >
+                  <Icon className="w-4 h-4 shrink-0" />
+                  {label}
+                  {id === 'chat' && unreadCount > 0 && mobileTab !== 'chat' && (
+                    <span className="chat-mobile-tab-badge">{unreadCount > 9 ? '9+' : unreadCount}</span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 

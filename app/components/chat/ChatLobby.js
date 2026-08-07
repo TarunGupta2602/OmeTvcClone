@@ -40,8 +40,11 @@ export default function ChatLobby({ isConnected, onStart }) {
           <span className="chat-lobby-title-glow"> Right now.</span>
         </h1>
 
-        <p className="chat-lobby-sub">
+        <p className="chat-lobby-sub chat-lobby-sub-desktop">
           Tap start, allow your camera, and get matched with someone new in seconds. Free, anonymous, worldwide.
+        </p>
+        <p className="chat-lobby-sub chat-lobby-sub-mobile">
+          Tap start, allow camera access, and meet someone new in seconds.
         </p>
 
         <div className="chat-lobby-cta-wrap">

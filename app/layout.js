@@ -14,6 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#030712' },
+    { media: '(prefers-color-scheme: dark)', color: '#030712' },
+  ],
+};
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {

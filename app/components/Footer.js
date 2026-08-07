@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-white to-slate-50 border-t border-slate-200/60 text-slate-600 py-12 mt-auto shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-200/60">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pb-10 border-b border-slate-200/60">
           
           {/* Brand Column */}
-          <div className="space-y-4 md:col-span-1">
+          <div className="space-y-4 col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 group">
               <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-rose-500 flex items-center justify-center font-black text-white shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform ring-2 ring-indigo-500/20">
                 P
