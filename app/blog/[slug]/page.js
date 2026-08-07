@@ -63,14 +63,15 @@ export async function generateMetadata({ params }) {
       authors: [post.author],
       section: post.category,
       tags: post.tags,
+      // Canonical social card: generated PNG at opengraph-image (not the on-page SVG cover)
       images: [
         {
-          url: post.imageAbsolute,
-          secureUrl: post.imageAbsolute,
+          url: `${SITE_URL}/blog/${slug}/opengraph-image`,
+          secureUrl: `${SITE_URL}/blog/${slug}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: post.imageAlt,
-          type: 'image/svg+xml',
+          type: 'image/png',
         },
       ],
     },
@@ -78,7 +79,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: seoTitle,
       description: post.excerpt,
-      images: [post.imageAbsolute],
+      images: [`${SITE_URL}/blog/${slug}/twitter-image`],
     },
     robots: {
       index: true,

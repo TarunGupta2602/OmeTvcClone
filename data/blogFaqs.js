@@ -79,7 +79,7 @@ export const blogFaqsMap = {
     },
     {
       q: 'Should I keep my camera on during random video chat?',
-      a: 'You control your camera on Parvah. Many users start with audio or a brief introduction before enabling video. Never pressure others to show more than they are comfortable with.',
+      a: 'Parvah requires camera and microphone permission to start a match. After you connect, you can mute audio or turn off your camera from the control bar. Never pressure others about what they show on camera.',
     },
     {
       q: 'What topics should I avoid on random video chat?',
@@ -162,7 +162,7 @@ export const blogFaqsMap = {
     },
     {
       q: 'Do I need a TURN server for Parvah?',
-      a: 'Most Parvah users connect successfully with STUN and direct peer-to-peer WebRTC on home Wi-Fi and mobile data. TURN relay is only needed on unusually restrictive corporate or symmetric NAT networks.',
+      a: 'Parvah uses public STUN servers only — there is no TURN relay. Most users on home Wi-Fi and mobile data connect fine via direct peer-to-peer. On restrictive corporate or symmetric NAT networks, try a personal hotspot or a different network.',
     },
   ],
 

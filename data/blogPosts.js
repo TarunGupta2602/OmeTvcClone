@@ -211,8 +211,8 @@ export const blogPostsMap = {
       <p>Before two browsers can talk directly, they must exchange connection metadata through a signaling channel. This includes Session Description Protocol offers and answers, plus ICE candidates that describe possible network paths.</p>
       <p>On Parvah, signaling happens over secure WebSocket connections. Importantly, signaling carries connection instructions—not your video content. Still, protect personal info in chat because text may pass through platform infrastructure.</p>
       <h3>2. ICE and NAT Traversal</h3>
-      <p>Most users sit behind home routers and firewalls. ICE (Interactive Connectivity Establishment) discovers routes that allow direct communication. STUN servers reveal public IP information; TURN servers relay traffic when strict NAT blocks direct P2P.</p>
-      <p>Parvah configures ICE servers to maximize direct connections while falling back to relay when necessary. Direct P2P is preferred for latency and privacy; relay adds a hop but keeps calls working on restrictive networks.</p>
+      <p>Most users sit behind home routers and firewalls. ICE (Interactive Connectivity Establishment) discovers routes that allow direct communication. STUN servers reveal public IP information; TURN servers can relay traffic when strict NAT blocks direct P2P.</p>
+      <p>Parvah uses public STUN servers only (no TURN relay) so browsers can discover routes for direct peer-to-peer connections. Most home Wi-Fi and mobile networks work well; some corporate or symmetric-NAT environments may fail to connect — try a personal hotspot if that happens.</p>
       <h3>3. Media Streaming</h3>
       <p>Once connected, browsers encode camera and microphone input using codecs like VP8, VP9, or H.264 for video and Opus for audio. Media travels over encrypted SRTP channels protected by DTLS key exchange.</p>
       <h2>Encryption and Security</h2>
@@ -229,7 +229,7 @@ export const blogPostsMap = {
       <h2>WebRTC vs Older Video Chat Architectures</h2>
       <p>Older random chat sites often relied on Flash or server-relayed video. Flash is dead. Server relay adds latency and creates a tempting archive point. WebRTC reflects how the modern web handles real-time communication: decentralized media, encrypted transport, standardized APIs.</p>
       <h2>Common WebRTC Limitations</h2>
-      <p>WebRTC is powerful but not magic. Bandwidth constraints cause quality drops. Symmetric NAT configurations may force TURN relay. CPU-heavy tabs can affect encoding performance on older devices. Parvah optimizes UI and matching to minimize overhead, but your network and hardware still matter.</p>
+      <p>WebRTC is powerful but not magic. Bandwidth constraints cause quality drops. Symmetric NAT configurations often need a TURN relay, which Parvah does not use — those networks may fail to connect. CPU-heavy tabs can affect encoding performance on older devices. Parvah optimizes UI and matching to minimize overhead, but your network and hardware still matter.</p>
       <h2>The Role of the Report Button</h2>
       <p>Technology alone cannot moderate human behavior. Parvah pairs WebRTC privacy with community tools including the report button and age gate. Technical privacy plus social accountability creates a safer environment than either approach alone.</p>
       <h2>Conclusion</h2>
@@ -428,7 +428,7 @@ export const blogPostsMap = {
       <h2>Step 8: Network and VPN Considerations</h2>
       <p>Camera access is local, but some corporate VPNs or managed browsers restrict media APIs entirely. If Parvah works on personal network but fails on work laptop, IT policy may be the cause.</p>
       <h2>When Video Works But Partner Cannot See You</h2>
-      <p>If your preview works but remote users see black, WebRTC negotiation may be failing. See our WebRTC connection troubleshooting guide. Reporting the issue helps Parvah improve TURN relay configuration for restrictive networks.</p>
+      <p>If your preview works but remote users see black, WebRTC negotiation may be failing. See our WebRTC connection troubleshooting guide. Emailing support@parvah.online with your browser, ISP, and network type helps us prioritize connectivity improvements.</p>
       <h2>Conclusion</h2>
       <p>Most webcam problems on Parvah trace to permissions, competing apps, or wrong device selection. Walk through browser allows, close other camera users, update software, and verify hardware independently. Parvah's no-registration WebRTC stack keeps setup simple once your browser can access the camera.</p>
 
@@ -478,10 +478,10 @@ export const blogPostsMap = {
         <li>Add optional details that help moderators understand context</li>
         <li>Use Next immediately to end the interaction—you owe harassers no debate</li>
       </ul>
-      <p>No registration is required to report. Parvah logs report metadata needed for moderation while avoiding unnecessary personal data collection from reporters.</p>
+      <p>No registration is required to report. On Parvah, reporting immediately blocks that peer for your session and skips to a new match. Report details are not stored on our servers — for serious violations, email safety@parvah.online.</p>
       <h2>What Happens After You Report?</h2>
-      <p>Reports enter a moderation queue reviewed by automated systems and human moderators depending on severity and volume. Possible outcomes include warnings, temporary restrictions, or permanent bans for repeat or severe offenders.</p>
-      <p>Moderation details are confidential to protect reporter privacy and prevent retaliation cycles. You may not receive individual case updates, but aggregate enforcement keeps repeat offenders out of matching pools.</p>
+      <p>The reported user is blocked and skipped in your current session so you will not rematch them while you stay connected. Because Parvah does not use accounts, there is no permanent user ban database. For severe abuse, email safety@parvah.online with as much detail as you can provide.</p>
+      <p>Email reports are handled as capacity allows. You may not receive an individual case update, but contacting safety helps us respond to serious incidents.</p>
       <h2>Reporting vs Blocking vs Next</h2>
       <h3>Next button</h3>
       <p>Use Next for neutral disengagement: boring chat, language barriers, or simply wanting a new partner. No moderation action needed.</p>
@@ -491,25 +491,25 @@ export const blogPostsMap = {
       <p>Do not engage with harassers to "gather evidence" on camera beyond what you already saw. Extended confrontation increases risk. Report, skip, and optionally note details from memory.</p>
       <p>Never share personal contact information to "follow up" on a report outside official Parvah channels. Legitimate moderation never asks for passwords or payment.</p>
       <h2>False Reports and Abuse of Reporting</h2>
-      <p>Submitting false reports to target innocent users violates guidelines itself. Moderation systems correlate patterns; serial false reporters may face restrictions. Report honestly and proportionately.</p>
+      <p>Submitting false reports to target innocent users violates guidelines itself. Report honestly and proportionately, and reserve the report button for real safety issues rather than awkward conversations.</p>
       <h2>Special Cases</h2>
       <h3>Underage users</h3>
       <p>Parvah's age gate targets adults, but dishonest users exist. If someone appears clearly under 18, report immediately and disconnect. Protecting minors is paramount.</p>
       <h3>Illegal content</h3>
       <p>For content involving exploitation or imminent danger, report through Parvah and contact local authorities if you have information suggesting ongoing harm.</p>
       <h2>How Reporting Fits Parvah's Privacy Model</h2>
-      <p>Parvah uses WebRTC P2P for video, meaning streams are not archived on servers for replay. Moderation relies on real-time reports and metadata rather than stored recordings. Your report is often the primary evidence—submit it promptly when violations occur.</p>
+      <p>Parvah uses WebRTC P2P for video, meaning streams are not archived on servers for replay. Safety relies on your in-chat block/skip tools plus email reports for serious cases rather than stored recordings. Act promptly when violations occur.</p>
       <h2>Conclusion</h2>
       <p>The report button is your most powerful tool for keeping Parvah safe alongside the age gate and personal privacy practices. Know what deserves a report, act quickly without engaging harassers, and trust that community enforcement makes the platform better for everyone.</p>
 
       <h2>Documenting Patterns</h2>
-      <p>Repeat offenders often reuse tactics: same opening lines, identical backgrounds, or predictable scam scripts. Note these patterns mentally when reporting—moderators correlate reports across sessions even without stored video.</p>
+      <p>Repeat offenders often reuse tactics: same opening lines, identical backgrounds, or predictable scam scripts. Note these patterns when emailing safety@parvah.online—details help even without stored video.</p>
       <h2>Supporting Other Users</h2>
       <p>Reporting protects strangers you will never meet. Think of each report as paying forward the safer environment you want when you return tomorrow. Parvah's no-registration model depends on community enforcement to stay viable.</p>
       <h2>Emotional Aftercare</h2>
       <p>Disturbing encounters affect mood. Disconnect, breathe, and take breaks. Parvah's Next button exists partly so you control pacing—never feel obligated to continue after harassment.</p>
       <h2>Working With Moderators</h2>
-      <p>Moderation teams prioritize severe violations—child safety, threats, non-consensual imagery—over minor disputes. Detailed reports with accurate categories accelerate triage. Parvah does not require registration to report, lowering friction for one-time visitors who witness abuse.</p>
+      <p>Prioritize severe violations—child safety, threats, non-consensual imagery—when emailing safety. Detailed reports with accurate categories help. Parvah does not require registration to report or block, lowering friction for one-time visitors who witness abuse.</p>
       <h2>Final Thoughts on Parvah</h2>
       <p>Parvah combines no registration, WebRTC peer-to-peer video, an 18+ age gate, and a visible report button so you can chat with strangers while keeping control of your privacy and safety. Whether you are comparing platforms, troubleshooting technology, or learning best practices, these principles stay constant: protect personal information, use built-in safety tools, and skip or report when something feels wrong. Open parvah.online in a modern browser, pass the age gate, and experience random video chat built for 2026.</p>    `,
   },
@@ -583,17 +583,17 @@ export const blogPostsMap = {
 
   'webrtc-connection-failed-troubleshooting': {
     title: 'WebRTC Connection Failed: Troubleshooting Guide',
-    excerpt: 'Fix "connection failed" errors on Parvah with this guide to NAT, firewall, TURN relay, browser settings, and network issues.',
+    excerpt: 'Fix "connection failed" errors on Parvah with this guide to NAT, firewall, STUN/ICE, browser settings, and network issues.',
     date: '2026-06-15',
     category: 'Technical',
     author: 'Parvah Team',
     readTime: '10 min read',
     featured: false,
-    keywords: 'WebRTC connection failed, Parvah connection error, NAT traversal, TURN server, video chat network troubleshooting',
+    keywords: 'WebRTC connection failed, Parvah connection error, NAT traversal, STUN ICE, video chat network troubleshooting',
     content: `
       <h2>Introduction</h2>
       <p>You matched with someone on Parvah, cameras enabled, then—connection failed, spinning loader, or one-way audio. WebRTC connections traverse home routers, corporate firewalls, and mobile carrier NAT. Failures are common but usually diagnosable.</p>
-      <p>Parvah uses WebRTC P2P with STUN and TURN fallbacks. Most users connect directly; restrictive networks need relay. This guide walks through fixes from simple reloads to network configuration changes.</p>
+      <p>Parvah uses WebRTC P2P with public STUN servers for ICE (no TURN). Most users on home Wi-Fi and mobile data connect directly; restrictive corporate or symmetric-NAT networks may fail. This guide walks through fixes from simple reloads to network configuration changes.</p>
       <h2>Understanding Why Connections Fail</h2>
       <p>WebRTC needs two things: signaling (handled by Parvah servers) and media paths (peer-to-peer or relayed). Signaling can succeed while media fails if firewalls block UDP, symmetric NAT prevents hole punching, or VPNs interfere with ICE candidates.</p>
       <h3>Common symptoms</h3>
@@ -617,7 +617,7 @@ export const blogPostsMap = {
       <p>On mobile, avoid low-power modes that throttle background networking. Keep the browser foreground during Parvah sessions.</p>
       <h2>Firewall and Corporate Networks</h2>
       <p>Offices, schools, and hotels often block UDP or non-standard ports WebRTC prefers. Symptoms include works-at-home, fails-at-work patterns.</p>
-      <p>Parvah's TURN servers relay traffic over TCP when direct P2P fails, but some networks block even TURN. Contact network admin or use personal connection for testing.</p>
+      <p>Because Parvah is STUN-only, some networks that block UDP or use symmetric NAT cannot complete media paths. Contact your network admin or switch to a personal hotspot for testing.</p>
       <h2>Router and Home Network</h2>
       <ul>
         <li>Reboot router and modem</li>
@@ -626,7 +626,7 @@ export const blogPostsMap = {
         <li>Reduce QoS rules that deprioritize browser traffic</li>
       </ul>
       <h2>NAT Types Explained Simply</h2>
-      <p>Network Address Translation lets multiple devices share one public IP. Symmetric NAT assigns different external ports per destination, breaking some P2P hole punches. TURN relay solves this by forwarding media through Parvah's infrastructure—slightly higher latency but reliable connectivity.</p>
+      <p>Network Address Translation lets multiple devices share one public IP. Symmetric NAT assigns different external ports per destination, breaking some P2P hole punches. A TURN relay would forward media through a middle server, but Parvah does not run TURN — we use STUN for direct peer-to-peer only.</p>
       <h2>VPN and Privacy Tools</h2>
       <p>VPNs add hops and may block UDP entirely. Test Parvah without VPN. Split-tunnel VPNs sometimes help by excluding browser traffic from the tunnel.</p>
       <h2>Permissions and Mixed Content</h2>
@@ -634,14 +634,14 @@ export const blogPostsMap = {
       <h2>When Only One Direction Fails</h2>
       <p>If you see them but they do not see you, your outbound ICE candidates may be blocked. If they see you but you see black, reverse is true. Both sides should run through this guide independently.</p>
       <h2>Reporting Persistent Issues</h2>
-      <p>If failures happen on every match across networks and devices, note your browser version, country, and ISP when contacting Parvah support. Community reports also help prioritize TURN capacity upgrades.</p>
+      <p>If failures happen on every match across networks and devices, note your browser version, country, and ISP when contacting Parvah support. That information helps us prioritize connectivity improvements.</p>
       <h2>How Parvah Architecture Helps</h2>
-      <p>Parvah optimizes for direct WebRTC P2P to minimize latency and honor privacy promises—video avoids server storage. TURN relay is the safety net when P2P cannot traverse NAT. Understanding this split clarifies why some networks need relay while others enjoy instant direct video.</p>
+      <p>Parvah optimizes for direct WebRTC P2P to minimize latency and honor privacy promises—video avoids server storage. Understanding STUN versus TURN clarifies why some networks connect instantly while others need a personal hotspot or different network.</p>
       <h2>Conclusion</h2>
       <p>WebRTC connection failed errors look scary but usually respond to reloads, VPN removal, browser updates, or network changes. Work through quick fixes, test on alternate connections, and remember Parvah's no-registration flow lets you retry immediately after each adjustment.</p>
 
       <h2>Mobile Carrier NAT</h2>
-      <p>Cellular networks sometimes use carrier-grade NAT harsher than home routers. If Parvah fails on LTE but works on home Wi-Fi, TURN relay should engage—persistent failure may indicate carrier blocking UDP wholesale.</p>
+      <p>Cellular networks sometimes use carrier-grade NAT harsher than home routers. If Parvah fails on LTE but works on home Wi-Fi, try toggling networks or disabling VPN—persistent failure may indicate carrier blocking UDP wholesale.</p>
       <h2>Dual Stack IPv4/IPv6 Issues</h2>
       <p>Misconfigured IPv6 on routers causes ICE to prefer broken paths. Temporarily disable IPv6 on router or device as diagnostic step if connections fail mysteriously despite good bandwidth.</p>
       <h2>Peer-Specific Failures</h2>
@@ -882,7 +882,7 @@ export const blogPostsList = [
   {
     slug: 'webrtc-connection-failed-troubleshooting',
     title: 'WebRTC Connection Failed: Troubleshooting Guide',
-    excerpt: 'Fix "connection failed" errors on Parvah with this guide to NAT, firewall, TURN relay, browser settings, and network issues.',
+    excerpt: 'Fix "connection failed" errors on Parvah with this guide to NAT, firewall, STUN/ICE, browser settings, and network issues.',
     date: '2026-06-15',
     category: 'Technical',
     readTime: '10 min read',

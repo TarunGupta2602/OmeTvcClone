@@ -18,6 +18,8 @@ const handle = app.getRequestHandler();
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const MAX_MATCH_REQUESTS = 30;
 const MAX_MESSAGES = 60;
+const MAX_SIGNALS = 120;
+const MAX_MESSAGE_LENGTH = 2000;
 
 app.prepare().then(() => {
   const server = createServer(async (req, res) => {
@@ -55,6 +57,21 @@ app.prepare().then(() => {
     entry.count += 1;
     rateLimits.set(key, entry);
     return entry.count <= max;
+  };
+
+  const clearRateLimits = (socketId) => {
+    for (const action of ['match', 'message', 'signal']) {
+      rateLimits.delete(`${socketId}:${action}`);
+    }
+  };
+
+  const peersShareRoom = (socketId, peerId, roomId) => {
+    if (!socketId || !peerId || !roomId) return false;
+    const myRoom = socketToRoom.get(socketId);
+    if (!myRoom || myRoom !== roomId) return false;
+    if (socketToRoom.get(peerId) !== roomId) return false;
+    const peers = roomPeers.get(roomId) || [];
+    return peers.includes(socketId) && peers.includes(peerId);
   };
 
   const removeFromQueue = (socketId) => {
@@ -131,30 +148,40 @@ app.prepare().then(() => {
     });
 
     socket.on('signal-offer', ({ offer, to, roomId }) => {
+      if (!checkRateLimit(socket.id, 'signal', MAX_SIGNALS)) return;
+      if (!offer || !peersShareRoom(socket.id, to, roomId)) return;
       io.to(to).emit('signal-offer', { offer, from: socket.id, roomId });
     });
 
     socket.on('signal-answer', ({ answer, to, roomId }) => {
+      if (!checkRateLimit(socket.id, 'signal', MAX_SIGNALS)) return;
+      if (!answer || !peersShareRoom(socket.id, to, roomId)) return;
       io.to(to).emit('signal-answer', { answer, from: socket.id, roomId });
     });
 
     socket.on('signal-ice-candidate', ({ candidate, to, roomId }) => {
+      if (!checkRateLimit(socket.id, 'signal', MAX_SIGNALS)) return;
+      if (!candidate || !peersShareRoom(socket.id, to, roomId)) return;
       io.to(to).emit('signal-ice-candidate', { candidate, from: socket.id, roomId });
     });
 
     socket.on('send-message', ({ message, to, roomId }) => {
       if (!checkRateLimit(socket.id, 'message', MAX_MESSAGES)) return;
-      if (to) {
-        io.to(to).emit('receive-message', {
-          message,
-          from: socket.id,
-          timestamp: new Date().toISOString(),
-        });
-      }
+      if (typeof message !== 'string') return;
+      const trimmed = message.trim().slice(0, MAX_MESSAGE_LENGTH);
+      if (!trimmed || !peersShareRoom(socket.id, to, roomId)) return;
+      io.to(to).emit('receive-message', {
+        message: trimmed,
+        from: socket.id,
+        timestamp: new Date().toISOString(),
+      });
     });
 
     socket.on('block-peer', ({ peerId }) => {
-      if (!peerId) return;
+      if (!peerId || typeof peerId !== 'string') return;
+      const myRoom = socketToRoom.get(socket.id);
+      const peers = myRoom ? roomPeers.get(myRoom) || [] : [];
+      if (!peers.includes(peerId)) return;
       const set = blockedPairs.get(socket.id) || new Set();
       set.add(peerId);
       blockedPairs.set(socket.id, set);
@@ -173,8 +200,7 @@ app.prepare().then(() => {
     socket.on('disconnect', () => {
       removeFromQueue(socket.id);
       leaveActiveRoom(socket);
-      rateLimits.delete(`${socket.id}:match`);
-      rateLimits.delete(`${socket.id}:message`);
+      clearRateLimits(socket.id);
       blockedPairs.delete(socket.id);
     });
   });

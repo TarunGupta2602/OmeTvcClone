@@ -17,4 +17,6 @@ services:
         value: https://parvah.online
       - key: GOOGLE_SITE_VERIFICATION
         sync: false # paste code from Search Console → HTML tag method
+      - key: NEXT_PUBLIC_GTM_ID
+        value: GTM-MF9GKBNC
     autoDeploy: true

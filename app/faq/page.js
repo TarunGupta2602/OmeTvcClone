@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: 'What are the age requirements?',
-    answer: 'Parvah is strictly for users aged 18 and older. Minors are prohibited from using the platform. We enforce this policy through automated systems and user reports.',
+    answer: 'Parvah is strictly for users aged 18 and older. Minors are prohibited from using the platform. An age confirmation gate is shown before chatting; if you believe someone is underage, report them and email safety@parvah.online.',
     category: 'Safety',
   },
   {
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     question: 'How do I report inappropriate behavior?',
-    answer: 'Click the Report button during an active chat session to flag a user. Reports are logged with session metadata and reviewed by our safety team. You can also email safety@parvah.online.',
+    answer: 'Click the Report button during an active chat to block that peer and skip to a new match. Report details are not stored on our servers. For serious violations, email safety@parvah.online with as much detail as you can.',
     category: 'Safety',
   },
   {
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     question: 'Is my IP address visible to others?',
-    answer: 'No, your IP address is not shared with other users. Only our signaling server uses it temporarily to establish the peer-to-peer connection.',
+    answer: 'Parvah does not display your IP in the chat UI. Our signaling server uses connection metadata to pair you. Like most WebRTC apps, ICE negotiation can expose network addresses to the peer during connection setup. Do not share personal details on camera or in text.',
     category: 'Privacy',
   },
   {
@@ -84,12 +84,12 @@ const faqs = [
   },
   {
     question: 'Can I use Parvah without a camera?',
-    answer: 'While a camera is required for video chat, you can choose to disable your camera if you prefer audio-only conversations. However, most users expect video during chats.',
+    answer: 'A camera and microphone are required to start a match. After you join, you can mute your microphone or turn off your camera from the control bar, but starting without camera permission is not supported.',
     category: 'Technical',
   },
   {
-    question: 'What happens if I get banned?',
-    answer: 'If you violate our community guidelines, your account may be temporarily or permanently banned. You can appeal bans by contacting our support team with your details.',
+    question: 'Does Parvah have accounts or bans?',
+    answer: 'Parvah has no user accounts. Reporting blocks a peer for your current session and skips them. For serious abuse, email safety@parvah.online — we may restrict access at the network level when we can identify abusive traffic, but there is no account ban or appeal system.',
     category: 'Safety',
   },
   {

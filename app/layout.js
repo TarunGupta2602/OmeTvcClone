@@ -1,16 +1,17 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Outfit, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
 import AppShell from './components/AppShell';
+import Analytics from './components/Analytics';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../lib/constants';
 import { buildOrganizationSchema } from '../lib/seo';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const outfit = Outfit({
+  variable: '--font-outfit',
   subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const sourceSerif = Source_Serif_4({
+  variable: '--font-source-serif',
   subsets: ['latin'],
 });
 
@@ -19,8 +20,8 @@ export const viewport = {
   initialScale: 1,
   viewportFit: 'cover',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#030712' },
-    { media: '(prefers-color-scheme: dark)', color: '#030712' },
+    { media: '(prefers-color-scheme: light)', color: '#0f766e' },
+    { media: '(prefers-color-scheme: dark)', color: '#042f2e' },
   ],
 };
 
@@ -132,17 +133,8 @@ const jsonLd = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="en" className={`${outfit.variable} ${sourceSerif.variable} h-full antialiased`}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MF9GKBNC');`,
-          }}
-        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
@@ -151,16 +143,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-indigo-50/20 to-rose-50/20 text-slate-900 selection:bg-indigo-600 selection:text-white">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MF9GKBNC"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
+      <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
         <AppShell>{children}</AppShell>
+        <Analytics />
       </body>
     </html>
   );

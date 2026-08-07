@@ -31,7 +31,7 @@ const jsonLd = {
   name: 'Terms of Service - Parvah',
   description: 'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements.',
   url: `${SITE_URL}/terms`,
-  dateModified: '2026-07-30',
+  dateModified: '2026-08-07',
   publisher: {
     '@type': 'Organization',
     name: SITE_NAME,
@@ -40,7 +40,7 @@ const jsonLd = {
 };
 
 export default function TermsPage() {
-  const lastUpdated = 'July 30, 2026';
+  const lastUpdated = 'August 7, 2026';
 
   const sections = [
     {
@@ -51,7 +51,7 @@ export default function TermsPage() {
     {
       id: 'age',
       title: '2. Strict Age Requirement (18+ Only)',
-      content: `Parvah is strictly intended for individuals who are at least 18 years of age or the legal age of majority in their jurisdiction. Persons under 18 years old are strictly prohibited from creating accounts, accessing video feeds, or using the platform. We reserve the right to immediately terminate access for any user suspected of being underage.`,
+      content: `Parvah is strictly intended for individuals who are at least 18 years of age or the legal age of majority in their jurisdiction. Persons under 18 years old are strictly prohibited from accessing video chats or using the platform. Parvah does not create user accounts; an age confirmation gate is required before chatting. We reserve the right to terminate sessions for anyone suspected of being underage.`,
     },
     {
       id: 'prohibited',
@@ -66,8 +66,8 @@ export default function TermsPage() {
     },
     {
       id: 'enforcement',
-      title: '4. Enforcement, Moderation & Immediate Bans',
-      content: `Parvah maintains automated monitoring tools and real-time user reporting mechanisms. Violation of any rule will result in immediate suspension or permanent hardware and IP address banning without prior warning or liability. Decisions regarding access bans are final.`,
+      title: '4. Enforcement & Safety Tools',
+      content: `Parvah provides an in-chat Report control that blocks the peer for your session and skips to a new match. Report details are not stored on our servers. For serious violations, email safety@parvah.online. Because there are no user accounts, there is no account ban or appeal process. We may rate-limit, disconnect, or restrict abusive network traffic when we can identify it. Decisions about access restrictions are final.`,
     },
     {
       id: 'disclaimer',
@@ -112,7 +112,7 @@ export default function TermsPage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
           <div className="text-xs text-slate-700 leading-relaxed">
-            <strong className="font-extrabold text-slate-900">CRITICAL REQUIREMENT:</strong> You must be 18 years or older to use Parvah. Nudity, harassment, and unauthorized session recordings are strictly prohibited and result in instant permanent bans.
+            <strong className="font-extrabold text-slate-900">CRITICAL REQUIREMENT:</strong> You must be 18 years or older to use Parvah. Nudity, harassment, and unauthorized session recordings are strictly prohibited — use Report to block/skip and email safety@parvah.online for serious abuse.
           </div>
         </div>
 

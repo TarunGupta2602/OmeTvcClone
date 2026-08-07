@@ -12,8 +12,9 @@ import ChatVideoStage from '../components/chat/ChatVideoStage';
 import ChatMessagesPanel from '../components/chat/ChatMessagesPanel';
 import { IconMessage, IconVideo } from '../components/chat/ChatIcons';
 import { useMedia } from '../hooks/useMedia';
+import '../chat.css';
 
-export default function OmeTVChatPage() {
+export default function ChatPage() {
   const { setChatMode, setLobbyMode } = useChatLayout();
   const [ageConfirmed, setAgeConfirmed] = useState(false);
   const [showAgeGate, setShowAgeGate] = useState(false);

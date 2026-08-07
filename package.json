@@ -1,12 +1,13 @@
 {
-  "name": "ometv",
+  "name": "parvah",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "build": "node scripts/generate-blog-covers.mjs && node scripts/generate-sitemap.mjs && next build",
+    "build": "node scripts/generate-blog-covers.mjs && next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node scripts/smoke-test.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4",

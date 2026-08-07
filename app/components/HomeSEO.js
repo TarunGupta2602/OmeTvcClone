@@ -52,7 +52,7 @@ export default function HomeSEO() {
             },
             {
               title: 'Built-in Safety',
-              desc: 'Report tools, community guidelines, and 18+ age verification keep chats respectful.',
+              desc: '18+ age gate, Report to block and skip, and community guidelines you can read anytime.',
             },
           ].map((item) => (
             <div key={item.title} className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">

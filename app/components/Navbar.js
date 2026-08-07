@@ -51,6 +51,7 @@ export default function Navbar({ minimal = false }) {
       <div
         className={`nav-mobile-drawer md:hidden ${mobileMenuOpen ? 'nav-mobile-drawer-open' : ''}`}
         aria-hidden={!mobileMenuOpen}
+        inert={!mobileMenuOpen ? true : undefined}
       >
         <div className="nav-mobile-drawer-header">
           <span className="text-sm font-black text-slate-900">Menu</span>

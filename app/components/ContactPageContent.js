@@ -39,8 +39,8 @@ export default function ContactPageContent() {
             <div className="w-10 h-10 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center text-lg">
               🛡️
             </div>
-            <h2 className="text-lg font-bold text-slate-900">Safety & Appeals</h2>
-            <p className="text-sm text-slate-600">Serious safety reports, ban appeals, and moderation concerns.</p>
+            <h2 className="text-lg font-bold text-slate-900">Safety Reports</h2>
+            <p className="text-sm text-slate-600">Serious safety reports and abuse concerns (no account bans — Parvah is account-free).</p>
             <a
               href={`mailto:${SAFETY_EMAIL}?subject=Parvah%20Safety%20Report`}
               className="inline-block text-sm font-bold text-rose-600 hover:underline"

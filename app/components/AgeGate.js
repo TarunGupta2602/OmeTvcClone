@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useDialogA11y } from '../hooks/useDialogA11y';
 
 const STORAGE_KEY = 'parvah_age_confirmed';
 
@@ -10,22 +11,41 @@ export function hasAgeConfirmation() {
 }
 
 export default function AgeGate({ onConfirm }) {
+  const panelRef = useDialogA11y({
+    open: true,
+    onClose: undefined,
+  });
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-slate-950/90 backdrop-blur-md p-0 sm:p-4">
-      <div className="max-w-md w-full p-6 sm:p-8 rounded-t-3xl sm:rounded-3xl bg-white shadow-2xl space-y-6 text-center border border-slate-200/80 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
-        <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-600 to-red-600 text-white font-black text-2xl flex items-center justify-center shadow-lg shadow-rose-500/30">
+    <div
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-slate-950/90 backdrop-blur-md p-0 sm:p-4"
+      role="presentation"
+    >
+      <div
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="age-gate-title"
+        aria-describedby="age-gate-desc"
+        tabIndex={-1}
+        className="max-w-md w-full p-6 sm:p-8 rounded-t-3xl sm:rounded-3xl bg-white space-y-6 text-center border border-slate-200/80 pb-[max(1.5rem,env(safe-area-inset-bottom))] outline-none"
+      >
+        <div className="w-16 h-16 mx-auto rounded-2xl bg-teal-800 text-white font-black text-2xl flex items-center justify-center">
           18+
         </div>
         <div className="space-y-2">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-indigo-600">Parvah</p>
-          <h2 className="text-xl font-black text-slate-900">Adults Only</h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Parvah is strictly for users aged 18 and older. By continuing, you confirm that you are at least 18 years of age and agree to our{' '}
-            <Link href="/terms" className="text-indigo-600 font-semibold hover:underline">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-teal-700">Parvah</p>
+          <h2 id="age-gate-title" className="text-xl font-black text-slate-900">
+            Adults Only
+          </h2>
+          <p id="age-gate-desc" className="text-sm text-slate-600 leading-relaxed">
+            Parvah is strictly for users aged 18 and older. By continuing, you confirm that you are at
+            least 18 years of age and agree to our{' '}
+            <Link href="/terms" className="text-teal-700 font-semibold hover:underline">
               Terms of Service
             </Link>{' '}
             and{' '}
-            <Link href="/safety" className="text-indigo-600 font-semibold hover:underline">
+            <Link href="/safety" className="text-teal-700 font-semibold hover:underline">
               Community Guidelines
             </Link>
             .

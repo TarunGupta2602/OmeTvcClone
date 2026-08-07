@@ -32,7 +32,7 @@ const jsonLd = {
   name: 'Privacy Policy - Parvah',
   description: 'Read our Privacy Policy to understand how we protect your privacy, handle peer-to-peer WebRTC video streams, and safeguard personal data.',
   url: `${SITE_URL}/privacy`,
-  dateModified: '2026-07-30',
+  dateModified: '2026-08-07',
   publisher: {
     '@type': 'Organization',
     name: SITE_NAME,
@@ -41,7 +41,7 @@ const jsonLd = {
 };
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = 'July 30, 2026';
+  const lastUpdated = 'August 7, 2026';
 
   const sections = [
     {
@@ -52,34 +52,35 @@ export default function PrivacyPolicyPage() {
     {
       id: 'webrtc-stream',
       title: '2. Peer-to-Peer (WebRTC) Video & Audio Privacy',
-      content: `Our video and audio calls utilize WebRTC (Web Real-Time Communication) technology. Media streams are established directly peer-to-peer between your web browser and your chat partner's browser. Parvah signaling servers only facilitate the initial connection exchange (SDP offers/answers and ICE candidates). We DO NOT record, store, or monitor video or audio stream content on our servers.`,
+      content: `Our video and audio calls utilize WebRTC (Web Real-Time Communication) technology. Media streams are established directly peer-to-peer between your web browser and your chat partner's browser whenever possible. Parvah signaling servers only facilitate the initial connection exchange (SDP offers/answers and ICE candidates). We DO NOT record, store, or monitor video or audio stream content on our servers. Note that WebRTC ICE negotiation can expose network addresses to the peer during connection setup.`,
     },
     {
       id: 'data-collected',
       title: '3. Information We Collect',
       content: `We collect minimal data required to provide and secure our matchmaking service:
 - Connection Metadata: Temporary socket session IDs, room identifiers, and timestamps required for pairing.
-- Technical Data: IP address, browser type, operating system, and WebRTC capability flags.
+- Technical Data: IP address, browser type, operating system, and WebRTC capability flags (used by the signaling server; not shown in the chat UI).
 - Text Chat Logs: Messages sent in active text chat sessions are held transiently in memory during the match to deliver messages and are discarded upon disconnect.
-- In-Chat Safety Actions: When you report a user, they are blocked and skipped locally. We do not store report details on our servers.`,
+- In-Chat Safety Actions: When you report a user, they are blocked and skipped for your session. We do not store report details on our servers.`,
     },
     {
       id: 'cookies',
       title: '4. Cookies & Local Storage',
-      content: `We use essential local storage for UI preferences (e.g. age confirmation, cookie consent, mute states). We use Google Tag Manager for analytics to improve the platform. You can accept or decline non-essential analytics via our cookie banner. We do not sell your data or use third-party ad tracking cookies.`,
+      content: `We use essential local storage for UI preferences (e.g. age confirmation, cookie consent choice, mute states). Optional analytics via Google Tag Manager loads only if you click Accept on our cookie banner. If you Decline, analytics scripts are not loaded. You can clear site data in your browser to reset this choice. We do not sell your data or use third-party ad tracking cookies.`,
     },
     {
       id: 'data-use',
       title: '5. How We Use Information',
       content: `We use collected technical data to:
-- Establish fast WebRTC peer-to-peer connections via signaling.
-- Prevent spam, bot abuse, DDoS attacks, and unauthorized access.
-- Maintain and improve system reliability and server stability.`,
+- Establish WebRTC peer-to-peer connections via signaling.
+- Prevent spam, bot abuse, and unauthorized access (rate limits and session blocks).
+- Maintain and improve system reliability.
+- If you accept analytics, understand aggregate usage via Google Tag Manager.`,
     },
     {
       id: 'sharing',
       title: '6. Data Sharing & Third Parties',
-      content: `We do NOT sell, rent, or trade your personal data to third parties under any circumstances. We may disclose technical information or IP records only if required by valid legal process, subpoena, or law enforcement agency investigating serious illegal activities.`,
+      content: `We do NOT sell, rent, or trade your personal data to third parties under any circumstances. If you accept analytics, Google may process analytics events under their terms. We may disclose technical information or IP records only if required by valid legal process, subpoena, or law enforcement investigating serious illegal activities.`,
     },
     {
       id: 'rights',
@@ -87,7 +88,7 @@ export default function PrivacyPolicyPage() {
       content: `Depending on your location, you have rights under regulations such as GDPR or CCPA, including:
 - The right to request information about data collected.
 - The right to request erasure of session metadata or IP logs where applicable.
-- The right to object to processing based on legitimate interest.
+- The right to object to processing based on legitimate interest, including declining analytics.
 To exercise any privacy rights, contact privacy@parvah.online.`,
     },
     {
