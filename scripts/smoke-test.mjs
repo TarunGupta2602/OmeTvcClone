@@ -78,7 +78,10 @@ check('FAQ does not claim report moderation queue', () => {
 });
 
 check('Blog does not claim Parvah TURN servers exist', () => {
-  const src = readFileSync(join(root, 'data/blogPosts.js'), 'utf8');
+  const src = [
+    readFileSync(join(root, 'data/blogPosts.js'), 'utf8'),
+    readFileSync(join(root, 'data/blogPostsExtra.js'), 'utf8'),
+  ].join('\n');
   assert.doesNotMatch(src, /Parvah's TURN servers/i);
   assert.doesNotMatch(src, /moderation queue reviewed/i);
 });
@@ -91,11 +94,11 @@ check('Chat CSS is split from globals', () => {
   assert.match(globals, /prefers-reduced-motion/);
 });
 
-check('Site OG uses static PNG only (no root opengraph-image.js)', () => {
+check('Site OG uses static JPEG (no root opengraph-image.js)', () => {
   assert.equal(existsSync(join(root, 'app/opengraph-image.js')), false);
-  assert.equal(existsSync(join(root, 'public/og-image.png')), true);
+  assert.equal(existsSync(join(root, 'public/og-image.jpg')), true);
   const layout = readFileSync(join(root, 'app/layout.js'), 'utf8');
-  assert.match(layout, /\/og-image\.png/);
+  assert.match(layout, /\/og-image\.jpg/);
   assert.equal(existsSync(join(root, 'app/blog/[slug]/opengraph-image.js')), true);
 });
 

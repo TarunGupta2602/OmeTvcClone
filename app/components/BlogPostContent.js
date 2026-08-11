@@ -20,8 +20,8 @@ function TableOfContents({ headings, activeId, className = '' }) {
                 level === 3 ? 'pl-6' : 'pl-4'
               } ${
                 activeId === id
-                  ? 'border-indigo-600 text-indigo-700 font-semibold'
-                  : 'border-transparent text-slate-600 hover:text-indigo-600 hover:border-indigo-300'
+                  ? 'border-teal-800 text-teal-900 font-semibold'
+                  : 'border-transparent text-slate-600 hover:text-teal-800 hover:border-teal-300'
               }`}
             >
               {text}
@@ -33,7 +33,7 @@ function TableOfContents({ headings, activeId, className = '' }) {
   );
 }
 
-export default function BlogPostContent({ content, headings, tags }) {
+export default function BlogPostContent({ content, headings, tagLinks, tags }) {
   const [activeId, setActiveId] = useState(headings?.[0]?.id || '');
 
   useEffect(() => {
@@ -60,6 +60,10 @@ export default function BlogPostContent({ content, headings, tags }) {
   }, [headings]);
 
   const showToc = headings?.length > 1;
+  const topicLinks =
+    tagLinks?.length > 0
+      ? tagLinks
+      : (tags || []).map((label) => ({ label, href: '/blog' }));
 
   return (
     <div className={showToc ? 'lg:grid lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-16 xl:gap-20' : ''}>
@@ -78,19 +82,19 @@ export default function BlogPostContent({ content, headings, tags }) {
 
         <div className="blog-prose" dangerouslySetInnerHTML={{ __html: content }} />
 
-        {tags?.length > 0 && (
+        {topicLinks.length > 0 && (
           <footer className="mt-12 pt-8 border-t border-slate-200">
             <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400 mb-3">
               Topics
             </p>
             <div className="flex flex-wrap gap-2">
-              {tags.map((tag) => (
+              {topicLinks.map(({ label, href }) => (
                 <Link
-                  key={tag}
-                  href="/blog"
-                  className="px-3 py-1 rounded-md bg-slate-100 text-slate-700 text-sm hover:bg-indigo-50 hover:text-indigo-700 transition"
+                  key={label}
+                  href={href}
+                  className="px-3 py-1 rounded-md bg-slate-100 text-slate-700 text-sm hover:bg-teal-50 hover:text-teal-900 transition"
                 >
-                  {tag}
+                  {label}
                 </Link>
               ))}
             </div>

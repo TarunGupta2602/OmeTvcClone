@@ -1,4 +1,6 @@
-export const blogPostsMap = {
+import { extraBlogPostsMap, extraBlogPostsList } from './blogPostsExtra.js';
+
+const coreBlogPostsMap = {
   'how-to-stay-safe-on-video-chat-platforms': {
     title: 'How to Stay Safe on Video Chat Platforms: Essential Tips',
     seoTitle: 'Video Chat Safety Tips',
@@ -7,7 +9,7 @@ export const blogPostsMap = {
     category: 'Safety',
     author: 'Parvah Team',
     readTime: '8 min read',
-    featured: true,
+    featured: false,
     keywords: 'video chat safety, online safety tips, random video chat security, protect privacy online, Parvah safety, stranger safety',
     content: `
       <h2>Introduction</h2>
@@ -797,7 +799,13 @@ export const blogPostsMap = {
   },
 };
 
+export const blogPostsMap = {
+  ...extraBlogPostsMap,
+  ...coreBlogPostsMap,
+};
+
 export const blogPostsList = [
+  ...extraBlogPostsList,
   {
     slug: 'how-to-stay-safe-on-video-chat-platforms',
     title: 'How to Stay Safe on Video Chat Platforms: Essential Tips',
@@ -805,7 +813,7 @@ export const blogPostsList = [
     date: '2026-08-01',
     category: 'Safety',
     readTime: '8 min read',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'omegle-alternatives-why-parvah-is-better',
@@ -909,7 +917,12 @@ export const blogPostsList = [
 ];
 
 // Per-post cover images are generated at /blog/[slug]/opengraph-image
-Object.entries(blogPostsMap).forEach(([slug, post]) => {
-  if (!post.dateModified) post.dateModified = post.date;
+const CONTENT_REFRESH_DATE = '2026-08-11';
+Object.entries(blogPostsMap).forEach(([, post]) => {
+  if (!post.dateModified || post.dateModified === post.date) {
+    // Existing posts refreshed with internal links / SEO updates
+    post.dateModified =
+      post.date >= CONTENT_REFRESH_DATE ? post.date : CONTENT_REFRESH_DATE;
+  }
   if (!post.imageAlt) post.imageAlt = `${post.title} | Parvah Blog Cover Image`;
 });

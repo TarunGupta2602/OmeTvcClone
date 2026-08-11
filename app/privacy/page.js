@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
+import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
   title: 'Privacy Policy',
@@ -14,7 +15,7 @@ export const metadata = {
       'Parvah uses peer-to-peer WebRTC — video is not stored on our servers. Read our full privacy policy.',
     url: `${SITE_URL}/privacy`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Privacy Policy' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Privacy Policy' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -22,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Privacy Policy | Parvah',
     description: 'Parvah uses peer-to-peer WebRTC — video is not stored on our servers.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -102,7 +103,7 @@ To exercise any privacy rights, contact privacy@parvah.online.`,
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
       />
       <main className="flex-1 bg-slate-50 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-10">

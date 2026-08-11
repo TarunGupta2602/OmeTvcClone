@@ -1,5 +1,5 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildWebPageSchema } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Best OmeTV Alternative — Free Live Webcam Chat';
@@ -15,7 +15,7 @@ export const metadata = {
     description,
     url: `${SITE_URL}/ometv-alternative`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah OmeTV Alternative' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah OmeTV Alternative' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `OmeTV Alternative | ${SITE_NAME}`,
     description,
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -42,17 +42,15 @@ const faqs = [
   },
 ];
 
-const jsonLd = [
+const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ title, description, url: `${SITE_URL}/ometv-alternative` }),
   buildFaqSchema(faqs),
-];
+]);
 
 export default function OmetvAlternativePage() {
   return (
     <>
-      {jsonLd.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="OmeTV Alternative"
         title="Free OmeTV Alternative for Random Webcam Chat"
@@ -68,6 +66,7 @@ export default function OmetvAlternativePage() {
         faqs={faqs}
         relatedLinks={[
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
+          { href: '/emerald-chat-alternative', label: 'Emerald Chat Alternative' },
           { href: '/random-video-chat', label: 'Random Video Chat' },
           { href: '/blog/ometv-vs-omegle-vs-parvah-comparison', label: 'OmeTV vs Omegle vs Parvah' },
           { href: '/safety', label: 'Safety Guidelines' },

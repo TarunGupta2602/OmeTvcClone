@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
-import { buildWebPageSchema } from '../../lib/seo';
+import { stringifyJsonLd, buildWebPageSchema } from '../../lib/seo';
 
 export const metadata = {
   title: 'Safety Guidelines for Video Chat',
@@ -15,7 +15,7 @@ export const metadata = {
       'Zero-tolerance safety rules, anti-harassment policies, and reporting tips for secure random video chat on Parvah.',
     url: `${SITE_URL}/safety`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Safety Guidelines for Video Chat',
     description: 'Zero-tolerance safety rules and reporting tips for secure random video chat on Parvah.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -113,7 +113,7 @@ export default function SafetyPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
       />
       <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 py-8 sm:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
       {/* Soft Ambient Background Mesh */}

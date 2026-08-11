@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FAQContent from './FAQContent';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
+import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
   title: 'FAQ — Video Chat Questions & Answers',
@@ -14,7 +15,7 @@ export const metadata = {
     description: 'Common questions about free random video chat, safety, and how Parvah works.',
     url: `${SITE_URL}/faq`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -22,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'FAQ — Video Chat Questions & Answers',
     description: 'Common questions about free random video chat, safety, and how Parvah works.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -150,7 +151,7 @@ export default function FAQPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
       />
       <main className="flex-1 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-rose-50/30 text-slate-900 py-12 px-4 sm:px-6 lg:px-8">
         {/* Soft Ambient Background Mesh */}

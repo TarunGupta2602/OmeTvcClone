@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
+import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
   title: 'About Parvah — Free Random Video Chat',
@@ -14,7 +15,7 @@ export const metadata = {
       'Discover how Parvah connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Free Random Video Chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Free Random Video Chat' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -22,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'About Parvah — Free Random Video Chat',
     description: 'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat. Talk to strangers online.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -105,7 +106,7 @@ export default function AboutPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
       />
       <main className="flex-1 bg-slate-50 text-slate-900">
       {/* Hero Header */}

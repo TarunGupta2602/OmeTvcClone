@@ -1,7 +1,7 @@
 import HomePageClient from './components/HomePageClient';
 import HomeCrawlLinks from './components/HomeCrawlLinks';
 import { SITE_URL, SITE_DESCRIPTION, SITE_NAME } from '../lib/constants';
-import { buildFaqSchema } from '../lib/seo';
+import { buildFaqSchema, stringifyJsonLd } from '../lib/seo';
 
 export const metadata = {
   title: 'Free Random Video Chat with Strangers',
@@ -14,7 +14,7 @@ export const metadata = {
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah - Free Random Video Chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah - Free Random Video Chat' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -22,7 +22,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `Free Random Video Chat with Strangers | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -46,7 +46,7 @@ const faqJsonLd = buildFaqSchema(HOME_FAQS);
 export default function Home() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(faqJsonLd) }} />
       <HomePageClient />
       <HomeCrawlLinks />
     </>

@@ -3,7 +3,7 @@ import './globals.css';
 import AppShell from './components/AppShell';
 import Analytics from './components/Analytics';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../lib/constants';
-import { buildOrganizationSchema } from '../lib/seo';
+import { buildJsonLdGraph, buildOrganizationSchema, stringifyJsonLd } from '../lib/seo';
 
 const outfit = Outfit({
   variable: '--font-outfit',
@@ -73,7 +73,7 @@ export const metadata = {
     category: 'social',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Parvah - Free Random Video Chat',
@@ -84,7 +84,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Free Random Video Chat with Strangers | Parvah',
     description: SITE_DESCRIPTION,
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -102,9 +102,8 @@ export const metadata = {
     : {}),
 };
 
-const jsonLd = [
+const jsonLd = buildJsonLdGraph([
   {
-    '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
@@ -114,7 +113,6 @@ const jsonLd = [
   },
   buildOrganizationSchema(),
   {
-    '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: SITE_NAME,
     alternateName: 'Parvah Random Video Chat',
@@ -129,7 +127,7 @@ const jsonLd = [
     },
     publisher: { '@id': `${SITE_URL}/#organization` },
   },
-];
+]);
 
 export default function RootLayout({ children }) {
   return (
@@ -141,7 +139,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="alternate" type="application/rss+xml" title="Parvah Blog RSS" href="/blog/rss.xml" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
         <AppShell>{children}</AppShell>

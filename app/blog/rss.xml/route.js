@@ -28,7 +28,7 @@ export async function GET() {
     <description>Tips, safety guides, and updates about random video chat on Parvah.</description>
     <language>en-us</language>
     <image>
-      <url>${SITE_URL}/og-image.png</url>
+      <url>${SITE_URL}/og-image.jpg</url>
       <title>${SITE_NAME} Blog</title>
       <link>${SITE_URL}/blog</link>
     </image>

@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../../../lib/constants';
 import { blogPostsList } from '../../../../data/blogPosts';
 import { BLOG_CATEGORIES, getCategoryBySlug, filterPostsByCategory } from '../../../../lib/blogCategories';
 import { BlogCard } from '../../../components/BlogCard';
-import { buildCollectionPageSchema } from '../../../../lib/seo';
+import { buildCollectionPageSchema, stringifyJsonLd } from '../../../../lib/seo';
 
 export function generateStaticParams() {
   return BLOG_CATEGORIES.map((cat) => ({ category: cat.slug }));
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
       description,
       url: `${SITE_URL}/blog/category/${category.slug}`,
       siteName: SITE_NAME,
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `Parvah Blog — ${category.label}` }],
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: `Parvah Blog — ${category.label}` }],
       locale: 'en_US',
       type: 'website',
     },
@@ -50,7 +50,7 @@ export default async function BlogCategoryPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <main className="flex-1 bg-slate-50 min-h-screen py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-10">
         <div className="space-y-4">

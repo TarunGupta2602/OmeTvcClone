@@ -54,7 +54,7 @@ export default function Navbar({ minimal = false }) {
         inert={!mobileMenuOpen ? true : undefined}
       >
         <div className="nav-mobile-drawer-header">
-          <span className="text-sm font-black text-slate-900">Menu</span>
+          <span className="text-sm font-bold text-slate-900">Menu</span>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(false)}
@@ -89,7 +89,10 @@ export default function Navbar({ minimal = false }) {
     return (
       <header className="nav-minimal fixed top-0 inset-x-0 z-50 border-b border-white/[0.06] bg-[#030712]/75 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="text-lg font-black tracking-tight text-white">
+          <Link
+            href="/"
+            className="font-[family-name:var(--font-source-serif)] text-xl tracking-tight text-teal-300"
+          >
             Parvah
           </Link>
           <nav className="hidden md:flex items-center gap-1">
@@ -124,15 +127,15 @@ export default function Navbar({ minimal = false }) {
   }
 
   return (
-    <header className="nav-standard sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-lg shadow-slate-200/50 transition-all">
+    <header className="nav-standard sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-teal-900/8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <Link href="/" className="flex items-center gap-2.5 group min-w-0">
             <div className="flex flex-col min-w-0">
-              <span className="text-lg sm:text-xl font-black tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 bg-clip-text text-transparent truncate">
+              <span className="font-[family-name:var(--font-source-serif)] text-xl sm:text-2xl tracking-tight text-teal-900 truncate">
                 Parvah
               </span>
-              <span className="hidden sm:block text-[10px] text-slate-500 tracking-wider uppercase font-bold -mt-0.5 truncate">
+              <span className="hidden sm:block text-[10px] text-slate-500 tracking-[0.14em] uppercase font-semibold -mt-0.5 truncate">
                 Free Random Video Chat
               </span>
             </div>
@@ -149,10 +152,10 @@ export default function Navbar({ minimal = false }) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
                     isActive
-                      ? 'bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 shadow-md shadow-indigo-500/10 border border-indigo-200/80 ring-1 ring-indigo-500/20'
-                      : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-100/70 hover:shadow-sm'
+                      ? 'bg-teal-50 text-teal-800'
+                      : 'text-slate-600 hover:text-teal-800 hover:bg-slate-50'
                   }`}
                 >
                   {item.name}
@@ -165,7 +168,7 @@ export default function Navbar({ minimal = false }) {
             {pathname !== '/' && (
               <Link
                 href="/"
-                className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-500 hover:from-indigo-700 hover:via-purple-700 hover:to-rose-600 rounded-xl shadow-lg shadow-indigo-500/25 transition-all active:scale-95 touch-manipulation"
+                className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white bg-teal-800 hover:bg-teal-900 rounded-xl transition-colors active:scale-[0.98] touch-manipulation"
               >
                 Start Chatting
               </Link>

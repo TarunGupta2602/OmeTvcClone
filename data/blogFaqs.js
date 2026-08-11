@@ -203,6 +203,96 @@ export const blogFaqsMap = {
       a: 'Omegle shut down permanently in 2023. Users seeking similar random video chat experiences use alternatives like Parvah that offer modern safety features and WebRTC technology.',
     },
   ],
+
+  'how-to-use-parvah': [
+    {
+      q: 'How do I start chatting on Parvah?',
+      a: 'Open parvah.online, confirm you are 18+, allow camera and microphone access, then click Start Match. No account is required.',
+    },
+    {
+      q: 'What if my camera permission is blocked?',
+      a: 'Open your browser site settings for parvah.online, set Camera and Microphone to Allow, and reload. Also check OS privacy toggles for your browser.',
+    },
+    {
+      q: 'How do I skip or report someone?',
+      a: 'Click Next to skip instantly. Use the Report button for harassment, prohibited content, or scams — then continue matching.',
+    },
+  ],
+
+  'is-random-video-chat-safe-2026': [
+    {
+      q: 'Is random video chat safe in 2026?',
+      a: 'It can be reasonably safe for adults who protect personal information, use reporting tools, and leave uncomfortable chats immediately. No stranger platform is zero-risk.',
+    },
+    {
+      q: 'What makes Parvah safer than old chat sites?',
+      a: 'Parvah combines an 18+ age gate, report and skip controls, no mandatory registration, and WebRTC peer-to-peer video that is not archived on Parvah servers.',
+    },
+    {
+      q: 'Can someone record my Parvah chat?',
+      a: 'Parvah does not store your video stream, but anyone could use screen recording on their device. Assume recording is possible and avoid showing identifying details.',
+    },
+  ],
+
+  'anonymous-vs-private-video-chat': [
+    {
+      q: 'Is anonymous the same as private video chat?',
+      a: 'No. Anonymous usually means no named profile; private refers to who can access or store your media and metadata. You need both good platform design and careful habits.',
+    },
+    {
+      q: 'Is Parvah anonymous?',
+      a: 'Parvah requires no account, so you are not building a public profile. Your face, voice, IP, and background can still identify you if you overshare.',
+    },
+    {
+      q: 'Does WebRTC make chats private?',
+      a: 'WebRTC encrypts media in transit and Parvah prefers peer-to-peer paths so video is not kept as a server archive. Signaling and safety systems may still process limited operational data.',
+    },
+  ],
+
+  'chatroulette-vs-parvah': [
+    {
+      q: 'Is Parvah a Chatroulette alternative?',
+      a: 'Yes. Parvah offers roulette-style stranger video matching in the browser with no signup, WebRTC privacy, and 18+ safety tools.',
+    },
+    {
+      q: 'Chatroulette vs Parvah — which is simpler?',
+      a: 'Parvah keeps onboarding to an age gate, permissions, and Start Match. Always verify you are on official domains for any chat brand you try.',
+    },
+    {
+      q: 'Which is better for privacy?',
+      a: 'Prefer products that explain WebRTC peer-to-peer video and avoid forcing accounts. Parvah is designed around no registration and P2P media when networks allow.',
+    },
+  ],
+
+  'webrtc-stun-turn-explained': [
+    {
+      q: 'What is STUN in WebRTC?',
+      a: 'STUN helps your browser discover its public IP address so ICE can try a direct peer-to-peer path. Parvah uses public STUN servers for this discovery step.',
+    },
+    {
+      q: 'What is TURN in WebRTC?',
+      a: 'TURN relays media when direct peer-to-peer candidates fail — common on strict firewalls. Relays add infrastructure cost and latency compared with direct ICE success.',
+    },
+    {
+      q: 'Why does my WebRTC call fail on some networks?',
+      a: 'Corporate firewalls, some mobile carriers, and VPNs can block UDP peer paths. Try home Wi-Fi, disable VPN, and confirm camera permissions are allowed.',
+    },
+  ],
+
+  'browser-camera-permission-guide': [
+    {
+      q: 'How do I allow camera access for Parvah in Chrome?',
+      a: 'Click the lock icon in the address bar → Site settings → set Camera and Microphone to Allow → reload parvah.online.',
+    },
+    {
+      q: 'Why does Safari still block my webcam?',
+      a: 'Check Safari site settings for parvah.online and macOS/iOS Privacy settings for Camera and Microphone for Safari. OS-level blocks override site Allow.',
+    },
+    {
+      q: 'Camera works in settings but not in chat — what next?',
+      a: 'Close other apps using the webcam, confirm HTTPS, reload Parvah, and review our webcam troubleshooting guide if the issue continues.',
+    },
+  ],
 };
 
 export function getBlogFaqs(slug) {

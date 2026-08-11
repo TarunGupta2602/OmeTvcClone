@@ -15,6 +15,7 @@ import {
   getAdjacentPosts,
   buildBlogJsonLd,
 } from '../../../lib/blog';
+import { stringifyJsonLd } from '../../../lib/seo';
 
 const CATEGORY_STYLES = {
   Safety: 'bg-rose-50 text-rose-700 ring-rose-200',
@@ -22,7 +23,7 @@ const CATEGORY_STYLES = {
   Tips: 'bg-emerald-50 text-emerald-700 ring-emerald-200',
   Technology: 'bg-violet-50 text-violet-700 ring-violet-200',
   Technical: 'bg-amber-50 text-amber-700 ring-amber-200',
-  Privacy: 'bg-indigo-50 text-indigo-700 ring-indigo-200',
+  Privacy: 'bg-teal-50 text-teal-900 ring-teal-200',
 };
 
 export async function generateStaticParams() {
@@ -110,7 +111,7 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
 
       <main className="flex-1 bg-white min-h-screen">
         <header className="border-b border-slate-200 bg-slate-50/60">
@@ -119,15 +120,18 @@ export default async function BlogPostPage({ params }) {
               items={[
                 { label: 'Home', href: '/' },
                 { label: 'Blog', href: '/blog' },
-                { label: post.category },
+                { label: post.category, href: post.categoryHref },
               ]}
             />
 
             <div className="mt-6 space-y-5">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
-                <span className={`inline-flex px-2.5 py-1 rounded-md text-xs font-semibold ring-1 ${categoryStyle}`}>
+                <Link
+                  href={post.categoryHref}
+                  className={`inline-flex px-2.5 py-1 rounded-md text-xs font-semibold ring-1 ${categoryStyle} hover:opacity-90`}
+                >
                   {post.category}
-                </span>
+                </Link>
                 <time dateTime={post.date}>{post.formattedDate}</time>
                 <span aria-hidden="true">·</span>
                 <span>{post.readTime}</span>
@@ -147,7 +151,7 @@ export default async function BlogPostPage({ params }) {
 
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-200/80">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-indigo-600 flex items-center justify-center text-white text-sm font-bold">
+                  <div className="w-9 h-9 rounded-full bg-teal-800 flex items-center justify-center text-white text-sm font-bold">
                     P
                   </div>
                   <div className="text-sm">
@@ -172,7 +176,7 @@ export default async function BlogPostPage({ params }) {
         </div>
 
         <div className="max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14">
-          <BlogPostContent content={post.content} headings={post.headings} tags={post.tags} />
+          <BlogPostContent content={post.content} headings={post.headings} tagLinks={post.tagLinks} />
           <BlogPostFAQ faqs={post.faqs} />
         </div>
 
@@ -201,7 +205,7 @@ export default async function BlogPostPage({ params }) {
                     </div>
                     <div>
                       <span className="text-xs font-medium text-slate-400">← Previous</span>
-                      <p className="mt-1 text-sm font-semibold text-slate-900 group-hover:text-indigo-600 line-clamp-2">
+                      <p className="mt-1 text-sm font-semibold text-slate-900 group-hover:text-teal-800 line-clamp-2">
                         {prev.title}
                       </p>
                     </div>
@@ -224,7 +228,7 @@ export default async function BlogPostPage({ params }) {
                     </div>
                     <div>
                       <span className="text-xs font-medium text-slate-400">Next →</span>
-                      <p className="mt-1 text-sm font-semibold text-slate-900 group-hover:text-indigo-600 line-clamp-2">
+                      <p className="mt-1 text-sm font-semibold text-slate-900 group-hover:text-teal-800 line-clamp-2">
                         {next.title}
                       </p>
                     </div>
@@ -233,14 +237,14 @@ export default async function BlogPostPage({ params }) {
               </nav>
             )}
 
-            <div className="p-8 rounded-2xl bg-indigo-600 text-white text-center">
+            <div className="p-8 rounded-2xl bg-teal-800 text-white text-center">
               <h2 className="text-xl sm:text-2xl font-bold mb-2">Try Parvah Free</h2>
-              <p className="text-indigo-100 text-sm mb-6 max-w-md mx-auto">
+              <p className="text-teal-100 text-sm mb-6 max-w-md mx-auto">
                 Random video chat with no signup — WebRTC privacy and built-in safety tools.
               </p>
               <Link
                 href="/"
-                className="inline-block px-6 py-3 rounded-lg font-semibold bg-white text-indigo-700 hover:bg-indigo-50 transition"
+                className="inline-block px-6 py-3 rounded-lg font-semibold bg-white text-teal-900 hover:bg-teal-50 transition"
               >
                 Start Video Chat
               </Link>
@@ -256,7 +260,7 @@ export default async function BlogPostPage({ params }) {
                     <Link
                       key={r.slug}
                       href={`/blog/${r.slug}`}
-                      className="group flex flex-col overflow-hidden rounded-xl bg-white border border-slate-200 hover:border-indigo-200 transition"
+                      className="group flex flex-col overflow-hidden rounded-xl bg-white border border-slate-200 hover:border-teal-200 transition"
                     >
                       <BlogCardThumbnail
                         title={r.title}
@@ -265,10 +269,10 @@ export default async function BlogPostPage({ params }) {
                         className="rounded-none rounded-t-xl"
                       />
                       <div className="p-4">
-                        <span className="text-[11px] font-semibold uppercase tracking-wide text-indigo-600">
+                        <span className="text-[11px] font-semibold uppercase tracking-wide text-teal-800">
                           {r.category}
                         </span>
-                        <p className="mt-1.5 text-sm font-semibold text-slate-900 group-hover:text-indigo-600 line-clamp-2 leading-snug">
+                        <p className="mt-1.5 text-sm font-semibold text-slate-900 group-hover:text-teal-800 line-clamp-2 leading-snug">
                           {r.title}
                         </p>
                       </div>
@@ -279,7 +283,7 @@ export default async function BlogPostPage({ params }) {
             )}
 
             <div className="text-center">
-              <Link href="/blog" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700">
+              <Link href="/blog" className="text-sm font-semibold text-teal-800 hover:text-teal-900">
                 ← All blog articles
               </Link>
             </div>

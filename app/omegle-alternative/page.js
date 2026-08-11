@@ -1,5 +1,5 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildWebPageSchema } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Best Omegle Alternative — Free Random Video Chat';
@@ -15,7 +15,7 @@ export const metadata = {
     description,
     url: `${SITE_URL}/omegle-alternative`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Omegle Alternative' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah Omegle Alternative' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `Omegle Alternative | ${SITE_NAME}`,
     description,
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -42,17 +42,15 @@ const faqs = [
   },
 ];
 
-const jsonLd = [
+const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ title, description, url: `${SITE_URL}/omegle-alternative` }),
   buildFaqSchema(faqs),
-];
+]);
 
 export default function OmegleAlternativePage() {
   return (
     <>
-      {jsonLd.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative"
         title="The Best Free Omegle Alternative for Random Video Chat"
@@ -68,7 +66,8 @@ export default function OmegleAlternativePage() {
         faqs={faqs}
         relatedLinks={[
           { href: '/ometv-alternative', label: 'OmeTV Alternative' },
-          { href: '/random-video-chat', label: 'Random Video Chat' },
+          { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
+          { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
           { href: '/blog/omegle-alternatives-why-parvah-is-better', label: 'Omegle Alternatives Guide' },
         ]}
       />

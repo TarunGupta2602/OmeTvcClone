@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
+import { stringifyJsonLd } from '../../lib/seo';
 import { blogPostsList } from '../../data/blogPosts';
 import { BLOG_CATEGORIES } from '../../lib/blogCategories';
 import { BlogCard } from '../components/BlogCard';
@@ -20,7 +21,7 @@ export const metadata = {
     description: 'Safety guides, Omegle alternatives, and WebRTC tips for random video chat.',
     url: `${SITE_URL}/blog`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Blog' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah Blog' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -63,7 +64,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(blogJsonLd) }} />
 
       <main className="flex-1 bg-slate-50 min-h-screen py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-12">

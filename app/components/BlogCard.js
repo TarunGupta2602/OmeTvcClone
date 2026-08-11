@@ -38,14 +38,14 @@ export function BlogCard({ post, featured = false }) {
     return (
       <Link
         href={`/blog/${post.slug}`}
-        className="group block overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-lg hover:shadow-xl transition-all"
+        className="group block overflow-hidden rounded-2xl bg-white border border-slate-200 hover:border-teal-200 transition-colors"
       >
         <BlogCardThumbnail {...thumbProps} className="rounded-none rounded-t-2xl" />
         <div className="p-6 sm:p-8 space-y-3">
-          <span className="inline-flex px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-700 text-xs font-semibold ring-1 ring-indigo-200">
+          <span className="inline-flex px-2.5 py-1 rounded-md bg-teal-50 text-teal-800 text-xs font-semibold ring-1 ring-teal-200">
             Featured · {post.category}
           </span>
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 leading-snug">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-teal-800 leading-snug">
             {post.title}
           </h2>
           <p className="text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
@@ -57,18 +57,18 @@ export function BlogCard({ post, featured = false }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl bg-white border border-slate-200 hover:border-indigo-200 hover:shadow-lg transition-all"
+      className="group flex flex-col overflow-hidden rounded-xl bg-white border border-slate-200 hover:border-teal-200 transition-colors"
     >
       <BlogCardThumbnail {...thumbProps} className="rounded-none rounded-t-xl" />
       <div className="p-5 flex flex-col flex-1">
-        <span className="text-[11px] font-semibold uppercase tracking-wide text-indigo-600">{post.category}</span>
-        <h3 className="mt-2 text-base font-bold text-slate-900 group-hover:text-indigo-600 line-clamp-2 leading-snug">
+        <span className="text-[11px] font-semibold uppercase tracking-wide text-teal-700">{post.category}</span>
+        <h3 className="mt-2 text-base font-bold text-slate-900 group-hover:text-teal-800 line-clamp-2 leading-snug">
           {post.title}
         </h3>
         <p className="mt-2 text-sm text-slate-600 line-clamp-2 flex-1">{post.excerpt}</p>
         <div className="mt-4 pt-3 border-t border-slate-100 flex justify-between text-xs text-slate-500">
           <span>{post.readTime}</span>
-          <span className="font-semibold text-indigo-600">Read →</span>
+          <span className="font-semibold text-teal-800">Read →</span>
         </div>
       </div>
     </Link>

@@ -1,5 +1,5 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildWebPageSchema } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Free Random Video Chat with Strangers Online';
@@ -15,7 +15,7 @@ export const metadata = {
     description,
     url: `${SITE_URL}/random-video-chat`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah Random Video Chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah Random Video Chat' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `Random Video Chat | ${SITE_NAME}`,
     description,
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -42,17 +42,15 @@ const faqs = [
   },
 ];
 
-const jsonLd = [
+const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ title, description, url: `${SITE_URL}/random-video-chat` }),
   buildFaqSchema(faqs),
-];
+]);
 
 export default function RandomVideoChatPage() {
   return (
     <>
-      {jsonLd.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Random Video Chat"
         title="Free Random Video Chat with Strangers — Start Instantly"
@@ -68,6 +66,8 @@ export default function RandomVideoChatPage() {
         faqs={faqs}
         relatedLinks={[
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
+          { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
+          { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
           { href: '/faq', label: 'FAQ' },
           { href: '/blog', label: 'Video Chat Blog' },
         ]}

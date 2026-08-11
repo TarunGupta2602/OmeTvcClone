@@ -1,16 +1,20 @@
 import Link from 'next/link';
 import { SITE_URL } from '../../lib/constants';
+import { stringifyJsonLd } from '../../lib/seo';
 
 export default function Breadcrumbs({ items, light = false }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.label,
-      item: item.href ? `${SITE_URL}${item.href}` : undefined,
-    })),
+    itemListElement: items.map((item, index) => {
+      const href = item.href || items[items.length - 1]?.href || '';
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.label,
+        item: `${SITE_URL}${href}`,
+      };
+    }),
   };
 
   const linkClass = light
@@ -23,7 +27,7 @@ export default function Breadcrumbs({ items, light = false }) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
       />
       <nav aria-label="Breadcrumb" className="text-sm">
         <ol className="flex flex-wrap items-center gap-2">

@@ -19,9 +19,9 @@ const ChatMessagesPanel = forwardRef(function ChatMessagesPanel(
     <aside className="chat-messages-panel">
       <header className="chat-messages-header">
         <div>
-          <h2 className="chat-messages-title">Live chat</h2>
+          <h2 className="chat-messages-title">Messages</h2>
           <p className="chat-messages-sub">
-            {inRoom && peerId ? `Connected · ${peerId.substring(0, 6)}` : 'Match to send messages'}
+            {inRoom && peerId ? 'Connected — say hello' : 'Match to send messages'}
           </p>
         </div>
         {inRoom && peerId && (

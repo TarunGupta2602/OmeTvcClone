@@ -11,7 +11,7 @@ export const metadata = {
     description: 'Page not found on Parvah. Return to homepage or start random video chat now.',
     url: `${SITE_URL}/404`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Parvah 404 Page' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah 404 Page' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -19,7 +19,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: '404 — Page Not Found | Parvah',
     description: 'Page not found on Parvah. Return home to start video chatting.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 };
 

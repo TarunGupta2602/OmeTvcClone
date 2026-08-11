@@ -46,7 +46,8 @@ export default function ChatControlBar({
           disabled={!isConnected || !inRoom}
           className={`chat-btn chat-btn-next ${inRoom ? 'chat-btn-next-emphasis' : ''}`}
         >
-          Next
+          <span className="chat-btn-label-short">Next</span>
+          <span className="chat-btn-label-long">Next match</span>
         </button>
         <button type="button" onClick={onStop} disabled={!isConnected || !sessionActive} className="chat-btn chat-btn-stop">
           Stop
