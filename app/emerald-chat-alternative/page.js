@@ -7,11 +7,11 @@ const description =
   'Looking for an Emerald Chat alternative? Parvah offers free 1-on-1 random video chat with no signup, WebRTC privacy, and built-in safety tools for adults 18+.';
 
 export const metadata = {
-  title: 'Emerald Chat Alternative — Free Video Chat',
+  title: 'Emerald Chat Alternative — Free No-Signup Video Chat',
   description,
   alternates: { canonical: `${SITE_URL}/emerald-chat-alternative` },
   openGraph: {
-    title: `Emerald Chat Alternative | ${SITE_NAME}`,
+    title: `Emerald Chat Alternative — Free No-Signup Video Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/emerald-chat-alternative`,
     siteName: SITE_NAME,
@@ -53,7 +53,7 @@ export default function EmeraldChatAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Emerald Chat Alternative"
-        title="Free Emerald Chat Alternative for Instant Video Matching"
+        title="Emerald Chat Alternative — Free Instant Video Matching"
         description={description}
         highlights={[
           { title: 'Zero Account Friction', desc: 'Skip profile setup — jump into 1-on-1 video as soon as you pass the age gate.' },
@@ -62,6 +62,18 @@ export default function EmeraldChatAlternativePage() {
           { title: 'Browser Based', desc: 'Use Parvah on desktop or mobile browsers without installing another chat app.' },
           { title: 'Clear Adult Rules', desc: 'Parvah is 18+ with published safety guidelines you can read anytime.' },
           { title: 'Free Forever', desc: 'No credits to burn through before your first real conversation.' },
+        ]}
+        sections={[
+          {
+            title: 'If you want Emerald Chat energy without the account wall',
+            paragraphs: [
+              'Some chat apps lean on interests, filters, or profiles. Parvah stays closer to classic random matching: confirm you are 18+, allow camera access, and Start Match. Use it as a free Emerald Chat alternative when you want speed over setup.',
+            ],
+            links: [
+              { href: '/no-signup-video-chat', label: 'No signup video chat' },
+              { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
+            ],
+          },
         ]}
         faqs={faqs}
         relatedLinks={[

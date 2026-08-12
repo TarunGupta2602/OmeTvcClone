@@ -1,6 +1,14 @@
 import Link from 'next/link';
 
-export default function SeoLandingPage({ badge, title, description, highlights, faqs, relatedLinks }) {
+export default function SeoLandingPage({
+  badge,
+  title,
+  description,
+  highlights,
+  sections = [],
+  faqs,
+  relatedLinks,
+}) {
   return (
     <main className="flex-1 min-h-screen bg-[var(--page-bg)]">
       <section className="relative overflow-hidden border-b border-teal-900/10">
@@ -59,6 +67,40 @@ export default function SeoLandingPage({ badge, title, description, highlights, 
           ))}
         </ul>
       </section>
+
+      {sections.map((section) => (
+        <section
+          key={section.title}
+          className="py-12 px-4 sm:px-6 max-w-3xl mx-auto space-y-4 border-t border-teal-900/10"
+        >
+          <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
+          {section.paragraphs.map((p) => (
+            <p key={p.slice(0, 48)} className="text-sm text-slate-600 leading-relaxed">
+              {p}
+            </p>
+          ))}
+          {section.bullets?.length > 0 && (
+            <ul className="list-disc pl-5 space-y-2 text-sm text-slate-600">
+              {section.bullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+          )}
+          {section.links?.length > 0 && (
+            <div className="flex flex-wrap gap-x-5 gap-y-2 pt-2">
+              {section.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-semibold text-teal-800 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
 
       {faqs?.length > 0 && (
         <section className="py-14 px-4 sm:px-6 border-y border-teal-900/10 bg-white/50">

@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'No Signup Video Chat — Free Random Webcam Chat';
+const title = 'Video Chat with No Signup — Start in Seconds';
 const description =
-  'No signup video chat on Parvah. Start free random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching.';
+  'Video chat with no signup on Parvah. Free random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching.';
 
 export const metadata = {
-  title: 'No Signup Video Chat — Free Webcam Chat',
+  title: 'Video Chat with No Signup — Start in Seconds',
   description,
   alternates: { canonical: `${SITE_URL}/no-signup-video-chat` },
   openGraph: {
-    title: `No Signup Video Chat | ${SITE_NAME}`,
+    title: `Video Chat with No Signup — Start in Seconds | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/no-signup-video-chat`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `No Signup Video Chat | ${SITE_NAME}`,
+    title: `Video Chat with No Signup | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -31,6 +31,10 @@ const faqs = [
   {
     q: 'Can I video chat without creating an account?',
     a: 'Yes. Parvah is no-signup video chat: open the site, confirm you are 18+, allow camera access, and click Start Match.',
+  },
+  {
+    q: 'Is free video chat with no registration safe?',
+    a: 'No signup reduces account data, but you still protect yourself: avoid showing IDs, addresses, or workplace details, and use Report or Next when needed.',
   },
   {
     q: 'Why avoid signup for stranger chat?',
@@ -53,7 +57,7 @@ export default function NoSignupVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="No Signup Video Chat"
-        title="Free No Signup Video Chat — Start in Your Browser"
+        title="Video Chat with No Signup — Start in Seconds"
         description={description}
         highlights={[
           { title: 'Zero Forms', desc: 'No email verification loops before your first match.' },
@@ -62,6 +66,18 @@ export default function NoSignupVideoChatPage() {
           { title: 'Same Safety Tools', desc: 'Skip and report still work even without a username.' },
           { title: 'Works Everywhere', desc: 'Desktop and mobile browsers — no app store account required either.' },
           { title: 'Free Access', desc: 'Chat without buying credits to unlock strangers.' },
+        ]}
+        sections={[
+          {
+            title: 'Free video chat with no registration — what to expect',
+            paragraphs: [
+              'No-signup products trade profiles for speed. You get faster starts and less permanent identity linkage, but you also own your habits: blur backgrounds if needed, skip rude matches, and never share personal numbers on camera.',
+            ],
+            links: [
+              { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
+              { href: '/random-video-chat', label: 'Random video chat' },
+            ],
+          },
         ]}
         faqs={faqs}
         relatedLinks={[

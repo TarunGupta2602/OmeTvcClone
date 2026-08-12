@@ -3,8 +3,12 @@ import Link from 'next/link';
 export default function HomeSEO() {
   const faqs = [
     {
-      q: 'Is Parvah free to use?',
-      a: 'Yes. Parvah is completely free with no registration or subscription required.',
+      q: 'Is Parvah free random video chat?',
+      a: 'Yes. Parvah is completely free with no registration, credits, or subscription required.',
+    },
+    {
+      q: 'Do I need an app?',
+      a: 'No. Use any modern browser on desktop or mobile — popular with users in India and worldwide who prefer no downloads.',
     },
     {
       q: 'Is video chat private?',
@@ -30,11 +34,11 @@ export default function HomeSEO() {
             Parvah
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-tight">
-            Free random video chat with strangers
+            Free random video chat — talk to strangers instantly
           </h2>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
-            Instant 1-on-1 webcam conversations — no signup, WebRTC privacy, and built-in safety tools for
-            adults 18+. A modern alternative to Omegle and OmeTV.
+            Instant 1-on-1 webcam conversations with no signup. WebRTC privacy and built-in safety tools for
+            adults 18+. A modern Omegle alternative and OmeTV alternative that works in your browser.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
             <Link href="/omegle-alternative" className="hover:underline">
@@ -45,6 +49,12 @@ export default function HomeSEO() {
             </Link>
             <Link href="/no-signup-video-chat" className="hover:underline">
               No signup chat
+            </Link>
+            <Link href="/ometv-alternative" className="hover:underline">
+              OmeTV alternative
+            </Link>
+            <Link href="/blog/best-omegle-alternatives-2026" className="hover:underline">
+              Best alternatives 2026
             </Link>
             <Link href="/safety" className="hover:underline">
               Safety

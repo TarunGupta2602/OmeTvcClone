@@ -4,15 +4,15 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'FAQ — Video Chat Questions & Answers',
+  title: 'FAQ — Free Random Video Chat Questions',
   description:
-    'Answers about Parvah random video chat: pricing, safety, camera setup, WebRTC privacy, age requirements, and how to talk to strangers online free.',
+    'Answers about Parvah free random video chat: no signup, safety, camera setup, WebRTC privacy, Omegle alternative questions, and how to talk to strangers online.',
   alternates: {
     canonical: `${SITE_URL}/faq`,
   },
   openGraph: {
-    title: 'FAQ — Video Chat Questions & Answers',
-    description: 'Common questions about free random video chat, safety, and how Parvah works.',
+    title: 'FAQ — Free Random Video Chat Questions',
+    description: 'Common questions about free random video chat, no signup, safety, and how Parvah works.',
     url: `${SITE_URL}/faq`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
@@ -21,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ — Video Chat Questions & Answers',
-    description: 'Common questions about free random video chat, safety, and how Parvah works.',
+    title: 'FAQ — Free Random Video Chat Questions',
+    description: 'Common questions about free random video chat, no signup, safety, and how Parvah works.',
     images: ['/og-image.jpg'],
   },
 };

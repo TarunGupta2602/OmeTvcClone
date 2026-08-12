@@ -202,6 +202,10 @@ export const blogFaqsMap = {
       q: 'Is Omegle coming back?',
       a: 'Omegle shut down permanently in 2023. Users seeking similar random video chat experiences use alternatives like Parvah that offer modern safety features and WebRTC technology.',
     },
+    {
+      q: 'What is better than searching only for “Omegle alternative”?',
+      a: 'Also try category queries like free random video chat, video chat with strangers, and no signup video chat — those match how demand shifted after the Omegle shutdown.',
+    },
   ],
 
   'how-to-use-parvah': [

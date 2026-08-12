@@ -7,11 +7,11 @@ const description =
   'Parvah is a free Chatroulette alternative for instant 1-on-1 random video chat. No signup, WebRTC privacy, 18+ age gate, and built-in reporting.';
 
 export const metadata = {
-  title: 'Chatroulette Alternative — Free Video Chat',
+  title: 'Chatroulette Alternative Free — Random Video Chat',
   description,
   alternates: { canonical: `${SITE_URL}/chatroulette-alternative` },
   openGraph: {
-    title: `Chatroulette Alternative | ${SITE_NAME}`,
+    title: `Chatroulette Alternative Free — Random Video Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/chatroulette-alternative`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Chatroulette Alternative | ${SITE_NAME}`,
+    title: `Chatroulette Alternative Free | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -53,7 +53,7 @@ export default function ChatrouletteAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Chatroulette Alternative"
-        title="A Modern Chatroulette Alternative for Random Video Chat"
+        title="Chatroulette Alternative Free — Instant Random Video Chat"
         description={description}
         highlights={[
           { title: 'Roulette-Style Matching', desc: 'Meet someone new in seconds — skip anytime with Next when a chat is not a fit.' },
@@ -62,6 +62,18 @@ export default function ChatrouletteAlternativePage() {
           { title: 'Adults 18+ Only', desc: 'An age gate sets a clear community boundary before matching begins.' },
           { title: 'Report Built In', desc: 'Flag harassment or prohibited content instantly and move on.' },
           { title: 'Works in Browser', desc: 'No APK sideloads — use HTTPS on desktop or mobile browsers you already trust.' },
+        ]}
+        sections={[
+          {
+            title: 'A modern Chatroulette alternative for 2026',
+            paragraphs: [
+              'Classic roulette chat was about surprise. Parvah keeps that energy while adding an age gate, report tools, and browser-native WebRTC — so you are not hunting for shady APKs or creating yet another account.',
+            ],
+            links: [
+              { href: '/blog/chatroulette-vs-parvah', label: 'Chatroulette vs Parvah' },
+              { href: '/random-video-chat', label: 'Random video chat' },
+            ],
+          },
         ]}
         faqs={faqs}
         relatedLinks={[

@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Best Omegle Alternative — Free Random Video Chat';
+const title = 'Omegle Alternative 2026 — Free 1-on-1 Video Chat';
 const description =
-  'Parvah is a free Omegle alternative for instant random video chat. No signup, WebRTC privacy, 18+ age gate, and built-in reporting — start in seconds.';
+  'Looking for an Omegle alternative after the shutdown? Parvah is free 1-on-1 random video chat — no signup, WebRTC privacy, 18+ age gate, and built-in reporting.';
 
 export const metadata = {
-  title: 'Omegle Alternative — Free Video Chat',
+  title: 'Omegle Alternative 2026 — Free 1-on-1 Video Chat',
   description,
   alternates: { canonical: `${SITE_URL}/omegle-alternative` },
   openGraph: {
-    title: `Omegle Alternative | ${SITE_NAME}`,
+    title: `Omegle Alternative 2026 — Free 1-on-1 Video Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/omegle-alternative`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Omegle Alternative | ${SITE_NAME}`,
+    title: `Omegle Alternative 2026 | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -33,12 +33,16 @@ const faqs = [
     a: 'Yes. Parvah offers instant random video chat without registration, peer-to-peer WebRTC video, an 18+ age gate, and a report button — the core experience Omegle users expect, with modern safety tools.',
   },
   {
+    q: 'What replaced Omegle in 2026?',
+    a: 'Omegle shut down in 2023. Many people now search for random video chat or free video chat with strangers. Parvah is a browser-based Omegle alternative focused on no signup and WebRTC privacy.',
+  },
+  {
     q: 'Do I need to sign up?',
     a: 'No. Parvah is completely free and requires no account. Click Start Match after confirming you are 18+.',
   },
   {
     q: 'Is Omegle coming back?',
-    a: 'Omegle shut down in 2023. Parvah and similar platforms continue the random video chat experience with updated privacy and moderation features.',
+    a: 'Omegle shut down permanently. Parvah and similar platforms continue the random video chat experience with updated privacy and moderation features.',
   },
 ];
 
@@ -53,7 +57,7 @@ export default function OmegleAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative"
-        title="The Best Free Omegle Alternative for Random Video Chat"
+        title="Omegle Alternative 2026 — Free 1-on-1 Random Video Chat"
         description={description}
         highlights={[
           { title: 'No Registration', desc: 'Start chatting instantly — no email, username, or password required.' },
@@ -63,12 +67,27 @@ export default function OmegleAlternativePage() {
           { title: 'Skip Anytime', desc: 'Click Next to instantly match with someone new if a conversation is not a fit.' },
           { title: 'Free Forever', desc: 'Parvah is free random video chat with no hidden paywalls or premium tiers.' },
         ]}
+        sections={[
+          {
+            title: 'Why people still search for an Omegle alternative',
+            paragraphs: [
+              'After Omegle shut down, search demand shifted from “find Omegle” to “find random video chat.” Users still want surprise matching — but they also want fewer accounts, clearer adult rules, and browser access that works on everyday phones.',
+              'Parvah is built for that shift: no signup, 1-on-1 video, and safety controls you can use mid-chat.',
+            ],
+            links: [
+              { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives in 2026' },
+              { href: '/random-video-chat', label: 'Random video chat hub' },
+              { href: '/ometv-alternative', label: 'OmeTV alternative' },
+            ],
+          },
+        ]}
         faqs={faqs}
         relatedLinks={[
           { href: '/ometv-alternative', label: 'OmeTV Alternative' },
           { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
           { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
-          { href: '/blog/omegle-alternatives-why-parvah-is-better', label: 'Omegle Alternatives Guide' },
+          { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },
+          { href: '/blog/omegle-alternatives-why-parvah-is-better', label: 'Why Parvah Stands Out' },
         ]}
       />
     </>

@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Best OmeTV Alternative — Free Live Webcam Chat';
+const title = 'OmeTV Alternative — Free Browser Webcam Chat';
 const description =
-  'Looking for an OmeTV alternative? Parvah offers free random video chat in your browser — no app, no signup, WebRTC privacy, and instant matching worldwide.';
+  'Need an OmeTV alternative that works in the browser? Parvah offers free random video chat — no app, no signup, WebRTC privacy, and instant matching worldwide.';
 
 export const metadata = {
-  title: 'OmeTV Alternative — Free Webcam Chat',
+  title: 'OmeTV Alternative — Free Browser Webcam Chat',
   description,
   alternates: { canonical: `${SITE_URL}/ometv-alternative` },
   openGraph: {
-    title: `OmeTV Alternative | ${SITE_NAME}`,
+    title: `OmeTV Alternative — Free Browser Webcam Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/ometv-alternative`,
     siteName: SITE_NAME,
@@ -33,8 +33,8 @@ const faqs = [
     a: 'Parvah runs entirely in your browser with no app download. It uses WebRTC for peer-to-peer video, requires no account, and includes an 18+ age gate plus a one-click report button.',
   },
   {
-    q: 'Can I use Parvah on mobile?',
-    a: 'Yes. Parvah works on modern mobile browsers. Allow camera and microphone access when prompted, then tap Start Match.',
+    q: 'Can I use an OmeTV alternative on mobile browser?',
+    a: 'Yes. Parvah works on modern mobile browsers. Allow camera and microphone access when prompted, then tap Start Match — useful if you prefer not to install another chat app.',
   },
   {
     q: 'Is OmeTV still available?',
@@ -53,15 +53,27 @@ export default function OmetvAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="OmeTV Alternative"
-        title="Free OmeTV Alternative for Random Webcam Chat"
+        title="OmeTV Alternative — Free Random Webcam Chat in Your Browser"
         description={description}
         highlights={[
           { title: 'Browser-Based', desc: 'No OmeTV app needed — chat from Chrome, Safari, Firefox, or Edge on any device.' },
           { title: 'Instant Matching', desc: 'Our signaling server pairs you with available users in seconds.' },
           { title: 'Text + Video Chat', desc: 'Switch between live webcam and text messaging during your session.' },
-          { title: 'Global Connections', desc: 'Meet people from around the world through random 1-on-1 matching.' },
+          { title: 'Global Connections', desc: 'Meet people worldwide — including users in India and other high-demand regions — through random 1-on-1 matching.' },
           { title: 'Block & Skip', desc: 'Next skips instantly; repeat offenders can be blocked from re-matching.' },
           { title: 'Community Safety', desc: 'Read our safety guidelines and report violations directly from the chat UI.' },
+        ]}
+        sections={[
+          {
+            title: 'When a browser OmeTV alternative makes sense',
+            paragraphs: [
+              'App stores are convenient until storage, permissions, or region limits get in the way. A browser OmeTV alternative like Parvah keeps matching simple: open a URL, pass the age gate, and start.',
+            ],
+            links: [
+              { href: '/random-video-chat', label: 'Random video chat' },
+              { href: '/blog/ometv-vs-omegle-vs-parvah-comparison', label: 'OmeTV vs Omegle vs Parvah' },
+            ],
+          },
         ]}
         faqs={faqs}
         relatedLinks={[

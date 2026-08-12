@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Anonymous Video Chat — Talk to Strangers Privately';
+const title = 'Anonymous Video Chat with Strangers (No Profile)';
 const description =
   'Anonymous video chat on Parvah: no account, WebRTC peer-to-peer video, 18+ age gate, and report tools. Meet strangers without building a public profile.';
 
 export const metadata = {
-  title: 'Anonymous Video Chat with Strangers',
+  title: 'Anonymous Video Chat with Strangers (No Profile)',
   description,
   alternates: { canonical: `${SITE_URL}/anonymous-video-chat` },
   openGraph: {
-    title: `Anonymous Video Chat | ${SITE_NAME}`,
+    title: `Anonymous Video Chat with Strangers | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/anonymous-video-chat`,
     siteName: SITE_NAME,
@@ -37,6 +37,10 @@ const faqs = [
     a: 'Parvah uses WebRTC so media is not archived on our servers when peer-to-peer connects. The other person could still screen-record, so treat every session carefully.',
   },
   {
+    q: 'Is this video chat with strangers?',
+    a: 'Yes. Parvah matches you randomly with another available adult for a live 1-on-1 session. Skip anytime with Next.',
+  },
+  {
     q: 'Do I need an email to start?',
     a: 'No. Confirm you are 18+, allow camera access, and click Start Match.',
   },
@@ -53,7 +57,7 @@ export default function AnonymousVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Anonymous Video Chat"
-        title="Anonymous Video Chat Without Building a Public Profile"
+        title="Anonymous Video Chat with Strangers — No Public Profile"
         description={description}
         highlights={[
           { title: 'No Account Trail', desc: 'Skip usernames and bios — match as a temporary session instead of a social profile.' },
@@ -63,9 +67,22 @@ export default function AnonymousVideoChatPage() {
           { title: 'Report Abuse', desc: 'Anonymity is not a shield for harassment — report violations in one click.' },
           { title: 'Read the Privacy Policy', desc: 'Know what signaling and safety systems may log when you use the service.' },
         ]}
+        sections={[
+          {
+            title: 'Anonymous vs private — quick clarity',
+            paragraphs: [
+              'Anonymous usually means no named profile. Private is about who can access or store your media. Parvah aims for both: no signup plus WebRTC peer-to-peer when networks allow — and you still decide what appears on camera.',
+            ],
+            links: [
+              { href: '/blog/anonymous-vs-private-video-chat', label: 'Anonymous vs private guide' },
+              { href: '/privacy', label: 'Privacy policy' },
+            ],
+          },
+        ]}
         faqs={faqs}
         relatedLinks={[
           { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
+          { href: '/random-video-chat', label: 'Random Video Chat' },
           { href: '/privacy', label: 'Privacy Policy' },
           { href: '/blog/anonymous-vs-private-video-chat', label: 'Anonymous vs Private Guide' },
           { href: '/blog/privacy-guide-random-video-chat', label: 'Privacy Guide' },
