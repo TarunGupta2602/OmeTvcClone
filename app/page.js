@@ -3,7 +3,7 @@ import HomeCrawlLinks from './components/HomeCrawlLinks';
 import { SITE_URL, SITE_DESCRIPTION, SITE_NAME } from '../lib/constants';
 import { buildFaqSchema, stringifyJsonLd } from '../lib/seo';
 
-export const metadata = {
+const baseMetadata = {
   title: 'Free Random Video Chat with Strangers',
   description: SITE_DESCRIPTION,
   alternates: {
@@ -25,6 +25,24 @@ export const metadata = {
     images: ['/og-image.jpg'],
   },
 };
+
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const hasJunkQuery = Boolean(params?.q || params?.search_term_string);
+
+  if (hasJunkQuery) {
+    return {
+      ...baseMetadata,
+      robots: {
+        index: false,
+        follow: false,
+        googleBot: { index: false, follow: false },
+      },
+    };
+  }
+
+  return baseMetadata;
+}
 
 const HOME_FAQS = [
   {

@@ -4,8 +4,8 @@
   "description": "Free random video chat platform to talk to strangers online. Instant 1-on-1 live webcam chat with no registration required.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4f46e5",
+  "background_color": "#f4f7f6",
+  "theme_color": "#0f766e",
   "orientation": "portrait-primary",
   "icons": [
     {
