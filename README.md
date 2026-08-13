@@ -42,6 +42,8 @@ npm start
 
 Requires the custom `server.js` for Socket.io signaling.
 
+For free always-on hosting (Oracle Cloud Always Free + Cloudflare), see [DEPLOY-ORACLE.md](./DEPLOY-ORACLE.md).
+
 ## Stack
 
 - Next.js 16, React 19, Tailwind CSS 4

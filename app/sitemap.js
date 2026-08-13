@@ -11,12 +11,12 @@ const staticRoutes = [
   { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/anonymous-video-chat', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/no-signup-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/about', changeFrequency: 'weekly', priority: 0.8 },
-  { path: '/safety', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/about', changeFrequency: 'monthly', priority: 0.4 },
+  { path: '/safety', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/faq', changeFrequency: 'weekly', priority: 0.8 },
-  { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/privacy', changeFrequency: 'monthly', priority: 0.5 },
-  { path: '/terms', changeFrequency: 'monthly', priority: 0.5 },
+  { path: '/contact', changeFrequency: 'monthly', priority: 0.4 },
+  { path: '/privacy', changeFrequency: 'yearly', priority: 0.2 },
+  { path: '/terms', changeFrequency: 'yearly', priority: 0.2 },
   { path: '/blog', changeFrequency: 'weekly', priority: 0.85 },
 ];
 

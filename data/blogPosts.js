@@ -940,7 +940,7 @@ export const blogPostsList = [
 ];
 
 // Per-post cover images are generated at /blog/[slug]/opengraph-image
-const CONTENT_REFRESH_DATE = '2026-08-12';
+const CONTENT_REFRESH_DATE = '2026-08-13';
 Object.entries(blogPostsMap).forEach(([, post]) => {
   if (!post.dateModified || post.dateModified === post.date) {
     // Existing posts refreshed with internal links / SEO updates

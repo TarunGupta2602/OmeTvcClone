@@ -197,6 +197,13 @@ export default function FAQPage() {
                 View Safety Guidelines
               </Link>
             </div>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 pt-2 text-sm font-semibold text-white/90">
+              <Link href="/random-video-chat" className="hover:underline">Random video chat</Link>
+              <Link href="/no-signup-video-chat" className="hover:underline">No signup</Link>
+              <Link href="/anonymous-video-chat" className="hover:underline">Anonymous</Link>
+              <Link href="/chatroulette-alternative" className="hover:underline">Chatroulette alt</Link>
+              <Link href="/omegle-alternative" className="hover:underline">Omegle alt</Link>
+            </div>
           </div>
         </div>
       </main>

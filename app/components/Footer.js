@@ -9,10 +9,14 @@ const NAV_LINKS = [
 ];
 
 const EXPLORE_LINKS = [
+  { href: '/random-video-chat', label: 'Random video chat' },
+  { href: '/no-signup-video-chat', label: 'No signup video chat' },
+  { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
   { href: '/omegle-alternative', label: 'Omegle alternative' },
   { href: '/ometv-alternative', label: 'OmeTV alternative' },
-  { href: '/random-video-chat', label: 'Random video chat' },
-  { href: '/anonymous-video-chat', label: 'Anonymous chat' },
+  { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
+  { href: '/emerald-chat-alternative', label: 'Emerald Chat alternative' },
+  { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
 ];
 
 const LEGAL_LINKS = [

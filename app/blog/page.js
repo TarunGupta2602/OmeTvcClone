@@ -75,7 +75,15 @@ export default function BlogPage() {
             <p className="text-base text-slate-600 leading-relaxed">
               Safety guides, Omegle alternatives, WebRTC explainers, and tips for random video chat on Parvah.
             </p>
-            <a href="/blog/rss.xml" className="inline-block text-sm font-semibold text-indigo-600 hover:underline">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm font-semibold text-teal-800">
+              <Link href="/random-video-chat" className="hover:underline">Random video chat</Link>
+              <Link href="/omegle-alternative" className="hover:underline">Omegle alternative</Link>
+              <Link href="/no-signup-video-chat" className="hover:underline">No signup</Link>
+              <Link href="/anonymous-video-chat" className="hover:underline">Anonymous chat</Link>
+              <Link href="/chatroulette-alternative" className="hover:underline">Chatroulette alternative</Link>
+              <Link href="/blog/best-omegle-alternatives-2026" className="hover:underline">Best alternatives 2026</Link>
+            </div>
+            <a href="/blog/rss.xml" className="inline-block text-sm font-semibold text-teal-700 hover:underline">
               Subscribe via RSS →
             </a>
           </div>

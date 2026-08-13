@@ -5,7 +5,7 @@ import { stringifyJsonLd } from '../../lib/seo';
 export const metadata = {
   title: 'Terms of Service',
   description:
-    'Parvah Terms of Service: 18+ age requirement, community conduct rules, zero-tolerance content policies, and user agreements for random video chat.',
+    'Parvah Terms of Service: 18+ age requirement, community conduct rules, and user agreements for using the platform.',
   alternates: {
     canonical: `${SITE_URL}/terms`,
   },

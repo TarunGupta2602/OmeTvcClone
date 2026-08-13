@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Best Chatroulette Alternative — Free Random Video Chat';
+const title = 'Chatroulette Alternative Free — Random Video Chat';
 const description =
-  'Parvah is a free Chatroulette alternative for instant 1-on-1 random video chat. No signup, WebRTC privacy, 18+ age gate, and built-in reporting.';
+  'Free Chatroulette alternative on Parvah: instant 1-on-1 random video chat in your browser. No signup, WebRTC privacy, 18+ age gate, and report tools.';
 
 export const metadata = {
   title: 'Chatroulette Alternative Free — Random Video Chat',
@@ -33,12 +33,20 @@ const faqs = [
     a: 'Yes. Parvah offers roulette-style random video matching in the browser with no registration, WebRTC peer-to-peer video, an 18+ age gate, and a report button.',
   },
   {
+    q: 'Is there a free Chatroulette alternative with no app?',
+    a: 'Parvah is free and browser-based. Open parvah.online on desktop or mobile, allow camera access, and click Start Match — no APK or app store account required.',
+  },
+  {
     q: 'Do I need to download an app?',
-    a: 'No. Open parvah.online in a modern browser on desktop or mobile, allow camera access, and click Start Match.',
+    a: 'No. Use a modern browser on desktop or mobile. Allow camera access, confirm you are 18+, and start matching.',
+  },
+  {
+    q: 'How is Parvah different from classic Chatroulette?',
+    a: 'Parvah keeps the surprise matching feel but adds an explicit adult age gate, one-click reporting, skip controls, and WebRTC peer-to-peer video when networks allow.',
   },
   {
     q: 'Is Chatroulette-style chat free on Parvah?',
-    a: 'Yes. Parvah is free random video chat with no credits, subscriptions, or hidden paywalls.',
+    a: 'Yes. Parvah is free random video chat with no credits, subscriptions, or hidden paywalls for basic matching.',
   },
 ];
 
@@ -65,13 +73,31 @@ export default function ChatrouletteAlternativePage() {
         ]}
         sections={[
           {
-            title: 'A modern Chatroulette alternative for 2026',
+            title: 'Why people look for a Chatroulette alternative in 2026',
             paragraphs: [
-              'Classic roulette chat was about surprise. Parvah keeps that energy while adding an age gate, report tools, and browser-native WebRTC — so you are not hunting for shady APKs or creating yet another account.',
+              'Classic roulette chat was about surprise conversations. Many users still want that energy — but they also want fewer shady downloads, clearer adult rules, and a report button they can find mid-chat.',
+              'Parvah is built as a free Chatroulette alternative for adults: open the site, pass the age gate, allow camera access, and Start Match. Use Next to keep the roulette loop going.',
+            ],
+            bullets: [
+              'Primary intent: Chatroulette alternative free / random video chat',
+              'Differentiator: no signup + browser WebRTC + 18+ safety tools',
+              'Best for: casual stranger chat, not dating profiles or paid filters',
             ],
             links: [
               { href: '/blog/chatroulette-vs-parvah', label: 'Chatroulette vs Parvah' },
-              { href: '/random-video-chat', label: 'Random video chat' },
+              { href: '/random-video-chat', label: 'Random video chat hub' },
+              { href: '/no-signup-video-chat', label: 'No signup video chat' },
+            ],
+          },
+          {
+            title: 'How to start roulette-style chat on Parvah',
+            paragraphs: [
+              'Go to parvah.online, confirm you are 18+, allow camera and microphone, then click Start Match. When a conversation ends or feels wrong, click Next for a new partner or Report for violations.',
+            ],
+            links: [
+              { href: '/safety', label: 'Safety guidelines' },
+              { href: '/faq', label: 'FAQ' },
+              { href: '/omegle-alternative', label: 'Omegle alternative' },
             ],
           },
         ]}
@@ -79,8 +105,10 @@ export default function ChatrouletteAlternativePage() {
         relatedLinks={[
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
           { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
+          { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
           { href: '/blog/chatroulette-vs-parvah', label: 'Chatroulette vs Parvah' },
           { href: '/random-video-chat', label: 'Random Video Chat' },
+          { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },
         ]}
       />
     </>

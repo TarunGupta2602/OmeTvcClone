@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Video Chat with No Signup — Start in Seconds';
 const description =
-  'Video chat with no signup on Parvah. Free random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching.';
+  'Free video chat with no signup on Parvah. Random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching in your browser.';
 
 export const metadata = {
   title: 'Video Chat with No Signup — Start in Seconds',
@@ -41,6 +41,10 @@ const faqs = [
     a: 'Fewer accounts mean fewer passwords to leak and less long-term profile data tied to your email. You still follow safety rules and protect what you show on camera.',
   },
   {
+    q: 'Does no signup video chat work on mobile?',
+    a: 'Yes. Use Chrome, Safari, or another modern mobile browser. No app store install is required for basic matching.',
+  },
+  {
     q: 'Is no-signup chat free on Parvah?',
     a: 'Yes. There is no registration wall and no paid tier required for basic random matching.',
   },
@@ -72,10 +76,27 @@ export default function NoSignupVideoChatPage() {
             title: 'Free video chat with no registration — what to expect',
             paragraphs: [
               'No-signup products trade profiles for speed. You get faster starts and less permanent identity linkage, but you also own your habits: blur backgrounds if needed, skip rude matches, and never share personal numbers on camera.',
+              'Parvah is built for people who searched free video chat no signup / no registration and want a browser session — not another social account.',
             ],
             links: [
               { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
               { href: '/random-video-chat', label: 'Random video chat' },
+              { href: '/blog/how-to-use-parvah', label: 'How to use Parvah' },
+            ],
+          },
+          {
+            title: '3 steps to start without an account',
+            paragraphs: [
+              'Open parvah.online → confirm 18+ → allow camera → Start Match. That is the entire funnel. When you are done, close the tab; there is no profile to delete.',
+            ],
+            bullets: [
+              'No email or phone verification',
+              'No credits to unlock strangers',
+              'Report and Next available during chat',
+            ],
+            links: [
+              { href: '/omegle-alternative', label: 'Omegle alternative' },
+              { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
             ],
           },
         ]}
@@ -85,6 +106,8 @@ export default function NoSignupVideoChatPage() {
           { href: '/random-video-chat', label: 'Random Video Chat' },
           { href: '/blog/how-to-use-parvah', label: 'How to Use Parvah' },
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
+          { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
+          { href: '/faq', label: 'FAQ' },
         ]}
       />
     </>

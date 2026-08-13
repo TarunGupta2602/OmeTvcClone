@@ -20,8 +20,8 @@ export default function Navbar({ minimal = false }) {
   ];
 
   const mainNavItems = [
-    { name: 'About', href: '/about' },
-    { name: 'Safety', href: '/safety' },
+    { name: 'Random Chat', href: '/random-video-chat' },
+    { name: 'Omegle Alt', href: '/omegle-alternative' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Blog', href: '/blog' },
   ];

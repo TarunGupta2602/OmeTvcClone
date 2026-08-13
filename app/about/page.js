@@ -3,26 +3,26 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'About Parvah — Free Random Video Chat',
+  title: 'About Parvah',
   description:
-    'Learn how Parvah connects people worldwide with instant WebRTC random video chat, smart matchmaking, and strict community safety — no registration required.',
+    'About Parvah: who we are, how the product works, and our focus on adult safety for browser-based stranger video chat.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
   openGraph: {
-    title: 'About Parvah — Free Random Video Chat',
+    title: `About Parvah | ${SITE_NAME}`,
     description:
-      'Discover how Parvah connects people worldwide through instant 1-on-1 WebRTC random video chat, smart matchmaking, and privacy-first engineering.',
+      'Learn who builds Parvah and how our browser video chat product is designed for adults 18+.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Free Random Video Chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Parvah' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Parvah — Free Random Video Chat',
-    description: 'Discover how our platform connects people worldwide through instant 1-on-1 WebRTC random video chat. Talk to strangers online.',
+    title: `About Parvah | ${SITE_NAME}`,
+    description: 'Who we are and how Parvah browser video chat works for adults 18+.',
     images: ['/og-image.jpg'],
   },
 };
@@ -30,8 +30,8 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Parvah - Free Random Video Chat',
-  description: 'Learn about our free random video chat platform connecting people globally with real-time matching, WebRTC technology, and strict community safety.',
+  name: 'About Parvah',
+  description: 'About the Parvah team and product: browser stranger video chat for adults 18+ with WebRTC and safety tools.',
   url: `${SITE_URL}/about`,
   publisher: {
     '@type': 'Organization',
@@ -119,14 +119,11 @@ export default function AboutPage() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900">
-            Connecting People Worldwide in{' '}
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 bg-clip-text text-transparent">
-              Real-Time Video Chat
-            </span>
+            About Parvah
           </h1>
 
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Parvah brings the spontaneity of real-life conversations to your browser. Meet new friends, discover diverse cultures, and practice languages with random video connections instantly.
+            We build browser-based stranger video chat for adults 18+ — with no signup wall, WebRTC privacy, and clear safety tools.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -137,11 +134,17 @@ export default function AboutPage() {
               Start Free Video Chat
             </Link>
             <Link
-              href="/safety"
+              href="/random-video-chat"
               className="px-8 py-4 rounded-2xl font-bold text-sm text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 hover:text-slate-900 transition-all shadow-xs"
             >
-              Read Community Safety Guidelines
+              Random video chat guide
             </Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 pt-2 text-sm font-semibold text-teal-800">
+            <Link href="/omegle-alternative" className="hover:underline">Omegle alternative</Link>
+            <Link href="/no-signup-video-chat" className="hover:underline">No signup chat</Link>
+            <Link href="/anonymous-video-chat" className="hover:underline">Anonymous chat</Link>
+            <Link href="/chatroulette-alternative" className="hover:underline">Chatroulette alternative</Link>
           </div>
         </div>
       </section>
