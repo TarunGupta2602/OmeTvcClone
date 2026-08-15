@@ -5,13 +5,13 @@ import { stringifyJsonLd } from '../../lib/seo';
 export const metadata = {
   title: 'Terms of Service',
   description:
-    'Parvah Terms of Service: 18+ age requirement, community conduct rules, and user agreements for using the platform.',
+    'Parvah Terms of Service: 18+ age requirement, consent-first adult chat rules, and user agreements for using the platform.',
   alternates: {
     canonical: `${SITE_URL}/terms`,
   },
   openGraph: {
     title: 'Terms of Service | Parvah',
-    description: 'Terms of Service and community rules for using Parvah random video chat.',
+    description: 'Terms of Service and community rules for using Parvah adult random video chat.',
     url: `${SITE_URL}/terms`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Terms of Service' }],
@@ -21,7 +21,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Terms of Service | Parvah',
-    description: 'Terms of Service and community rules for using Parvah random video chat.',
+    description: 'Terms of Service and community rules for using Parvah adult random video chat.',
     images: ['/og-image.jpg'],
   },
 };
@@ -30,9 +30,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TermsOfService',
   name: 'Terms of Service - Parvah',
-  description: 'Terms of Service for our random video chat platform outlining rules of conduct, 18+ age restriction, zero tolerance content policies, and user agreements.',
+  description: 'Terms of Service for our adult random video chat platform outlining rules of conduct, 18+ age restriction, consent requirements, and user agreements.',
   url: `${SITE_URL}/terms`,
-  dateModified: '2026-08-07',
+  dateModified: '2026-08-15',
   publisher: {
     '@type': 'Organization',
     name: SITE_NAME,
@@ -41,7 +41,7 @@ const jsonLd = {
 };
 
 export default function TermsPage() {
-  const lastUpdated = 'August 7, 2026';
+  const lastUpdated = 'August 15, 2026';
 
   const sections = [
     {
@@ -55,34 +55,41 @@ export default function TermsPage() {
       content: `Parvah is strictly intended for individuals who are at least 18 years of age or the legal age of majority in their jurisdiction. Persons under 18 years old are strictly prohibited from accessing video chats or using the platform. Parvah does not create user accounts; an age confirmation gate is required before chatting. We reserve the right to terminate sessions for anyone suspected of being underage.`,
     },
     {
+      id: 'adult-consent',
+      title: '3. Adult Content & Consent',
+      content: `Parvah is an adult random video chat platform. Flirty conversation, intimate talk, and mutual adult chemistry between consenting users aged 18+ are allowed. Explicit activity is only permitted when both matched adults clearly consent. You must stop immediately if the other person asks you to stop, skips, or appears uncomfortable. Parvah does not provide paid performers, cam models, or guaranteed partners of any gender or appearance.`,
+    },
+    {
       id: 'prohibited',
-      title: '3. Prohibited Conduct & Zero Tolerance Policy',
+      title: '4. Prohibited Conduct & Zero Tolerance Policy',
       content: `You agree NEVER to perform any of the following while using Parvah:
-- Nudity, sexually explicit content, or vulgar behavior of any kind.
+- Any interaction involving minors or anyone you believe may be under 18.
+- Non-consensual sexual behavior, flashing without clear mutual interest, or continuing after a request to stop.
 - Harassment, bullying, hate speech, discrimination, or abusive language.
 - Violence, threats of harm, weapons display, or promotion of self-harm.
 - Recording, screenshotting, or streaming video sessions without explicit consent of your peer.
 - Spam, advertising, scams, phishing, or bot automation.
-- Impersonation of others or law enforcement personnel.`,
+- Impersonation of others or law enforcement personnel.
+- Illegal content of any kind under applicable law.`,
     },
     {
       id: 'enforcement',
-      title: '4. Enforcement & Safety Tools',
+      title: '5. Enforcement & Safety Tools',
       content: `Parvah provides an in-chat Report control that blocks the peer for your session and skips to a new match. Report details are not stored on our servers. For serious violations, email safety@parvah.online. Because there are no user accounts, there is no account ban or appeal process. We may rate-limit, disconnect, or restrict abusive network traffic when we can identify it. Decisions about access restrictions are final.`,
     },
     {
       id: 'disclaimer',
-      title: '5. Service Provided "As-Is"',
-      content: `Parvah is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. We do not guarantee uninterrupted server uptime, connection speed, or the conduct of individual third-party users matched in video chat.`,
+      title: '6. Service Provided "As-Is"',
+      content: `Parvah is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. We do not guarantee uninterrupted server uptime, connection speed, match quality, gender of matches, or the conduct of individual third-party users matched in video chat.`,
     },
     {
       id: 'limitation',
-      title: '6. Limitation of Liability',
+      title: '7. Limitation of Liability',
       content: `To the maximum extent permitted by applicable law, Parvah, its operators, affiliates, and developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service, or conduct of any third party.`,
     },
     {
       id: 'changes',
-      title: '7. Amendments to Terms',
+      title: '8. Amendments to Terms',
       content: `We reserve the right to revise these Terms of Service at any time. Continued use of the platform following updates constitutes full acceptance of modified terms.`,
     },
   ];

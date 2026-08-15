@@ -292,11 +292,11 @@
 
 .chat-lobby-title-glow {
   display: block;
-  background: linear-gradient(90deg, #5eead4 0%, #2dd4bf 45%, #14b8a6 100%);
+  background: linear-gradient(90deg, #fb7185 0%, #f43f5e 40%, #2dd4bf 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 40px rgba(45, 212, 191, 0.28));
+  filter: drop-shadow(0 0 40px rgba(244, 63, 94, 0.22));
 }
 
 @media (min-width: 640px) {

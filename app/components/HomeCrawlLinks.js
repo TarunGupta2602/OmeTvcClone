@@ -2,6 +2,13 @@ import Link from 'next/link';
 import { blogPostsList } from '../../data/blogPosts';
 
 const MONEY_PAGES = [
+  { href: '/adult-video-chat', label: 'Adult video chat' },
+  { href: '/hot-video-chat', label: 'Hot video chat' },
+  { href: '/flirty-video-chat', label: 'Flirty video chat' },
+  { href: '/late-night-video-chat', label: 'Late night video chat' },
+  { href: '/meet-people-online', label: 'Meet people online' },
+  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
+  { href: '/free-webcam-chat', label: 'Free webcam chat' },
   { href: '/omegle-alternative', label: 'Omegle alternative' },
   { href: '/ometv-alternative', label: 'OmeTV alternative' },
   { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },

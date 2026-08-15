@@ -20,8 +20,9 @@ export default function Navbar({ minimal = false }) {
   ];
 
   const mainNavItems = [
+    { name: 'Adult Chat', href: '/adult-video-chat' },
+    { name: 'Hot Chat', href: '/hot-video-chat' },
     { name: 'Random Chat', href: '/random-video-chat' },
-    { name: 'Omegle Alt', href: '/omegle-alternative' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Blog', href: '/blog' },
   ];
@@ -136,7 +137,7 @@ export default function Navbar({ minimal = false }) {
                 Parvah
               </span>
               <span className="hidden sm:block text-[10px] text-slate-500 tracking-[0.14em] uppercase font-semibold -mt-0.5 truncate">
-                Free Random Video Chat
+                Free Adult Video Chat
               </span>
             </div>
           </Link>

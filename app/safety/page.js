@@ -3,16 +3,16 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd, buildWebPageSchema } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Safety Guidelines for Video Chat',
+  title: 'Safety Guidelines for Adult Video Chat',
   description:
-    'Parvah community guidelines: 18+ only, zero tolerance for harassment and explicit content, report tools, and tips to stay safe when chatting with strangers.',
+    'Parvah community guidelines: 18+ only, consent-first adult chat, zero tolerance for underage users and harassment, report tools, and tips to stay safe.',
   alternates: {
     canonical: `${SITE_URL}/safety`,
   },
   openGraph: {
-    title: 'Safety Guidelines for Video Chat',
+    title: 'Safety Guidelines for Adult Video Chat',
     description:
-      'Zero-tolerance safety rules, anti-harassment policies, and reporting tips for secure random video chat on Parvah.',
+      'Consent-first adult chat rules, anti-harassment policies, and reporting tips for secure random video chat on Parvah.',
     url: `${SITE_URL}/safety`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
@@ -21,15 +21,15 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Safety Guidelines for Video Chat',
-    description: 'Zero-tolerance safety rules and reporting tips for secure random video chat on Parvah.',
+    title: 'Safety Guidelines for Adult Video Chat',
+    description: 'Consent-first adult chat rules and reporting tips for secure random video chat on Parvah.',
     images: ['/og-image.jpg'],
   },
 };
 
-const pageTitle = 'Safety Guidelines for Video Chat';
+const pageTitle = 'Safety Guidelines for Adult Video Chat';
 const pageDescription =
-  'Parvah community guidelines: 18+ only, zero tolerance for harassment and explicit content, report tools, and tips to stay safe when chatting with strangers.';
+  'Parvah community guidelines: 18+ only, consent-first adult chat, zero tolerance for underage users and harassment, report tools, and tips to stay safe.';
 
 const jsonLd = buildWebPageSchema({
   title: pageTitle,
@@ -41,9 +41,9 @@ export default function SafetyPage() {
   const rules = [
     {
       number: '01',
-      title: 'Zero Tolerance for Nudity & Sexual Content',
+      title: 'Consent First for Adult Content',
       description:
-        'Explicit sexual behavior, nudity, or inappropriate conduct is forbidden. Use the Report button during chat to block and skip, or email safety@parvah.online for serious abuse.',
+        'Flirty or intimate chat is allowed only between consenting adults 18+. Stop immediately if someone asks, skips, or seems uncomfortable. Non-consensual flashing or pressure is banned — use Report and email safety@parvah.online for serious abuse.',
       icon: (
         <svg className="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
@@ -53,6 +53,18 @@ export default function SafetyPage() {
     },
     {
       number: '02',
+      title: 'No Minors — Ever',
+      description:
+        'Anyone under 18 is banned. If you suspect a match is underage, end the chat immediately, report, and leave. Zero tolerance.',
+      icon: (
+        <svg className="w-6 h-6 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+        </svg>
+      ),
+      severity: 'Immediate Disconnect + Report',
+    },
+    {
+      number: '03',
       title: 'No Harassment, Hate Speech, or Bullying',
       description:
         'Discriminatory remarks based on race, ethnicity, religion, gender, sexual orientation, or disability are never tolerated. Treat every person you match with dignity and respect.',
@@ -64,34 +76,34 @@ export default function SafetyPage() {
       severity: 'Zero Tolerance Enforcement',
     },
     {
-      number: '03',
+      number: '04',
       title: 'Protect Your Personal Information',
       description:
         'Never share sensitive private details such as your full name, home address, phone number, financial information, passwords, or social security numbers with strangers.',
       icon: (
-        <svg className="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-6 h-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
       severity: 'Personal Safety Guardrail',
     },
     {
-      number: '04',
+      number: '05',
       title: 'No Unauthorized Session Recording',
       description:
-        'Recording, screenshotting, or re-broadcasting another user’s video stream without their explicit prior written consent violates privacy laws and will lead to legal escalation.',
+        'Recording, screenshotting, or re-broadcasting another user’s video stream without their explicit prior consent violates privacy laws and our terms.',
       icon: (
-        <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-6 h-6 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
         </svg>
       ),
       severity: 'Legal & Terms Violation',
     },
     {
-      number: '05',
+      number: '06',
       title: 'No Weapons, Drugs, or Illegal Content',
       description:
-        'Displaying firearms, dangerous weapons, illicit substances, or engaging in illegal acts live on stream is strictly prohibited and immediately reported to appropriate law enforcement.',
+        'Displaying firearms, dangerous weapons, illicit substances, or engaging in illegal acts live on stream is strictly prohibited and may be reported to law enforcement.',
       icon: (
         <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

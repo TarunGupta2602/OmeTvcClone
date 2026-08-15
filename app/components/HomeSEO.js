@@ -3,27 +3,27 @@ import Link from 'next/link';
 export default function HomeSEO() {
   const faqs = [
     {
-      q: 'Is Parvah free random video chat?',
-      a: 'Yes. Parvah is completely free with no registration, credits, or subscription required.',
+      q: 'Is Parvah free adult video chat?',
+      a: 'Yes. Completely free with no registration, credits, or subscription — open the site and match instantly.',
     },
     {
-      q: 'Do I need an app?',
-      a: 'No. Use any modern browser on desktop or mobile — popular with users in India and worldwide who prefer no downloads.',
+      q: 'Can I have flirty or hot conversations?',
+      a: 'Yes, between consenting adults 18+. Mutual chemistry is welcome. Skip or report anything that feels wrong.',
     },
     {
-      q: 'Is video chat private?',
-      a: 'Video streams use peer-to-peer WebRTC and are not recorded or stored on our servers.',
+      q: 'Will I meet women or new people every time?',
+      a: 'Matches are random adults in the live queue. Gender and vibe vary — keep tapping Next until the spark feels right.',
     },
     {
       q: 'How do I stay safe?',
-      a: 'Never share personal information, use the Report button for violations, and click Next to skip uncomfortable chats.',
+      a: 'Never share personal info, use Report for abuse, and leave any chat that is not consensual. Parvah is 18+ only.',
     },
   ];
 
   const steps = [
     'Confirm you are 18+ and allow camera access.',
-    'Click Start Match to join the live queue.',
-    'Chat via video and text — skip or report anytime.',
+    'Click Start Matching to join the live adult queue.',
+    'Flirt, talk, connect — skip or report anytime.',
   ];
 
   return (
@@ -34,27 +34,31 @@ export default function HomeSEO() {
             Parvah
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-tight">
-            Free random video chat — talk to strangers instantly
+            Free adult random video chat — flirty talks, new people, real chemistry
           </h2>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
-            Instant 1-on-1 webcam conversations with no signup. WebRTC privacy and built-in safety tools for
-            adults 18+. A modern Omegle alternative and OmeTV alternative that works in your browser.
+            Instant 1-on-1 webcam chat for adults who want hot conversations, late-night company, or a
+            spark that might turn into something more. No signup. WebRTC privacy. Built-in skip and
+            report. A modern adult Omegle alternative in your browser.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
+            <Link href="/adult-video-chat" className="hover:underline">
+              Adult video chat
+            </Link>
+            <Link href="/hot-video-chat" className="hover:underline">
+              Hot video chat
+            </Link>
+            <Link href="/flirty-video-chat" className="hover:underline">
+              Flirty video chat
+            </Link>
+            <Link href="/meet-people-online" className="hover:underline">
+              Meet people online
+            </Link>
+            <Link href="/video-chat-with-strangers" className="hover:underline">
+              Chat with strangers
+            </Link>
             <Link href="/omegle-alternative" className="hover:underline">
               Omegle alternative
-            </Link>
-            <Link href="/random-video-chat" className="hover:underline">
-              Random video chat
-            </Link>
-            <Link href="/no-signup-video-chat" className="hover:underline">
-              No signup chat
-            </Link>
-            <Link href="/ometv-alternative" className="hover:underline">
-              OmeTV alternative
-            </Link>
-            <Link href="/blog/best-omegle-alternatives-2026" className="hover:underline">
-              Best alternatives 2026
             </Link>
             <Link href="/safety" className="hover:underline">
               Safety
@@ -64,22 +68,22 @@ export default function HomeSEO() {
 
         <div className="space-y-8">
           <div className="space-y-2">
-            <h3 className="text-xl font-bold text-slate-900">Why people choose Parvah</h3>
+            <h3 className="text-xl font-bold text-slate-900">Why adults choose Parvah</h3>
             <p className="text-sm text-slate-600">One clear reason per point — skip anytime, no account wall.</p>
           </div>
           <ul className="space-y-7">
             {[
               {
-                title: 'Instant matching',
-                desc: 'Join the queue and get paired with another available adult in seconds.',
+                title: 'Instant adult matching',
+                desc: 'Join the queue and get paired with another available adult in seconds for live 1-on-1 video.',
               },
               {
-                title: 'Privacy first',
-                desc: 'Peer-to-peer WebRTC video is not archived on Parvah servers.',
+                title: 'Flirty to deep — your vibe',
+                desc: 'From playful dirty talk to late-night honesty to dating energy — consenting adults set the tone together.',
               },
               {
-                title: 'Built-in safety',
-                desc: '18+ age gate, report and skip controls, and clear community guidelines.',
+                title: 'Privacy + safety tools',
+                desc: 'Peer-to-peer WebRTC, 18+ age gate, report and skip controls, and clear community rules.',
               },
             ].map((item, i) => (
               <li key={item.title} className="grid gap-2 sm:grid-cols-[3rem_1fr] sm:gap-6">

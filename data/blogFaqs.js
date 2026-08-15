@@ -1,5 +1,48 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'best-adult-video-chat-sites-2026': [
+    {
+      q: 'What is the best free adult video chat site in 2026?',
+      a: 'Parvah is a strong choice for free adult video chat: no signup, 18+ age gate, instant 1-on-1 matching, and consent-first flirty conversation with skip and report tools.',
+    },
+    {
+      q: 'Are adult video chat sites the same as cam girl sites?',
+      a: 'No. Random adult video chat matches real users. Cam sites usually sell performer shows. Parvah is random matching, not a paid cam catalog.',
+    },
+    {
+      q: 'Is hot video chat allowed on Parvah?',
+      a: 'Yes between consenting adults 18+. Non-consent, underage users, and harassment are banned.',
+    },
+  ],
+  'how-to-flirt-on-random-video-chat': [
+    {
+      q: 'How do I start flirting on video chat?',
+      a: 'Open light, smile, ask a simple question, and match their energy. Escalate only when the other adult clearly reciprocates.',
+    },
+    {
+      q: 'What if they are not interested?',
+      a: 'Stop immediately and click Next. Pressure or non-consensual behavior is not allowed on Parvah.',
+    },
+    {
+      q: 'Is flirty video chat free?',
+      a: 'Yes on Parvah — free matching with no signup for adults 18+.',
+    },
+  ],
+  'free-hot-video-chat-no-signup': [
+    {
+      q: 'Is free hot video chat really free?',
+      a: 'On Parvah, basic adult matching is free with no credits or signup. Confirm you are 18+ and start.',
+    },
+    {
+      q: 'Do I get guaranteed nude chats?',
+      a: 'No. Matches are random adults. Intimate chat only happens with mutual consent — never as a guarantee.',
+    },
+    {
+      q: 'How fast can I start?',
+      a: 'Usually under a minute: open the site, pass the age gate, allow camera access, and click Start Matching.',
+    },
+  ],
+
   'how-to-stay-safe-on-video-chat-platforms': [
     {
       q: 'Is random video chat safe?',

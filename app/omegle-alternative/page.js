@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Omegle Alternative 2026 — Free 1-on-1 Video Chat';
+const title = 'Omegle Alternative 2026 — Free Adult Video Chat';
 const description =
-  'Looking for an Omegle alternative after the shutdown? Parvah is free 1-on-1 random video chat — no signup, WebRTC privacy, 18+ age gate, and built-in reporting.';
+  'Looking for an Omegle alternative after the shutdown? Parvah is free adult 1-on-1 random video chat — no signup, flirty talks welcome (consenting 18+), WebRTC privacy, and built-in reporting.';
 
 export const metadata = {
-  title: 'Omegle Alternative 2026 — Free 1-on-1 Video Chat',
+  title: 'Omegle Alternative 2026 — Free Adult Video Chat',
   description,
   alternates: { canonical: `${SITE_URL}/omegle-alternative` },
   openGraph: {
-    title: `Omegle Alternative 2026 — Free 1-on-1 Video Chat | ${SITE_NAME}`,
+    title: `Omegle Alternative 2026 — Free Adult Video Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/omegle-alternative`,
     siteName: SITE_NAME,
@@ -57,15 +57,15 @@ export default function OmegleAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative"
-        title="Omegle Alternative 2026 — Free 1-on-1 Random Video Chat"
+        title="Omegle Alternative 2026 — Free Adult Random Video Chat"
         description={description}
         highlights={[
           { title: 'No Registration', desc: 'Start chatting instantly — no email, username, or password required.' },
+          { title: 'Adult flirty energy', desc: 'Consenting adults 18+ can keep chats playful, hot, or deep — skip anytime.' },
           { title: 'WebRTC Privacy', desc: 'Video streams use peer-to-peer connections and are not stored on our servers.' },
           { title: 'Safety Built In', desc: '18+ age verification, report button, and community guidelines keep chats respectful.' },
           { title: 'Works in Browser', desc: 'No app download. Open parvah.online on desktop or mobile and allow camera access.' },
-          { title: 'Skip Anytime', desc: 'Click Next to instantly match with someone new if a conversation is not a fit.' },
-          { title: 'Free Forever', desc: 'Parvah is free random video chat with no hidden paywalls or premium tiers.' },
+          { title: 'Free Forever', desc: 'Parvah is free adult random video chat with no hidden paywalls or premium tiers.' },
         ]}
         sections={[
           {
@@ -76,18 +76,20 @@ export default function OmegleAlternativePage() {
             ],
             links: [
               { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives in 2026' },
-              { href: '/random-video-chat', label: 'Random video chat hub' },
-              { href: '/ometv-alternative', label: 'OmeTV alternative' },
+              { href: '/adult-video-chat', label: 'Adult video chat' },
+              { href: '/hot-video-chat', label: 'Hot video chat' },
             ],
           },
         ]}
         faqs={faqs}
         relatedLinks={[
+          { href: '/adult-video-chat', label: 'Adult Video Chat' },
+          { href: '/hot-video-chat', label: 'Hot Video Chat' },
+          { href: '/video-chat-with-strangers', label: 'Video Chat with Strangers' },
           { href: '/ometv-alternative', label: 'OmeTV Alternative' },
           { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
           { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
           { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },
-          { href: '/blog/omegle-alternatives-why-parvah-is-better', label: 'Why Parvah Stands Out' },
         ]}
       />
     </>

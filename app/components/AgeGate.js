@@ -36,11 +36,11 @@ export default function AgeGate({ onConfirm }) {
         <div className="space-y-2">
           <p className="text-[10px] font-bold uppercase tracking-widest text-teal-700">Parvah</p>
           <h2 id="age-gate-title" className="text-xl font-black text-slate-900">
-            Adults Only
+            Adults Only — 18+
           </h2>
           <p id="age-gate-desc" className="text-sm text-slate-600 leading-relaxed">
-            Parvah is strictly for users aged 18 and older. By continuing, you confirm that you are at
-            least 18 years of age and agree to our{' '}
+            Parvah is free adult random video chat. Matches may include flirty or intimate conversation
+            between consenting adults. By continuing, you confirm you are at least 18 and agree to our{' '}
             <Link href="/terms" className="text-teal-700 font-semibold hover:underline">
               Terms of Service
             </Link>{' '}

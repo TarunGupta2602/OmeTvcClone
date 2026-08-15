@@ -4,15 +4,15 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'FAQ — Free Random Video Chat Questions',
+  title: 'FAQ — Free Adult Video Chat Questions',
   description:
-    'Answers about Parvah free random video chat: no signup, safety, camera setup, WebRTC privacy, Omegle alternative questions, and how to talk to strangers online.',
+    'Answers about Parvah free adult video chat: no signup, flirty talks, safety, camera setup, WebRTC privacy, and how random matching works for adults 18+.',
   alternates: {
     canonical: `${SITE_URL}/faq`,
   },
   openGraph: {
-    title: 'FAQ — Free Random Video Chat Questions',
-    description: 'Common questions about free random video chat, no signup, safety, and how Parvah works.',
+    title: 'FAQ — Free Adult Video Chat Questions',
+    description: 'Common questions about free adult video chat, flirty talks, no signup, safety, and how Parvah works.',
     url: `${SITE_URL}/faq`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
@@ -21,21 +21,31 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ — Free Random Video Chat Questions',
-    description: 'Common questions about free random video chat, no signup, safety, and how Parvah works.',
+    title: 'FAQ — Free Adult Video Chat Questions',
+    description: 'Common questions about free adult video chat, flirty talks, no signup, safety, and how Parvah works.',
     images: ['/og-image.jpg'],
   },
 };
 
 const faqs = [
   {
-    question: 'Is Parvah free to use?',
-    answer: 'Yes, Parvah is completely free to use. No registration, credit card, or payment is required to start video chatting with strangers.',
+    question: 'Is Parvah free adult video chat?',
+    answer: 'Yes. Parvah is completely free adult random video chat. No registration, credits, or subscription is required to start matching with other adults 18+.',
+    category: 'General',
+  },
+  {
+    question: 'Are flirty talks and intimate chats allowed?',
+    answer: 'Yes, between consenting adults. Mutual chemistry, flirty conversation, and hot talk are welcome when both people agree. Non-consent, pressure, and underage users are banned.',
+    category: 'General',
+  },
+  {
+    question: 'Will I always match with women or get nude chats?',
+    answer: 'No. Matches are random adults in the live queue. Parvah does not sell cam models or guarantee gender, looks, or explicit content. Skip until you find a mutual vibe.',
     category: 'General',
   },
   {
     question: 'Do I need to register to use the platform?',
-    answer: 'No registration is required. Simply visit the website, grant camera and microphone permissions, and click "Start Match" to begin chatting instantly.',
+    answer: 'No registration is required. Simply visit the website, confirm you are 18+, grant camera and microphone permissions, and click Start Matching.',
     category: 'General',
   },
   {
@@ -65,7 +75,7 @@ const faqs = [
   },
   {
     question: 'Can I choose who I match with?',
-    answer: 'Matches are random to ensure equal opportunities for all users. You can use the "Next" button to skip to a new stranger at any time.',
+    answer: 'Matches are random to keep the queue fair. Use the Next button anytime to skip to someone new until the chemistry feels right.',
     category: 'General',
   },
   {
@@ -80,7 +90,7 @@ const faqs = [
   },
   {
     question: 'How does the matching algorithm work?',
-    answer: 'Our matching system pairs users randomly based on availability. When you click "Start Match", our system finds another user who is also looking to chat and connects you instantly.',
+    answer: 'Our matching system pairs users randomly based on availability. When you click Start Matching, our system finds another adult who is also looking to chat and connects you instantly.',
     category: 'Technical',
   },
   {
@@ -105,23 +115,13 @@ const faqs = [
   },
   {
     question: 'Is there a time limit on conversations?',
-    answer: 'No, there is no time limit on conversations. You can chat as long as both parties want to continue. Simply click "Next" when you\'re ready to move on.',
+    answer: 'No, there is no time limit on conversations. You can chat as long as both parties want to continue. Simply click Next when you\'re ready to move on.',
     category: 'General',
   },
   {
     question: 'How do I delete my data?',
     answer: 'Since we don\'t store personal data or video content, there\'s nothing to delete. Your session data is automatically cleared when you leave the platform.',
     category: 'Privacy',
-  },
-  {
-    question: 'Can I use Parvah for business purposes?',
-    answer: 'Parvah is designed for personal social interactions. For business video conferencing, we recommend using dedicated business communication platforms.',
-    category: 'General',
-  },
-  {
-    question: 'What should I do if I encounter a bug?',
-    answer: 'If you experience technical issues, try refreshing the page or using a different browser. If the problem persists, please contact our support team with details about the issue.',
-    category: 'Technical',
   },
   {
     question: 'Are there any hidden fees or subscriptions?',
@@ -134,7 +134,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   name: 'FAQ - Parvah',
-  description: 'Frequently asked questions about our free random video chat platform.',
+  description: 'Frequently asked questions about our free adult random video chat platform.',
   url: `${SITE_URL}/faq`,
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',

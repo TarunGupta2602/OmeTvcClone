@@ -36,7 +36,7 @@ export default function SeoLandingPage({
               href="/"
               className="inline-block px-8 py-4 rounded-xl font-bold text-white bg-teal-800 hover:bg-teal-900 transition"
             >
-              Start free video chat
+              Start free adult chat
             </Link>
             <Link
               href="/safety"

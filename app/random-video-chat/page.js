@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Random Video Chat Free (No Signup)';
+const title = 'Random Video Chat Free — Adult Strangers 18+';
 const description =
-  'Free random video chat with strangers — no signup. Instant 1-on-1 webcam chat in your browser, WebRTC privacy, 18+ age gate, and skip anytime on Parvah.';
+  'Free random video chat with adults — no signup. Instant 1-on-1 webcam chat for flirty talks, late-night company, and real connections on Parvah (18+).';
 
 export const metadata = {
-  title: 'Random Video Chat Free (No Signup)',
+  title: 'Random Video Chat Free — Adult Strangers 18+',
   description,
   alternates: { canonical: `${SITE_URL}/random-video-chat` },
   openGraph: {
-    title: `Random Video Chat Free (No Signup) | ${SITE_NAME}`,
+    title: `Random Video Chat Free — Adult Strangers 18+ | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/random-video-chat`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Random Video Chat Free (No Signup) | ${SITE_NAME}`,
+    title: `Random Video Chat Free — Adult Strangers 18+ | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -65,50 +65,51 @@ export default function RandomVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Random Video Chat"
-        title="Random Video Chat Free — Talk to Strangers Instantly"
+        title="Random Video Chat Free — Meet Adults Instantly"
         description={description}
         highlights={[
-          { title: 'Talk to Strangers', desc: 'Meet new people through live 1-on-1 video — casual conversations, language practice, or cultural exchange.' },
+          { title: 'Talk to Strangers', desc: 'Meet new adults through live 1-on-1 video — flirty talks, late-night company, or real chemistry.' },
           { title: 'No Sign-Up', desc: 'Jump straight into random webcam chat without creating an account or verifying email.' },
           { title: 'Peer-to-Peer Video', desc: 'WebRTC routes video directly between browsers when possible for lower latency and better privacy.' },
           { title: 'Works Worldwide', desc: 'Popular with users across India, the US, and other regions who want browser-based stranger chat without an app.' },
-          { title: 'Adults 18+ Only', desc: 'Age verification helps maintain a community standard for adult random chat.' },
+          { title: 'Adults 18+ Only', desc: 'Age verification keeps Parvah focused on adult random chat with clear consent rules.' },
           { title: 'Free & Unlimited', desc: 'No time limits, no credits, no subscription — chat as long as you like.' },
         ]}
         sections={[
           {
             title: 'How free random video chat works on Parvah',
             paragraphs: [
-              'Open parvah.online, confirm you are 18+, allow camera access, and click Start Match. Our signaling server pairs you with another available adult for a live 1-on-1 session. Click Next anytime to meet someone new.',
+              'Open parvah.online, confirm you are 18+, allow camera access, and click Start Matching. Our signaling server pairs you with another available adult for a live 1-on-1 session. Click Next anytime to meet someone new.',
               'Unlike app-only platforms, Parvah is built for the browser — useful if you are on a shared laptop, a mid-range Android phone, or simply do not want another download.',
             ],
             bullets: [
               'Primary keyword fit: free random video chat with strangers',
+              'Adult angle: flirty and hot talk welcome with consent',
               'Differentiator: no signup + WebRTC peer-to-peer when networks allow',
-              'Safety: report, skip, and published guidelines',
             ],
             links: [
-              { href: '/no-signup-video-chat', label: 'No signup video chat' },
-              { href: '/omegle-alternative', label: 'Omegle alternative' },
-              { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
+              { href: '/adult-video-chat', label: 'Adult video chat' },
+              { href: '/hot-video-chat', label: 'Hot video chat' },
+              { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
             ],
           },
           {
             title: 'Random video chat vs apps and dating sites',
             paragraphs: [
               'People searching for random video chat usually want spontaneity — not profiles, swipes, or paid boosts. Parvah stays in that lane: temporary sessions, skip anytime, and no public bio to maintain.',
-              'If you need filters, interest tags, or social profiles, other products may fit better. If you want talk-to-strangers energy with modern safety basics, start here.',
+              'If you need filters, interest tags, or social profiles, other products may fit better. If you want talk-to-strangers energy with modern adult safety basics, start here.',
             ],
           },
         ]}
         faqs={faqs}
         relatedLinks={[
+          { href: '/adult-video-chat', label: 'Adult Video Chat' },
+          { href: '/hot-video-chat', label: 'Hot Video Chat' },
+          { href: '/meet-people-online', label: 'Meet People Online' },
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
-          { href: '/ometv-alternative', label: 'OmeTV Alternative' },
           { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
           { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
           { href: '/faq', label: 'FAQ' },
-          { href: '/blog', label: 'Video Chat Blog' },
         ]}
       />
     </>

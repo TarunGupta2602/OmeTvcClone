@@ -9,6 +9,13 @@ const NAV_LINKS = [
 ];
 
 const EXPLORE_LINKS = [
+  { href: '/adult-video-chat', label: 'Adult video chat' },
+  { href: '/hot-video-chat', label: 'Hot video chat' },
+  { href: '/flirty-video-chat', label: 'Flirty video chat' },
+  { href: '/late-night-video-chat', label: 'Late night video chat' },
+  { href: '/meet-people-online', label: 'Meet people online' },
+  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
+  { href: '/free-webcam-chat', label: 'Free webcam chat' },
   { href: '/random-video-chat', label: 'Random video chat' },
   { href: '/no-signup-video-chat', label: 'No signup video chat' },
   { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
@@ -37,7 +44,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-              Free 1-on-1 random video chat — no signup, WebRTC privacy, adults 18+.
+              Free adult 1-on-1 random video chat — flirty talks, real chemistry, no signup, adults 18+.
             </p>
             <p className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-rose-700">
               <span className="w-1.5 h-1.5 rounded-full bg-rose-500" aria-hidden="true" />

@@ -1,9 +1,16 @@
 import { SITE_URL } from '../lib/constants';
 import { blogPostsList, blogPostsMap } from '../data/blogPosts';
 import { BLOG_CATEGORIES } from '../lib/blogCategories';
+import { SEO_LANDING_SLUGS } from '../lib/seoLandings';
 
 const staticRoutes = [
   { path: '', changeFrequency: 'daily', priority: 1 },
+  { path: '/adult-video-chat', changeFrequency: 'weekly', priority: 0.95 },
+  ...SEO_LANDING_SLUGS.map((slug) => ({
+    path: `/${slug}`,
+    changeFrequency: 'weekly',
+    priority: 0.92,
+  })),
   { path: '/omegle-alternative', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/ometv-alternative', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/chatroulette-alternative', changeFrequency: 'weekly', priority: 0.9 },
