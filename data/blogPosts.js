@@ -722,11 +722,11 @@ const coreBlogPostsMap = {
 
   'best-omegle-alternatives-2026': {
     title: 'Best Omegle Alternatives in 2026 (Free & No App)',
-    seoTitle: 'Best Omegle Alternatives in 2026 (Free & No App)',
+    seoTitle: 'Best Free Omegle Alternatives 2026 — No App Needed',
     excerpt:
       'Omegle is gone. Compare the best Omegle alternatives in 2026 for free random video chat — browser vs app, signup walls, safety, and why Parvah leads for no-registration WebRTC chat.',
     date: '2026-06-01',
-    dateModified: '2026-08-12',
+    dateModified: '2026-08-15',
     category: 'Comparison',
     author: 'Parvah Team',
     readTime: '11 min read',

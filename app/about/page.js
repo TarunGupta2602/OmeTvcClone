@@ -3,16 +3,16 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'About Parvah',
+  title: 'About Parvah — Free Adult Random Video Chat',
   description:
-    'About Parvah: who we are, how the product works, and our focus on adult safety for browser-based stranger video chat.',
+    'Parvah is free adult random video chat in the browser: no signup, WebRTC privacy, 18+ age gate, and skip anytime. Learn who we are and how matching works.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
   openGraph: {
-    title: `About Parvah | ${SITE_NAME}`,
+    title: `About Parvah — Free Adult Random Video Chat | ${SITE_NAME}`,
     description:
-      'Learn who builds Parvah and how our browser video chat product is designed for adults 18+.',
+      'Parvah is free adult random video chat in the browser: no signup, WebRTC privacy, and safety tools for adults 18+.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Parvah' }],
@@ -21,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `About Parvah | ${SITE_NAME}`,
-    description: 'Who we are and how Parvah browser video chat works for adults 18+.',
+    title: `About Parvah — Free Adult Video Chat | ${SITE_NAME}`,
+    description: 'Free adult random video chat in the browser — no signup, WebRTC privacy, adults 18+.',
     images: ['/og-image.jpg'],
   },
 };

@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'OmeTV Alternative — Free Browser Webcam Chat';
+const title = 'Free OmeTV Alternative — Browser Video Chat No App';
 const description =
-  'Need an OmeTV alternative that works in the browser? Parvah offers free random video chat — no app, no signup, WebRTC privacy, and instant matching worldwide.';
+  'Looking for an OmeTV alternative without the app? Parvah is free random adult video chat in your browser — no signup, instant 1-on-1 matching, 18+.';
 
 export const metadata = {
-  title: 'OmeTV Alternative — Free Browser Webcam Chat',
+  title: 'Free OmeTV Alternative — Browser Video Chat No App',
   description,
   alternates: { canonical: `${SITE_URL}/ometv-alternative` },
   openGraph: {
-    title: `OmeTV Alternative — Free Browser Webcam Chat | ${SITE_NAME}`,
+    title: `Free OmeTV Alternative — Browser Video Chat No App | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/ometv-alternative`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `OmeTV Alternative | ${SITE_NAME}`,
+    title: `Free OmeTV Alternative — Chat in Browser | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },

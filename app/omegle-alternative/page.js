@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Omegle Alternative 2026 — Free Adult Video Chat';
+const title = 'Free Omegle Alternative — No Signup Adult Video Chat';
 const description =
-  'Looking for an Omegle alternative after the shutdown? Parvah is free adult 1-on-1 random video chat — no signup, flirty talks welcome (consenting 18+), WebRTC privacy, and built-in reporting.';
+  'Best free Omegle alternative in 2026: instant 1-on-1 adult video chat, no app, no signup. Flirty talks welcome (18+). Start matching on Parvah in seconds.';
 
 export const metadata = {
-  title: 'Omegle Alternative 2026 — Free Adult Video Chat',
+  title: 'Free Omegle Alternative — No Signup Adult Video Chat',
   description,
   alternates: { canonical: `${SITE_URL}/omegle-alternative` },
   openGraph: {
-    title: `Omegle Alternative 2026 — Free Adult Video Chat | ${SITE_NAME}`,
+    title: `Free Omegle Alternative — No Signup Adult Video Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/omegle-alternative`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Omegle Alternative 2026 | ${SITE_NAME}`,
+    title: `Free Omegle Alternative — Chat Now | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -57,7 +57,7 @@ export default function OmegleAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative"
-        title="Omegle Alternative 2026 — Free Adult Random Video Chat"
+        title="Free Omegle Alternative — No Signup, Instant Match"
         description={description}
         highlights={[
           { title: 'No Registration', desc: 'Start chatting instantly — no email, username, or password required.' },
