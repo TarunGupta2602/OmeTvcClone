@@ -3,24 +3,35 @@ import HomeCrawlLinks from './components/HomeCrawlLinks';
 import { SITE_URL, SITE_DESCRIPTION, SITE_NAME } from '../lib/constants';
 import { buildFaqSchema, stringifyJsonLd } from '../lib/seo';
 
+const HOME_TITLE = 'Random Video Chat with Strangers — Free, No Signup';
+
 const baseMetadata = {
-  title: 'Free Adult Video Chat — Flirty Random Webcam Chat 18+',
+  title: {
+    absolute: HOME_TITLE,
+  },
   description: SITE_DESCRIPTION,
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: `Free Adult Video Chat — Flirty Random Webcam Chat 18+ | ${SITE_NAME}`,
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah - Free Adult Random Video Chat' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Free random video chat with strangers — no signup',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Free Adult Video Chat — Flirty Random Webcam Chat 18+ | ${SITE_NAME}`,
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
     images: ['/og-image.jpg'],
   },
@@ -46,28 +57,28 @@ export async function generateMetadata({ searchParams }) {
 
 const HOME_FAQS = [
   {
-    q: 'Is Parvah free adult video chat?',
-    a: 'Yes. Parvah is completely free adult random video chat with no registration, credits, or subscription required.',
+    q: 'Is random video chat with strangers free?',
+    a: 'Yes. Random video chat here is completely free — no registration, credits, or subscription required.',
+  },
+  {
+    q: 'Do I need to sign up to video chat with strangers?',
+    a: 'No. Confirm you are 18+, allow camera access, and click Start Matching. No email or account needed.',
   },
   {
     q: 'Who will I match with?',
-    a: 'You are matched with another available adult (18+) in the live queue. Matches are random — chemistry, gender, and vibe vary. Skip anytime if it is not a fit.',
+    a: 'You are paired with another available adult (18+) in the live queue. Matches are random — skip anytime if it is not a fit.',
   },
   {
     q: 'Is flirty or intimate chat allowed?',
-    a: 'Yes, between consenting adults 18+. Flirty talks, hot conversations, and mutual chemistry are welcome. Non-consent, underage users, and illegal content are banned.',
+    a: 'Yes, between consenting adults 18+. Non-consent, underage users, and illegal content are banned.',
   },
   {
     q: 'Do I need to download an app?',
-    a: 'No. Open parvah.online in Chrome, Safari, Firefox, or Edge on desktop or mobile, allow camera access, and start matching.',
+    a: 'No. Use Chrome, Safari, Firefox, or Edge on desktop or mobile — allow camera access and start matching in the browser.',
   },
   {
-    q: 'Is video chat private?',
-    a: 'Video streams use peer-to-peer WebRTC and are not recorded or stored on our servers.',
-  },
-  {
-    q: 'Is Parvah an adult Omegle alternative?',
-    a: 'Yes. Parvah offers instant stranger matching for adults who want flirty, late-night, or relationship-minded video chat — with an age gate, report tools, and skip controls.',
+    q: 'Is this a good Omegle alternative?',
+    a: 'Yes. You get instant stranger matching with an 18+ age gate, report tools, skip controls, and peer-to-peer WebRTC video.',
   },
 ];
 

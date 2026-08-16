@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Anonymous Video Chat with Strangers (No Profile)';
 const description =
-  'Anonymous video chat with strangers on Parvah — no account, no public profile, WebRTC peer-to-peer video, 18+ age gate, and report tools. Start free in your browser.';
+  'Anonymous video chat with strangers — no account, no public profile, WebRTC peer-to-peer video, 18+ age gate, and report tools. Start free in your browser.';
 
 export const metadata = {
   title: 'Anonymous Video Chat with Strangers (No Profile)',

@@ -9,17 +9,23 @@ const NAV_LINKS = [
 ];
 
 const EXPLORE_LINKS = [
-  { href: '/adult-video-chat', label: 'Adult video chat' },
-  { href: '/hot-video-chat', label: 'Hot video chat' },
+  { href: '/random-video-chat', label: 'Random video chat' },
+  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
+  { href: '/talk-to-strangers', label: 'Talk to strangers' },
+  { href: '/chat-with-girls', label: 'Chat with girls' },
+  { href: '/video-chat-with-girls', label: 'Video chat with girls' },
+  { href: '/girls-video-chat', label: 'Girls video chat' },
   { href: '/flirty-video-chat', label: 'Flirty video chat' },
+  { href: '/hot-video-chat', label: 'Hot video chat' },
+  { href: '/dirty-talk-video-chat', label: 'Dirty talk video chat' },
+  { href: '/live-video-chat', label: 'Live video chat' },
+  { href: '/free-webcam-chat', label: 'Free webcam chat' },
   { href: '/late-night-video-chat', label: 'Late night video chat' },
   { href: '/meet-people-online', label: 'Meet people online' },
-  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
-  { href: '/free-webcam-chat', label: 'Free webcam chat' },
-  { href: '/random-video-chat', label: 'Random video chat' },
+  { href: '/adult-video-chat', label: 'Adult video chat' },
+  { href: '/omegle-alternative', label: 'Omegle alternative' },
   { href: '/no-signup-video-chat', label: 'No signup video chat' },
   { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
-  { href: '/omegle-alternative', label: 'Omegle alternative' },
   { href: '/ometv-alternative', label: 'OmeTV alternative' },
   { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
   { href: '/emerald-chat-alternative', label: 'Emerald Chat alternative' },
@@ -44,7 +50,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-              Free adult 1-on-1 random video chat — flirty talks, real chemistry, no signup, adults 18+.
+              Free random video chat with strangers — no signup, 1-on-1 webcam, adults 18+.
             </p>
             <p className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-rose-700">
               <span className="w-1.5 h-1.5 rounded-full bg-rose-500" aria-hidden="true" />

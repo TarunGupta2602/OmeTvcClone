@@ -4,15 +4,15 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'FAQ — Free Adult Video Chat Questions',
+  title: 'FAQ — Random Video Chat with Strangers',
   description:
-    'Answers about Parvah free adult video chat: no signup, flirty talks, safety, camera setup, WebRTC privacy, and how random matching works for adults 18+.',
+    'Answers about free random video chat with strangers: no signup, safety, camera setup, WebRTC privacy, and how matching works for adults 18+.',
   alternates: {
     canonical: `${SITE_URL}/faq`,
   },
   openGraph: {
-    title: 'FAQ — Free Adult Video Chat Questions',
-    description: 'Common questions about free adult video chat, flirty talks, no signup, safety, and how Parvah works.',
+    title: 'FAQ — Random Video Chat with Strangers',
+    description: 'Common questions about free random video chat with strangers, no signup, safety, and how matching works.',
     url: `${SITE_URL}/faq`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
@@ -21,16 +21,16 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ — Free Adult Video Chat Questions',
-    description: 'Common questions about free adult video chat, flirty talks, no signup, safety, and how Parvah works.',
+    title: 'FAQ — Random Video Chat with Strangers',
+    description: 'Common questions about free random video chat with strangers, no signup, safety, and how matching works.',
     images: ['/og-image.jpg'],
   },
 };
 
 const faqs = [
   {
-    question: 'Is Parvah free adult video chat?',
-    answer: 'Yes. Parvah is completely free adult random video chat. No registration, credits, or subscription is required to start matching with other adults 18+.',
+    question: 'Is random video chat with strangers free?',
+    answer: 'Yes. Completely free random video chat — no registration, credits, or subscription required to start matching with other adults 18+.',
     category: 'General',
   },
   {
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     question: 'Will I always match with women or get nude chats?',
-    answer: 'No. Matches are random adults in the live queue. Parvah does not sell cam models or guarantee gender, looks, or explicit content. Skip until you find a mutual vibe.',
+    answer: 'No. Matches are random adults in the live queue. This is not a cam-model catalog and does not guarantee gender, looks, or explicit content. Skip until you find a mutual vibe.',
     category: 'General',
   },
   {
@@ -49,8 +49,8 @@ const faqs = [
     category: 'General',
   },
   {
-    question: 'Is Parvah safe to use?',
-    answer: 'Parvah uses an age gate on first visit and a report button during chats. Always exercise caution, never share personal information, and use Next to skip uncomfortable conversations.',
+    question: 'Is random video chat safe to use?',
+    answer: 'An age gate runs on first visit and a report button is available during chats. Always exercise caution, never share personal information, and use Next to skip uncomfortable conversations.',
     category: 'Safety',
   },
   {

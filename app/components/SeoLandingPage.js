@@ -21,9 +21,6 @@ export default function SeoLandingPage({
           }}
         />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24 space-y-6">
-          <p className="font-[family-name:var(--font-source-serif)] text-4xl sm:text-5xl text-teal-900 tracking-tight">
-            Parvah
-          </p>
           {badge && (
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-800/80">{badge}</p>
           )}
@@ -36,7 +33,7 @@ export default function SeoLandingPage({
               href="/"
               className="inline-block px-8 py-4 rounded-xl font-bold text-white bg-teal-800 hover:bg-teal-900 transition"
             >
-              Start free adult chat
+              Start free video chat
             </Link>
             <Link
               href="/safety"
@@ -50,7 +47,7 @@ export default function SeoLandingPage({
 
       <section className="py-14 px-4 sm:px-6 max-w-3xl mx-auto space-y-10">
         <div className="space-y-2">
-          <h2 className="text-2xl font-bold text-slate-900">Why people choose Parvah</h2>
+          <h2 className="text-2xl font-bold text-slate-900">Why people choose this chat</h2>
           <p className="text-sm text-slate-600">One clear reason per point — no signup, peer-to-peer video, skip anytime.</p>
         </div>
         <ul className="space-y-8">

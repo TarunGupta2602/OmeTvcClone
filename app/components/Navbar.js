@@ -20,11 +20,11 @@ export default function Navbar({ minimal = false }) {
   ];
 
   const mainNavItems = [
-    { name: 'Adult Chat', href: '/adult-video-chat' },
-    { name: 'Hot Chat', href: '/hot-video-chat' },
     { name: 'Random Chat', href: '/random-video-chat' },
+    { name: 'Strangers', href: '/video-chat-with-strangers' },
+    { name: 'Chat Girls', href: '/chat-with-girls' },
+    { name: 'Flirty', href: '/flirty-video-chat' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Blog', href: '/blog' },
   ];
 
   useEffect(() => {
@@ -137,7 +137,7 @@ export default function Navbar({ minimal = false }) {
                 Parvah
               </span>
               <span className="hidden sm:block text-[10px] text-slate-500 tracking-[0.14em] uppercase font-semibold -mt-0.5 truncate">
-                Free Adult Video Chat
+                Random Video Chat with Strangers
               </span>
             </div>
           </Link>

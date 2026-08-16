@@ -5,19 +5,35 @@ import { SEO_LANDING_SLUGS } from '../lib/seoLandings';
 
 const staticRoutes = [
   { path: '', changeFrequency: 'daily', priority: 1 },
-  { path: '/adult-video-chat', changeFrequency: 'weekly', priority: 0.95 },
-  ...SEO_LANDING_SLUGS.map((slug) => ({
+  { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.95 },
+  { path: '/video-chat-with-strangers', changeFrequency: 'weekly', priority: 0.95 },
+  { path: '/chat-with-girls', changeFrequency: 'weekly', priority: 0.94 },
+  { path: '/video-chat-with-girls', changeFrequency: 'weekly', priority: 0.94 },
+  { path: '/omegle-alternative', changeFrequency: 'weekly', priority: 0.93 },
+  { path: '/talk-to-strangers', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/flirty-video-chat', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/hot-video-chat', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/no-signup-video-chat', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/anonymous-video-chat', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/adult-video-chat', changeFrequency: 'weekly', priority: 0.9 },
+  ...SEO_LANDING_SLUGS.filter(
+    (slug) =>
+      ![
+        'video-chat-with-strangers',
+        'chat-with-girls',
+        'video-chat-with-girls',
+        'talk-to-strangers',
+        'flirty-video-chat',
+        'hot-video-chat',
+      ].includes(slug)
+  ).map((slug) => ({
     path: `/${slug}`,
     changeFrequency: 'weekly',
-    priority: 0.92,
+    priority: 0.88,
   })),
-  { path: '/omegle-alternative', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/ometv-alternative', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/chatroulette-alternative', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/emerald-chat-alternative', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/anonymous-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/no-signup-video-chat', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/ometv-alternative', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/chatroulette-alternative', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/emerald-chat-alternative', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.4 },
   { path: '/safety', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/faq', changeFrequency: 'weekly', priority: 0.8 },

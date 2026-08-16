@@ -12,20 +12,20 @@ export default function ChatLobby({ isConnected, onStart }) {
       <div className="chat-lobby-center">
         <div className="chat-lobby-status">
           <span className={`chat-lobby-status-dot ${isConnected ? 'is-live' : ''}`} />
-          {isConnected ? 'Adults online now' : 'Connecting…'}
+          {isConnected ? 'People online now' : 'Connecting…'}
         </div>
 
         <h1 className="chat-lobby-title">
-          Adult video chat.
-          <span className="chat-lobby-title-glow"> Meet someone new.</span>
+          Random video chat
+          <span className="chat-lobby-title-glow"> with strangers.</span>
         </h1>
 
         <p className="chat-lobby-sub chat-lobby-sub-desktop">
-          Free 1-on-1 random webcam chat for flirty talks, late-night chemistry, and real
-          connections. No signup — adults 18+ only.
+          Free 1-on-1 webcam chat — no signup. Meet someone new in seconds for talk, flirt, or real
+          connection. Adults 18+ only.
         </p>
         <p className="chat-lobby-sub chat-lobby-sub-mobile">
-          Free flirty random video chat. Tap start and meet someone new — 18+ only.
+          Free random video chat with strangers. Tap start — no signup, 18+ only.
         </p>
 
         <div className="chat-lobby-cta-wrap">
@@ -36,13 +36,13 @@ export default function ChatLobby({ isConnected, onStart }) {
           </button>
         </div>
 
-        <p className="chat-lobby-fine">18+ adults only · Consent required · Skip anytime</p>
+        <p className="chat-lobby-fine">18+ only · No signup · Skip anytime</p>
 
         <div className="chat-lobby-pills">
           <span>100% Free</span>
           <span>No Signup</span>
-          <span>Flirty &amp; Real</span>
-          <span>WebRTC Private</span>
+          <span>1-on-1 Video</span>
+          <span>Worldwide</span>
         </div>
       </div>
     </section>

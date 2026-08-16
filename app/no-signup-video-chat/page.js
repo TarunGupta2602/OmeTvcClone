@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Video Chat with No Signup — Start in Seconds';
 const description =
-  'Free video chat with no signup on Parvah. Random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching in your browser.';
+  'Free video chat with no signup. Random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching in your browser.';
 
 export const metadata = {
   title: 'Video Chat with No Signup — Start in Seconds',

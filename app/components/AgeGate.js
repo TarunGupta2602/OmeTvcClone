@@ -39,8 +39,9 @@ export default function AgeGate({ onConfirm }) {
             Adults Only — 18+
           </h2>
           <p id="age-gate-desc" className="text-sm text-slate-600 leading-relaxed">
-            Parvah is free adult random video chat. Matches may include flirty or intimate conversation
-            between consenting adults. By continuing, you confirm you are at least 18 and agree to our{' '}
+            This site is free random video chat with strangers. Matches may include flirty or intimate
+            conversation between consenting adults. By continuing, you confirm you are at least 18 and
+            agree to our{' '}
             <Link href="/terms" className="text-teal-700 font-semibold hover:underline">
               Terms of Service
             </Link>{' '}

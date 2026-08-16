@@ -2,20 +2,26 @@ import Link from 'next/link';
 import { blogPostsList } from '../../data/blogPosts';
 
 const MONEY_PAGES = [
-  { href: '/adult-video-chat', label: 'Adult video chat' },
-  { href: '/hot-video-chat', label: 'Hot video chat' },
+  { href: '/random-video-chat', label: 'Random video chat' },
+  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
+  { href: '/talk-to-strangers', label: 'Talk to strangers' },
+  { href: '/chat-with-girls', label: 'Chat with girls' },
+  { href: '/video-chat-with-girls', label: 'Video chat with girls' },
+  { href: '/girls-video-chat', label: 'Girls video chat' },
   { href: '/flirty-video-chat', label: 'Flirty video chat' },
+  { href: '/hot-video-chat', label: 'Hot video chat' },
+  { href: '/dirty-talk-video-chat', label: 'Dirty talk video chat' },
+  { href: '/live-video-chat', label: 'Live video chat' },
+  { href: '/free-webcam-chat', label: 'Free webcam chat' },
   { href: '/late-night-video-chat', label: 'Late night video chat' },
   { href: '/meet-people-online', label: 'Meet people online' },
-  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
-  { href: '/free-webcam-chat', label: 'Free webcam chat' },
+  { href: '/adult-video-chat', label: 'Adult video chat' },
   { href: '/omegle-alternative', label: 'Omegle alternative' },
+  { href: '/no-signup-video-chat', label: 'No signup video chat' },
+  { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
   { href: '/ometv-alternative', label: 'OmeTV alternative' },
   { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
   { href: '/emerald-chat-alternative', label: 'Emerald Chat alternative' },
-  { href: '/random-video-chat', label: 'Random video chat' },
-  { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
-  { href: '/no-signup-video-chat', label: 'No signup video chat' },
   { href: '/faq', label: 'FAQ' },
   { href: '/safety', label: 'Safety' },
 ];
@@ -26,9 +32,9 @@ export default function HomeCrawlLinks() {
     <section className="bg-slate-50/90 border-t border-slate-200 py-8 px-4 sm:px-6" aria-labelledby="home-guides-heading">
       <div className="max-w-4xl mx-auto">
         <h2 id="home-pages-heading" className="text-sm font-bold text-slate-900 mb-1">
-          Explore Parvah
+          Explore video chat
         </h2>
-        <p className="text-xs text-slate-500 mb-4">Alternatives, chat modes, and safety pages.</p>
+        <p className="text-xs text-slate-500 mb-4">Popular searches, alternatives, and safety pages.</p>
         <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm mb-8">
           {MONEY_PAGES.map((page) => (
             <li key={page.href}>

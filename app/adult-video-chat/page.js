@@ -2,26 +2,26 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Free Adult Video Chat — Flirty Random Webcam Chat 18+';
+const title = 'Adult Video Chat Free — Random Webcam Chat with Strangers';
 const description =
-  'Free adult video chat with no signup. Meet new people for flirty talks, hot conversations, late-night chemistry, and real connections. Instant 1-on-1 webcam matching for adults 18+ on Parvah.';
+  'Free adult video chat with strangers — no signup. Instant 1-on-1 webcam matching for flirty talks, hot conversations, and real connections. Adults 18+ only.';
 
 export const metadata = {
-  title: 'Free Adult Video Chat (No Signup) 18+',
+  title: 'Adult Video Chat Free — Random Webcam with Strangers',
   description,
   alternates: { canonical: `${SITE_URL}/adult-video-chat` },
   openGraph: {
-    title: `Free Adult Video Chat (No Signup) 18+ | ${SITE_NAME}`,
+    title: `Adult Video Chat Free — Random Webcam with Strangers | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/adult-video-chat`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Parvah Free Adult Video Chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free adult video chat with strangers' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Free Adult Video Chat (No Signup) 18+ | ${SITE_NAME}`,
+    title: `Adult Video Chat Free — Random Webcam with Strangers | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -29,12 +29,12 @@ export const metadata = {
 
 const faqs = [
   {
-    q: 'What is adult video chat on Parvah?',
-    a: 'Parvah is free random 1-on-1 webcam chat for adults 18+. You match with another person in the live queue for live video and text — flirty talks, hot chemistry, friendship, or dating energy depending on mutual consent.',
+    q: 'What is adult video chat?',
+    a: 'Free random 1-on-1 webcam chat for adults 18+. You match with another person in the live queue for live video and text — flirty talks, hot chemistry, friendship, or dating energy depending on mutual consent.',
   },
   {
     q: 'Is this nude cam girls or paid performers?',
-    a: 'No. Parvah is random stranger matching between real users — not a cam-model catalog, not paid nude shows, and not a guarantee of any gender or explicit content. Skip until you find a mutual vibe.',
+    a: 'No. This is random stranger matching between real users — not a cam-model catalog, not paid nude shows, and not a guarantee of any gender or explicit content. Skip until you find a mutual vibe.',
   },
   {
     q: 'Are dirty talks and intimate chats allowed?',
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: 'How do I stay safe during adult chat?',
-    a: 'Only chat with people who feel respectful, never share financial or address details, use Report for abuse, and leave any chat that is not consensual. Parvah does not record peer video streams.',
+    a: 'Only chat with people who feel respectful, never share financial or address details, use Report for abuse, and leave any chat that is not consensual. Peer video streams are not recorded on our servers.',
   },
 ];
 
@@ -65,7 +65,7 @@ export default function AdultVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Adult Video Chat · 18+"
-        title="Free Adult Video Chat — Flirty, Hot, Real"
+        title="Adult Video Chat Free — Random Webcam with Strangers"
         description={description}
         highlights={[
           {
@@ -123,14 +123,14 @@ export default function AdultVideoChatPage() {
         faqs={faqs}
         relatedLinks={[
           { href: '/', label: 'Live chat' },
+          { href: '/chat-with-girls', label: 'Chat with girls' },
+          { href: '/video-chat-with-girls', label: 'Video chat with girls' },
           { href: '/hot-video-chat', label: 'Hot video chat' },
           { href: '/flirty-video-chat', label: 'Flirty video chat' },
+          { href: '/dirty-talk-video-chat', label: 'Dirty talk video chat' },
           { href: '/late-night-video-chat', label: 'Late night video chat' },
-          { href: '/meet-people-online', label: 'Meet people online' },
-          { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
-          { href: '/free-webcam-chat', label: 'Free webcam chat' },
           { href: '/random-video-chat', label: 'Random video chat' },
-          { href: '/omegle-alternative', label: 'Omegle alternative' },
+          { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
           { href: '/safety', label: 'Safety guidelines' },
         ]}
       />
