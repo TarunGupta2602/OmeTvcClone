@@ -26,12 +26,12 @@ export default function ChatPage() {
   const [roomId, setRoomId] = useState(null);
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
-  const [isLocalVideoFullscreen, setIsLocalVideoFullscreen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [mobileTab, setMobileTab] = useState('video');
   const [unreadCount, setUnreadCount] = useState(0);
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportNotice, setReportNotice] = useState('');
+  const [isLocalVideoFullscreen, setIsLocalVideoFullscreen] = useState(false);
   const [pipPosition, setPipPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -349,6 +349,7 @@ export default function ChatPage() {
   };
 
   const handleDragStart = (e) => {
+    if (typeof window !== 'undefined' && window.matchMedia('(min-width: 640px)').matches) return;
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const clientY = e.touches ? e.touches[0].clientY : e.clientY;
     setDragStart({ x: clientX, y: clientY });
@@ -364,7 +365,7 @@ export default function ChatPage() {
     const newX = clientX - dragRef.current.startX;
     const newY = clientY - dragRef.current.startY;
     const pipW = Math.min(window.innerWidth * 0.26, 108);
-    const controlReserve = window.innerWidth < 640 ? 140 + (window.visualViewport?.offsetTop || 0) : 192;
+    const controlReserve = 140 + (window.visualViewport?.offsetTop || 0);
     const maxX = window.innerWidth - pipW - 12;
     const maxY = window.innerHeight - controlReserve;
     setPipPosition({
@@ -431,9 +432,9 @@ export default function ChatPage() {
 
       {reportNotice && <div className="chat-toast">{reportNotice}</div>}
 
-      {/* Desktop status — active session only */}
+      {/* Desktop status overlay — active session only */}
       {isImmersive && (
-        <header className="chat-desktop-status shrink-0">
+        <header className="chat-desktop-status">
           <div className="chat-desktop-status-inner">
             <div className="flex items-center gap-3 min-w-0">
               <span className="chat-desktop-status-brand">Parvah</span>
