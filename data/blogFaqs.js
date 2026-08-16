@@ -1,5 +1,76 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'free-video-chat-with-girls-online': [
+    {
+      q: 'Is free video chat with girls really free?',
+      a: 'Yes on this platform — free random matching with no signup for adults 18+. Gender is not guaranteed every match.',
+    },
+    {
+      q: 'Are these real girls or paid cam models?',
+      a: 'Real adult users in a random queue. This is not a paid cam-model catalog.',
+    },
+    {
+      q: 'Is it 18+ only?',
+      a: 'Yes. Minors are prohibited. Leave and report if you suspect someone is underage.',
+    },
+  ],
+  'how-to-talk-to-strangers-online-video-chat': [
+    {
+      q: 'How do I talk to strangers online for free?',
+      a: 'Use free random video chat in your browser: confirm 18+, allow camera, Start Matching, and skip anytime.',
+    },
+    {
+      q: 'What should I say first?',
+      a: 'Keep it simple and friendly — ask about their day, music, or a light opinion question.',
+    },
+    {
+      q: 'Is talking to strangers safe?',
+      a: 'It can be when you hide personal details, use Report, and leave uncomfortable chats immediately.',
+    },
+  ],
+  'omegle-alternative-no-signup-2026': [
+    {
+      q: 'What is the best Omegle alternative with no signup in 2026?',
+      a: 'Look for free browser random video chat, an 18+ age gate, skip/report tools, and no email wall before matching.',
+    },
+    {
+      q: 'Is Omegle coming back?',
+      a: 'No. Omegle shut down permanently. Searchers want free stranger video chat replacements.',
+    },
+    {
+      q: 'Do I need an app?',
+      a: 'Not for a browser Omegle alternative — Chrome, Safari, Firefox, or Edge is enough.',
+    },
+  ],
+  'random-video-chat-with-strangers-guide': [
+    {
+      q: 'Is random video chat with strangers free?',
+      a: 'Yes — free matching with no signup for adults 18+ on this site.',
+    },
+    {
+      q: 'Does it work on mobile?',
+      a: 'Yes in modern mobile browsers. Allow camera access; Wi‑Fi is more stable than congested data.',
+    },
+    {
+      q: 'Who will I match with?',
+      a: 'Another available adult in the live queue. Matches are random — use Next until it fits.',
+    },
+  ],
+  'hot-flirty-video-chat-tips': [
+    {
+      q: 'Is hot or flirty video chat allowed?',
+      a: 'Yes between consenting adults 18+. Non-consent and underage users are banned.',
+    },
+    {
+      q: 'How do I start dirty talk politely?',
+      a: 'Ask first, escalate only if they clearly reciprocate, and stop immediately if they hesitate.',
+    },
+    {
+      q: 'What if they only want friendly chat?',
+      a: 'Stay friendly or click Next. Do not pressure anyone.',
+    },
+  ],
+
   'best-adult-video-chat-sites-2026': [
     {
       q: 'What is the best free adult video chat site in 2026?',

@@ -1,4 +1,5 @@
 import { extraBlogPostsMap, extraBlogPostsList } from './blogPostsExtra.js';
+import { marketingBlogPostsMap, marketingBlogPostsList } from './blogPostsMarketing.js';
 
 const coreBlogPostsMap = {
   'how-to-stay-safe-on-video-chat-platforms': {
@@ -822,11 +823,13 @@ const coreBlogPostsMap = {
 };
 
 export const blogPostsMap = {
+  ...marketingBlogPostsMap,
   ...extraBlogPostsMap,
   ...coreBlogPostsMap,
 };
 
 export const blogPostsList = [
+  ...marketingBlogPostsList,
   ...extraBlogPostsList,
   {
     slug: 'how-to-stay-safe-on-video-chat-platforms',

@@ -3,26 +3,29 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'About Parvah — Free Adult Random Video Chat',
+  title: 'About Us',
   description:
-    'Parvah is free adult random video chat in the browser: no signup, WebRTC privacy, 18+ age gate, and skip anytime. Learn who we are and how matching works.',
+    'Who builds this free random video chat platform, how matching works, and our focus on adult safety (18+).',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: `About Parvah — Free Adult Random Video Chat | ${SITE_NAME}`,
-    description:
-      'Parvah is free adult random video chat in the browser: no signup, WebRTC privacy, and safety tools for adults 18+.',
+    title: `About Us | ${SITE_NAME}`,
+    description: 'Who builds this free random video chat platform and how matching works for adults 18+.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Parvah' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Us' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `About Parvah — Free Adult Video Chat | ${SITE_NAME}`,
-    description: 'Free adult random video chat in the browser — no signup, WebRTC privacy, adults 18+.',
+    title: `About Us | ${SITE_NAME}`,
+    description: 'Who builds this free random video chat platform and how matching works for adults 18+.',
     images: ['/og-image.jpg'],
   },
 };
