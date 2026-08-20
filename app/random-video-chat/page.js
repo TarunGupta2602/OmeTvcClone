@@ -2,16 +2,18 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Random Video Chat with Strangers — Free, No Signup';
+const title = 'Free Random Video Chat Online — Instant 1-on-1 Matching';
 const description =
-  'Free random video chat with strangers — no signup. Instant 1-on-1 webcam chat in your browser. Talk to new people worldwide, skip anytime, adults 18+.';
+  'How free random video chat works: instant 1-on-1 webcam matching in your browser, no signup. Skip anytime, WebRTC peer video, adults 18+ only.';
 
 export const metadata = {
-  title: 'Random Video Chat with Strangers — Free, No Signup',
+  title: {
+    absolute: title,
+  },
   description,
   alternates: { canonical: `${SITE_URL}/random-video-chat` },
   openGraph: {
-    title: `Random Video Chat with Strangers — Free, No Signup | ${SITE_NAME}`,
+    title,
     description,
     url: `${SITE_URL}/random-video-chat`,
     siteName: SITE_NAME,
@@ -20,7 +22,7 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Free random video chat with strangers',
+        alt: 'Free random video chat online — instant matching',
       },
     ],
     locale: 'en_US',
@@ -28,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Random Video Chat with Strangers — Free, No Signup | ${SITE_NAME}`,
+    title,
     description,
     images: ['/og-image.jpg'],
   },
@@ -72,7 +74,7 @@ export default function RandomVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Random Video Chat"
-        title="Random Video Chat with Strangers — Free & Instant"
+        title="Free Random Video Chat Online — Instant Matching"
         description={description}
         highlights={[
           {

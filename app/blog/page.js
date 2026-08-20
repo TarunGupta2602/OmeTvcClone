@@ -25,6 +25,12 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Parvah Blog | Video Chat Tips & Safety Guides',
+    description: 'Safety guides, Omegle alternatives, and WebRTC tips for random video chat.',
+    images: ['/og-image.jpg'],
+  },
   robots: { index: true, follow: true },
 };
 
