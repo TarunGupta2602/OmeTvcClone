@@ -139,7 +139,13 @@ app.prepare().then(() => {
     socket.emit('waiting', { message: 'Searching for a random peer...' });
   };
 
+  const broadcastOnlineCount = () => {
+    io.emit('online-count', { count: io.sockets.sockets.size });
+  };
+
   io.on('connection', (socket) => {
+    broadcastOnlineCount();
+
     socket.on('find-match', () => matchUser(socket));
 
     socket.on('leave-queue', () => {
@@ -202,6 +208,7 @@ app.prepare().then(() => {
       leaveActiveRoom(socket);
       clearRateLimits(socket.id);
       blockedPairs.delete(socket.id);
+      broadcastOnlineCount();
     });
   });
 

@@ -20,6 +20,7 @@ export default function ChatPage() {
   const [showAgeGate, setShowAgeGate] = useState(false);
   const [socket, setSocket] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
+  const [onlineCount, setOnlineCount] = useState(0);
   const [inRoom, setInRoom] = useState(false);
   const [status, setStatus] = useState('Click Start Match to begin');
   const [peerId, setPeerId] = useState(null);
@@ -179,8 +180,15 @@ export default function ChatPage() {
       setSocket(socketIo);
     });
 
+    socketIo.on('online-count', ({ count }) => {
+      if (typeof count === 'number' && count >= 0) {
+        setOnlineCount(count);
+      }
+    });
+
     socketIo.on('disconnect', () => {
       setIsConnected(false);
+      setOnlineCount(0);
       setStatus('Disconnected from server');
       cleanupPeerConnection();
     });
@@ -486,7 +494,7 @@ export default function ChatPage() {
       )}
 
       {isLobby ? (
-        <ChatLobby isConnected={isConnected} onStart={handleStartMatch} />
+        <ChatLobby isConnected={isConnected} onlineCount={onlineCount} onStart={handleStartMatch} />
       ) : (
         <div className="chat-layout flex-1 min-h-0">
           <div className={`chat-main-col ${mobileTab === 'chat' ? 'chat-col-hidden-mobile' : ''}`}>

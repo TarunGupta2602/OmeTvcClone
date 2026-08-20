@@ -1,6 +1,18 @@
 import { IconCamera } from './ChatIcons';
 
-export default function ChatLobby({ isConnected, onStart }) {
+function formatOnlineCount(count) {
+  if (typeof count !== 'number' || count < 1) return null;
+  return count.toLocaleString();
+}
+
+export default function ChatLobby({ isConnected, onlineCount, onStart }) {
+  const formattedCount = formatOnlineCount(onlineCount);
+  const statusLabel = !isConnected
+    ? 'Connecting…'
+    : formattedCount
+      ? `${formattedCount} online`
+      : 'People online now';
+
   return (
     <section className="chat-lobby">
       <div className="chat-lobby-scene" aria-hidden="true">
@@ -10,9 +22,9 @@ export default function ChatLobby({ isConnected, onStart }) {
       </div>
 
       <div className="chat-lobby-center">
-        <div className="chat-lobby-status">
+        <div className="chat-lobby-status" aria-live="polite">
           <span className={`chat-lobby-status-dot ${isConnected ? 'is-live' : ''}`} />
-          {isConnected ? 'People online now' : 'Connecting…'}
+          {statusLabel}
         </div>
 
         <h1 className="chat-lobby-title">
