@@ -2,28 +2,28 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Free OmeTV Alternative 2026 — Browser Video Chat No App';
+const title = 'OmeTV Alternative — Free Browser Video Chat (No App)';
 const description =
-  'Need an OmeTV alternative without the app? Free random video chat with strangers in your browser — no signup, instant 1-on-1 webcam matching, adults 18+. Start free.';
+  'Best free OmeTV alternative without downloading an app. Instant 1-on-1 random video chat in your browser — no signup, skip anytime, adults 18+.';
 
 export const metadata = {
   title: {
-    absolute: 'Free OmeTV Alternative 2026 — Browser Video Chat No App',
+    absolute: title,
   },
   description,
   alternates: { canonical: `${SITE_URL}/ometv-alternative` },
   openGraph: {
-    title: 'Free OmeTV Alternative 2026 — Browser Video Chat No App',
+    title,
     description,
     url: `${SITE_URL}/ometv-alternative`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free OmeTV alternative — browser video chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'OmeTV alternative — free browser video chat' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free OmeTV Alternative 2026 — Browser Video Chat No App',
+    title,
     description,
     images: ['/og-image.jpg'],
   },

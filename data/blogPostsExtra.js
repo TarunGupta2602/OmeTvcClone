@@ -110,11 +110,11 @@ export const extraBlogPostsMap = {
 
   'how-to-use-parvah': {
     title: 'How to Use Parvah: Start Random Video Chat in Minutes',
-    seoTitle: 'How to Use Parvah Video Chat',
+    seoTitle: 'How to Start Parvah Video Chat — No Signup Steps',
     excerpt:
-      'Step-by-step guide to starting free random video chat on Parvah — age gate, camera permissions, Start Match, Next, and Report.',
+      'Start free random video chat on Parvah in minutes: age gate, camera permissions, Start Match, Next, and Report — no account needed.',
     date: '2026-08-11',
-    dateModified: '2026-08-11',
+    dateModified: '2026-08-20',
     category: 'Tips',
     author: 'Parvah Team',
     readTime: '8 min read',
@@ -417,7 +417,7 @@ export const extraBlogPostsList = [
     slug: 'how-to-use-parvah',
     title: 'How to Use Parvah: Start Random Video Chat in Minutes',
     excerpt:
-      'Step-by-step guide to starting free random video chat on Parvah — age gate, camera permissions, Start Match, Next, and Report.',
+      'Start free random video chat on Parvah in minutes: age gate, camera permissions, Start Match, Next, and Report — no account needed.',
     date: '2026-08-11',
     category: 'Tips',
     readTime: '8 min read',

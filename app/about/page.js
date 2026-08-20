@@ -3,9 +3,9 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'About Us',
+  title: 'About the Parvah Team',
   description:
-    'Who builds this free random video chat platform, how matching works, and our focus on adult safety (18+).',
+    'Meet the team behind Parvah — free browser random video chat for adults 18+. How matching works, WebRTC privacy, and our safety focus.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
@@ -14,18 +14,18 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: `About Us | ${SITE_NAME}`,
-    description: 'Who builds this free random video chat platform and how matching works for adults 18+.',
+    title: `About the Parvah Team | ${SITE_NAME}`,
+    description: 'Who builds Parvah and how free random video chat matching works for adults 18+.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Us' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About the Parvah Team' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `About Us | ${SITE_NAME}`,
-    description: 'Who builds this free random video chat platform and how matching works for adults 18+.',
+    title: `About the Parvah Team | ${SITE_NAME}`,
+    description: 'Who builds Parvah and how free random video chat matching works for adults 18+.',
     images: ['/og-image.jpg'],
   },
 };
