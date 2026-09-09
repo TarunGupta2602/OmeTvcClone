@@ -3,9 +3,11 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'About the Parvah Team',
+  title: {
+    absolute: 'About Us — Mission, Matching & Safety',
+  },
   description:
-    'Meet the team behind Parvah — free browser random video chat for adults 18+. How matching works, WebRTC privacy, and our safety focus.',
+    'How our free browser random video chat works for adults 18+: peer-to-peer WebRTC matching, privacy model, and the safety tools we ship (skip, report, age gate).',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
@@ -14,18 +16,18 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: `About the Parvah Team | ${SITE_NAME}`,
-    description: 'Who builds Parvah and how free random video chat matching works for adults 18+.',
+    title: 'About Us — Mission, Matching & Safety',
+    description: 'How free random video chat matching works: WebRTC privacy, no signup, and safety tools for adults 18+.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About the Parvah Team' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About us — matching and safety' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `About the Parvah Team | ${SITE_NAME}`,
-    description: 'Who builds Parvah and how free random video chat matching works for adults 18+.',
+    title: 'About Us — Mission, Matching & Safety',
+    description: 'How free random video chat matching works: WebRTC privacy, no signup, and safety tools for adults 18+.',
     images: ['/og-image.jpg'],
   },
 };
@@ -33,8 +35,8 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Parvah',
-  description: 'About the Parvah team and product: browser stranger video chat for adults 18+ with WebRTC and safety tools.',
+  name: 'About Us — Mission, Matching & Safety',
+  description: 'How free browser stranger video chat works for adults 18+ with WebRTC and safety tools.',
   url: `${SITE_URL}/about`,
   publisher: {
     '@type': 'Organization',
@@ -122,11 +124,11 @@ export default function AboutPage() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900">
-            About Parvah
+            About Us
           </h1>
 
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            We build browser-based stranger video chat for adults 18+ — with no signup wall, WebRTC privacy, and clear safety tools.
+            We build browser-based stranger video chat for adults 18+ — with no signup wall, WebRTC privacy, and clear safety tools. The product name is {SITE_NAME}; this page is about how matching and safety work.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -2,11 +2,11 @@
 export const extraBlogPostsMap = {
   'best-adult-video-chat-sites-2026': {
     title: 'Best Adult Video Chat Sites in 2026 (Free & No Signup)',
-    seoTitle: 'Best Adult Video Chat Sites 2026',
+    seoTitle: 'Best Adult Video Chat Sites 2026 — Free & No Signup',
     excerpt:
-      'Compare the best free adult video chat options in 2026. Why Parvah stands out for flirty 1-on-1 matching, no signup, and consent-first 18+ chat.',
+      'Best free adult video chat sites in 2026 — no signup, 1-on-1 flirty webcam matching for adults 18+. Compare options and why Parvah stands out.',
     date: '2026-08-15',
-    dateModified: '2026-08-15',
+    dateModified: '2026-09-09',
     category: 'Comparison',
     author: 'Parvah Team',
     readTime: '9 min read',
@@ -387,7 +387,7 @@ export const extraBlogPostsList = [
     slug: 'best-adult-video-chat-sites-2026',
     title: 'Best Adult Video Chat Sites in 2026 (Free & No Signup)',
     excerpt:
-      'Compare the best free adult video chat options in 2026. Why Parvah stands out for flirty 1-on-1 matching, no signup, and consent-first 18+ chat.',
+      'Best free adult video chat sites in 2026 — no signup, 1-on-1 flirty webcam matching for adults 18+. Compare options and why Parvah stands out.',
     date: '2026-08-15',
     category: 'Comparison',
     readTime: '9 min read',

@@ -3,15 +3,17 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Terms of Service',
+  title: {
+    absolute: 'Terms of Service — Rules for Adult Video Chat',
+  },
   description:
-    'Parvah Terms of Service: 18+ age requirement, consent-first adult chat rules, and user agreements for using the platform.',
+    'Terms of service for this free adult random video chat: 18+ age requirement, consent-first rules, prohibited conduct, and how reporting works.',
   alternates: {
     canonical: `${SITE_URL}/terms`,
   },
   openGraph: {
-    title: 'Terms of Service | Parvah',
-    description: 'Terms of Service and community rules for using Parvah adult random video chat.',
+    title: 'Terms of Service — Rules for Adult Video Chat',
+    description: '18+ age requirement, consent-first adult chat rules, and user agreements for the platform.',
     url: `${SITE_URL}/terms`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Terms of Service' }],
@@ -20,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Service | Parvah',
-    description: 'Terms of Service and community rules for using Parvah adult random video chat.',
+    title: 'Terms of Service — Rules for Adult Video Chat',
+    description: '18+ age requirement, consent-first adult chat rules, and user agreements for the platform.',
     images: ['/og-image.jpg'],
   },
 };

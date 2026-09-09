@@ -315,9 +315,11 @@ const coreBlogPostsMap = {
 
   'ometv-vs-omegle-vs-parvah-comparison': {
     title: 'OmeTV vs Omegle vs Parvah: Which Random Video Chat Is Best?',
-    seoTitle: 'OmeTV vs Omegle vs Parvah Compared',
-    excerpt: 'Compare OmeTV, Omegle, and Parvah side by side on privacy, safety, registration, and video technology to find the best random chat platform.',
+    seoTitle: 'OmeTV vs Omegle vs Parvah — 2026 Comparison',
+    excerpt:
+      'Which is better in 2026: OmeTV, Omegle, or Parvah? Side-by-side on signup, browser vs app, privacy, safety, and free random video chat — pick the right fit fast.',
     date: '2026-07-10',
+    dateModified: '2026-09-09',
     category: 'Comparison',
     author: 'Parvah Team',
     readTime: '9 min read',
@@ -374,11 +376,11 @@ const coreBlogPostsMap = {
 
   'fix-webcam-not-working-video-chat': {
     title: 'How to Fix Webcam Not Working on Video Chat',
-    seoTitle: 'Fix Webcam Not Working on Video Chat (Browser)',
+    seoTitle: 'Webcam Not Working? Fix Camera for Video Chat Fast',
     excerpt:
-      'Camera blocked on random video chat? Fix webcam not working in Chrome, Safari, and Edge — permissions, other apps, and OS privacy settings.',
+      'Black screen or camera blocked on random video chat? Fix webcam not working in Chrome, Safari, and Edge in minutes — permissions, other apps, and OS privacy settings.',
     date: '2026-07-05',
-    dateModified: '2026-08-20',
+    dateModified: '2026-09-09',
     category: 'Technical',
     author: 'Parvah Team',
     readTime: '9 min read',
@@ -728,16 +730,17 @@ const coreBlogPostsMap = {
     title: 'Best Omegle Alternatives in 2026 (Free & No App)',
     seoTitle: 'Best Omegle Alternatives 2026 — Free, No Signup',
     excerpt:
-      'Looking for the best Omegle alternative in 2026? Compare free no-signup random video chat options — browser vs app, safety tools, and which sites actually work.',
+      'Best free Omegle alternatives in 2026 — no signup, browser random video chat, adult-safe 18+ tools. See which sites actually work after Omegle shut down.',
     date: '2026-06-01',
-    dateModified: '2026-08-20',
+    dateModified: '2026-09-09',
     category: 'Comparison',
     author: 'Parvah Team',
     readTime: '11 min read',
     featured: true,
     keywords:
-      'best omegle alternatives 2026, omegle alternative, free random video chat, omegle replacement, no signup video chat, video chat with strangers',
+      'best omegle alternatives 2026, omegle alternative, free random video chat, omegle replacement, no signup video chat, video chat with strangers, adult omegle',
     content: `
+
       <h2>Introduction</h2>
       <p>Omegle shut down in 2023, but people still search for an Omegle alternative in 2026. The smarter searches shifted toward category terms — free random video chat, video chat with strangers, and no signup video chat — because users want the experience, not a dead brand.</p>
       <p>This guide ranks Omegle alternatives by what actually matters now: signup friction, browser vs app, WebRTC privacy, adult safety tools, and whether you can start in seconds without buying credits.</p>
@@ -882,7 +885,8 @@ export const blogPostsList = [
   {
     slug: 'ometv-vs-omegle-vs-parvah-comparison',
     title: 'OmeTV vs Omegle vs Parvah: Which Random Video Chat Is Best?',
-    excerpt: 'Compare OmeTV, Omegle, and Parvah side by side on privacy, safety, registration, and video technology to find the best random chat platform.',
+    excerpt:
+      'Which is better in 2026: OmeTV, Omegle, or Parvah? Side-by-side on signup, browser vs app, privacy, safety, and free random video chat — pick the right fit fast.',
     date: '2026-07-10',
     category: 'Comparison',
     readTime: '9 min read',
@@ -892,7 +896,7 @@ export const blogPostsList = [
     slug: 'fix-webcam-not-working-video-chat',
     title: 'How to Fix Webcam Not Working on Video Chat',
     excerpt:
-      'Camera blocked on random video chat? Fix webcam not working in Chrome, Safari, and Edge — permissions, other apps, and OS privacy settings.',
+      'Black screen or camera blocked on random video chat? Fix webcam not working in Chrome, Safari, and Edge in minutes — permissions, other apps, and OS privacy settings.',
     date: '2026-07-05',
     category: 'Technical',
     readTime: '9 min read',
@@ -938,7 +942,7 @@ export const blogPostsList = [
     slug: 'best-omegle-alternatives-2026',
     title: 'Best Omegle Alternatives in 2026 (Free & No App)',
     excerpt:
-      'Looking for the best Omegle alternative in 2026? Compare free no-signup random video chat options — browser vs app, safety tools, and which sites actually work.',
+      'Best free Omegle alternatives in 2026 — no signup, browser random video chat, adult-safe 18+ tools. See which sites actually work after Omegle shut down.',
     date: '2026-06-01',
     category: 'Comparison',
     readTime: '11 min read',

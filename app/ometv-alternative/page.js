@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'OmeTV Alternative — Free Browser Video Chat (No App)';
+const title = 'Free OmeTV Alternative 2026 — Browser Video Chat (No App)';
 const description =
-  'Best free OmeTV alternative without downloading an app. Instant 1-on-1 random video chat in your browser — no signup, skip anytime, adults 18+.';
+  'Best free OmeTV alternative in 2026 — no app download, no signup. Instant 1-on-1 random video chat with strangers in your browser. Skip anytime. Adults 18+ only.';
 
 export const metadata = {
   title: {
@@ -62,8 +62,8 @@ export default function OmetvAlternativePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
-        badge="OmeTV Alternative"
-        title="OmeTV Alternative — Free Random Webcam Chat in Your Browser"
+        badge="OmeTV Alternative · 2026"
+        title="Free OmeTV Alternative — Browser Random Video Chat (No App)"
         description={description}
         highlights={[
           { title: 'No App Download', desc: 'Chat from Chrome, Safari, Firefox, or Edge — desktop or mobile browser.' },

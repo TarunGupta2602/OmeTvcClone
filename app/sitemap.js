@@ -3,6 +3,15 @@ import { blogPostsList, blogPostsMap } from '../data/blogPosts';
 import { BLOG_CATEGORIES } from '../lib/blogCategories';
 import { SEO_LANDING_SLUGS } from '../lib/seoLandings';
 
+const HARDCODED_LANDING_SLUGS = new Set([
+  'video-chat-with-strangers',
+  'chat-with-girls',
+  'video-chat-with-girls',
+  'talk-to-strangers',
+  'flirty-video-chat',
+  'hot-video-chat',
+]);
+
 const staticRoutes = [
   { path: '', changeFrequency: 'daily', priority: 1 },
   { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.95 },
@@ -16,17 +25,7 @@ const staticRoutes = [
   { path: '/no-signup-video-chat', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/anonymous-video-chat', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/adult-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  ...SEO_LANDING_SLUGS.filter(
-    (slug) =>
-      ![
-        'video-chat-with-strangers',
-        'chat-with-girls',
-        'video-chat-with-girls',
-        'talk-to-strangers',
-        'flirty-video-chat',
-        'hot-video-chat',
-      ].includes(slug)
-  ).map((slug) => ({
+  ...SEO_LANDING_SLUGS.filter((slug) => !HARDCODED_LANDING_SLUGS.has(slug)).map((slug) => ({
     path: `/${slug}`,
     changeFrequency: 'weekly',
     priority: 0.88,
@@ -34,10 +33,10 @@ const staticRoutes = [
   { path: '/ometv-alternative', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/chatroulette-alternative', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/emerald-chat-alternative', changeFrequency: 'weekly', priority: 0.85 },
-  { path: '/about', changeFrequency: 'monthly', priority: 0.4 },
+  { path: '/about', changeFrequency: 'monthly', priority: 0.3 },
   { path: '/safety', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/faq', changeFrequency: 'weekly', priority: 0.8 },
-  { path: '/contact', changeFrequency: 'monthly', priority: 0.4 },
+  { path: '/contact', changeFrequency: 'monthly', priority: 0.3 },
   { path: '/privacy', changeFrequency: 'yearly', priority: 0.2 },
   { path: '/terms', changeFrequency: 'yearly', priority: 0.2 },
   { path: '/blog', changeFrequency: 'weekly', priority: 0.85 },
@@ -46,14 +45,13 @@ const staticRoutes = [
 export default function sitemap() {
   const now = new Date();
 
+  // No image: entries — OG/social preview URLs were producing GSC sitemap
+  // warnings (~28). Google still discovers OG images from page metadata.
   const pages = staticRoutes.map(({ path, changeFrequency, priority }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
     changeFrequency,
     priority,
-    ...(path === ''
-      ? { images: [`${SITE_URL}/og-image.jpg`] }
-      : {}),
   }));
 
   const categories = BLOG_CATEGORIES.map((cat) => ({
@@ -69,8 +67,7 @@ export default function sitemap() {
       url: `${SITE_URL}/blog/${post.slug}`,
       lastModified: new Date(full?.dateModified || post.date),
       changeFrequency: 'monthly',
-      priority: 0.7,
-      images: [`${SITE_URL}/blog/${post.slug}/opengraph-image`],
+      priority: post.featured || full?.featured ? 0.75 : 0.7,
     };
   });
 
