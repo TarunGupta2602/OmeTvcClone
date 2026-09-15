@@ -1,5 +1,6 @@
 import { extraBlogPostsMap, extraBlogPostsList } from './blogPostsExtra.js';
 import { marketingBlogPostsMap, marketingBlogPostsList } from './blogPostsMarketing.js';
+import { gscBlogPostsMap, gscBlogPostsList } from './blogPostsGsc.js';
 
 const coreBlogPostsMap = {
   'how-to-stay-safe-on-video-chat-platforms': {
@@ -375,11 +376,12 @@ const coreBlogPostsMap = {
   },
 
   'fix-webcam-not-working-video-chat': {
-    title: 'How to Fix Webcam Not Working on Video Chat',
+    title: 'Webcam Not Working on Video Chat? Fix It in 5 Minutes',
     seoTitle: 'Webcam Not Working? Fix Camera for Video Chat Fast',
     excerpt:
       'Black screen or camera blocked on random video chat? Fix webcam not working in Chrome, Safari, and Edge in minutes — permissions, other apps, and OS privacy settings.',
     date: '2026-07-05',
+    dateModified: '2026-09-15',
     dateModified: '2026-09-09',
     category: 'Technical',
     author: 'Parvah Team',
@@ -727,12 +729,12 @@ const coreBlogPostsMap = {
   },
 
   'best-omegle-alternatives-2026': {
-    title: 'Best Omegle Alternatives in 2026 (Free & No App)',
-    seoTitle: 'Best Omegle Alternatives 2026 — Free, No Signup',
+    title: 'Best Omegle Alternatives 2026 — Free, No Signup, No App',
+    seoTitle: 'Best Free Omegle Alternatives 2026 (No Signup)',
     excerpt:
       'Best free Omegle alternatives in 2026 — no signup, browser random video chat, adult-safe 18+ tools. See which sites actually work after Omegle shut down.',
     date: '2026-06-01',
-    dateModified: '2026-09-09',
+    dateModified: '2026-09-15',
     category: 'Comparison',
     author: 'Parvah Team',
     readTime: '11 min read',
@@ -829,12 +831,14 @@ const coreBlogPostsMap = {
 };
 
 export const blogPostsMap = {
+  ...gscBlogPostsMap,
   ...marketingBlogPostsMap,
   ...extraBlogPostsMap,
   ...coreBlogPostsMap,
 };
 
 export const blogPostsList = [
+  ...gscBlogPostsList,
   ...marketingBlogPostsList,
   ...extraBlogPostsList,
   {
@@ -894,7 +898,7 @@ export const blogPostsList = [
   },
   {
     slug: 'fix-webcam-not-working-video-chat',
-    title: 'How to Fix Webcam Not Working on Video Chat',
+    title: 'Webcam Not Working on Video Chat? Fix It in 5 Minutes',
     excerpt:
       'Black screen or camera blocked on random video chat? Fix webcam not working in Chrome, Safari, and Edge in minutes — permissions, other apps, and OS privacy settings.',
     date: '2026-07-05',
@@ -940,7 +944,7 @@ export const blogPostsList = [
   },
   {
     slug: 'best-omegle-alternatives-2026',
-    title: 'Best Omegle Alternatives in 2026 (Free & No App)',
+    title: 'Best Omegle Alternatives 2026 — Free, No Signup, No App',
     excerpt:
       'Best free Omegle alternatives in 2026 — no signup, browser random video chat, adult-safe 18+ tools. See which sites actually work after Omegle shut down.',
     date: '2026-06-01',

@@ -1,5 +1,117 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'adult-omegle-free-no-signup': [
+    {
+      q: 'Is there a free adult Omegle with no signup in 2026?',
+      a: 'Omegle is gone, but adult Omegle-style chat still exists. Parvah offers free 18+ random video chat with no signup in your browser.',
+    },
+    {
+      q: 'Is adult Omegle the same as a cam girl site?',
+      a: 'No. Adult Omegle alternatives use random matching with real adults. Cam sites sell performances. Random queues do not guarantee gender or nudity.',
+    },
+    {
+      q: 'Is Omegle for adults only on Parvah?',
+      a: 'Yes. Parvah requires an 18+ age gate. Minors are prohibited. Leave and report if you suspect someone is underage.',
+    },
+  ],
+  'best-ometv-alternative-free-browser': [
+    {
+      q: 'What is the best free OmeTV alternative in the browser?',
+      a: 'Look for free random 1-on-1 video, no forced app download, optional or no signup, and clear 18+ tools. Parvah is built as a browser OmeTV alternative.',
+    },
+    {
+      q: 'Does Parvah need the OmeTV app?',
+      a: 'No. Parvah runs in Chrome, Safari, Firefox, or Edge — no APK or App Store install required.',
+    },
+    {
+      q: 'Is there an adult OmeTV alternative?',
+      a: 'Yes — Parvah is adults-only with consent-first flirty chat, skip, and report tools.',
+    },
+  ],
+  'nsfw-video-chat-with-strangers-18-plus': [
+    {
+      q: 'Is NSFW video chat with strangers free?',
+      a: 'Yes on Parvah — free matching with no signup for adults 18+. Intimate talk is only OK when both people consent.',
+    },
+    {
+      q: 'Is this the same as free live porn chat?',
+      a: 'No. Parvah is live 1-on-1 adult webcam chat with strangers, not a porn video library or paid cam catalog.',
+    },
+    {
+      q: 'Can I do video chat 18+ without an account?',
+      a: 'Yes. Confirm 18+, allow camera, and start matching — no email required.',
+    },
+  ],
+  'adult-webcam-chat-free-no-signup': [
+    {
+      q: 'Is adult webcam chat free on Parvah?',
+      a: 'Yes — free 1-on-1 adult webcam matching with no signup for basic chat.',
+    },
+    {
+      q: 'Are adult webcam chats the same as cam shows?',
+      a: 'No. Random adult webcam chat matches you with strangers. Paid cam platforms sell performances.',
+    },
+    {
+      q: 'Do I need to download an app?',
+      a: 'No. Adult webcam chat on Parvah works in your browser.',
+    },
+  ],
+  'talk-to-strangers-18-plus-video': [
+    {
+      q: 'How do I talk to strangers 18+ for free?',
+      a: 'Use free adult random video chat: confirm 18+, allow camera, Start Matching, and skip anytime.',
+    },
+    {
+      q: 'Is chat with strangers 18 safe?',
+      a: 'It can be when you hide personal details, use Report, and leave uncomfortable chats immediately.',
+    },
+    {
+      q: 'What should I say first?',
+      a: 'Keep it light — ask about their day, music, or a playful preference question.',
+    },
+  ],
+  'free-video-chat-strangers-no-signup': [
+    {
+      q: 'Is free video chat with strangers no sign up real?',
+      a: 'Yes. Parvah lets adults start random video chat without email or password.',
+    },
+    {
+      q: 'Does it work on mobile?',
+      a: 'Yes in modern mobile browsers. Wi‑Fi is usually more stable than congested data.',
+    },
+    {
+      q: 'Is it really free?',
+      a: 'Basic matching is free. Random matches are not a paid guarantee of any gender or vibe.',
+    },
+  ],
+  'what-replaced-omegle-in-2026': [
+    {
+      q: 'What replaced Omegle in 2026?',
+      a: 'No single official replacement exists. Free browser Omegle alternatives like Parvah fill the same need: random stranger video chat with no signup.',
+    },
+    {
+      q: 'Is Omegle coming back in 2026?',
+      a: 'No. Omegle shut down permanently. “Omegle 2026” searches are looking for alternatives.',
+    },
+    {
+      q: 'What is the best Omegle alternative 2026?',
+      a: 'Prefer free, no-signup, browser video chat with an 18+ gate and report tools — that is what Parvah is built for.',
+    },
+  ],
+  'flirty-video-chat-online-free-guide': [
+    {
+      q: 'Is flirty video chat online free?',
+      a: 'Yes on Parvah — free matching for adults 18+ with no signup.',
+    },
+    {
+      q: 'How do I flirt without being weird?',
+      a: 'Greet normally first, escalate only if they reciprocate, and hit Next if the energy is not mutual.',
+    },
+    {
+      q: 'Is flirty chat allowed?',
+      a: 'Yes between consenting adults. Pressure, harassment, and underage contact are banned.',
+    },
+  ],
   'free-video-chat-with-girls-online': [
     {
       q: 'Is free video chat with girls really free?',
