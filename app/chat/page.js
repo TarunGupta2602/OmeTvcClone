@@ -36,6 +36,8 @@ export default function ChatPage() {
   const [pipPosition, setPipPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [skipCount, setSkipCount] = useState(0);
+  const [inviteChipDismissed, setInviteChipDismissed] = useState(false);
 
   const {
     localStreamRef,
@@ -315,6 +317,7 @@ export default function ChatPage() {
     if (!activeSocket || !isConnected) return;
     cleanupPeerConnection();
     setStatus('Searching for next peer...');
+    setSkipCount((count) => count + 1);
     activeSocket.emit('skip-peer');
   };
 
@@ -324,6 +327,8 @@ export default function ChatPage() {
     cleanupPeerConnection();
     setShowHeader(true);
     setChatMode(false);
+    setSkipCount(0);
+    setInviteChipDismissed(false);
     activeSocket.emit('stop-session');
     setStatus('Click Start Match to begin');
   };
@@ -527,6 +532,8 @@ export default function ChatPage() {
                 onBlock={handleBlockAndSkip}
                 onToggleAudio={toggleAudio}
                 onToggleVideo={toggleVideo}
+                showInviteChip={skipCount >= 3 && !inviteChipDismissed}
+                onDismissInvite={() => setInviteChipDismissed(true)}
               />
             </div>
           </div>

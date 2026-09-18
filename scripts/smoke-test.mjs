@@ -94,12 +94,30 @@ check('Chat CSS is split from globals', () => {
   assert.match(globals, /prefers-reduced-motion/);
 });
 
-check('Site OG uses static JPEG (no root opengraph-image.js)', () => {
-  assert.equal(existsSync(join(root, 'app/opengraph-image.js')), false);
+check('Homepage OG is generated; landings keep static JPEG', () => {
+  assert.equal(existsSync(join(root, 'app/opengraph-image.js')), true);
+  assert.equal(existsSync(join(root, 'app/twitter-image.js')), true);
   assert.equal(existsSync(join(root, 'public/og-image.jpg')), true);
-  const layout = readFileSync(join(root, 'app/layout.js'), 'utf8');
-  assert.match(layout, /\/og-image\.jpg/);
+  const home = readFileSync(join(root, 'app/page.js'), 'utf8');
+  assert.doesNotMatch(home, /\/og-image\.jpg/);
+  const ometv = readFileSync(join(root, 'app/ometv-alternative/page.js'), 'utf8');
+  assert.match(ometv, /\/og-image\.jpg/);
   assert.equal(existsSync(join(root, 'app/blog/[slug]/opengraph-image.js')), true);
+});
+
+check('HomeSEO links OmeTV and Omegle alternative pages', () => {
+  const src = readFileSync(join(root, 'app/components/HomeSEO.js'), 'utf8');
+  assert.match(src, /\/ometv-alternative/);
+  assert.match(src, /\/omegle-alternative/);
+});
+
+check('Lobby has invite share loop', () => {
+  const lobby = readFileSync(join(root, 'app/components/chat/ChatLobby.js'), 'utf8');
+  const invite = readFileSync(join(root, 'app/components/chat/InviteShare.js'), 'utf8');
+  const inviteLib = readFileSync(join(root, 'lib/invite.js'), 'utf8');
+  assert.match(lobby, /InviteShare/);
+  assert.match(invite, /WhatsApp/);
+  assert.match(inviteLib, /from=invite/);
 });
 
 if (failed > 0) {

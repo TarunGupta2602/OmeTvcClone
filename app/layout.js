@@ -72,20 +72,11 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
     category: 'social',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Free random video chat with strangers — no signup',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Random Video Chat with Strangers — Free, No Signup',
     description: SITE_DESCRIPTION,
-    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,

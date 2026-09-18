@@ -1,4 +1,5 @@
 import { IconCamera } from './ChatIcons';
+import InviteShare from './InviteShare';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -47,6 +48,8 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
             <span>Start Matching</span>
           </button>
         </div>
+
+        <InviteShare />
 
         <p className="chat-lobby-fine">18+ only · No signup · Skip anytime</p>
 

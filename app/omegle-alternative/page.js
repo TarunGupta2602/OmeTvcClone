@@ -67,7 +67,7 @@ export default function OmegleAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative · Adults 18+"
-        title="Adult Omegle Alternative — Free Random Video Chat (No Signup)"
+        title="Free Omegle Alternative — No Signup Random Video Chat (18+)"
         description={description}
         highlights={[
           { title: 'No registration', desc: 'Start instantly — no email, username, or password.' },
@@ -77,6 +77,20 @@ export default function OmegleAlternativePage() {
           { title: 'Safety built in', desc: '18+ age gate, report button, and skip anytime.' },
           { title: '100% free matching', desc: 'No credits, no premium unlock to meet strangers.' },
         ]}
+        comparison={{
+          title: 'Classic Omegle vs this free Omegle alternative',
+          intro:
+            'Omegle shut down in 2023. This page is for people who still want free random video chat with strangers in a browser — no signup, 18+ only.',
+          headers: ['Feature', 'Classic Omegle', 'Parvah (this page)'],
+          rows: [
+            ['Status', 'Permanently closed', 'Live browser matching'],
+            ['Signup', 'No account for basic chat', 'No signup for basic matching'],
+            ['Access', 'Desktop-era web', 'Desktop and mobile browser'],
+            ['Age gate', 'Inconsistent in practice', 'Adults 18+ only'],
+            ['Skip / report', 'Skip existed; tools varied', 'Next + Report in the session'],
+            ['Video', 'Flash then WebRTC era', 'WebRTC peer-to-peer when networks allow'],
+          ],
+        }}
         sections={[
           {
             title: 'Why people search for an adult Omegle alternative in 2026',
@@ -91,8 +105,8 @@ export default function OmegleAlternativePage() {
               'Skip and report controls',
             ],
             links: [
+              { href: '/', label: 'Start matching now' },
               { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
-              { href: '/adult-video-chat', label: 'Adult video chat' },
               { href: '/random-video-chat', label: 'Random video chat' },
             ],
           },

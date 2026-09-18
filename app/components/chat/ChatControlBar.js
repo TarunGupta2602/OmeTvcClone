@@ -1,4 +1,5 @@
 import { IconBlock, IconCamera, IconFlag, IconMic } from './ChatIcons';
+import InviteShare from './InviteShare';
 
 function ControlIconButton({ onClick, disabled, active, danger, label, children }) {
   return (
@@ -29,11 +30,23 @@ export default function ChatControlBar({
   onBlock,
   onToggleAudio,
   onToggleVideo,
+  onDismissInvite,
+  showInviteChip = false,
 }) {
   const sessionActive = inRoom || isSearching;
 
   return (
     <div className="chat-control-bar">
+      {showInviteChip && (
+        <div className="chat-invite-chip-wrap">
+          <InviteShare compact />
+          {onDismissInvite && (
+            <button type="button" className="chat-invite-chip-dismiss" onClick={onDismissInvite}>
+              Dismiss
+            </button>
+          )}
+        </div>
+      )}
       <div className="chat-control-primary">
         {!sessionActive && (
           <button type="button" onClick={onStart} disabled={!isConnected} className="chat-btn chat-btn-start">

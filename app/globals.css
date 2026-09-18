@@ -179,6 +179,27 @@ a, button, input, select, textarea, summary {
   color: #111827;
 }
 
+.blog-prose table {
+  width: 100%;
+  margin: 1.25rem 0 1.75rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.blog-prose th,
+.blog-prose td {
+  border: 1px solid #d1d5db;
+  padding: 0.625rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-prose th {
+  background: #f0fdfa;
+  color: #111827;
+  font-weight: 700;
+}
+
 /* Inline emphasis */
 .blog-prose strong {
   color: #111827;

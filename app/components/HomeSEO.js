@@ -42,6 +42,12 @@ export default function HomeSEO() {
             alternative that works in your browser.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
+            <Link href="/ometv-alternative" className="hover:underline">
+              OmeTV alternative
+            </Link>
+            <Link href="/omegle-alternative" className="hover:underline">
+              Omegle alternative
+            </Link>
             <Link href="/random-video-chat" className="hover:underline">
               Random video chat
             </Link>
@@ -56,9 +62,6 @@ export default function HomeSEO() {
             </Link>
             <Link href="/hot-video-chat" className="hover:underline">
               Hot video chat
-            </Link>
-            <Link href="/omegle-alternative" className="hover:underline">
-              Omegle alternative
             </Link>
             <Link href="/safety" className="hover:underline">
               Safety

@@ -17,6 +17,7 @@ export default function SeoLandingPage({
   relatedLinks,
   howToSteps = DEFAULT_STEPS,
   popularSearches,
+  comparison,
 }) {
   return (
     <main className="flex-1 min-h-screen bg-[var(--page-bg)]">
@@ -75,6 +76,46 @@ export default function SeoLandingPage({
           ))}
         </ul>
       </section>
+
+      {comparison && (
+        <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto space-y-6 border-t border-teal-900/10">
+          <h2 className="text-2xl font-bold text-slate-900">{comparison.title}</h2>
+          {comparison.intro ? (
+            <p className="text-sm text-slate-600 leading-relaxed">{comparison.intro}</p>
+          ) : null}
+          <div className="overflow-x-auto rounded-xl border border-teal-900/10 bg-white/70">
+            <table className="w-full min-w-[28rem] text-left text-sm">
+              <caption className="sr-only">{comparison.title}</caption>
+              <thead className="bg-teal-900/5 text-slate-900">
+                <tr>
+                  {comparison.headers.map((header) => (
+                    <th key={header} scope="col" className="px-4 py-3 font-bold">
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.rows.map((row) => (
+                  <tr key={row[0]} className="border-t border-teal-900/10">
+                    {row.map((cell, i) => (
+                      <td
+                        key={`${row[0]}-${i}`}
+                        className={`px-4 py-3 leading-relaxed ${i === 0 ? 'font-semibold text-slate-900' : 'text-slate-600'}`}
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <Link href="/" className="inline-block text-sm font-semibold text-teal-800 hover:underline">
+            Start matching in the browser →
+          </Link>
+        </section>
+      )}
 
       {howToSteps?.length > 0 && (
         <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto space-y-6 border-t border-teal-900/10">

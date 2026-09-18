@@ -366,6 +366,114 @@
   cursor: not-allowed;
 }
 
+.chat-invite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0 0 1.25rem;
+  max-width: 22rem;
+}
+
+.chat-invite-copy {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+}
+
+.chat-invite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.375rem;
+}
+
+.chat-invite-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.chat-invite-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.chat-invite-btn-ghost {
+  background: transparent;
+}
+
+.chat-invite-btn-wa {
+  background: rgba(20, 184, 166, 0.18);
+  border-color: rgba(45, 212, 191, 0.35);
+}
+
+.chat-invite-chip-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.chat-invite-chip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.chat-invite-chip-copy {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.chat-invite-chip-actions {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.chat-invite-chip-btn,
+.chat-invite-chip-dismiss {
+  min-height: 1.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.chat-invite-chip-btn-wa {
+  background: rgba(20, 184, 166, 0.28);
+}
+
+.chat-invite-chip-dismiss {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .chat-lobby-fine {
   font-size: 0.6875rem;
   font-weight: 600;
@@ -731,11 +839,17 @@
 @media (min-width: 640px) {
   .chat-control-bar {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     border-radius: 0;
     padding: 2rem 1.25rem 1rem;
     gap: 1rem;
+  }
+
+  .chat-invite-chip-wrap {
+    flex: 1 0 100%;
+    order: -1;
   }
 }
 
@@ -1481,6 +1595,15 @@
     font-size: 1rem;
     border-radius: 1rem;
     touch-action: manipulation;
+  }
+
+  .chat-invite {
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .chat-invite-copy {
+    font-size: 0.6875rem;
   }
 
   .chat-lobby-fine {

@@ -115,7 +115,7 @@ export default function RandomVideoChatPage() {
               'Safety: report, skip, and published guidelines',
             ],
             links: [
-              { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
+              { href: '/ometv-alternative', label: 'OmeTV alternative' },
               { href: '/omegle-alternative', label: 'Omegle alternative' },
               { href: '/no-signup-video-chat', label: 'No signup video chat' },
             ],
@@ -130,8 +130,10 @@ export default function RandomVideoChatPage() {
         ]}
         faqs={faqs}
         relatedLinks={[
-          { href: '/video-chat-with-strangers', label: 'Video Chat with Strangers' },
+          { href: '/', label: 'Start free chat' },
+          { href: '/ometv-alternative', label: 'OmeTV Alternative' },
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
+          { href: '/video-chat-with-strangers', label: 'Video Chat with Strangers' },
           { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
           { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
           { href: '/adult-video-chat', label: 'Adult Video Chat' },
