@@ -1,11 +1,9 @@
 import Link from 'next/link';
+import DirectAnswer from './DirectAnswer';
+import { HOW_TO_START } from '../../lib/geo';
+import { buildHowToSchema, stringifyJsonLd } from '../../lib/seo';
 
-const DEFAULT_STEPS = [
-  'Confirm you are 18+ on the age gate.',
-  'Allow camera and microphone in your browser.',
-  'Click Start Matching for free 1-on-1 video chat.',
-  'Talk, flirt, or skip with Next anytime.',
-];
+const DEFAULT_STEPS = HOW_TO_START.map((step) => step.text);
 
 export default function SeoLandingPage({
   badge,
@@ -19,8 +17,17 @@ export default function SeoLandingPage({
   popularSearches,
   comparison,
 }) {
+  const howToJsonLd = buildHowToSchema({
+    name: `How to start: ${title}`,
+    description,
+    steps: howToSteps,
+  });
+
   return (
     <main className="flex-1 min-h-screen bg-[var(--page-bg)]">
+      {howToJsonLd ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(howToJsonLd) }} />
+      ) : null}
       <section className="relative overflow-hidden border-b border-teal-900/10">
         <div
           className="absolute inset-0 pointer-events-none"
@@ -37,7 +44,7 @@ export default function SeoLandingPage({
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15]">
             {title}
           </h1>
-          <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">{description}</p>
+          <p className="direct-answer text-lg text-slate-600 leading-relaxed max-w-2xl">{description}</p>
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/"
@@ -53,6 +60,10 @@ export default function SeoLandingPage({
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto border-b border-teal-900/10">
+        <DirectAnswer heading="Key facts" compact />
       </section>
 
       <section className="py-14 px-4 sm:px-6 max-w-3xl mx-auto space-y-10">

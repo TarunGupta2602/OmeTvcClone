@@ -1,34 +1,13 @@
 import Link from 'next/link';
+import DirectAnswer from './DirectAnswer';
+import { HOME_FAQS, HOW_TO_START_LINES } from '../../lib/geo';
 
 export default function HomeSEO() {
-  const faqs = [
-    {
-      q: 'Is random video chat with strangers free?',
-      a: 'Yes. Completely free with no registration, credits, or subscription — open the site and match instantly.',
-    },
-    {
-      q: 'Do I need an app or signup?',
-      a: 'No. Use any modern browser on desktop or mobile. Confirm you are 18+, allow camera access, and start.',
-    },
-    {
-      q: 'Who will I talk to?',
-      a: 'Another available adult in the live queue. Matches are random — keep tapping Next until the vibe feels right.',
-    },
-    {
-      q: 'How do I stay safe?',
-      a: 'Never share personal info, use Report for abuse, and leave any chat that is not consensual. 18+ only.',
-    },
-  ];
-
-  const steps = [
-    'Confirm you are 18+ and allow camera access.',
-    'Click Start Matching to join the live queue.',
-    'Talk, flirt, or connect — skip or report anytime.',
-  ];
-
   return (
     <section className="border-t border-teal-900/10 bg-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto space-y-14">
+        <DirectAnswer />
+
         <div className="space-y-4 text-center sm:text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-800/80">
             Free · No signup · 18+
@@ -106,7 +85,7 @@ export default function HomeSEO() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-slate-900">How it works</h3>
             <ol className="space-y-3 text-sm text-slate-600">
-              {steps.map((step, i) => (
+              {HOW_TO_START_LINES.map((step, i) => (
                 <li key={step} className="flex gap-3">
                   <span className="w-6 h-6 rounded-full bg-teal-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
                     {i + 1}
@@ -123,7 +102,7 @@ export default function HomeSEO() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-slate-900">Quick FAQ</h3>
             <div className="space-y-5">
-              {faqs.map((faq) => (
+              {HOME_FAQS.filter((faq) => faq.q !== 'What is Parvah?').map((faq) => (
                 <div key={faq.q} className="space-y-1.5">
                   <p className="text-sm font-bold text-slate-900">{faq.q}</p>
                   <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>

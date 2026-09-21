@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import DirectAnswer from '../components/DirectAnswer';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
+import { WHAT_IS_PARVAH } from '../../lib/geo';
 
 export const metadata = {
   title: {
@@ -127,8 +129,8 @@ export default function AboutPage() {
             About Us
           </h1>
 
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            We build browser-based stranger video chat for adults 18+ — with no signup wall, WebRTC privacy, and clear safety tools. The product name is {SITE_NAME}; this page is about how matching and safety work.
+          <p className="direct-answer text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            {WHAT_IS_PARVAH}
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -151,6 +153,12 @@ export default function AboutPage() {
             <Link href="/anonymous-video-chat" className="hover:underline">Anonymous chat</Link>
             <Link href="/chatroulette-alternative" className="hover:underline">Chatroulette alternative</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-200/80 bg-white py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <DirectAnswer heading="Parvah at a glance" compact />
         </div>
       </section>
 

@@ -65,6 +65,9 @@ export default function HomeCrawlLinks() {
           <a href="/sitemap.xml" className="text-slate-500 hover:text-teal-700">
             Sitemap
           </a>
+          <a href="/llms.txt" className="text-slate-500 hover:text-teal-700">
+            llms.txt
+          </a>
         </div>
       </div>
     </section>

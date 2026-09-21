@@ -120,6 +120,25 @@ check('Lobby has invite share loop', () => {
   assert.match(inviteLib, /from=invite/);
 });
 
+check('GEO/AEO: llms.txt route and honest key facts', () => {
+  assert.equal(existsSync(join(root, 'app/llms.txt/route.js')), true);
+  const geo = readFileSync(join(root, 'lib/geo.js'), 'utf8');
+  assert.match(geo, /WHAT_IS_PARVAH/);
+  assert.match(geo, /does not guarantee women/);
+  assert.match(geo, /Not a paid cam-girl catalog/);
+  const robots = readFileSync(join(root, 'app/robots.js'), 'utf8');
+  assert.match(robots, /GPTBot/);
+  assert.match(robots, /PerplexityBot/);
+  assert.match(robots, /Google-Extended/);
+  const seo = readFileSync(join(root, 'lib/seo.js'), 'utf8');
+  assert.match(seo, /buildHowToSchema/);
+  const homeSeo = readFileSync(join(root, 'app/components/HomeSEO.js'), 'utf8');
+  assert.match(homeSeo, /DirectAnswer/);
+  const landings = readFileSync(join(root, 'app/components/SeoLandingPage.js'), 'utf8');
+  assert.match(landings, /direct-answer/);
+  assert.match(landings, /Key facts/);
+});
+
 if (failed > 0) {
   console.error(`\n${failed} smoke check(s) failed`);
   process.exit(1);

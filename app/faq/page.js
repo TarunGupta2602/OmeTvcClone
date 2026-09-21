@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import FAQContent from './FAQContent';
+import DirectAnswer from '../components/DirectAnswer';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
@@ -28,6 +29,18 @@ export const metadata = {
 };
 
 const faqs = [
+  {
+    question: 'What is Parvah?',
+    answer:
+      'Parvah is a free random video chat website for adults 18+. No signup and no app: confirm your age, allow camera, and match 1-on-1 with another adult in the live queue. Matching is random — Parvah does not sell cam models or guarantee women, looks, or explicit content.',
+    category: 'General',
+  },
+  {
+    question: 'Is Parvah a free Omegle alternative?',
+    answer:
+      'Yes. Omegle shut down in 2023. Parvah is a free browser Omegle alternative with random 1-on-1 matching, an 18+ age gate, skip and report tools, and peer-to-peer WebRTC video. No account is required.',
+    category: 'General',
+  },
   {
     question: 'Is random video chat with strangers free?',
     answer: 'Yes. Completely free random video chat — no registration, credits, or subscription required to start matching with other adults 18+.',
@@ -173,6 +186,10 @@ export default function FAQPage() {
             <p className="text-xs sm:text-sm text-slate-600">
               Find answers to common questions about Parvah, safety, and how to use our platform.
             </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200/80 bg-white/90 p-6 sm:p-8">
+            <DirectAnswer />
           </div>
 
           <FAQContent faqs={faqs} />

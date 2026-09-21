@@ -3,7 +3,13 @@ import './globals.css';
 import AppShell from './components/AppShell';
 import Analytics from './components/Analytics';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../lib/constants';
-import { buildJsonLdGraph, buildOrganizationSchema, stringifyJsonLd } from '../lib/seo';
+import { BRAND_SLOGAN } from '../lib/geo';
+import {
+  buildJsonLdGraph,
+  buildOrganizationSchema,
+  buildWebApplicationExtras,
+  stringifyJsonLd,
+} from '../lib/seo';
 
 const outfit = Outfit({
   variable: '--font-outfit',
@@ -99,13 +105,16 @@ const jsonLd = buildJsonLdGraph([
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: ['Parvah Video Chat', 'Parvah Random Video Chat'],
     url: SITE_URL,
     description: SITE_DESCRIPTION,
+    inLanguage: 'en',
     publisher: { '@id': `${SITE_URL}/#organization` },
   },
   buildOrganizationSchema(),
   {
     '@type': 'WebApplication',
+    '@id': `${SITE_URL}/#app`,
     name: SITE_NAME,
     alternateName: [
       'Random Video Chat with Strangers',
@@ -120,8 +129,11 @@ const jsonLd = buildJsonLdGraph([
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
     },
     publisher: { '@id': `${SITE_URL}/#organization` },
+    ...buildWebApplicationExtras(),
+    slogan: BRAND_SLOGAN,
   },
 ]);
 
@@ -134,6 +146,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="alternate" type="application/rss+xml" title="Parvah Blog RSS" href="/blog/rss.xml" />
+        <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       </head>
