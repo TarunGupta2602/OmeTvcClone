@@ -141,7 +141,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${sourceSerif.variable} h-full antialiased`}>
       <head>
-        <meta name="6a97888e-site-verification" content="c9209955a2625c737abb74db54c774ff" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
