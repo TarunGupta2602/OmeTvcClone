@@ -1,5 +1,27 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'best-dating-site': [
+    {
+      q: 'What is the best dating site in 2026?',
+      a: 'If you want to see chemistry live instead of swiping on photos, Parvah is the best dating site for that job: free random video chat, no signup, adults 18+ only.',
+    },
+    {
+      q: 'How does random video chat help people date?',
+      a: 'You meet face to face in seconds, talk, and either stay or skip. A good chat can become a second call or an in-person date when both adults want that.',
+    },
+    {
+      q: 'Is Parvah a free dating site with no signup?',
+      a: 'Yes. You can start matching in the browser with no account. Confirm you are 18+, allow your camera, and talk.',
+    },
+    {
+      q: 'Will I be matched with someone who wants to date?',
+      a: 'Matches are random adults. Some people want to flirt or date, others just want to talk. Say what you want and use Next until the interest is mutual.',
+    },
+    {
+      q: 'Is it safe to plan a date from video chat?',
+      a: 'Keep personal details private on the first chat, never send money, and meet in public only after you both choose to. Leave and report anyone who pressures you.',
+    },
+  ],
   'adult-omegle-free-no-signup': [
     {
       q: 'Is there a free adult Omegle with no signup in 2026?',
