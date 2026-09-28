@@ -1,5 +1,75 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'free-random-video-chat': [
+    {
+      q: 'Is there a free random video chat with no signup?',
+      a: 'Yes. Parvah lets adults start random video chat in the browser with no account, no app, and no payment to match.',
+    },
+    {
+      q: 'Does free random video chat work on a phone?',
+      a: 'Yes in Chrome, Safari, Firefox, or Edge. Allow the camera, use Wi-Fi if you can, and face a light so people stay on the call.',
+    },
+    {
+      q: 'Will I be matched with a specific gender?',
+      a: 'No. The queue is random adults. Skip until the conversation fits, and do not trust sites that promise a gender on a free queue.',
+    },
+  ],
+  'free-random-cam-chat': [
+    {
+      q: 'What is random cam chat?',
+      a: 'Random cam chat is live 1-on-1 webcam matching with strangers. Either person can skip. It is not a paid cam-show catalog.',
+    },
+    {
+      q: 'Is random webcam chat free on Parvah?',
+      a: 'Yes. You can start with no signup. Confirm you are 18+, allow the camera, and match.',
+    },
+    {
+      q: 'Do I need to download an app for random cam chat?',
+      a: 'No. Parvah runs in the browser on your phone or computer.',
+    },
+  ],
+  '18-plus-video-chat': [
+    {
+      q: 'Is 18+ video chat free?',
+      a: 'On Parvah, yes. Adult video chat starts with an age gate and no account. Basic matching is free.',
+    },
+    {
+      q: 'Is 18+ video chat the same as a porn site?',
+      a: 'No. It is live 1-on-1 video with another adult. Explicit chat only happens if both people want it. Nothing explicit is guaranteed.',
+    },
+    {
+      q: 'What if the other person seems underage?',
+      a: 'Leave immediately and use the report button. Parvah is adults-only.',
+    },
+  ],
+  'free-live-porn-chat': [
+    {
+      q: 'Is there a free live porn chat with no signup?',
+      a: 'Parvah is free 18+ live video chat with strangers and no signup. It is a random adult conversation, not a porn tube or a paid cam menu.',
+    },
+    {
+      q: 'Will every match be explicit?',
+      a: 'No. Some adults want a flirty chat, some want a normal talk, and some leave immediately. Ask first and skip if it is not mutual.',
+    },
+    {
+      q: 'Does Parvah have an archive of porn chats?',
+      a: 'No. Chats are live only. Parvah does not host recorded videos of strangers.',
+    },
+  ],
+  'ometv-nsfw-alternative': [
+    {
+      q: 'What is a good OmeTV NSFW alternative without an app?',
+      a: 'Parvah is a browser alternative: free 18+ random video chat, no download, and Next anytime. NSFW tone is only for consenting adults.',
+    },
+    {
+      q: 'Does an OmeTV alternative for girls guarantee women?',
+      a: 'No. Random queues are random. Women use these sites, and so does everyone else. Skip until a match wants to talk.',
+    },
+    {
+      q: 'Is OmeTV NSFW chat adults-only on Parvah?',
+      a: 'Yes. You confirm 18+ before matching. Report and leave if someone seems underage.',
+    },
+  ],
   'best-dating-site': [
     {
       q: 'What is the best dating site in 2026?',
