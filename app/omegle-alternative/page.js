@@ -107,7 +107,20 @@ export default function OmegleAlternativePage() {
             links: [
               { href: '/', label: 'Start matching now' },
               { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
+              { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
               { href: '/random-video-chat', label: 'Random video chat' },
+            ],
+          },
+          {
+            title: 'Omegle alternative by country',
+            paragraphs: [
+              'Search demand splits by country. If you want the same free browser chat with local tips for mobile networks and peak hours, open the page for your region.',
+              'Matching stays global and random on every page — country pages explain how to start, not a fake local-only filter.',
+            ],
+            links: [
+              { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
+              { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
+              { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
             ],
           },
           {
@@ -126,18 +139,20 @@ export default function OmegleAlternativePage() {
         popularSearches={[
           { href: '/adult-video-chat', label: 'adult video chat' },
           { href: '/random-video-chat', label: 'random video chat' },
+          { href: '/omegle-alternative-india', label: 'omegle alternative india' },
+          { href: '/omegle-alternative-usa', label: 'omegle alternative usa' },
+          { href: '/omegle-alternative-uk', label: 'omegle alternative uk' },
           { href: '/talk-to-strangers', label: 'talk to strangers' },
-          { href: '/hot-video-chat', label: 'hot video chat' },
-          { href: '/flirty-video-chat', label: 'flirty video chat' },
-          { href: '/live-video-chat', label: 'live video chat' },
         ]}
         faqs={faqs}
         relatedLinks={[
           { href: '/', label: 'Start free chat' },
+          { href: '/omegle-alternative-india', label: 'Omegle Alternative India' },
+          { href: '/omegle-alternative-usa', label: 'Omegle Alternative USA' },
+          { href: '/omegle-alternative-uk', label: 'Omegle Alternative UK' },
           { href: '/adult-video-chat', label: 'Adult Video Chat' },
           { href: '/random-video-chat', label: 'Random Video Chat' },
           { href: '/ometv-alternative', label: 'OmeTV Alternative' },
-          { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
           { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },
         ]}
       />

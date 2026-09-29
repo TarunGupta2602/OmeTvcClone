@@ -13,7 +13,7 @@ export default function HomeSEO() {
             Free · No signup · 18+
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-tight">
-            Free random video chat with strangers — talk instantly
+            Free random video chat with strangers — no signup
           </h2>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
             Instant 1-on-1 webcam conversations with no account wall. Meet new people for casual talk,
@@ -26,6 +26,15 @@ export default function HomeSEO() {
             </Link>
             <Link href="/omegle-alternative" className="hover:underline">
               Omegle alternative
+            </Link>
+            <Link href="/omegle-alternative-india" className="hover:underline">
+              Omegle alternative India
+            </Link>
+            <Link href="/omegle-alternative-usa" className="hover:underline">
+              Omegle alternative USA
+            </Link>
+            <Link href="/omegle-alternative-uk" className="hover:underline">
+              Omegle alternative UK
             </Link>
             <Link href="/random-video-chat" className="hover:underline">
               Random video chat

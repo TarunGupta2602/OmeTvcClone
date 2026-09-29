@@ -9,7 +9,7 @@ import {
   stringifyJsonLd,
 } from '../lib/seo';
 
-const HOME_TITLE = 'Random Video Chat with Strangers — Free, No Signup';
+const HOME_TITLE = 'Free Random Video Chat with Strangers — No Signup';
 
 const baseMetadata = {
   title: {
