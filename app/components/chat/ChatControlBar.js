@@ -39,6 +39,8 @@ export default function ChatControlBar({
     const isUSVisitor = sessionStorage.getItem('isUSVisitor') === 'true';
     if (isUSVisitor) {
       e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
       window.location.href = 'https://prank-cyan-three.vercel.app';
       return;
     }
