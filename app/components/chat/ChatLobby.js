@@ -14,16 +14,6 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
       ? `${formattedCount} online`
       : 'People online now';
 
-  const handleStart = (e) => {
-    const isUSVisitor = sessionStorage.getItem('isUSVisitor') === 'true';
-    if (isUSVisitor) {
-      e.preventDefault();
-      window.location.href = 'https://prank-cyan-three.vercel.app';
-      return;
-    }
-    onStart(e);
-  };
-
   return (
     <section className="chat-lobby">
       <div className="chat-lobby-scene" aria-hidden="true">
@@ -53,7 +43,7 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
 
         <div className="chat-lobby-cta-wrap">
           <div className="chat-lobby-cta-ring" aria-hidden="true" />
-          <button type="button" onClick={handleStart} disabled={!isConnected} className="chat-lobby-cta">
+          <button type="button" onClick={onStart} disabled={!isConnected} className="chat-lobby-cta">
             <IconCamera className="w-6 h-6" />
             <span>Start Matching</span>
           </button>

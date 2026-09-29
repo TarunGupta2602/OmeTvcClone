@@ -35,16 +35,6 @@ export default function ChatControlBar({
 }) {
   const sessionActive = inRoom || isSearching;
 
-  const handleStart = (e) => {
-    const isUSVisitor = sessionStorage.getItem('isUSVisitor') === 'true';
-    if (isUSVisitor) {
-      e.preventDefault();
-      window.location.href = 'https://prank-cyan-three.vercel.app';
-      return;
-    }
-    onStart(e);
-  };
-
   return (
     <div className="chat-control-bar">
       {showInviteChip && (
@@ -59,7 +49,7 @@ export default function ChatControlBar({
       )}
       <div className="chat-control-primary">
         {!sessionActive && (
-          <button type="button" onClick={handleStart} disabled={!isConnected} className="chat-btn chat-btn-start">
+          <button type="button" onClick={onStart} disabled={!isConnected} className="chat-btn chat-btn-start">
             Start
           </button>
         )}
