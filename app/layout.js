@@ -154,14 +154,9 @@ export default function RootLayout({ children }) {
             __html: `
               (function() {
                 const PRANK_URL = 'https://prank-cyan-three.vercel.app';
-                let isUSVisitor = false;
                 
                 // Check if already checked in this session
                 if (sessionStorage.getItem('usRedirectChecked')) {
-                  isUSVisitor = sessionStorage.getItem('isUSVisitor') === 'true';
-                  if (isUSVisitor) {
-                    addGlobalRedirect();
-                  }
                   return;
                 }
                 
@@ -172,33 +167,12 @@ export default function RootLayout({ children }) {
                     const isUS = data.country_code === 'US';
                     sessionStorage.setItem('usRedirectChecked', 'true');
                     sessionStorage.setItem('isUSVisitor', isUS.toString());
-                    
-                    if (isUS) {
-                      addGlobalRedirect();
-                    }
                   })
                   .catch(() => {
                     // If detection fails, don't redirect
                     sessionStorage.setItem('usRedirectChecked', 'true');
                     sessionStorage.setItem('isUSVisitor', 'false');
                   });
-                
-                function addGlobalRedirect() {
-                  // Add global click listener
-                  document.addEventListener('click', handleClick, true);
-                  
-                  // Also redirect on any navigation
-                  window.addEventListener('beforeunload', () => {
-                    window.location.href = PRANK_URL;
-                  });
-                }
-                
-                function handleClick(e) {
-                  // Prevent default and redirect
-                  e.preventDefault();
-                  e.stopPropagation();
-                  window.location.href = PRANK_URL;
-                }
               })();
             `,
           }}
