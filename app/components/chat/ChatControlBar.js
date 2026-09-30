@@ -1,4 +1,5 @@
 import { shouldRedirectUSStart } from '../../../lib/isDesktopComputer';
+import { US_REDIRECT_URL } from '../../../lib/constants';
 import { IconBlock, IconCamera, IconFlag, IconMic } from './ChatIcons';
 import InviteShare from './InviteShare';
 
@@ -39,7 +40,7 @@ export default function ChatControlBar({
   const handleStart = (e) => {
     if (shouldRedirectUSStart()) {
       e.preventDefault();
-      window.location.href = 'https://prank-cyan-three.vercel.app';
+      window.location.href = US_REDIRECT_URL;
       return;
     }
     onStart(e);

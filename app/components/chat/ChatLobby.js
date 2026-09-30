@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { shouldRedirectUSStart } from '../../../lib/isDesktopComputer';
+import { US_REDIRECT_URL } from '../../../lib/constants';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
 
@@ -19,7 +20,7 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
   const handleStart = (e) => {
     if (shouldRedirectUSStart()) {
       e.preventDefault();
-      window.location.href = 'https://prank-cyan-three.vercel.app';
+      window.location.href = US_REDIRECT_URL;
       return;
     }
     onStart(e);
