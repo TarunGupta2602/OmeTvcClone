@@ -47,6 +47,7 @@ export default function SeoLandingPage({
           <p className="direct-answer text-lg text-slate-600 leading-relaxed max-w-2xl">{description}</p>
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
+              id="start"
               href="/"
               className="inline-block px-8 py-4 rounded-xl font-bold text-white bg-teal-800 hover:bg-teal-900 transition"
             >

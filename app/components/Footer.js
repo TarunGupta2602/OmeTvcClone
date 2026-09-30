@@ -50,7 +50,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-              Free random video chat with strangers — no signup, 1-on-1 webcam, adults 18+.
+              Free random video chat — no signup, 1-on-1 webcam, adults 18+.
             </p>
             <p className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-rose-700">
               <span className="w-1.5 h-1.5 rounded-full bg-rose-500" aria-hidden="true" />

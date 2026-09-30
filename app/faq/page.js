@@ -5,15 +5,15 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
-  title: 'FAQ — Random Video Chat with Strangers',
+  title: 'FAQ — Free Random Video Chat',
   description:
-    'Answers about free random video chat with strangers: no signup, safety, camera setup, WebRTC privacy, and how matching works for adults 18+.',
+    'Answers about free random video chat: no signup, safety, camera setup, WebRTC privacy, and how matching works for adults 18+.',
   alternates: {
     canonical: `${SITE_URL}/faq`,
   },
   openGraph: {
-    title: 'FAQ — Random Video Chat with Strangers',
-    description: 'Common questions about free random video chat with strangers, no signup, safety, and how matching works.',
+    title: 'FAQ — Free Random Video Chat',
+    description: 'Common questions about free random video chat, no signup, safety, and how matching works.',
     url: `${SITE_URL}/faq`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat FAQ' }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ — Random Video Chat with Strangers',
-    description: 'Common questions about free random video chat with strangers, no signup, safety, and how matching works.',
+    title: 'FAQ — Free Random Video Chat',
+    description: 'Common questions about free random video chat, no signup, safety, and how matching works.',
     images: ['/og-image.jpg'],
   },
 };
@@ -36,14 +36,14 @@ const faqs = [
     category: 'General',
   },
   {
-    question: 'Is Parvah a free Omegle alternative?',
+    question: 'Where is the Omegle alternative page?',
     answer:
-      'Yes. Omegle shut down in 2023. Parvah is a free browser Omegle alternative with random 1-on-1 matching, an 18+ age gate, skip and report tools, and peer-to-peer WebRTC video. No account is required.',
+      'Omegle shut down in 2023. The page for adult Omegle, 18+ Omegle, and Omegle adult is https://parvah.online/omegle-alternative.',
     category: 'General',
   },
   {
-    question: 'Is random video chat with strangers free?',
-    answer: 'Yes. Completely free random video chat — no registration, credits, or subscription required to start matching with other adults 18+.',
+    question: 'Is random video chat free?',
+    answer: 'Yes. Random video chat is completely free — no registration, credits, or subscription required to start matching with other adults 18+.',
     category: 'General',
   },
   {

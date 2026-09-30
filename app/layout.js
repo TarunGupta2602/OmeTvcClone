@@ -34,7 +34,7 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Free Random Video Chat with Strangers — No Signup',
+    default: 'Parvah — Free Random Video Chat, No Signup',
     template: '%s | Parvah',
   },
   description: SITE_DESCRIPTION,
@@ -71,7 +71,7 @@ export const metadata = {
     apple: '/apple-touch-icon-180x180.png',
   },
   openGraph: {
-    title: 'Free Random Video Chat with Strangers — No Signup',
+    title: 'Parvah — Free Random Video Chat, No Signup',
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -81,7 +81,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Random Video Chat with Strangers — No Signup',
+    title: 'Parvah — Free Random Video Chat, No Signup',
     description: SITE_DESCRIPTION,
   },
   robots: {

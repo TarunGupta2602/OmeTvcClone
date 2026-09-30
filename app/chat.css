@@ -281,8 +281,28 @@
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.04em;
-  margin-bottom: 1.125rem;
+  margin-bottom: 0.75rem;
   text-wrap: balance;
+}
+
+.chat-lobby-query-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.25rem;
+  margin-bottom: 1.125rem;
+}
+
+.chat-lobby-query-links a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.chat-lobby-query-links a:hover {
+  color: #fff;
 }
 
 .chat-lobby-title-glow {

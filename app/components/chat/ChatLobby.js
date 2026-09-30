@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { shouldRedirectUSStart } from '../../../lib/isDesktopComputer';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
@@ -40,15 +41,20 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
 
         <h1 className="chat-lobby-title">
           Random video chat
-          <span className="chat-lobby-title-glow"> with strangers.</span>
+          <span className="chat-lobby-title-glow"> no signup.</span>
         </h1>
+
+        <nav className="chat-lobby-query-links" aria-label="Related chats">
+          <Link href="/video-chat-with-strangers">Video chat with strangers</Link>
+          <Link href="/omegle-alternative">Omegle alternative</Link>
+        </nav>
 
         <p className="chat-lobby-sub chat-lobby-sub-desktop">
           Free 1-on-1 webcam chat — no signup. Meet someone new in seconds for talk, flirt, or real
           connection. Adults 18+ only.
         </p>
         <p className="chat-lobby-sub chat-lobby-sub-mobile">
-          Free random video chat with strangers. Tap start — no signup, 18+ only.
+          Free random video chat. Tap start — no signup, 18+ only.
         </p>
 
         <div className="chat-lobby-cta-wrap">

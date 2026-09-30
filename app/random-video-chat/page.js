@@ -38,8 +38,8 @@ export const metadata = {
 
 const faqs = [
   {
-    q: 'What is random video chat with strangers?',
-    a: 'Random video chat connects you with another person for a live 1-on-1 webcam conversation. Matching is automatic — no friend requests or profiles needed.',
+    q: 'What is free random video chat?',
+    a: 'Free random video chat pairs you with another adult for a live 1-on-1 webcam conversation. Matching is automatic — no friend requests, profiles, credits, or signup.',
   },
   {
     q: 'Is random video chat free?',
@@ -104,17 +104,18 @@ export default function RandomVideoChatPage() {
         ]}
         sections={[
           {
-            title: 'How free random video chat with strangers works',
+            title: 'How free random video chat works',
             paragraphs: [
               'Open the site, confirm you are 18+, allow camera access, and click Start Matching. You are paired with another available adult for a live 1-on-1 session. Click Next anytime to meet someone new.',
               'Unlike app-only platforms, this random video chat runs in the browser — useful on a laptop or phone without another download.',
             ],
             bullets: [
-              'Primary search intent: random video chat with strangers',
+              'Primary search intent: free random video chat',
               'No signup + WebRTC peer-to-peer when networks allow',
               'Safety: report, skip, and published guidelines',
             ],
             links: [
+              { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
               { href: '/ometv-alternative', label: 'OmeTV alternative' },
               { href: '/omegle-alternative', label: 'Omegle alternative' },
               { href: '/no-signup-video-chat', label: 'No signup video chat' },

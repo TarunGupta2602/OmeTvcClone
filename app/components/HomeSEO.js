@@ -13,12 +13,19 @@ export default function HomeSEO() {
             Free · No signup · 18+
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-tight">
-            Free random video chat with strangers — no signup
+            Free random video chat — no signup
           </h2>
+          <nav className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 text-sm font-semibold text-teal-800" aria-label="Related chats">
+            <Link href="/video-chat-with-strangers" className="hover:underline">
+              Video chat with strangers
+            </Link>
+            <Link href="/omegle-alternative" className="hover:underline">
+              Omegle alternative
+            </Link>
+          </nav>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
             Instant 1-on-1 webcam conversations with no account wall. Meet new people for casual talk,
-            flirty chemistry, or late-night company. WebRTC privacy, skip anytime, and a modern Omegle
-            alternative that works in your browser.
+            flirty chemistry, or late-night company. WebRTC privacy, skip anytime, in your browser.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
             <Link href="/ometv-alternative" className="hover:underline">
@@ -70,7 +77,7 @@ export default function HomeSEO() {
               },
               {
                 title: 'No signup friction',
-                desc: 'No email, credits, or profile setup — confirm 18+ and start video chat with strangers.',
+                desc: 'No email, credits, or profile setup — confirm 18+ and start random video chat.',
               },
               {
                 title: 'Privacy + safety tools',

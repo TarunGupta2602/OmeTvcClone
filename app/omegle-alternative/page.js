@@ -32,7 +32,15 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is the best free Omegle alternative in 2026?',
-    a: 'A strong Omegle alternative offers free random video chat with strangers, no signup, browser access, an 18+ age gate, and skip/report tools. This site is built for that exact checklist.',
+    a: 'Parvah is a free Omegle alternative. Omegle shut down in 2023. This page is random 1-on-1 video chat in the browser: no signup, no app, adults 18+ only, with Next to skip and Report for abuse.',
+  },
+  {
+    q: 'Is this adult Omegle?',
+    a: 'Yes. People searching “adult Omegle” or “Omegle adult” land here. It is free 18+ random video chat, not a paid cam site, and it does not guarantee who you will meet.',
+  },
+  {
+    q: 'Is there an 18+ Omegle?',
+    a: 'Omegle is closed. This 18+ Omegle alternative lets adults start free random video chat with no signup. Minors are banned. Confirm your age, allow the camera, and match 1-on-1.',
   },
   {
     q: 'Is this an adult Omegle alternative?',
