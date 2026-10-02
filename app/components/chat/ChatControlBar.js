@@ -1,5 +1,3 @@
-import { shouldRedirectUSStart } from '../../../lib/isDesktopComputer';
-import { US_REDIRECT_URL } from '../../../lib/constants';
 import { IconBlock, IconCamera, IconFlag, IconMic } from './ChatIcons';
 import InviteShare from './InviteShare';
 
@@ -38,11 +36,6 @@ export default function ChatControlBar({
   const sessionActive = inRoom || isSearching;
 
   const handleStart = (e) => {
-    if (shouldRedirectUSStart()) {
-      e.preventDefault();
-      window.location.href = US_REDIRECT_URL;
-      return;
-    }
     onStart(e);
   };
 

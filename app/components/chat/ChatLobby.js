@@ -1,8 +1,10 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
-import { shouldRedirectUSStart } from '../../../lib/isDesktopComputer';
-import { US_REDIRECT_URL } from '../../../lib/constants';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
+import USWelcomePopup from '../USWelcomePopup';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -10,6 +12,7 @@ function formatOnlineCount(count) {
 }
 
 export default function ChatLobby({ isConnected, onlineCount, onStart }) {
+  const [showPopup, setShowPopup] = useState(false);
   const formattedCount = formatOnlineCount(onlineCount);
   const statusLabel = !isConnected
     ? 'Connecting…'
@@ -18,11 +21,7 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
       : 'People online now';
 
   const handleStart = (e) => {
-    if (shouldRedirectUSStart()) {
-      e.preventDefault();
-      window.location.href = US_REDIRECT_URL;
-      return;
-    }
+    setShowPopup(true);
     onStart(e);
   };
 
@@ -77,6 +76,7 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
           <span>Worldwide</span>
         </div>
       </div>
+      <USWelcomePopup show={showPopup} />
     </section>
   );
 }
