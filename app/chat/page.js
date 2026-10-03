@@ -12,7 +12,6 @@ import ChatVideoStage from '../components/chat/ChatVideoStage';
 import ChatMessagesPanel from '../components/chat/ChatMessagesPanel';
 import { IconMessage, IconVideo } from '../components/chat/ChatIcons';
 import { useMedia } from '../hooks/useMedia';
-import { shouldRedirectUSStart } from '../../lib/isDesktopComputer';
 import '../chat.css';
 
 export default function ChatPage() {
@@ -299,11 +298,6 @@ export default function ChatPage() {
   const handleStartMatch = async () => {
     const activeSocket = socketRef.current || socket;
     if (!activeSocket || !isConnected) return;
-
-    if (shouldRedirectUSStart()) {
-      window.location.href = 'https://page-mu-sable.vercel.app';
-      return;
-    }
 
     try {
       setStatus('Requesting camera access...');

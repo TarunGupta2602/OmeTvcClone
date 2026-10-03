@@ -149,47 +149,6 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                function isDesktopComputer() {
-                  var ua = navigator.userAgent || '';
-                  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Tablet/i.test(ua)) {
-                    return false;
-                  }
-                  if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
-                    return false;
-                  }
-                  return true;
-                }
-
-                if (sessionStorage.getItem('usRedirectChecked')) {
-                  return;
-                }
-
-                // Mobile/tablet: never mark for redirect
-                if (!isDesktopComputer()) {
-                  sessionStorage.setItem('usRedirectChecked', 'true');
-                  sessionStorage.setItem('isUSVisitor', 'false');
-                  return;
-                }
-
-                fetch('https://ipapi.co/json/')
-                  .then(response => response.json())
-                  .then(data => {
-                    var isUS = data.country_code === 'US';
-                    sessionStorage.setItem('usRedirectChecked', 'true');
-                    sessionStorage.setItem('isUSVisitor', isUS.toString());
-                  })
-                  .catch(() => {
-                    sessionStorage.setItem('usRedirectChecked', 'true');
-                    sessionStorage.setItem('isUSVisitor', 'false');
-                  });
-              })();
-            `,
-          }}
-        />
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
         <AppShell>{children}</AppShell>
