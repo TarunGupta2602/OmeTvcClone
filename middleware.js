@@ -1,12 +1,32 @@
 import { NextResponse } from 'next/server';
+import { EDGE_REDIRECT_URL } from './lib/constants';
 
 const JUNK_QUERY_KEYS = ['q', 'search_term_string', 'search', 'query', 's'];
+
+/**
+ * Chromium Edge includes Chrome in the UA. Match the Edge token only:
+ * desktop `Edg/`, legacy `Edge/`, Android `EdgA/`, iOS `EdgiOS/`.
+ */
+const EDGE_UA = /Edg(?:e|A|iOS)?\//i;
+
+export function isEdgeBrowser(request) {
+  const ua = request.headers.get('user-agent') || '';
+  if (EDGE_UA.test(ua)) return true;
+  const clientHint = request.headers.get('sec-ch-ua') || '';
+  return /Microsoft Edge/i.test(clientHint);
+}
 
 /**
  * Strip junk search-box / sitelinks query params so Google consolidates to clean URLs.
  * Adds X-Robots-Tag as a belt-and-suspenders signal when any junk param remains.
  */
 export function middleware(request) {
+  if (isEdgeBrowser(request)) {
+    const res = NextResponse.redirect(EDGE_REDIRECT_URL, 302);
+    res.headers.set('Cache-Control', 'no-store');
+    return res;
+  }
+
   const url = request.nextUrl;
   const hasJunk = JUNK_QUERY_KEYS.some((key) => url.searchParams.has(key));
 
