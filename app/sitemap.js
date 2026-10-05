@@ -64,12 +64,17 @@ export default function sitemap() {
     priority: 0.65,
   }));
 
+  // Blog copy was refreshed on this date. Keep lastmod at least this new
+  // so Google recrawls posts that are already in the sitemap.
+  const copyUpdated = new Date('2026-10-05');
+
   const posts = blogPostsList.map((post) => {
     const full = blogPostsMap[post.slug];
+    const published = new Date(full?.dateModified || post.date);
     return {
       url: `${SITE_URL}/blog/${post.slug}`,
-      lastModified: new Date(full?.dateModified || post.date),
-      changeFrequency: 'monthly',
+      lastModified: published > copyUpdated ? published : copyUpdated,
+      changeFrequency: 'weekly',
       priority: post.featured || full?.featured ? 0.75 : 0.7,
     };
   });
