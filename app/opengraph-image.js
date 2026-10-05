@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
             Random video chat with strangers
           </div>
           <div style={{ fontSize: 28, color: 'rgba(255,255,255,0.78)', lineHeight: 1.35, maxWidth: 820 }}>
-            Instant 1-on-1 webcam matching in your browser. Talk, flirt, or skip anytime.
+            Instant 1-on-1 webcam matching in your browser. Talk with someone new, or skip anytime.
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

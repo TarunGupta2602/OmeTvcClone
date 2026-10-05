@@ -65,7 +65,7 @@ export default function OmegleAlternativeUsaPage() {
           { title: 'No account required', desc: 'Confirm 18+, allow camera, match. Email is not required.' },
           { title: 'Evening US hours', desc: 'Peak activity often lines up with US nights and weekends.' },
           { title: 'Skip and report', desc: 'Leave a bad match in one tap. Report abuse when needed.' },
-          { title: 'Honest matching', desc: 'Random adults — not a paid cam catalog or gender guarantee.' },
+          { title: 'Honest matching', desc: 'Random adults — not a paid show catalog or gender guarantee.' },
         ]}
         comparison={{
           title: 'Omegle vs this USA Omegle alternative',
@@ -91,7 +91,7 @@ export default function OmegleAlternativeUsaPage() {
               'Free random video chat with strangers',
               'No signup and no download',
               'Works across US time zones in the browser',
-              'Consent-first flirty chat between adults is allowed',
+              'Sexual content and nudity are not allowed',
             ],
             links: [
               { href: '/', label: 'Start matching now' },
@@ -108,7 +108,7 @@ export default function OmegleAlternativeUsaPage() {
             links: [
               { href: '/safety', label: 'Safety guidelines' },
               { href: '/blog/how-to-stay-safe-on-video-chat-platforms', label: 'Video chat safety tips' },
-              { href: '/adult-video-chat', label: 'Adult video chat' },
+              { href: '/adult-video-chat', label: '18+ video chat' },
             ],
           },
         ]}
@@ -118,7 +118,7 @@ export default function OmegleAlternativeUsaPage() {
           { href: '/omegle-alternative-uk', label: 'omegle alternative uk' },
           { href: '/random-video-chat', label: 'random video chat' },
           { href: '/free-webcam-chat', label: 'free webcam chat' },
-          { href: '/flirty-video-chat', label: 'flirty video chat' },
+          { href: '/flirty-video-chat', label: 'friendly video chat' },
         ]}
         faqs={faqs}
         relatedLinks={[

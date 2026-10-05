@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Adult Omegle Alternative 2026 — Free Random Video Chat (18+)';
+const title = 'Omegle for adults 18+ Alternative 2026 — Free Random Video Chat (18+)';
 const description =
-  'Free adult Omegle alternative for 18+ — random video chat with strangers, no signup, no app. Instant 1-on-1 webcam matching in your browser. Flirty or friendly chats welcome between consenting adults.';
+  'Free Omegle for adults 18+ alternative for 18+ — random video chat with strangers, no signup, no app. Instant 1-on-1 webcam matching in your browser. Friendly or friendly chats welcome between consenting adults.';
 
 export const metadata = {
   title: {
@@ -17,7 +17,7 @@ export const metadata = {
     description,
     url: `${SITE_URL}/omegle-alternative`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Adult Omegle alternative — free random video chat 18+' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Omegle for adults 18+ alternative — free random video chat 18+' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -35,20 +35,20 @@ const faqs = [
     a: 'Parvah is a free Omegle alternative. Omegle shut down in 2023. This page is random 1-on-1 video chat in the browser: no signup, no app, adults 18+ only, with Next to skip and Report for abuse.',
   },
   {
-    q: 'Is this adult Omegle?',
-    a: 'Yes. People searching “adult Omegle” or “Omegle adult” land here. It is free 18+ random video chat, not a paid cam site, and it does not guarantee who you will meet.',
+    q: 'Is this Omegle for adults 18+?',
+    a: 'Yes. People searching “Omegle for adults 18+” or “Omegle adult” land here. It is free 18+ random video chat, not a paid cam site, and it does not guarantee who you will meet.',
   },
   {
     q: 'Is there an 18+ Omegle?',
     a: 'Omegle is closed. This 18+ Omegle alternative lets adults start free random video chat with no signup. Minors are banned. Confirm your age, allow the camera, and match 1-on-1.',
   },
   {
-    q: 'Is this an adult Omegle alternative?',
-    a: 'Yes — it is for adults 18+ only. Consenting adults can have flirty or adult conversations. Non-consent, underage users, and illegal content are banned. Use Skip or Report anytime.',
+    q: 'Is this an Omegle for adults 18+ alternative?',
+    a: 'Yes — it is for adults 18+ only. Consenting adults can have friendly conversations. Non-consent, underage users, and illegal content are banned. Use Skip or Report anytime.',
   },
   {
     q: 'Is Omegle coming back in 2026?',
-    a: 'Omegle shut down permanently in 2023. People searching “Omegle 2026”, “adult Omegle”, or “what is the new Omegle” usually want a free random video chat replacement in the browser.',
+    a: 'Omegle shut down permanently in 2023. People searching “Omegle 2026”, “Omegle for adults 18+”, or “what is the new Omegle” usually want a free random video chat replacement in the browser.',
   },
   {
     q: 'Do I need to sign up for this Omegle alternative?',
@@ -59,8 +59,8 @@ const faqs = [
     a: 'Yes. Use Chrome or another modern mobile browser on Wi‑Fi or data. Allow camera and mic — no Play Store app required.',
   },
   {
-    q: 'Is flirty or adult chat allowed?',
-    a: 'Yes between consenting adults 18+. Non-consent, underage users, and illegal content are banned.',
+    q: 'Is sexual content allowed?',
+    a: 'No. This is random video chat for conversation. Sexual content, nudity, underage users, and harassment are not allowed. Use Skip or Report anytime.',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function OmegleAlternativePage() {
         description={description}
         highlights={[
           { title: 'No registration', desc: 'Start instantly — no email, username, or password.' },
-          { title: 'Adult Omegle energy', desc: '1-on-1 random matching like classic Omegle — rebuilt for modern browsers, 18+ only.' },
+          { title: 'Omegle for adults 18+ energy', desc: '1-on-1 random matching like classic Omegle — rebuilt for modern browsers, 18+ only.' },
           { title: 'Works on phones', desc: 'Popular with users in India and worldwide who want no-app video chat.' },
           { title: 'WebRTC privacy', desc: 'Peer-to-peer video when networks allow — streams are not archived on our servers.' },
           { title: 'Safety built in', desc: '18+ age gate, report button, and skip anytime.' },
@@ -101,14 +101,14 @@ export default function OmegleAlternativePage() {
         }}
         sections={[
           {
-            title: 'Why people search for an adult Omegle alternative in 2026',
+            title: 'Why people search for an Omegle for adults 18+ alternative in 2026',
             paragraphs: [
-              'Omegle closed, but search demand never left. Queries like “Omegle alternative 2026”, “adult Omegle”, “omegle adults”, and “what is the new Omegle” all point to the same need: free random video chat with strangers without another heavy app.',
-              'This Omegle alternative focuses on browser matching, no signup, and clear adult rules — so you can talk, flirt, or just meet someone new in seconds. Adults 18+ only.',
+              'Omegle closed, but search demand never left. Queries like “Omegle alternative 2026”, “Omegle for adults 18+”, “omegle adults”, and “what is the new Omegle” all point to the same need: free random video chat with strangers without another heavy app.',
+              'This Omegle alternative focuses on browser matching and no signup, so you can meet someone new in seconds. People 18 and older only.',
             ],
             bullets: [
               'Free random video chat with strangers',
-              'Adult / flirty chat allowed between consenting 18+ users',
+              '18+ age check before matching',
               'No signup / no app download',
               'Skip and report controls',
             ],
@@ -145,7 +145,7 @@ export default function OmegleAlternativePage() {
           },
         ]}
         popularSearches={[
-          { href: '/adult-video-chat', label: 'adult video chat' },
+          { href: '/adult-video-chat', label: '18+ video chat' },
           { href: '/random-video-chat', label: 'random video chat' },
           { href: '/omegle-alternative-india', label: 'omegle alternative india' },
           { href: '/omegle-alternative-usa', label: 'omegle alternative usa' },
@@ -158,7 +158,7 @@ export default function OmegleAlternativePage() {
           { href: '/omegle-alternative-india', label: 'Omegle Alternative India' },
           { href: '/omegle-alternative-usa', label: 'Omegle Alternative USA' },
           { href: '/omegle-alternative-uk', label: 'Omegle Alternative UK' },
-          { href: '/adult-video-chat', label: 'Adult Video Chat' },
+          { href: '/adult-video-chat', label: '18+ video chat' },
           { href: '/random-video-chat', label: 'Random Video Chat' },
           { href: '/ometv-alternative', label: 'OmeTV Alternative' },
           { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },

@@ -32,13 +32,13 @@ const faqs = [
   {
     question: 'What is Parvah?',
     answer:
-      'Parvah is a free random video chat website for adults 18+. No signup and no app: confirm your age, allow camera, and match 1-on-1 with another adult in the live queue. Matching is random — Parvah does not sell cam models or guarantee women, looks, or explicit content.',
+      'Parvah is a free random video chat website for adults 18+. No signup and no app: confirm your age, allow camera, and match 1-on-1 with another adult in the live queue. Matching is random — Parvah does not sell performers or guarantee women, looks, or inappropriate content.',
     category: 'General',
   },
   {
     question: 'Where is the Omegle alternative page?',
     answer:
-      'Omegle shut down in 2023. The page for adult Omegle, 18+ Omegle, and Omegle adult is https://parvah.online/omegle-alternative.',
+      'Omegle shut down in 2023. The page for Omegle for adults 18+, 18+ Omegle, and Omegle adult is https://parvah.online/omegle-alternative.',
     category: 'General',
   },
   {
@@ -47,13 +47,13 @@ const faqs = [
     category: 'General',
   },
   {
-    question: 'Are flirty talks and intimate chats allowed?',
-    answer: 'Yes, between consenting adults. Mutual chemistry, flirty conversation, and hot talk are welcome when both people agree. Non-consent, pressure, and underage users are banned.',
+    question: 'Is sexual content allowed?',
+    answer: 'No. Parvah is for live conversation with new people. Sexual content, nudity, and harassment are not allowed.',
     category: 'General',
   },
   {
-    question: 'Will I always match with women or get nude chats?',
-    answer: 'No. Matches are random adults in the live queue. This is not a cam-model catalog and does not guarantee gender, looks, or explicit content. Skip until you find a mutual vibe.',
+    question: 'Will I always match with a specific person?',
+    answer: 'No. Matches are random people in the live queue. This is not a performer catalog and does not filter by gender or appearance. Skip until you find a conversation you want.',
     category: 'General',
   },
   {
@@ -147,7 +147,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   name: 'FAQ - Parvah',
-  description: 'Frequently asked questions about our free adult random video chat platform.',
+  description: 'Frequently asked questions about our free random video chat for people 18+ platform.',
   url: `${SITE_URL}/faq`,
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',

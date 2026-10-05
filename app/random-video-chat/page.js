@@ -79,7 +79,7 @@ export default function RandomVideoChatPage() {
         highlights={[
           {
             title: 'Talk to strangers live',
-            desc: 'Meet new people through 1-on-1 video — casual talk, language practice, flirt, or real chemistry.',
+            desc: 'Meet new people through 1-on-1 video — casual talk, language practice, chat, or real chemistry.',
           },
           {
             title: 'No sign-up',
@@ -122,7 +122,7 @@ export default function RandomVideoChatPage() {
             ],
           },
           {
-            title: 'Random video chat vs dating apps',
+            title: 'Random video chat vs profile apps',
             paragraphs: [
               'People searching for random video chat usually want spontaneity — not profiles, swipes, or paid boosts. Temporary sessions, skip anytime, and no public bio to maintain.',
               'If you need filters or social profiles, other products may fit better. If you want talk-to-strangers energy with modern safety basics, start on the homepage.',
@@ -137,7 +137,7 @@ export default function RandomVideoChatPage() {
           { href: '/video-chat-with-strangers', label: 'Video Chat with Strangers' },
           { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
           { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
-          { href: '/adult-video-chat', label: 'Adult Video Chat' },
+          { href: '/adult-video-chat', label: '18+ video chat' },
           { href: '/faq', label: 'FAQ' },
         ]}
       />

@@ -81,7 +81,7 @@ export default function ChatrouletteAlternativePage() {
             bullets: [
               'Primary intent: Chatroulette alternative free / random video chat',
               'Differentiator: no signup + browser WebRTC + 18+ safety tools',
-              'Best for: casual stranger chat, not dating profiles or paid filters',
+              'Best for: casual stranger chat, not public profiles or paid filters',
             ],
             links: [
               { href: '/blog/chatroulette-vs-parvah', label: 'Chatroulette vs Parvah' },

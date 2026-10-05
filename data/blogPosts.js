@@ -43,7 +43,7 @@ const coreBlogPostsMap = {
       <h3>Age gate</h3>
       <p>Before entering chat, Parvah's age gate confirms you are 18 or older. Random video platforms are not appropriate for minors. Never bypass age verification or encourage others to do so.</p>
       <h3>Report button</h3>
-      <p>If a user is harassing you, showing explicit content, or attempting fraud, use the report button immediately. Reports help moderators identify repeat offenders and improve matching quality for everyone.</p>
+      <p>If a user is harassing you, showing inappropriate content, or attempting fraud, use the report button immediately. Reports help moderators identify repeat offenders and improve matching quality for everyone.</p>
       <h3>Camera and microphone controls</h3>
       <p>You control when you are visible and audible. Keep your camera off until you feel comfortable. Parvah's WebRTC connection works the same whether you toggle video on immediately or after a brief pause.</p>
       <h2>Recognize Common Scams and Manipulation</h2>
@@ -100,7 +100,7 @@ const coreBlogPostsMap = {
       <h3>Age gate</h3>
       <p>Parvah enforces an 18+ age gate before chat access. Random video platforms are not appropriate for minors, and Parvah treats age verification as a non-negotiable entry requirement.</p>
       <h3>Report button</h3>
-      <p>When users encounter harassment, nudity violations, or scams, the report button provides immediate escalation. Community reporting feeds moderation workflows that remove bad actors and improve future matches.</p>
+      <p>When users encounter harassment, rule violations, or scams, the report button provides immediate escalation. Community reporting feeds moderation workflows that remove bad actors and improve future matches.</p>
       <h3>Community guidelines</h3>
       <p>Clear rules set expectations: be respectful, do not share illegal content, do not attempt to exploit other users. Parvah combines automated systems with human review where appropriate.</p>
       <h2>Privacy-First Design</h2>
@@ -288,7 +288,7 @@ const coreBlogPostsMap = {
       <h3>Respect boundaries</h3>
       <p>Not everyone wants the same conversation depth or topic mix. Read social cues. If someone hesitates or changes subject, follow their lead. Never pressure others to show or discuss anything that makes them uncomfortable.</p>
       <h2>Topics to Handle Carefully</h2>
-      <p>Politics, religion, and explicit content can derail otherwise pleasant chats. Unless both parties signal openness, steer toward neutral ground: hobbies, travel, food, music, movies, and cultural differences. Parvah's age gate ensures an adult audience, but adulthood does not imply unlimited topic consent.</p>
+      <p>Politics, religion, and inappropriate content can derail otherwise pleasant chats. Unless both parties signal openness, steer toward neutral ground: hobbies, travel, food, music, movies, and cultural differences. Parvah's age gate ensures an adult audience, but adulthood does not imply unlimited topic consent.</p>
       <h2>Using Parvah's Controls Politely</h2>
       <p>The Next button is a legitimate tool, not an insult. Use it when conversations end naturally, when interests clearly diverge, or when you feel unsafe. A brief "Nice meeting you, goodbye" before clicking Next is courteous when timing allows.</p>
       <p>If someone violates guidelines, skip the debate and use the report button. Parvah moderators depend on reports to keep the platform usable for everyone.</p>
@@ -457,7 +457,7 @@ const coreBlogPostsMap = {
 
   'how-to-report-inappropriate-users': {
     title: 'How to Report Inappropriate Users on Video Chat',
-    excerpt: 'Learn when and how to use Parvah\'s report button to flag harassment, explicit content, and scams to keep the community safe.',
+    excerpt: 'Learn when and how to use Parvah\'s report button to flag harassment, inappropriate content, and scams to keep the community safe.',
     date: '2026-06-28',
     category: 'Safety',
     author: 'Parvah Team',
@@ -471,7 +471,7 @@ const coreBlogPostsMap = {
       <h2>What Should You Report?</h2>
       <p>Report behavior that violates Parvah's community guidelines or makes you fear for your safety. Common categories include:</p>
       <ul>
-        <li>Explicit nudity or sexual acts on camera</li>
+        <li>Explicit inappropriate images or inappropriate behavior on camera</li>
         <li>Harassment, hate speech, or targeted abuse</li>
         <li>Threats of violence or doxxing attempts</li>
         <li>Scams, fraud, or requests for money</li>
@@ -740,7 +740,7 @@ const coreBlogPostsMap = {
     readTime: '11 min read',
     featured: true,
     keywords:
-      'best omegle alternatives 2026, omegle alternative, free random video chat, omegle replacement, no signup video chat, video chat with strangers, adult omegle',
+      'best omegle alternatives 2026, omegle alternative, free random video chat, omegle replacement, no signup video chat, video chat with strangers, omegle for adults 18+',
     content: `
 
       <h2>Introduction</h2>
@@ -939,7 +939,7 @@ export const blogPostsList = [
   {
     slug: 'how-to-report-inappropriate-users',
     title: 'How to Report Inappropriate Users on Video Chat',
-    excerpt: 'Learn when and how to use Parvah\'s report button to flag harassment, explicit content, and scams to keep the community safe.',
+    excerpt: 'Learn when and how to use Parvah\'s report button to flag harassment, inappropriate content, and scams to keep the community safe.',
     date: '2026-06-28',
     category: 'Safety',
     readTime: '8 min read',

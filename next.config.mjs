@@ -17,6 +17,21 @@ const nextConfig = {
         destination: '/blog/omegle-alternatives-why-parvah-is-better',
         permanent: true,
       },
+      {
+        source: '/dirty-talk-video-chat',
+        destination: '/casual-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/blog/free-live-porn-chat',
+        destination: '/blog/free-live-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/blog/nsfw-video-chat-with-strangers-18-plus',
+        destination: '/blog/video-chat-with-strangers-18-plus',
+        permanent: true,
+      },
     ];
   },
   async headers() {
