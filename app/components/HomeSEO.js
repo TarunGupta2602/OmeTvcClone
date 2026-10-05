@@ -25,7 +25,7 @@ export default function HomeSEO() {
           </nav>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
             Instant 1-on-1 webcam conversations with no account wall. Meet new people for casual talk,
-            easy conversation, or late-night company. WebRTC privacy, skip anytime, in your browser.
+            flirty chemistry, or late-night company. WebRTC privacy, skip anytime, in your browser.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
             <Link href="/ometv-alternative" className="hover:underline">
@@ -50,13 +50,13 @@ export default function HomeSEO() {
               Video chat with strangers
             </Link>
             <Link href="/chat-with-girls" className="hover:underline">
-              Chat with new people
+              Chat with girls
             </Link>
             <Link href="/flirty-video-chat" className="hover:underline">
-              Friendly video chat
+              Flirty video chat
             </Link>
             <Link href="/hot-video-chat" className="hover:underline">
-              Free video chat
+              Hot video chat
             </Link>
             <Link href="/safety" className="hover:underline">
               Safety

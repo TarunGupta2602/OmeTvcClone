@@ -22,8 +22,8 @@ export default function Navbar({ minimal = false }) {
   const mainNavItems = [
     { name: 'Random Chat', href: '/random-video-chat' },
     { name: 'Strangers', href: '/video-chat-with-strangers' },
-    { name: 'Meet People', href: '/meet-people-online' },
-    { name: 'Friendly', href: '/flirty-video-chat' },
+    { name: 'Chat Girls', href: '/chat-with-girls' },
+    { name: 'Flirty', href: '/flirty-video-chat' },
     { name: 'FAQ', href: '/faq' },
   ];
 

@@ -2,26 +2,26 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Random Video Chat for Adults 18+ — Free, No Signup';
+const title = 'Adult Video Chat Free — Random Webcam Chat with Strangers';
 const description =
-  'Free random video chat for people 18 and older — no signup. Instant 1-on-1 webcam matching for conversation. Sexual content is not allowed.';
+  'Free adult video chat with strangers — no signup. Instant 1-on-1 webcam matching for flirty talks, hot conversations, and real connections. Adults 18+ only.';
 
 export const metadata = {
-  title: 'Random Video Chat for Adults 18+ — Free, No Signup',
+  title: 'Adult Video Chat Free — Random Webcam with Strangers',
   description,
   alternates: { canonical: `${SITE_URL}/adult-video-chat` },
   openGraph: {
-    title: `Random Video Chat for Adults 18+ | ${SITE_NAME}`,
+    title: `Adult Video Chat Free — Random Webcam with Strangers | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/adult-video-chat`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free 18+ video chat with strangers' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free adult video chat with strangers' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Random Video Chat for Adults 18+ | ${SITE_NAME}`,
+    title: `Adult Video Chat Free — Random Webcam with Strangers | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -29,28 +29,28 @@ export const metadata = {
 
 const faqs = [
   {
-    q: 'What is this page?',
-    a: 'Free random 1-on-1 video chat for people 18 and older. You match with another person for a live conversation. There is no signup.',
+    q: 'What is adult video chat?',
+    a: 'Free random 1-on-1 webcam chat for adults 18+. You match with another person in the live queue for live video and text — flirty talks, hot chemistry, friendship, or dating energy depending on mutual consent.',
   },
   {
-    q: 'Is this a performer or adult site?',
-    a: 'No. Matching is random between real people. Parvah does not sell performances, and sexual content and nudity are not allowed.',
+    q: 'Is this nude cam girls or paid performers?',
+    a: 'No. This is random stranger matching between real users — not a cam-model catalog, not paid nude shows, and not a guarantee of any gender or explicit content. Skip until you find a mutual vibe.',
   },
   {
-    q: 'What kind of chat is allowed?',
-    a: 'Normal conversation. Harassment, sexual content, nudity, illegal content, and anyone under 18 are not allowed.',
+    q: 'Are dirty talks and intimate chats allowed?',
+    a: 'Yes, when both adults consent. Flirty language and mutual adult chemistry are welcome. Non-consent, underage users, illegal content, and harassment are banned.',
   },
   {
-    q: 'Is it free?',
+    q: 'Is adult video chat free?',
     a: 'Yes. No credits, subscriptions, or signup. Confirm you are 18+, allow your camera, and start matching.',
   },
   {
-    q: 'Who will I meet?',
-    a: 'Another available person in the live queue. Matches are random. Skip until the conversation feels right, and do not share personal contact details.',
+    q: 'Can I meet women or find relationships?',
+    a: 'You can meet new adults worldwide, including people open to flirting or connection. Matches are random — keep skipping until the conversation feels right. Never share personal contact details too quickly.',
   },
   {
-    q: 'How do I stay safe?',
-    a: 'Never share financial or address details, use Report for abuse, and leave any chat that feels wrong. Video is not recorded on our servers.',
+    q: 'How do I stay safe during adult chat?',
+    a: 'Only chat with people who feel respectful, never share financial or address details, use Report for abuse, and leave any chat that is not consensual. Peer video streams are not recorded on our servers.',
   },
 ];
 
@@ -64,21 +64,21 @@ export default function AdultVideoChatPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
-        badge="Video Chat 18+"
-        title="Random Video Chat for Adults 18+"
+        badge="Adult Video Chat · 18+"
+        title="Adult Video Chat Free — Random Webcam with Strangers"
         description={description}
         highlights={[
           {
-            title: 'Meet someone new',
-            desc: 'Live 1-on-1 webcam matching for a normal conversation.',
+            title: 'Meet new adults instantly',
+            desc: 'Live 1-on-1 webcam matching with people looking for conversation, flirt, late-night company, or chemistry.',
           },
           {
-            title: 'Conversation only',
-            desc: 'Sexual content and nudity are not allowed. Skip or report if a chat goes wrong.',
+            title: 'Flirty & hot talks welcome',
+            desc: 'Consenting adults can keep it playful, steamy, or deep. You set the tone together — skip if it is not mutual.',
           },
           {
             title: 'No signup wall',
-            desc: 'Jump into random video chat for people 18+ without email, credits, or an account.',
+            desc: 'Jump into adult random video chat without email, credits, or an account.',
           },
           {
             title: 'Privacy-minded WebRTC',
@@ -95,39 +95,39 @@ export default function AdultVideoChatPage() {
         ]}
         sections={[
           {
-            title: 'Random video chat for people 18+',
+            title: 'Adult random video chat built for chemistry',
             paragraphs: [
-              'Open the site, confirm you are 18 or older, and match with someone new. The point is a live conversation, not a performance.',
-              'Every match is different. Use Next when you want someone else, and do not share personal details.',
+              'Parvah is for adults who want more than small talk — flirty video chat, dirty talk when mutual, late-night honesty, and the chance of a real connection. Open the site, confirm you are 18+, and match with someone new in seconds.',
+              'Because matching is random, every session is different. Some chats stay playful. Some turn hot. Some become genuine conversations that feel like the start of something. Keep Next handy and protect your privacy.',
             ],
             bullets: [
-              'Free video chat in the browser',
-              '18+ age check before you start',
-              'Skip and report controls',
+              'Free adult webcam chat in the browser',
+              'Consent-first flirty and intimate conversation',
+              'Skip and report controls always available',
               'Works on desktop and mobile — no app download',
             ],
             links: [
-              { href: '/', label: 'Start 18+ video chat' },
+              { href: '/', label: 'Start adult video chat' },
               { href: '/random-video-chat', label: 'Random video chat guide' },
-              { href: '/omegle-alternative', label: 'Omegle for adults 18+ alternative' },
+              { href: '/omegle-alternative', label: 'Adult Omegle alternative' },
             ],
           },
           {
             title: 'What Parvah is (and is not)',
             paragraphs: [
-              'Parvah is a free random video chat platform for people 18 and older. It is not a paid performer directory. We do not filter matches by gender or appearance.',
-              'You get a live conversation, a skip button, and a report button. Sexual content and nudity are not allowed.',
+              'Parvah is a free random video chat platform for adults. It is not a paid cam-girl directory, escort service, or guaranteed nude show. Marketing that promises “sexy girls waiting nude” on a random matcher is misleading — we do not sell performers or guarantee gender, looks, or explicit content.',
+              'What you get is honest: live adults, instant matching, and the freedom to flirt, talk dirty, or connect when both people agree. That is how sustainable traffic and trust are built.',
             ],
           },
         ]}
         faqs={faqs}
         relatedLinks={[
           { href: '/', label: 'Live chat' },
-          { href: '/chat-with-girls', label: 'Chat with new people' },
-          { href: '/video-chat-with-girls', label: 'Video chat with new people' },
-          { href: '/hot-video-chat', label: 'Free video chat' },
-          { href: '/flirty-video-chat', label: 'Friendly video chat' },
-          { href: '/casual-video-chat', label: 'Casual video chat' },
+          { href: '/chat-with-girls', label: 'Chat with girls' },
+          { href: '/video-chat-with-girls', label: 'Video chat with girls' },
+          { href: '/hot-video-chat', label: 'Hot video chat' },
+          { href: '/flirty-video-chat', label: 'Flirty video chat' },
+          { href: '/dirty-talk-video-chat', label: 'Dirty talk video chat' },
           { href: '/late-night-video-chat', label: 'Late night video chat' },
           { href: '/random-video-chat', label: 'Random video chat' },
           { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },

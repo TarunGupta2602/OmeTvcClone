@@ -55,8 +55,8 @@ const faqs = [
     a: 'No. No email, no credits for basic matching. Pass the age gate and start.',
   },
   {
-    q: 'Is sexual content allowed?',
-    a: 'No. Parvah is for live conversation. Sexual content, nudity, minors, and illegal content are not allowed — use Skip or Report anytime.',
+    q: 'Is flirty or adult chat allowed?',
+    a: 'Consenting adults 18+ can have flirty or intimate conversations. Non-consensual behavior, minors, and illegal content are banned — use Skip or Report anytime.',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function OmetvAlternativePage() {
           { title: 'Text + Video', desc: 'Live webcam with in-session text messaging.' },
           { title: 'No Signup', desc: '18+ age gate only — no account for basic random matching.' },
           { title: 'Skip & Report', desc: 'Next skips instantly; report tools help keep the queue safer.' },
-          { title: 'Adults Only', desc: 'Consent-first chat for adults 18+ is allowed; minors are never allowed.' },
+          { title: 'Adults Only', desc: 'Consent-first adult chat is allowed; minors are never allowed.' },
         ]}
         comparison={{
           title: 'OmeTV app vs this browser OmeTV alternative',

@@ -39,8 +39,8 @@ export default function AgeGate({ onConfirm }) {
             Adults Only — 18+
           </h2>
           <p id="age-gate-desc" className="text-sm text-slate-600 leading-relaxed">
-            This site is free random video chat for people 18 and older. It is for live conversation
-            with new people. Sexual content and nudity are not allowed. By continuing, you confirm you are at least 18 and
+            This site is free random video chat for adults. Matches may include flirty or intimate
+            conversation between consenting adults. By continuing, you confirm you are at least 18 and
             agree to our{' '}
             <Link href="/terms" className="text-teal-700 font-semibold hover:underline">
               Terms of Service

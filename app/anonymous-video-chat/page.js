@@ -76,7 +76,7 @@ export default function AnonymousVideoChatPage() {
             title: 'Anonymous video chat vs private video chat',
             paragraphs: [
               'Anonymous usually means no named profile. Private is about who can access or store your media. Parvah aims for both: no signup plus WebRTC peer-to-peer when networks allow — and you still decide what appears on camera.',
-              'If you searched for video chat with strangers and want minimal identity friction, start here. If you need interest filters or public profiles, a different product shape may fit better.',
+              'If you searched for video chat with strangers and want minimal identity friction, start here. If you need interest filters or dating profiles, a different product shape may fit better.',
             ],
             links: [
               { href: '/blog/anonymous-vs-private-video-chat', label: 'Anonymous vs private guide' },

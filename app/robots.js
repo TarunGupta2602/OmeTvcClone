@@ -1,8 +1,6 @@
 import { SITE_URL } from '../lib/constants';
 
-// `/chat$` blocks only the live chat app. A bare `/chat` also blocks
-// /chat-with-girls and /chatroulette-alternative, which Google then will not index.
-const DISALLOW = ['/api/', '/chat$', '/*?q=', '/*?*search_term*'];
+const DISALLOW = ['/api/', '/chat', '/*?q=', '/*?*search_term*'];
 
 const AI_CRAWLERS = [
   'GPTBot',

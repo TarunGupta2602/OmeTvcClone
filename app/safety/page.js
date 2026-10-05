@@ -3,16 +3,16 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd, buildWebPageSchema } from '../../lib/seo';
 
 export const metadata = {
-  title: 'Safety Guidelines for Random Video Chat',
+  title: 'Safety Guidelines for Adult Video Chat',
   description:
-    'Parvah community guidelines: 18+ only, respectful conversation, zero tolerance for underage users, sexual content, and harassment, plus report tools and safety tips.',
+    'Parvah community guidelines: 18+ only, consent-first adult chat, zero tolerance for underage users and harassment, report tools, and tips to stay safe.',
   alternates: {
     canonical: `${SITE_URL}/safety`,
   },
   openGraph: {
-    title: 'Safety Guidelines for Random Video Chat',
+    title: 'Safety Guidelines for Adult Video Chat',
     description:
-      'Conversation rules, anti-harassment policies, and reporting tips for secure random video chat on Parvah.',
+      'Consent-first adult chat rules, anti-harassment policies, and reporting tips for secure random video chat on Parvah.',
     url: `${SITE_URL}/safety`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Safety Guidelines' }],
@@ -21,15 +21,15 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Safety Guidelines for Random Video Chat',
-    description: 'Conversation rules and reporting tips for secure random video chat on Parvah.',
+    title: 'Safety Guidelines for Adult Video Chat',
+    description: 'Consent-first adult chat rules and reporting tips for secure random video chat on Parvah.',
     images: ['/og-image.jpg'],
   },
 };
 
-const pageTitle = 'Safety Guidelines for Random Video Chat';
+const pageTitle = 'Safety Guidelines for Adult Video Chat';
 const pageDescription =
-  'Parvah community guidelines: 18+ only, respectful conversation, zero tolerance for underage users, sexual content, and harassment, plus report tools and safety tips.';
+  'Parvah community guidelines: 18+ only, consent-first adult chat, zero tolerance for underage users and harassment, report tools, and tips to stay safe.';
 
 const jsonLd = buildWebPageSchema({
   title: pageTitle,
@@ -41,9 +41,9 @@ export default function SafetyPage() {
   const rules = [
     {
       number: '01',
-      title: 'No Sexual Content or Nudity',
+      title: 'Consent First for Adult Content',
       description:
-        'Parvah is for conversation. Sexual content, nudity, pornography, and solicitation are not allowed. Stop immediately if someone asks, skips, or seems uncomfortable. Use Report and email safety@parvah.online for serious abuse.',
+        'Flirty or intimate chat is allowed only between consenting adults 18+. Stop immediately if someone asks, skips, or seems uncomfortable. Non-consensual flashing or pressure is banned — use Report and email safety@parvah.online for serious abuse.',
       icon: (
         <svg className="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
@@ -156,7 +156,7 @@ export default function SafetyPage() {
               18+
             </div>
             <div className="space-y-1">
-              <h3 className="text-sm sm:text-base font-bold text-slate-900">18+ Only</h3>
+              <h3 className="text-sm sm:text-base font-bold text-slate-900">Strict Adult Only Policy</h3>
               <p className="text-[10px] sm:text-xs text-slate-600 leading-relaxed">
                 Parvah is exclusively for adults aged 18 and older. Minors are strictly prohibited. Leave immediately if you are under 18.
               </p>

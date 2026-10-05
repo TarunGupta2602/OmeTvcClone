@@ -84,14 +84,14 @@ export default function OmegleAlternativeUkPage() {
           {
             title: 'What UK users want from an Omegle alternative',
             paragraphs: [
-              '“Omegle alternative UK” usually means: free, fast, no account, and usable on a phone after work. People are not looking for another public profile or a paid cam grid.',
+              '“Omegle alternative UK” usually means: free, fast, no account, and usable on a phone after work. People are not looking for another dating profile or a paid cam grid.',
               'Parvah matches that checklist. You confirm 18+, join the random queue, and leave with Next whenever a chat is wrong. Matches are not limited to the UK, and gender is not guaranteed.',
             ],
             bullets: [
               'Free random video chat with strangers',
               'No signup and no app install',
               'Works well on UK home Wi‑Fi and mobile browsers',
-              '18+ only — sexual content is not allowed',
+              'Adults only — consent required for flirty chat',
             ],
             links: [
               { href: '/', label: 'Start matching now' },

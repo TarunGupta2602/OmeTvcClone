@@ -46,8 +46,8 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
         </nav>
 
         <p className="chat-lobby-sub chat-lobby-sub-desktop">
-          Free 1-on-1 webcam chat — no signup. Meet someone new in seconds.
-          For people 18 and older.
+          Free 1-on-1 webcam chat — no signup. Meet someone new in seconds for talk, flirt, or real
+          connection. Adults 18+ only.
         </p>
         <p className="chat-lobby-sub chat-lobby-sub-mobile">
           Free random video chat. Tap start — no signup, 18+ only.

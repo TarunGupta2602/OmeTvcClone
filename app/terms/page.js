@@ -4,16 +4,16 @@ import { stringifyJsonLd } from '../../lib/seo';
 
 export const metadata = {
   title: {
-    absolute: 'Terms of Service — Random Video Chat Rules',
+    absolute: 'Terms of Service — Rules for Adult Video Chat',
   },
   description:
-    'Terms of service for this free random video chat: 18+ age requirement, respectful conversation rules, prohibited conduct, and how reporting works.',
+    'Terms of service for this free adult random video chat: 18+ age requirement, consent-first rules, prohibited conduct, and how reporting works.',
   alternates: {
     canonical: `${SITE_URL}/terms`,
   },
   openGraph: {
-    title: 'Terms of Service — Random Video Chat Rules',
-    description: '18+ age requirement, conversation rules, and user agreements for the platform.',
+    title: 'Terms of Service — Rules for Adult Video Chat',
+    description: '18+ age requirement, consent-first adult chat rules, and user agreements for the platform.',
     url: `${SITE_URL}/terms`,
     siteName: SITE_NAME,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Video Chat Terms of Service' }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Service — Random Video Chat Rules',
-    description: '18+ age requirement, conversation rules, and user agreements for the platform.',
+    title: 'Terms of Service — Rules for Adult Video Chat',
+    description: '18+ age requirement, consent-first adult chat rules, and user agreements for the platform.',
     images: ['/og-image.jpg'],
   },
 };
@@ -32,9 +32,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TermsOfService',
   name: 'Terms of Service - Parvah',
-  description: 'Terms of Service for our free random video chat platform outlining rules of conduct, 18+ age restriction, and user agreements.',
+  description: 'Terms of Service for our adult random video chat platform outlining rules of conduct, 18+ age restriction, consent requirements, and user agreements.',
   url: `${SITE_URL}/terms`,
-  dateModified: '2026-10-05',
+  dateModified: '2026-08-15',
   publisher: {
     '@type': 'Organization',
     name: SITE_NAME,
@@ -43,7 +43,7 @@ const jsonLd = {
 };
 
 export default function TermsPage() {
-  const lastUpdated = 'October 5, 2026';
+  const lastUpdated = 'August 15, 2026';
 
   const sections = [
     {
@@ -57,17 +57,16 @@ export default function TermsPage() {
       content: `Parvah is strictly intended for individuals who are at least 18 years of age or the legal age of majority in their jurisdiction. Persons under 18 years old are strictly prohibited from accessing video chats or using the platform. Parvah does not create user accounts; an age confirmation gate is required before chatting. We reserve the right to terminate sessions for anyone suspected of being underage.`,
     },
     {
-      id: 'conversation-rules',
-      title: '3. What This Service Is',
-      content: `Parvah is a free random video chat service for people who are 18 or older. It is for live conversation with new people. It is not an adult-entertainment service, a dating service, or a performer directory. Sexual content, nudity, pornography, solicitation, and paid performances are not allowed. Parvah does not provide paid performers and does not guarantee a match of any gender or appearance. Stop and use Next if the other person asks you to stop, skips, or seems uncomfortable.`,
+      id: 'adult-consent',
+      title: '3. Adult Content & Consent',
+      content: `Parvah is an adult random video chat platform. Flirty conversation, intimate talk, and mutual adult chemistry between consenting users aged 18+ are allowed. Explicit activity is only permitted when both matched adults clearly consent. You must stop immediately if the other person asks you to stop, skips, or appears uncomfortable. Parvah does not provide paid performers, cam models, or guaranteed partners of any gender or appearance.`,
     },
     {
       id: 'prohibited',
       title: '4. Prohibited Conduct & Zero Tolerance Policy',
       content: `You agree NEVER to perform any of the following while using Parvah:
 - Any interaction involving minors or anyone you believe may be under 18.
-- Sexual content, nudity, pornography, solicitation, or flashing.
-- Continuing a chat after the other person asks you to stop.
+- Non-consensual sexual behavior, flashing without clear mutual interest, or continuing after a request to stop.
 - Harassment, bullying, hate speech, discrimination, or abusive language.
 - Violence, threats of harm, weapons display, or promotion of self-harm.
 - Recording, screenshotting, or streaming video sessions without explicit consent of your peer.
