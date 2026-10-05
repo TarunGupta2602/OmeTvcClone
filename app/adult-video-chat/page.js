@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Adult Video Chat Free — Random Webcam Chat with Strangers';
+const title = '18+ Adult Video Chat Free — Porn Chat and Nude Chat';
 const description =
-  'Free adult video chat with strangers — no signup. Instant 1-on-1 webcam matching for flirty talks, hot conversations, and real connections. Adults 18+ only.';
+  'Free 18+ adult video chat with strangers — no signup. Porn chat and nude chat happen only when both adults want them. Random 1-on-1 matching, skip anytime.';
 
 export const metadata = {
-  title: 'Adult Video Chat Free — Random Webcam with Strangers',
+  title: '18+ Adult Video Chat Free — Porn Chat and Nude Chat',
   description,
   alternates: { canonical: `${SITE_URL}/adult-video-chat` },
   openGraph: {
-    title: `Adult Video Chat Free — Random Webcam with Strangers | ${SITE_NAME}`,
+    title: `18+ Adult Video Chat Free — Porn Chat and Nude Chat | ${SITE_NAME}`,
     description,
     url: `${SITE_URL}/adult-video-chat`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Adult Video Chat Free — Random Webcam with Strangers | ${SITE_NAME}`,
+    title: `18+ Adult Video Chat Free — Porn Chat and Nude Chat | ${SITE_NAME}`,
     description,
     images: ['/og-image.jpg'],
   },
@@ -65,7 +65,7 @@ export default function AdultVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Adult Video Chat · 18+"
-        title="Adult Video Chat Free — Random Webcam with Strangers"
+        title="18+ Adult Video Chat Free — Porn Chat and Nude Chat"
         description={description}
         highlights={[
           {
@@ -97,7 +97,7 @@ export default function AdultVideoChatPage() {
           {
             title: 'Adult random video chat built for chemistry',
             paragraphs: [
-              'Parvah is for adults who want more than small talk — flirty video chat, dirty talk when mutual, late-night honesty, and the chance of a real connection. Open the site, confirm you are 18+, and match with someone new in seconds.',
+              'This is free 18+ adult video chat. People searching porn chat or nude chat land here for live 1-on-1 matching with another adult — not a porn archive and not a paid nude show. Open the site, confirm you are 18+, and match. Nude chat only happens if both adults want it.',
               'Because matching is random, every session is different. Some chats stay playful. Some turn hot. Some become genuine conversations that feel like the start of something. Keep Next handy and protect your privacy.',
             ],
             bullets: [

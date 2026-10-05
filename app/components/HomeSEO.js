@@ -24,8 +24,8 @@ export default function HomeSEO() {
             </Link>
           </nav>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
-            Instant 1-on-1 webcam conversations with no account wall. Meet new people for casual talk,
-            flirty chemistry, or late-night company. WebRTC privacy, skip anytime, in your browser.
+            Instant 1-on-1 webcam conversations with no account wall. This is 18+ adult video chat for
+            porn chat and nude chat searches too — random matching, adults only, skip anytime.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
             <Link href="/ometv-alternative" className="hover:underline">
@@ -57,6 +57,15 @@ export default function HomeSEO() {
             </Link>
             <Link href="/hot-video-chat" className="hover:underline">
               Hot video chat
+            </Link>
+            <Link href="/adult-video-chat" className="hover:underline">
+              18+ adult video chat
+            </Link>
+            <Link href="/blog/free-live-porn-chat" className="hover:underline">
+              Porn chat
+            </Link>
+            <Link href="/blog/nsfw-video-chat-with-strangers-18-plus" className="hover:underline">
+              Nude chat
             </Link>
             <Link href="/safety" className="hover:underline">
               Safety
