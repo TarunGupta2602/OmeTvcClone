@@ -101,6 +101,18 @@ export default function OmegleAlternativePage() {
         }}
         sections={[
           {
+            title: 'Omegle adult, adult Omegle, and 18+ Omegle',
+            paragraphs: [
+              'Omegle adult, adult Omegle, 18+ Omegle, and Omegle 18+ are the same request: the old stranger-video button, only for adults. Omegle itself is gone. This page is the free replacement — open the browser, confirm you are 18+, and match. There is no app and no account.',
+              'It is random. You will not get a guaranteed face, gender, or nude chat. Flirty talk is fine when both adults want it. Use Next when you do not, and Report for abuse. That is the whole product behind those searches.',
+            ],
+            links: [
+              { href: '/', label: 'Start 18+ Omegle-style chat' },
+              { href: '/adult-video-chat', label: 'Adult video chat' },
+              { href: '/blog/adult-omegle-free-no-signup', label: 'Adult Omegle guide' },
+            ],
+          },
+          {
             title: 'Why people search for an adult Omegle alternative in 2026',
             paragraphs: [
               'Omegle closed, but search demand never left. Queries like “Omegle alternative 2026”, “adult Omegle”, “omegle adults”, and “what is the new Omegle” all point to the same need: free random video chat with strangers without another heavy app.',

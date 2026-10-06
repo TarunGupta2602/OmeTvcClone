@@ -73,6 +73,82 @@ export default function HomeSEO() {
           </div>
         </div>
 
+        <div className="space-y-10">
+          <article className="space-y-3">
+            <h2 className="text-2xl font-bold text-slate-900">Random video chat that starts in the browser</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Random video chat means you are matched with a new person, live, without a profile or a friend request.
+              On Parvah it is free: confirm you are 18+, allow the camera, and start. There is no credit pack and no
+              email wall. If the chat is not a fit, Next finds someone else.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              The same queue covers free random video chat, random video chat with strangers, and random video chat
+              with no sign up. A full walkthrough is on the{' '}
+              <Link href="/random-video-chat" className="font-semibold text-teal-800 hover:underline">
+                random video chat
+              </Link>{' '}
+              page.
+            </p>
+          </article>
+
+          <article className="space-y-3">
+            <h2 className="text-2xl font-bold text-slate-900">Video chat with strangers, free and 1-on-1</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Video chat with strangers is a private webcam conversation with someone you have not met. It is not a
+              group room and not a text-only app. You see one person, you can type as well as talk, and you leave
+              whenever you want.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Searches like video chat strangers, free video chat with strangers, and cam chat with strangers all
+              describe this same start. Details are on{' '}
+              <Link href="/video-chat-with-strangers" className="font-semibold text-teal-800 hover:underline">
+                video chat with strangers
+              </Link>
+              .
+            </p>
+          </article>
+
+          <article className="space-y-3">
+            <h2 className="text-2xl font-bold text-slate-900">18+ adult video chat</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Adult video chat, video chat 18+, and free adult video chat are for people who are 18 or older. The age
+              gate runs before matching. NSFW video chat and nude chat are not a catalog and are not guaranteed —
+              both adults have to want that, and you can skip the moment you do not.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Read the rules on{' '}
+              <Link href="/adult-video-chat" className="font-semibold text-teal-800 hover:underline">
+                18+ adult video chat
+              </Link>{' '}
+              and the{' '}
+              <Link href="/blog/nsfw-video-chat-with-strangers-18-plus" className="font-semibold text-teal-800 hover:underline">
+                NSFW video chat
+              </Link>{' '}
+              guide.
+            </p>
+          </article>
+
+          <article className="space-y-3">
+            <h2 className="text-2xl font-bold text-slate-900">Adult Omegle and 18+ Omegle</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Omegle closed in 2023. Adult Omegle, Omegle adult, 18+ Omegle, and Omegle 18+ are still searched every
+              day by people who want that old random button back. Parvah is a free browser version: no app, no
+              signup, adults only, with Next and Report.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              The country notes and the shut-down story are on the{' '}
+              <Link href="/omegle-alternative" className="font-semibold text-teal-800 hover:underline">
+                Omegle alternative
+              </Link>{' '}
+              page. If you were comparing the OmeTV app, use the{' '}
+              <Link href="/ometv-alternative" className="font-semibold text-teal-800 hover:underline">
+                OmeTV alternative
+              </Link>
+              .
+            </p>
+          </article>
+        </div>
+
         <div className="space-y-8">
           <div className="space-y-2">
             <h3 className="text-xl font-bold text-slate-900">Why people use this random video chat</h3>

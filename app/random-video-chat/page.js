@@ -104,6 +104,18 @@ export default function RandomVideoChatPage() {
         ]}
         sections={[
           {
+            title: 'Free random video chat with strangers, no sign up',
+            paragraphs: [
+              'Free random video chat, random video chat with strangers, and random video chat with no sign up are one flow here. You do not build a profile. You do not wait for a match request. The queue pairs you with another adult who is online at the same time.',
+              'Use it on a phone or a laptop. Chrome, Safari, Firefox, and Edge all work if you allow the camera. When you are done, close the tab — there is no account left behind.',
+            ],
+            links: [
+              { href: '/', label: 'Start random video chat' },
+              { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
+              { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
+            ],
+          },
+          {
             title: 'How free random video chat works',
             paragraphs: [
               'Open the site, confirm you are 18+, allow camera access, and click Start Matching. You are paired with another available adult for a live 1-on-1 session. Click Next anytime to meet someone new.',

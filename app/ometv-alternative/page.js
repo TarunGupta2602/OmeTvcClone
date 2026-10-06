@@ -97,6 +97,24 @@ export default function OmetvAlternativePage() {
         }}
         sections={[
           {
+            title: 'What “OmeTV alternative” should include',
+            paragraphs: [
+              'An OmeTV alternative is worth opening when it keeps the part people liked — random 1-on-1 video with strangers — and drops the part they skip: the install, the account prompt, and the credit screen. This page is that version. It is free, it stays in the browser, and it is 18+ only.',
+              'If the first match is quiet or not your vibe, that is normal for any stranger queue, including OmeTV. Hit Next. A good OmeTV alternative is the one you can leave in one tap, not the one that locks you into a profile.',
+            ],
+            bullets: [
+              'Free OmeTV alternative with no signup',
+              'No APK and no app-store install',
+              '18+ age gate before the first match',
+              'Skip and report on every chat',
+            ],
+            links: [
+              { href: '/', label: 'Try the free OmeTV alternative' },
+              { href: '/blog/ometv-nsfw-alternative', label: 'OmeTV NSFW alternative' },
+              { href: '/live-video-chat', label: 'Live video chat' },
+            ],
+          },
+          {
             title: 'When a browser OmeTV alternative makes sense',
             paragraphs: [
               'App stores are convenient until storage, permissions, or region limits get in the way. A browser OmeTV alternative keeps matching simple: open a URL, pass the age gate, and start.',
