@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { io } from 'socket.io-client';
 import { getIceServers } from '../../lib/constants';
-import { redirectIfIphone } from '../../lib/edgeRedirect';
 import { useChatLayout } from '../context/ChatLayoutContext';
 import AgeGate, { hasAgeConfirmation } from '../components/AgeGate';
 import ReportModal from '../components/ReportModal';
@@ -299,8 +298,6 @@ export default function ChatPage() {
   const handleStartMatch = async () => {
     const activeSocket = socketRef.current || socket;
     if (!activeSocket || !isConnected) return;
-
-    if (redirectIfIphone()) return;
 
     try {
       setStatus('Requesting camera access...');
