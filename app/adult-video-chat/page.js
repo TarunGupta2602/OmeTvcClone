@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = '18+ Adult Video Chat Free — Porn Chat and Nude Chat';
+const title = 'Video Chat 18+ — Free Adult Video Chat, No Signup';
 const description =
-  'Free 18+ adult video chat with strangers — no signup. Porn chat and nude chat happen only when both adults want them. Random 1-on-1 matching, skip anytime.';
+  'Video chat 18+ with strangers — free, no signup. Porn chat and nude chat happen only when both adults want them. Random 1-on-1 matching, skip anytime.';
 
 export const metadata = {
-  title: '18+ Adult Video Chat Free — Porn Chat and Nude Chat',
+  title: { absolute: title },
   description,
   alternates: { canonical: `${SITE_URL}/adult-video-chat` },
   openGraph: {
-    title: `18+ Adult Video Chat Free — Porn Chat and Nude Chat | ${SITE_NAME}`,
+    title,
     description,
     url: `${SITE_URL}/adult-video-chat`,
     siteName: SITE_NAME,
@@ -21,13 +21,17 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `18+ Adult Video Chat Free — Porn Chat and Nude Chat | ${SITE_NAME}`,
+    title,
     description,
     images: ['/og-image.jpg'],
   },
 };
 
 const faqs = [
+  {
+    q: 'Is this video chat 18+?',
+    a: 'Yes. Video chat 18+ here is free random matching for adults. Confirm your age, then match 1-on-1. Nude chat is never guaranteed.',
+  },
   {
     q: 'What is adult video chat?',
     a: 'Free random 1-on-1 webcam chat for adults 18+. You match with another person in the live queue for live video and text — flirty talks, hot chemistry, friendship, or dating energy depending on mutual consent.',
@@ -65,7 +69,7 @@ export default function AdultVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Adult Video Chat · 18+"
-        title="18+ Adult Video Chat Free — Porn Chat and Nude Chat"
+        title="Video Chat 18+ — Free Adult Video Chat, No Signup"
         description={description}
         highlights={[
           {

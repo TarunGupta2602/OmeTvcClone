@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Adult Omegle Alternative 2026 — Free Random Video Chat (18+)';
+const title = 'Omegle Adult — Free Adult Omegle, No Signup (18+)';
 const description =
-  'Free adult Omegle alternative for 18+ — random video chat with strangers, no signup, no app. Instant 1-on-1 webcam matching in your browser. Flirty or friendly chats welcome between consenting adults.';
+  'Omegle adult and adult Omegle, free with no signup. 18+ random video chat with strangers in the browser. No app. Matches are random — gender and nude chat are not guaranteed.';
 
 export const metadata = {
   title: {
@@ -75,7 +75,7 @@ export default function OmegleAlternativePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative · Adults 18+"
-        title="Free Omegle Alternative — No Signup Random Video Chat (18+)"
+        title="Omegle Adult — Free Adult Omegle, No Signup (18+)"
         description={description}
         highlights={[
           { title: 'No registration', desc: 'Start instantly — no email, username, or password.' },
@@ -127,7 +127,7 @@ export default function OmegleAlternativePage() {
             links: [
               { href: '/', label: 'Start matching now' },
               { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
-              { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
+              { href: '/omegle-alternative-india', label: 'Omegle free video call India' },
               { href: '/random-video-chat', label: 'Random video chat' },
             ],
           },
@@ -152,7 +152,7 @@ export default function OmegleAlternativePage() {
             links: [
               { href: '/ometv-alternative', label: 'OmeTV alternative' },
               { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
-              { href: '/no-signup-video-chat', label: 'No signup video chat' },
+              { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
             ],
           },
         ]}
@@ -167,7 +167,7 @@ export default function OmegleAlternativePage() {
         faqs={faqs}
         relatedLinks={[
           { href: '/', label: 'Start free chat' },
-          { href: '/omegle-alternative-india', label: 'Omegle Alternative India' },
+          { href: '/omegle-alternative-india', label: 'Omegle free video call' },
           { href: '/omegle-alternative-usa', label: 'Omegle Alternative USA' },
           { href: '/omegle-alternative-uk', label: 'Omegle Alternative UK' },
           { href: '/adult-video-chat', label: 'Adult Video Chat' },

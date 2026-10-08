@@ -2,16 +2,16 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Video Chat with No Signup — Start in Seconds';
+const title = 'Video Chat No Sign Up — Free 18+ Video Chat';
 const description =
-  'Free video chat with no signup. Random webcam chat without email or passwords — WebRTC privacy, 18+ age gate, and instant matching in your browser.';
+  'Video chat no sign up — free 18+ video chat in the browser. No email, no account, no app. Confirm your age, allow the camera, and match.';
 
 export const metadata = {
-  title: 'Video Chat with No Signup — Start in Seconds',
+  title: { absolute: title },
   description,
   alternates: { canonical: `${SITE_URL}/no-signup-video-chat` },
   openGraph: {
-    title: `Video Chat with No Signup — Start in Seconds | ${SITE_NAME}`,
+    title,
     description,
     url: `${SITE_URL}/no-signup-video-chat`,
     siteName: SITE_NAME,
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Video Chat with No Signup | ${SITE_NAME}`,
+    title,
     description,
     images: ['/og-image.jpg'],
   },
@@ -29,8 +29,12 @@ export const metadata = {
 
 const faqs = [
   {
+    q: 'Is this video chat 18+ with no sign up?',
+    a: 'Yes. Video chat no sign up here is free and 18+ only. Confirm your age, allow the camera, and start. No email and no account.',
+  },
+  {
     q: 'Can I video chat without creating an account?',
-    a: 'Yes. Parvah is no-signup video chat: open the site, confirm you are 18+, allow camera access, and click Start Match.',
+    a: 'Yes. Open the site, confirm you are 18+, allow camera access, and click Start Match.',
   },
   {
     q: 'Is free video chat with no registration safe?',
@@ -60,8 +64,8 @@ export default function NoSignupVideoChatPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
-        badge="No Signup Video Chat"
-        title="Video Chat with No Signup — Start in Seconds"
+        badge="Video Chat No Sign Up · 18+"
+        title="Video Chat No Sign Up — Free 18+ Video Chat"
         description={description}
         highlights={[
           { title: 'Zero Forms', desc: 'No email verification loops before your first match.' },

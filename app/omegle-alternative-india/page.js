@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Omegle Alternative India — Free Random Video Chat (No App)';
+const title = 'Omegle Free Video Call — Random Video Chat India, No App';
 const description =
-  'Best Omegle alternative in India for free random video chat — no signup, no Play Store app. Works in Chrome on Android and mobile data. Adults 18+ only.';
+  'Omegle free video call and free random video call for India and Pakistan. No app, no signup, 18+ only. Random 1-on-1 chat in Chrome. Girls are not guaranteed.';
 
 export const metadata = {
   title: { absolute: title },
@@ -15,7 +15,7 @@ export const metadata = {
     description,
     url: `${SITE_URL}/omegle-alternative-india`,
     siteName: SITE_NAME,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Omegle alternative India — free random video chat' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Omegle free video call India — random video chat, no app' }],
     locale: 'en_IN',
     type: 'website',
   },
@@ -29,8 +29,12 @@ export const metadata = {
 
 const faqs = [
   {
+    q: 'Is this an Omegle free video call?',
+    a: 'Yes. Omegle free video call and free random video call in India and Pakistan open this browser chat. No Play Store app, no signup, 18+ only. Matching is random. Girls are not guaranteed.',
+  },
+  {
     q: 'Is there a free Omegle alternative in India with no app?',
-    a: 'Yes. Parvah is a browser Omegle alternative for India — open Chrome, confirm 18+, allow camera, and start matching. No Play Store install.',
+    a: 'Yes. Open Chrome, confirm you are 18+, allow the camera, and start matching. No Play Store install and no account.',
   },
   {
     q: 'Does random video chat work on Jio or Airtel data?',
@@ -57,7 +61,7 @@ export default function OmegleAlternativeIndiaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Omegle Alternative India · 18+"
-        title="Omegle Alternative India — Free Random Video Chat, No App"
+        title="Omegle Free Video Call — Random Video Chat India, No App"
         description={description}
         highlights={[
           { title: 'No Play Store needed', desc: 'Chrome or any modern Android browser is enough — no APK.' },
@@ -70,7 +74,7 @@ export default function OmegleAlternativeIndiaPage() {
         comparison={{
           title: 'Omegle vs browser Omegle alternative in India',
           intro:
-            'Omegle is gone. In India most people want the same thing on a phone: free random video chat without another app install.',
+            'Omegle is gone. In India and Pakistan most people want a free random video call on a phone, without another app install.',
           headers: ['Need', 'Old Omegle habit', 'Parvah in India'],
           rows: [
             ['Install', 'Desktop site / later apps', 'Browser only — no Play Store'],
@@ -82,10 +86,10 @@ export default function OmegleAlternativeIndiaPage() {
         }}
         sections={[
           {
-            title: 'Why Indians search “Omegle alternative India”',
+            title: 'Omegle free video call in India and Pakistan',
             paragraphs: [
-              'After Omegle shut down, searchers in India kept looking for free random video chat that opens in Chrome — not another heavy APK. “Omegle alternative India”, “Omegle India”, and “random video chat India” are the same intent: strangers on webcam, skip button, no account.',
-              'Parvah is built for that browser habit. Confirm you are 18+, allow the camera, and match. Gender and city are not filtered. Evening IST often feels busier because more adults are online worldwide.',
+              'After Omegle shut down, people in India and Pakistan kept searching omegle free video call, free random video call, and omegle free. That is this page: strangers on webcam in Chrome, a skip button, no account, and no Play Store app.',
+              'Confirm you are 18+, allow the camera, and match. Gender and city are not filtered, so a girl on the other side is not guaranteed. Evening IST and PKT often feel busier because more adults are online worldwide.',
             ],
             bullets: [
               'No signup and no app download',
