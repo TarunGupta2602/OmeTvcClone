@@ -21,6 +21,7 @@ export default function ChatPage() {
   const [socket, setSocket] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
   const [onlineCount, setOnlineCount] = useState(0);
+  const [waitingCount, setWaitingCount] = useState(0);
   const [inRoom, setInRoom] = useState(false);
   const [status, setStatus] = useState('Click Start Match to begin');
   const [peerId, setPeerId] = useState(null);
@@ -182,15 +183,19 @@ export default function ChatPage() {
       setSocket(socketIo);
     });
 
-    socketIo.on('online-count', ({ count }) => {
+    socketIo.on('online-count', ({ count, waiting }) => {
       if (typeof count === 'number' && count >= 0) {
         setOnlineCount(count);
+      }
+      if (typeof waiting === 'number' && waiting >= 0) {
+        setWaitingCount(waiting);
       }
     });
 
     socketIo.on('disconnect', () => {
       setIsConnected(false);
       setOnlineCount(0);
+      setWaitingCount(0);
       setStatus('Disconnected from server');
       cleanupPeerConnection();
     });
@@ -302,7 +307,7 @@ export default function ChatPage() {
     try {
       setStatus('Requesting camera access...');
       await setupMedia();
-      setStatus('Searching for a random peer...');
+      setStatus('Searching — stay here, the next person matches you');
       setShowHeader(false);
       setChatMode(true);
       videoContainerRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -499,7 +504,12 @@ export default function ChatPage() {
       )}
 
       {isLobby ? (
-        <ChatLobby isConnected={isConnected} onlineCount={onlineCount} onStart={handleStartMatch} />
+        <ChatLobby
+          isConnected={isConnected}
+          onlineCount={onlineCount}
+          waitingCount={waitingCount}
+          onStart={handleStartMatch}
+        />
       ) : (
         <div className="chat-layout flex-1 min-h-0">
           <div className={`chat-main-col ${mobileTab === 'chat' ? 'chat-col-hidden-mobile' : ''}`}>
@@ -517,6 +527,7 @@ export default function ChatPage() {
                 pipPosition={pipPosition}
                 onPipDragStart={handleDragStart}
                 isSearching={isSearching}
+                onlineCount={onlineCount}
               />
               <ChatControlBar
                 isConnected={isConnected}

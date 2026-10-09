@@ -1,5 +1,61 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'talk-to-strangers-video-chat': [
+    {
+      q: 'How do I talk to strangers online without signing up?',
+      a: 'Open Parvah in your browser, confirm you are 18+, allow the camera, and tap Start. You are paired 1-on-1 with another adult. No account is required.',
+    },
+    {
+      q: 'Will every stranger want to talk?',
+      a: 'No. Some people skip immediately. Say hello in the first second, and use Next if the chat stays silent.',
+    },
+    {
+      q: 'Is talk-to-strangers video chat free?',
+      a: 'Yes. Basic matching on Parvah is free in the browser. You do not buy credits to start.',
+    },
+  ],
+  'language-practice-video-chat': [
+    {
+      q: 'Can I use video chat for language practice?',
+      a: 'Yes. Tell the stranger your target language in the first sentence. If they do not want to practice, skip and try the next match.',
+    },
+    {
+      q: 'Does Parvah filter by language?',
+      a: 'No. The queue is random and worldwide. You ask for the language you want, then use Next until someone agrees.',
+    },
+    {
+      q: 'Is language practice video chat free?',
+      a: 'Yes. There is no tutor fee and no signup. It is a live stranger chat, not a structured course.',
+    },
+  ],
+  'meet-new-people-online-video-chat': [
+    {
+      q: 'How do I meet new people online without a dating app?',
+      a: 'Use a free random video chat. You see a live person immediately instead of swapping profiles. Stay if the conversation works, and skip if it does not.',
+    },
+    {
+      q: 'Will I be matched with someone in my city?',
+      a: 'Not on purpose. Matching is random worldwide. City and gender are not filters.',
+    },
+    {
+      q: 'Should I share my Instagram to keep talking?',
+      a: 'Not in the first minute. A good chat can stay on the call. Early requests for WhatsApp or money are a common scam pattern.',
+    },
+  ],
+  'omegle-alternative-india': [
+    {
+      q: 'What is a free Omegle alternative in India with no app?',
+      a: 'Parvah runs in Chrome. Confirm you are 18+, allow the camera, and match. There is no Play Store install and no account.',
+    },
+    {
+      q: 'Does this Omegle alternative work on Jio or Airtel?',
+      a: 'It can. Wi-Fi is steadier. Close other apps that are using the camera, and skip if the video freezes.',
+    },
+    {
+      q: 'Are girls guaranteed on an Omegle alternative in India?',
+      a: 'No. The queue is random adults. Skip until the conversation fits, and ignore pages that promise a gender.',
+    },
+  ],
   'free-random-video-chat': [
     {
       q: 'Is there a free random video chat with no signup?',

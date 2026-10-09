@@ -81,6 +81,7 @@ check('Blog does not claim Parvah TURN servers exist', () => {
   const src = [
     readFileSync(join(root, 'data/blogPosts.js'), 'utf8'),
     readFileSync(join(root, 'data/blogPostsExtra.js'), 'utf8'),
+    readFileSync(join(root, 'data/blogPostsSocial.js'), 'utf8'),
   ].join('\n');
   assert.doesNotMatch(src, /Parvah's TURN servers/i);
   assert.doesNotMatch(src, /moderation queue reviewed/i);

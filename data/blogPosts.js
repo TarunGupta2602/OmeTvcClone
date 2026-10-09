@@ -1,6 +1,7 @@
 import { extraBlogPostsMap, extraBlogPostsList } from './blogPostsExtra.js';
 import { marketingBlogPostsMap, marketingBlogPostsList } from './blogPostsMarketing.js';
 import { gscBlogPostsMap, gscBlogPostsList } from './blogPostsGsc.js';
+import { socialBlogPostsMap, socialBlogPostsList } from './blogPostsSocial.js';
 
 const coreBlogPostsMap = {
   'how-to-stay-safe-on-video-chat-platforms': {
@@ -861,6 +862,7 @@ const coreBlogPostsMap = {
 };
 
 export const blogPostsMap = {
+  ...socialBlogPostsMap,
   ...gscBlogPostsMap,
   ...marketingBlogPostsMap,
   ...extraBlogPostsMap,
@@ -868,6 +870,7 @@ export const blogPostsMap = {
 };
 
 export const blogPostsList = [
+  ...socialBlogPostsList,
   ...gscBlogPostsList,
   ...marketingBlogPostsList,
   ...extraBlogPostsList,

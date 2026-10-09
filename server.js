@@ -136,21 +136,28 @@ app.prepare().then(() => {
     }
 
     waitingQueue.push(socket.id);
-    socket.emit('waiting', { message: 'Searching for a random peer...' });
+    socket.emit('waiting', { message: 'Searching — stay here, the next person matches you' });
   };
 
   const broadcastOnlineCount = () => {
-    io.emit('online-count', { count: io.sockets.sockets.size });
+    io.emit('online-count', {
+      count: io.sockets.sockets.size,
+      waiting: waitingQueue.length,
+    });
   };
 
   io.on('connection', (socket) => {
     broadcastOnlineCount();
 
-    socket.on('find-match', () => matchUser(socket));
+    socket.on('find-match', () => {
+      matchUser(socket);
+      broadcastOnlineCount();
+    });
 
     socket.on('leave-queue', () => {
       removeFromQueue(socket.id);
       socket.emit('queue-left');
+      broadcastOnlineCount();
     });
 
     socket.on('signal-offer', ({ offer, to, roomId }) => {
@@ -195,12 +202,16 @@ app.prepare().then(() => {
       leaveActiveRoom(socket);
     });
 
-    socket.on('skip-peer', () => matchUser(socket));
+    socket.on('skip-peer', () => {
+      matchUser(socket);
+      broadcastOnlineCount();
+    });
 
     socket.on('stop-session', () => {
       removeFromQueue(socket.id);
       leaveActiveRoom(socket);
       socket.emit('session-stopped');
+      broadcastOnlineCount();
     });
 
     socket.on('disconnect', () => {

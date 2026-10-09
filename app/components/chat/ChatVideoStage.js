@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 
 const ChatVideoStage = forwardRef(function ChatVideoStage(
   {
@@ -15,10 +15,32 @@ const ChatVideoStage = forwardRef(function ChatVideoStage(
     pipPosition,
     onPipDragStart,
     isSearching,
+    onlineCount,
   },
   containerRef
 ) {
   const showWaiting = !peerId;
+  const [elapsed, setElapsed] = useState(0);
+
+  useEffect(() => {
+    if (!isSearching) {
+      setElapsed(0);
+      return undefined;
+    }
+    const started = Date.now();
+    const timer = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - started) / 1000));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [isSearching]);
+
+  const othersOnline = typeof onlineCount === 'number' ? Math.max(onlineCount - 1, 0) : 0;
+  const waitTitle = isSearching ? 'You’re in line' : 'Waiting to connect';
+  const waitSub = !isSearching
+    ? status
+    : othersOnline > 0
+      ? 'Stay on this screen. When someone else taps Start, you match instantly.'
+      : 'You’re first. Stay here — the next person who taps Start matches you.';
 
   return (
     <div ref={containerRef} className="chat-video-stage">
@@ -39,10 +61,15 @@ const ChatVideoStage = forwardRef(function ChatVideoStage(
             <div className="chat-pulse-ring">
               <div className="chat-pulse-core" />
             </div>
-            <p className="chat-placeholder-title">
-              {isSearching ? 'Finding someone…' : 'Waiting to connect'}
-            </p>
-            <p className="chat-placeholder-sub">{status}</p>
+            <p className="chat-placeholder-title">{waitTitle}</p>
+            <p className="chat-placeholder-sub">{waitSub}</p>
+            {isSearching && (
+              <p className="chat-placeholder-meta">
+                {othersOnline > 0 ? `${othersOnline} other${othersOnline === 1 ? '' : 's'} online` : 'Waiting for the next person'}
+                {' · '}
+                {elapsed}s
+              </p>
+            )}
           </div>
         )}
       </div>

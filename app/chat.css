@@ -329,6 +329,17 @@
   text-wrap: pretty;
 }
 
+.chat-lobby-queue {
+  margin: -1.25rem 0 1.25rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.16);
+  color: #99f6e4;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .chat-lobby-cta-wrap {
   position: relative;
   margin-bottom: 1rem;
@@ -807,8 +818,15 @@
 .chat-placeholder-sub {
   font-size: 0.75rem;
   color: #94a3b8;
-  max-width: 16rem;
+  max-width: 18rem;
   line-height: 1.5;
+}
+
+.chat-placeholder-meta {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #5eead4;
 }
 
 .chat-video-overlay {

@@ -9,7 +9,7 @@ function formatOnlineCount(count) {
   return count.toLocaleString();
 }
 
-export default function ChatLobby({ isConnected, onlineCount, onStart }) {
+export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, onStart }) {
   const formattedCount = formatOnlineCount(onlineCount);
   const statusLabel = !isConnected
     ? 'Connecting…'
@@ -52,6 +52,12 @@ export default function ChatLobby({ isConnected, onlineCount, onStart }) {
         <p className="chat-lobby-sub chat-lobby-sub-mobile">
           Free random video chat. Tap start — no signup, 18+ only.
         </p>
+
+        {waitingCount > 0 && (
+          <p className="chat-lobby-queue">
+            {waitingCount === 1 ? '1 person is waiting' : `${waitingCount} people are waiting`} — start now and you match instantly.
+          </p>
+        )}
 
         <div className="chat-lobby-cta-wrap">
           <div className="chat-lobby-cta-ring" aria-hidden="true" />
