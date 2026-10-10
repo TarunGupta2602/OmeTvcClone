@@ -1,13 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
-
-const TOPICS = [
-  { id: 'talk', label: 'Just talk', line: 'Hey — what are you up to right now?' },
-  { id: 'language', label: 'Language practice', line: 'Hi — want to practice a language for a few minutes?' },
-  { id: 'meet', label: 'Meet someone', line: 'Hey, I am here to meet someone new.' },
-];
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -21,10 +16,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
     : formattedCount
       ? `${formattedCount} online`
       : 'People online now';
-
-  const handleStart = (e) => {
-    onStart(e);
-  };
 
   return (
     <section className="chat-lobby">
@@ -45,19 +36,10 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           <span className="chat-lobby-title-glow"> no signup.</span>
         </h1>
 
-        <div className="chat-topic-row" role="group" aria-label="What do you want to do">
-          {TOPICS.map((topic) => (
-            <button
-              key={topic.id}
-              type="button"
-              className="chat-topic-chip"
-              disabled={!isConnected}
-              onClick={() => onStart(topic)}
-            >
-              {topic.label}
-            </button>
-          ))}
-        </div>
+        <nav className="chat-lobby-query-links" aria-label="Related chats">
+          <Link href="/video-chat-with-strangers">Video chat with strangers</Link>
+          <Link href="/omegle-alternative">Omegle alternative</Link>
+        </nav>
 
         <p className="chat-lobby-sub chat-lobby-sub-desktop">
           Free 1-on-1 webcam chat — no signup. Meet someone new in seconds for talk, flirt, or real
@@ -75,7 +57,7 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
 
         <div className="chat-lobby-cta-wrap">
           <div className="chat-lobby-cta-ring" aria-hidden="true" />
-          <button type="button" onClick={handleStart} disabled={!isConnected} className="chat-lobby-cta">
+          <button type="button" onClick={onStart} disabled={!isConnected} className="chat-lobby-cta">
             <IconCamera className="w-6 h-6" />
             <span>{waitingCount > 0 ? 'Match now' : 'Start Matching'}</span>
           </button>

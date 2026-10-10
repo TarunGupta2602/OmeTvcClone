@@ -1,7 +1,6 @@
 'use client';
 
 import { forwardRef, useEffect, useState } from 'react';
-import InviteShare from './InviteShare';
 
 const ChatVideoStage = forwardRef(function ChatVideoStage(
   {
@@ -17,9 +16,6 @@ const ChatVideoStage = forwardRef(function ChatVideoStage(
     onPipDragStart,
     isSearching,
     onlineCount,
-    opener,
-    showHello,
-    onSayHello,
   },
   containerRef
 ) {
@@ -42,9 +38,7 @@ const ChatVideoStage = forwardRef(function ChatVideoStage(
   const waitTitle = isSearching ? 'You’re in line' : 'Waiting to connect';
   const waitSub = !isSearching
     ? status
-    : othersOnline > 0
-      ? 'Stay on this screen. When someone else taps Start, you match instantly.'
-      : 'You’re first. Stay here — the next person who taps Start matches you.';
+    : 'Stay here — the next person who taps Start matches you.';
 
   return (
     <div ref={containerRef} className="chat-video-stage">
@@ -60,11 +54,6 @@ const ChatVideoStage = forwardRef(function ChatVideoStage(
             Stranger
           </div>
         )}
-        {showHello && opener && (
-          <button type="button" className="chat-say-hello" onClick={onSayHello}>
-            Say: {opener}
-          </button>
-        )}
         {showWaiting && (
           <div className="chat-video-placeholder">
             <div className="chat-pulse-ring">
@@ -79,10 +68,6 @@ const ChatVideoStage = forwardRef(function ChatVideoStage(
                 {elapsed}s
               </p>
             )}
-            {isSearching && opener && (
-              <p className="chat-placeholder-opener">First line: {opener}</p>
-            )}
-            {isSearching && elapsed >= 8 && <InviteShare compact />}
           </div>
         )}
       </div>

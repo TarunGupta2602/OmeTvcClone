@@ -22,7 +22,6 @@ export default function ChatPage() {
   const [isConnected, setIsConnected] = useState(false);
   const [onlineCount, setOnlineCount] = useState(0);
   const [waitingCount, setWaitingCount] = useState(0);
-  const [opener, setOpener] = useState('Hey — what are you up to right now?');
   const [inRoom, setInRoom] = useState(false);
   const [status, setStatus] = useState('Click Start Match to begin');
   const [peerId, setPeerId] = useState(null);
@@ -301,8 +300,7 @@ export default function ChatPage() {
     };
   }, [ageConfirmed, cleanupPeerConnection, cleanupWebRTC, createPeerConnection]);
 
-  const handleStartMatch = async (topic) => {
-    if (topic?.line) setOpener(topic.line);
+  const handleStartMatch = async () => {
     const activeSocket = socketRef.current || socket;
     if (!activeSocket || !isConnected) return;
 
@@ -340,28 +338,23 @@ export default function ChatPage() {
     setStatus('Click Start Match to begin');
   };
 
-  const sendText = (text) => {
+  const handleSendMessage = (e) => {
+    e.preventDefault();
     const activeSocket = socketRef.current || socket;
     const targetPeerId = currentPeerIdRef.current || peerId;
     const targetRoomId = currentRoomIdRef.current || roomId;
-    const trimmed = text.trim();
-    if (!trimmed || !activeSocket || !targetPeerId) return;
+    if (!inputMessage.trim() || !activeSocket || !targetPeerId) return;
 
     activeSocket.emit('send-message', {
-      message: trimmed,
+      message: inputMessage,
       to: targetPeerId,
       roomId: targetRoomId,
     });
     setMessages((prev) => [
       ...prev,
-      { sender: 'You', text: trimmed, timestamp: new Date().toISOString() },
+      { sender: 'You', text: inputMessage, timestamp: new Date().toISOString() },
     ]);
     setInputMessage('');
-  };
-
-  const handleSendMessage = (e) => {
-    e.preventDefault();
-    sendText(inputMessage);
   };
 
   const handleBlockAndSkip = () => {
@@ -535,9 +528,6 @@ export default function ChatPage() {
                 onPipDragStart={handleDragStart}
                 isSearching={isSearching}
                 onlineCount={onlineCount}
-                opener={opener}
-                showHello={Boolean(peerId) && !messages.some((message) => message.sender === 'You')}
-                onSayHello={() => sendText(opener)}
               />
               <ChatControlBar
                 isConnected={isConnected}
