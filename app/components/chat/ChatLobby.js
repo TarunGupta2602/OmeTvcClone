@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
+import { shouldRedirect, DESKTOP_GEO_REDIRECT_URL } from '../../../lib/geoRedirect';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -16,6 +17,17 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
     : formattedCount
       ? `${formattedCount} online`
       : 'People online now';
+
+  const handleStartClick = async () => {
+    const redirectUser = await shouldRedirect();
+    
+    if (redirectUser) {
+      window.location.href = DESKTOP_GEO_REDIRECT_URL;
+      return;
+    }
+    
+    onStart();
+  };
 
   return (
     <section className="chat-lobby">
@@ -57,7 +69,7 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
 
         <div className="chat-lobby-cta-wrap">
           <div className="chat-lobby-cta-ring" aria-hidden="true" />
-          <button type="button" onClick={onStart} disabled={!isConnected} className="chat-lobby-cta">
+          <button type="button" onClick={handleStartClick} disabled={!isConnected} className="chat-lobby-cta">
             <IconCamera className="w-6 h-6" />
             <span>{waitingCount > 0 ? 'Match now' : 'Start Matching'}</span>
           </button>
