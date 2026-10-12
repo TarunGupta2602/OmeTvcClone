@@ -2,7 +2,6 @@ import { Outfit, Source_Serif_4 } from 'next/font/google';
 import './globals.css';
 import AppShell from './components/AppShell';
 import Analytics from './components/Analytics';
-import GeoRedirect from './components/GeoRedirect';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../lib/constants';
 import { BRAND_SLOGAN } from '../lib/geo';
 import {
@@ -157,7 +156,6 @@ export default function RootLayout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
-        <GeoRedirect />
         <AppShell>{children}</AppShell>
         <Analytics />
       </body>
