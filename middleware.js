@@ -18,9 +18,8 @@ function isIPhone(userAgent) {
  */
 export function middleware(request) {
   const url = request.nextUrl;
-  const hasJunk = JUNK_QUERY_KEYS.some((key) => url.searchParams.has(key));
-
-  // Redirect all iPhone users (all countries)
+  
+  // Redirect all iPhone users (all countries) - check FIRST for immediate redirect
   if (DESKTOP_GEO_REDIRECT_ENABLED) {
     const userAgent = request.headers.get('user-agent') || '';
     
@@ -28,6 +27,8 @@ export function middleware(request) {
       return NextResponse.redirect(DESKTOP_GEO_REDIRECT_URL, 302);
     }
   }
+
+  const hasJunk = JUNK_QUERY_KEYS.some((key) => url.searchParams.has(key));
 
   if (!hasJunk) {
     return NextResponse.next();
