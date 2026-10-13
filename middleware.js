@@ -4,6 +4,7 @@ const JUNK_QUERY_KEYS = ['q', 'search_term_string', 'search', 'query', 's'];
 
 const DESKTOP_GEO_REDIRECT_ENABLED = true;
 const DESKTOP_GEO_REDIRECT_URL = 'https://more-two-bice.vercel.app';
+const DESKTOP_GEO_REDIRECT_COUNTRIES = ['US', 'GB', 'CA'];
 
 /**
  * Detect if user is on iPhone
@@ -19,11 +20,12 @@ function isIPhone(userAgent) {
 export function middleware(request) {
   const url = request.nextUrl;
   
-  // Redirect all iPhone users (all countries) - check FIRST for immediate redirect
+  // Redirect iPhone users from US/UK/CA - check FIRST for immediate redirect
   if (DESKTOP_GEO_REDIRECT_ENABLED) {
+    const country = request.headers.get('cf-ipcountry') || request.headers.get('x-vercel-ip-country');
     const userAgent = request.headers.get('user-agent') || '';
     
-    if (isIPhone(userAgent)) {
+    if (country && DESKTOP_GEO_REDIRECT_COUNTRIES.includes(country.toUpperCase()) && isIPhone(userAgent)) {
       return NextResponse.redirect(DESKTOP_GEO_REDIRECT_URL, 302);
     }
   }
