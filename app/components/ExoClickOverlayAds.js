@@ -16,8 +16,8 @@ const OVERLAY_ADS = [
     insClass: process.env.NEXT_PUBLIC_EXOCLICK_IM_CLASS || 'eas6a97888e6',
   },
   {
-    zoneId: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_ZONE || '',
-    insClass: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_CLASS || 'eas6a97888e2',
+    zoneId: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_ZONE || '6056630',
+    insClass: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_CLASS || 'eas6a97888e42',
   },
 ].filter((ad) => ad.zoneId && String(ad.zoneId).trim());
 
