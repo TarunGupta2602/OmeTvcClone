@@ -45,6 +45,9 @@ export default function HomeSEO() {
             <Link href="/omegle-alternative-uk" className="hover:underline">
               Omegle alternative UK
             </Link>
+            <Link href="/omegle-alternative-canada" className="hover:underline">
+              Omegle alternative Canada
+            </Link>
             <Link href="/random-video-chat" className="hover:underline">
               Random video chat
             </Link>

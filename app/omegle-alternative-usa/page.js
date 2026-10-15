@@ -111,10 +111,28 @@ export default function OmegleAlternativeUsaPage() {
               { href: '/adult-video-chat', label: 'Adult video chat' },
             ],
           },
+          {
+            title: 'Free random video chat for Americans (EST, CST, PST)',
+            paragraphs: [
+              'People in the United States still type “Omegle alternative USA”, “free random video chat USA”, and “video chat with strangers online” after Omegle shut down. Parvah is a browser Omegle alternative for US users who want 1-on-1 webcam matching without an app.',
+              'Peak hours often line up with US evenings across Eastern, Central, Mountain, and Pacific time. Matching stays worldwide and random — you are not locked to your state — but US night traffic usually feels busier.',
+            ],
+            bullets: [
+              'Omegle alternative for USA — free, no signup',
+              'Works in Chrome, Safari, Edge on phone or laptop',
+              '18+ adult video chat with skip and report',
+              'Also useful if you searched from Canada or the UK',
+            ],
+            links: [
+              { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
+              { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
+              { href: '/random-video-chat', label: 'Random video chat' },
+            ],
+          },
         ]}
         popularSearches={[
           { href: '/omegle-alternative', label: 'omegle alternative' },
-          { href: '/omegle-alternative-india', label: 'omegle alternative india' },
+          { href: '/omegle-alternative-canada', label: 'omegle alternative canada' },
           { href: '/omegle-alternative-uk', label: 'omegle alternative uk' },
           { href: '/random-video-chat', label: 'random video chat' },
           { href: '/free-webcam-chat', label: 'free webcam chat' },
@@ -124,7 +142,7 @@ export default function OmegleAlternativeUsaPage() {
         relatedLinks={[
           { href: '/', label: 'Start free chat' },
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
-          { href: '/omegle-alternative-india', label: 'Omegle Alternative India' },
+          { href: '/omegle-alternative-canada', label: 'Omegle Alternative Canada' },
           { href: '/omegle-alternative-uk', label: 'Omegle Alternative UK' },
           { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
           { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },

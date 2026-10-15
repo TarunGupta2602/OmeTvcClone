@@ -20,6 +20,7 @@ const MONEY_PAGES = [
   { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
   { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
   { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
+  { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
   { href: '/no-signup-video-chat', label: 'No signup video chat' },
   { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
   { href: '/ometv-alternative', label: 'OmeTV alternative' },

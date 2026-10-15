@@ -141,6 +141,7 @@ export default function OmegleAlternativePage() {
               { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
               { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
               { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
+              { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
             ],
           },
           {

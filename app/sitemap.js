@@ -22,6 +22,7 @@ const staticRoutes = [
   { path: '/omegle-alternative-india', changeFrequency: 'weekly', priority: 0.92 },
   { path: '/omegle-alternative-usa', changeFrequency: 'weekly', priority: 0.92 },
   { path: '/omegle-alternative-uk', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/omegle-alternative-canada', changeFrequency: 'weekly', priority: 0.92 },
   { path: '/ometv-alternative', changeFrequency: 'weekly', priority: 0.93 },
   { path: '/talk-to-strangers', changeFrequency: 'weekly', priority: 0.92 },
   { path: '/flirty-video-chat', changeFrequency: 'weekly', priority: 0.92 },

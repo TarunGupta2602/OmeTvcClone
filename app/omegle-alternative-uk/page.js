@@ -111,11 +111,29 @@ export default function OmegleAlternativeUkPage() {
               { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
             ],
           },
+          {
+            title: 'Omegle alternative for Britain — free stranger video chat',
+            paragraphs: [
+              'UK searches like “Omegle alternative UK”, “free random video chat UK”, and “talk to strangers online” still mean the same thing: instant webcam chat without an account.',
+              'Parvah runs in the browser for users in England, Scotland, Wales, and Northern Ireland. The queue is worldwide — not UK-only — and evenings in British time often feel active.',
+            ],
+            bullets: [
+              'Free Omegle-style chat for the UK — no app',
+              'Works on EE, Vodafone, Three, and home broadband browsers',
+              '18+ only with skip and report controls',
+              'Related pages for USA and Canada searchers too',
+            ],
+            links: [
+              { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
+              { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
+              { href: '/talk-to-strangers', label: 'Talk to strangers' },
+            ],
+          },
         ]}
         popularSearches={[
           { href: '/omegle-alternative', label: 'omegle alternative' },
           { href: '/omegle-alternative-usa', label: 'omegle alternative usa' },
-          { href: '/omegle-alternative-india', label: 'omegle alternative india' },
+          { href: '/omegle-alternative-canada', label: 'omegle alternative canada' },
           { href: '/random-video-chat', label: 'random video chat' },
           { href: '/video-chat-with-strangers', label: 'video chat with strangers' },
           { href: '/live-video-chat', label: 'live video chat' },
@@ -125,7 +143,7 @@ export default function OmegleAlternativeUkPage() {
           { href: '/', label: 'Start free chat' },
           { href: '/omegle-alternative', label: 'Omegle Alternative' },
           { href: '/omegle-alternative-usa', label: 'Omegle Alternative USA' },
-          { href: '/omegle-alternative-india', label: 'Omegle Alternative India' },
+          { href: '/omegle-alternative-canada', label: 'Omegle Alternative Canada' },
           { href: '/emerald-chat-alternative', label: 'Emerald Chat Alternative' },
           { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },
         ]}
