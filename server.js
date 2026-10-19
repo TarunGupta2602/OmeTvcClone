@@ -20,11 +20,20 @@ const MAX_MATCH_REQUESTS = 30;
 const MAX_MESSAGES = 60;
 const MAX_SIGNALS = 120;
 const MAX_MESSAGE_LENGTH = 2000;
+const MAX_QUEUE_LENGTH = 500;
+const CLEANUP_INTERVAL_MS = 60_000;
 
 app.prepare().then(() => {
   const server = createServer(async (req, res) => {
     try {
       const parsedUrl = parse(req.url, true);
+      // Lightweight health check — avoid loading full Next page for Render probes
+      if (parsedUrl.pathname === '/healthz') {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end('ok');
+        return;
+      }
       await handle(req, res, parsedUrl);
     } catch (err) {
       console.error('Error handling request:', req.url, err);
@@ -135,6 +144,10 @@ app.prepare().then(() => {
       }
     }
 
+    if (waitingQueue.length >= MAX_QUEUE_LENGTH) {
+      socket.emit('waiting', { message: 'Queue is full. Please try again in a moment.' });
+      return;
+    }
     waitingQueue.push(socket.id);
     socket.emit('waiting', { message: 'Searching — stay here, the next person matches you' });
   };
@@ -222,6 +235,35 @@ app.prepare().then(() => {
       broadcastOnlineCount();
     });
   });
+
+  // Drop stale rate-limit keys and orphaned queue IDs so RAM does not grow forever
+  setInterval(() => {
+    const now = Date.now();
+    for (const [key, entry] of rateLimits) {
+      if (now > entry.resetAt) rateLimits.delete(key);
+    }
+    waitingQueue = waitingQueue.filter((id) => {
+      const s = io.sockets.sockets.get(id);
+      return s && s.connected;
+    });
+    for (const [roomId, peers] of roomPeers) {
+      const alive = peers.filter((id) => io.sockets.sockets.get(id)?.connected);
+      if (alive.length === 0) {
+        roomPeers.delete(roomId);
+        continue;
+      }
+      if (alive.length !== peers.length) {
+        roomPeers.set(roomId, alive);
+        for (const id of peers) {
+          if (!alive.includes(id)) socketToRoom.delete(id);
+        }
+      }
+    }
+    const mem = process.memoryUsage();
+    console.log(
+      `[mem] rss=${Math.round(mem.rss / 1024 / 1024)}MB heap=${Math.round(mem.heapUsed / 1024 / 1024)}/${Math.round(mem.heapTotal / 1024 / 1024)}MB sockets=${io.sockets.sockets.size} queue=${waitingQueue.length}`,
+    );
+  }, CLEANUP_INTERVAL_MS);
 
   server.listen(port, '0.0.0.0', (err) => {
     if (err) throw err;

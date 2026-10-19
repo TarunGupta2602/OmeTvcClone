@@ -5,14 +5,17 @@ services:
   - type: web
     name: parvah
     runtime: node
-    plan: starter # free tier spins down — bad for WebRTC + slow for Googlebot first crawl
+    # starter (~512MB) OOMs under chat + Next traffic spikes — use standard+ in dashboard if crashes continue
+    plan: starter
     region: singapore # or closest to your users
     buildCommand: npm install && npm run build
     startCommand: npm start
-    healthCheckPath: /
+    healthCheckPath: /healthz
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=384
       - key: ALLOWED_ORIGINS
         value: https://parvah.online
       - key: GOOGLE_SITE_VERIFICATION
