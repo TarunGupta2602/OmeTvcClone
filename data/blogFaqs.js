@@ -18,6 +18,48 @@ export const blogFaqsMap = {
       a: 'No. The queue is random and global. Peak local evenings often feel busier because more adults are online then.',
     },
   ],
+  'omegle-nsfw-18-plus': [
+    {
+      q: 'What does omegle nsfw mean now that Omegle is gone?',
+      a: 'It usually means free adult stranger video chat with an 18+ rule. Parvah is a browser alternative with an age gate, skip, and report — not a paid cam catalog.',
+    },
+    {
+      q: 'Is omegle 18+ chat free on Parvah?',
+      a: 'Yes. Basic matching is free with no signup. Confirm you are 18+, allow camera, and start.',
+    },
+    {
+      q: 'Are nude chats guaranteed?',
+      a: 'No. Matching is random between adults. Flirty or intimate chat needs consent from both people. Nothing is guaranteed.',
+    },
+  ],
+  'adult-video-chat-usa-uk-canada': [
+    {
+      q: 'Is adult video chat free in the USA, UK, and Canada?',
+      a: 'On Parvah, yes — free browser matching with no signup. You confirm 18+ and join the same global adult queue.',
+    },
+    {
+      q: 'Do I need an app for 18+ video chat?',
+      a: 'No. Use Chrome or Safari on phone or laptop. No App Store or Play Store download.',
+    },
+    {
+      q: 'Will I only match people in my country?',
+      a: 'No. Matches are worldwide. Local evening hours often feel busier.',
+    },
+  ],
+  'omegle-adult-free-alternative': [
+    {
+      q: 'Is there a free Omegle adult alternative?',
+      a: 'Yes. Parvah offers free 18+ random video chat in the browser with no signup — an Omegle-style Next queue for adults.',
+    },
+    {
+      q: 'How is this different from paid adult sites?',
+      a: 'You match with other users in a free queue. Parvah does not sell cam shows or guarantee gender or explicit content.',
+    },
+    {
+      q: 'Can I use it from the USA or UK?',
+      a: 'Yes. Open the site from any country. See the USA, UK, and Canada landing pages for local search guides.',
+    },
+  ],
   'talk-to-strangers-video-chat': [
     {
       q: 'How do I talk to strangers online without signing up?',
