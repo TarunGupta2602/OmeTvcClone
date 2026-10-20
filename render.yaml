@@ -14,8 +14,9 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      # ~1.5GB heap on 2GB instance (was 384 for free 512MB — too tight, causes GC pauses)
       - key: NODE_OPTIONS
-        value: --max-old-space-size=384
+        value: --max-old-space-size=1536
       - key: ALLOWED_ORIGINS
         value: https://parvah.online
       - key: GOOGLE_SITE_VERIFICATION
