@@ -5,10 +5,13 @@ import { useEffect, useRef } from 'react';
 const ADS_ENABLED = process.env.NEXT_PUBLIC_EXOCLICK_ADS !== 'false';
 const PROVIDER_SRC = 'https://a.magsrv.com/ad-provider.js';
 
-/** Each overlay format may use a different ExoClick ins class from Get Code */
+/**
+ * Keep Instant Message only for now — Sticky + In-Page Push cluttered the lobby,
+ * hurt Match CTA / bounce after the outage. Re-enable via env when traffic is stable.
+ */
 const OVERLAY_ADS = [
   {
-    zoneId: process.env.NEXT_PUBLIC_EXOCLICK_STICKY_ZONE || '6056618',
+    zoneId: process.env.NEXT_PUBLIC_EXOCLICK_STICKY_ZONE || '',
     insClass: process.env.NEXT_PUBLIC_EXOCLICK_STICKY_CLASS || 'eas6a97888e17',
   },
   {
@@ -16,7 +19,7 @@ const OVERLAY_ADS = [
     insClass: process.env.NEXT_PUBLIC_EXOCLICK_IM_CLASS || 'eas6a97888e6',
   },
   {
-    zoneId: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_ZONE || '6056630',
+    zoneId: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_ZONE || '',
     insClass: process.env.NEXT_PUBLIC_EXOCLICK_PUSH_CLASS || 'eas6a97888e42',
   },
 ].filter((ad) => ad.zoneId && String(ad.zoneId).trim());

@@ -40,6 +40,8 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
         <nav className="chat-lobby-query-links" aria-label="Related chats">
           <Link href="/video-chat-with-strangers">Video chat with strangers</Link>
           <Link href="/omegle-alternative">Omegle alternative</Link>
+          <Link href="/omegle-alternative-usa">USA</Link>
+          <Link href="/omegle-alternative-uk">UK</Link>
         </nav>
 
         <p className="chat-lobby-sub chat-lobby-sub-desktop">
@@ -66,8 +68,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
 
         <InviteShare />
 
-        <ExoClickBanner className="chat-lobby-ad mt-2 mb-1" />
-
         <p className="chat-lobby-fine">18+ only · No signup · Skip anytime</p>
 
         <div className="chat-lobby-pills">
@@ -76,6 +76,9 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           <span>1-on-1 Video</span>
           <span>Worldwide</span>
         </div>
+
+        {/* Below CTA so Match button stays clear for US/UK visitors */}
+        <ExoClickBanner className="chat-lobby-ad mt-4 mb-1" />
       </div>
     </section>
   );
