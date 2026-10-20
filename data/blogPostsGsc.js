@@ -1140,9 +1140,122 @@ export const gscBlogPostsMap = {
       <p>Free flirty video chat online works when you combine confidence with consent. Start on Parvah, keep it playful, and skip until the spark is real.</p>
     `,
   },
+
+  'omegle-alternative-usa-uk-canada': {
+    title: 'Omegle Alternative USA, UK & Canada — Free Random Video Chat 2026',
+    seoTitle: 'Omegle Alternative USA, UK & Canada — Free No Signup Chat',
+    excerpt:
+      'Looking for an Omegle alternative in the USA, UK, or Canada? Free random video chat with strangers in the browser — no signup, no app, adults 18+ only. Start on Parvah in under a minute.',
+    date: '2026-10-20',
+    dateModified: '2026-10-20',
+    category: 'Comparison',
+    author: 'Parvah Team',
+    readTime: '12 min read',
+    featured: true,
+    keywords:
+      'omegle alternative usa, omegle alternative uk, omegle alternative canada, free random video chat usa, video chat with strangers uk, omegle nsfw, nsfw omegle, adult video chat, free omegle alternative',
+    imageAlt: 'Omegle alternative for USA UK Canada — free random video chat on Parvah',
+    content: `
+      <h2>Introduction</h2>
+      <p>People in the <strong>United States</strong>, the <strong>United Kingdom</strong>, and <strong>Canada</strong> still search for Omegle every day — years after it shut down. What they want is the same habit: open a site, meet a stranger on camera, hit Next. No app store. No email wall. Adults only.</p>
+      <p>Parvah is a free browser <a href="/omegle-alternative">Omegle alternative</a> built for that. Matching is random and worldwide. Country filters are not guaranteed — but evenings in US, UK, and Canadian time zones often feel busier because more adults are online then.</p>
+
+      <h2>Omegle alternative USA</h2>
+      <p>If you searched <strong>Omegle alternative USA</strong>, <strong>free random video chat USA</strong>, or <strong>omegle nsfw</strong>, you usually want 1-on-1 webcam chat that works in Chrome, Safari, or Edge on a phone or laptop.</p>
+      <ul>
+        <li>No App Store download</li>
+        <li>No signup before the first match</li>
+        <li>Strict 18+ age gate</li>
+        <li>Skip and report on every chat</li>
+      </ul>
+      <p>Peak hours often line up with US nights across Eastern, Central, Mountain, and Pacific time. Start here: <a href="/omegle-alternative-usa">Omegle alternative USA</a> or go straight to <a href="/">parvah.online</a>.</p>
+
+      <h2>Omegle alternative UK</h2>
+      <p>UK searches like <strong>Omegle alternative UK</strong> and <strong>talk to strangers online</strong> mean the same thing: free stranger video chat after work, on home Wi‑Fi or mobile data, without another dating profile.</p>
+      <p>Parvah works in Chrome and Safari for users in England, Scotland, Wales, and Northern Ireland. The queue is worldwide — not UK-only. Details: <a href="/omegle-alternative-uk">Omegle alternative UK</a>.</p>
+
+      <h2>Omegle alternative Canada</h2>
+      <p>Canadian evenings often overlap busy North American chat hours. If you searched from Canada for a free Omegle-style site, use <a href="/omegle-alternative-canada">Omegle alternative Canada</a> — same free matching, no signup, 18+ only.</p>
+
+      <h2>How to start (under one minute)</h2>
+      <ol>
+        <li>Open <a href="/">parvah.online</a></li>
+        <li>Confirm you are 18+</li>
+        <li>Allow camera and microphone</li>
+        <li>Tap Start Matching</li>
+        <li>Say hello — or hit Next</li>
+      </ol>
+      <p>Want the stranger wording? See <a href="/video-chat-with-strangers">video chat with strangers</a> and <a href="/random-video-chat">random video chat</a> — same queue.</p>
+
+      <h2>NSFW / adult Omegle searches</h2>
+      <p>Queries like <strong>omegle nsfw</strong>, <strong>nsfw omegle</strong>, and <strong>adult video chat</strong> still point at consenting adults, not a paid cam catalog. Parvah allows flirty chat between adults when both people agree. Nothing intimate is guaranteed. Minors are banned. Read <a href="/adult-video-chat">adult video chat</a> and <a href="/safety">safety</a>.</p>
+
+      <h2>USA vs UK vs Canada — what is the same</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>USA page</th>
+            <th>UK page</th>
+            <th>Canada page</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price</td>
+            <td>Free matching</td>
+            <td>Free matching</td>
+            <td>Free matching</td>
+          </tr>
+          <tr>
+            <td>Signup</td>
+            <td>None</td>
+            <td>None</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>App</td>
+            <td>Browser only</td>
+            <td>Browser only</td>
+            <td>Browser only</td>
+          </tr>
+          <tr>
+            <td>Country-only matches</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The landing pages explain local search intent. The product is one global 18+ queue.</p>
+
+      <h2>Safety for US, UK, and Canadian users</h2>
+      <ul>
+        <li>Do not share address, workplace, or payment apps</li>
+        <li>Never send money or gift cards</li>
+        <li>Use Report for harassment or anyone who may be underage</li>
+        <li>Meet offline only in a public place — if you ever meet at all</li>
+      </ul>
+      <p>More tips: <a href="/blog/how-to-stay-safe-on-video-chat-platforms">video chat safety</a>.</p>
+
+      <h2>Conclusion</h2>
+      <p>If you want an Omegle alternative in the USA, UK, or Canada, start free on Parvah: no signup, no app, adults only. Open the geo page that matches your search, then tap Start Matching.</p>
+    `,
+  },
 };
 
 export const gscBlogPostsList = [
+  {
+    slug: 'omegle-alternative-usa-uk-canada',
+    title: 'Omegle Alternative USA, UK & Canada — Free Random Video Chat 2026',
+    excerpt:
+      'Looking for an Omegle alternative in the USA, UK, or Canada? Free random video chat with strangers in the browser — no signup, no app, adults 18+ only. Start on Parvah in under a minute.',
+    date: '2026-10-20',
+    category: 'Comparison',
+    readTime: '12 min read',
+    featured: true,
+  },
+
   {
     slug: 'free-random-video-chat',
     title: 'Free Random Video Chat (No Signup, No App) in 2026',

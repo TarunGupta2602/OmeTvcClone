@@ -1,5 +1,23 @@
 /** Search-targeted FAQs per blog post — used for on-page FAQ sections + FAQPage JSON-LD */
 export const blogFaqsMap = {
+  'omegle-alternative-usa-uk-canada': [
+    {
+      q: 'What is the best Omegle alternative in the USA?',
+      a: 'Look for free random video chat, no signup, browser access, and a clear 18+ rule. Parvah matches that — open parvah.online or the Omegle alternative USA page and start matching.',
+    },
+    {
+      q: 'Is there a free Omegle alternative in the UK?',
+      a: 'Yes. Parvah offers free stranger video chat in Chrome or Safari with no app and no account. Adults 18+ only.',
+    },
+    {
+      q: 'Does Parvah work for Canada?',
+      a: 'Yes. Same free browser matching. Canadian evenings often overlap busy North American hours. Matching is worldwide, not Canada-only.',
+    },
+    {
+      q: 'Will I only match people in my country?',
+      a: 'No. The queue is random and global. Peak local evenings often feel busier because more adults are online then.',
+    },
+  ],
   'talk-to-strangers-video-chat': [
     {
       q: 'How do I talk to strangers online without signing up?',
