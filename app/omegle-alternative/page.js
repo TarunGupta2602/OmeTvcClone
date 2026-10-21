@@ -156,7 +156,6 @@ export default function OmegleAlternativePage() {
               { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
             ],
           },
-        ]}
           {
             title: 'Omegle NSFW, NSFW Omegle, and Omegle 18+',
             paragraphs: [
