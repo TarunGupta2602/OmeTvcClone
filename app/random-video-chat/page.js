@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Free Random Video Chat Online — Instant 1-on-1 Matching';
+const title = 'Random Video Chat & Random Webcam Chat Online Free';
 const description =
-  'How free random video chat works: instant 1-on-1 webcam matching in your browser, no signup. Skip anytime, WebRTC peer video, adults 18+ only.';
+  'Random video chat and random webcam chat online free — instant 1-on-1 matching in your browser, no signup. Skip anytime. Adults 18+ only.';
 
 export const metadata = {
   title: {
@@ -131,6 +131,18 @@ export default function RandomVideoChatPage() {
               { href: '/ometv-alternative', label: 'OmeTV alternative' },
               { href: '/omegle-alternative', label: 'Omegle alternative' },
               { href: '/no-signup-video-chat', label: 'No signup video chat' },
+            ],
+          },
+          {
+            title: 'Random webcam chat online free',
+            paragraphs: [
+              'Random webcam chat online free means the same thing as random video chat here: open the site, confirm 18+, allow the camera, and match. No download and no account.',
+              'If you also searched omegle nsfw or adult omegle, the adult queue is the same matching flow with a clear age gate.',
+            ],
+            links: [
+              { href: '/', label: 'random webcam chat online free' },
+              { href: '/free-webcam-chat', label: 'free webcam chat' },
+              { href: '/omegle-alternative', label: 'omegle nsfw' },
             ],
           },
           {

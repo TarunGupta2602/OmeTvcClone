@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Video Chat 18+ — Free Adult Video Chat, No Signup';
+const title = 'NSFW Video Chat & Adult Video Chat 18+ — Free, No Signup';
 const description =
-  'Video chat 18+ with strangers — free, no signup. Porn chat and nude chat happen only when both adults want them. Random 1-on-1 matching, skip anytime.';
+  'NSFW video chat and adult video chat 18+ with strangers — free, no signup. Intimate chat only when both adults want it. Random 1-on-1 matching, skip anytime.';
 
 export const metadata = {
   title: { absolute: title },
@@ -114,6 +114,18 @@ export default function AdultVideoChatPage() {
               { href: '/', label: 'Start adult video chat' },
               { href: '/random-video-chat', label: 'Random video chat guide' },
               { href: '/omegle-alternative', label: 'Adult Omegle alternative' },
+            ],
+          },
+          {
+            title: 'NSFW video chat and Omegle +18 searches',
+            paragraphs: [
+              'NSFW video chat, omegle +18, and adult video chat are the same request: live webcam chat for adults. Parvah puts an 18+ gate in front of a free random queue.',
+              'Use Next if the match is wrong. Report anyone who may be underage. Do not send money.',
+            ],
+            links: [
+              { href: '/blog/omegle-nsfw-18-plus', label: 'omegle +18' },
+              { href: '/blog/adult-video-chat-usa-uk-canada', label: 'adult video chat' },
+              { href: '/omegle-alternative', label: 'nsfw omegle' },
             ],
           },
           {

@@ -40,7 +40,13 @@ export default function HomeSEO() {
               OmeTV alternative
             </Link>
             <Link href="/omegle-alternative" className="hover:underline">
-              Omegle alternative
+              Omegle NSFW
+            </Link>
+            <Link href="/adult-video-chat" className="hover:underline">
+              NSFW video chat
+            </Link>
+            <Link href="/random-video-chat" className="hover:underline">
+              Random webcam chat online free
             </Link>
             <Link href="/omegle-alternative-india" className="hover:underline">
               Omegle alternative India

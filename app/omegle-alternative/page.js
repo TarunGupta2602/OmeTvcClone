@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Omegle Adult — Free Adult Omegle, No Signup (18+)';
+const title = 'Omegle NSFW & Omegle 18+ — Free Adult Omegle, No Signup';
 const description =
-  'Omegle adult and adult Omegle, free with no signup. 18+ random video chat with strangers in the browser. No app. Matches are random — gender and nude chat are not guaranteed.';
+  'Omegle NSFW, NSFW Omegle, Omegle 18+, and adult Omegle — free with no signup. 18+ random video chat in the browser. No app. Matches are random — gender and nude chat are not guaranteed.';
 
 export const metadata = {
   title: {
@@ -157,13 +157,27 @@ export default function OmegleAlternativePage() {
             ],
           },
         ]}
+          {
+            title: 'Omegle NSFW, NSFW Omegle, and Omegle 18+',
+            paragraphs: [
+              'People still type omegle nsfw, nsfw omegle, omegle 18+, omegle +18, adult omegle, and omegle porn. Those searches want a free adult stranger video chat after Omegle shut down — not a paid cam grid.',
+              'This page is that queue: confirm 18+, allow camera, match 1-on-1. Flirty chat needs consent. Nothing explicit is guaranteed. Minors are banned.',
+            ],
+            links: [
+              { href: '/blog/omegle-nsfw-18-plus', label: 'omegle nsfw' },
+              { href: '/blog/omegle-adult-free-alternative', label: 'adult omegle' },
+              { href: '/adult-video-chat', label: 'nsfw video chat' },
+              { href: '/blog/free-live-porn-chat', label: 'omegle porn' },
+            ],
+          },
+        ]}
         popularSearches={[
-          { href: '/adult-video-chat', label: 'adult video chat' },
+          { href: '/blog/omegle-nsfw-18-plus', label: 'nsfw omegle' },
+          { href: '/blog/omegle-nsfw-18-plus', label: 'omegle nsfw' },
+          { href: '/blog/omegle-adult-free-alternative', label: 'adult omegle' },
+          { href: '/adult-video-chat', label: 'nsfw video chat' },
           { href: '/random-video-chat', label: 'random video chat' },
-          { href: '/omegle-alternative-india', label: 'omegle alternative india' },
           { href: '/omegle-alternative-usa', label: 'omegle alternative usa' },
-          { href: '/omegle-alternative-uk', label: 'omegle alternative uk' },
-          { href: '/talk-to-strangers', label: 'talk to strangers' },
         ]}
         faqs={faqs}
         relatedLinks={[
