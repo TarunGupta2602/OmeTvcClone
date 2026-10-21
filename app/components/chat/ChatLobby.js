@@ -33,8 +33,8 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
         </div>
 
         <h1 className="chat-lobby-title">
-          Random video chat
-          <span className="chat-lobby-title-glow"> no signup.</span>
+          Parvah
+          <span className="chat-lobby-title-glow"> — random video chat, no signup.</span>
         </h1>
 
         <nav className="chat-lobby-query-links" aria-label="Related chats">
