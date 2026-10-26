@@ -42,49 +42,11 @@ export default function HilltopAdsTopBanner() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '6px 40px 6px 6px',
-        minHeight: '70px',
+        margin: '8px 0',
         position: 'relative',
-        overflow: 'hidden',
       }}
       aria-label="Advertisement"
     >
-      {/* Close button */}
-      <button
-        onClick={() => setVisible(false)}
-        style={{
-          position: 'absolute',
-          top: 6,
-          right: 8,
-          background: 'rgba(255,255,255,0.1)',
-          border: 'none',
-          color: '#aaa',
-          fontSize: '12px',
-          cursor: 'pointer',
-          borderRadius: '3px',
-          padding: '2px 6px',
-          zIndex: 2,
-        }}
-        aria-label="Close ad"
-      >
-        ✕
-      </button>
-
-      {/* Small "Ad" label */}
-      <span
-        style={{
-          position: 'absolute',
-          top: 6,
-          left: 8,
-          fontSize: '10px',
-          color: '#555',
-          textTransform: 'uppercase',
-          letterSpacing: '1px',
-        }}
-      >
-        Ad
-      </span>
-
       {/* Banner slot - centered, script injects here */}
       <div
         ref={slotRef}
@@ -94,7 +56,6 @@ export default function HilltopAdsTopBanner() {
           alignItems: 'center',
           width: '100%',
           maxWidth: '728px',
-          minHeight: '50px',
         }}
       />
     </div>
