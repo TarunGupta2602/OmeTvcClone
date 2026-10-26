@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import HilltopAdsInlineBanner from '../HilltopAdsInlineBanner';
-import HilltopAdsTopBanner from '../HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../HilltopAdsMobileBanner';
+import HilltopAdsInlineBanner from './HilltopAdsInlineBanner';
+import HilltopAdsTopBanner from './HilltopAdsTopBanner';
+import HilltopAdsMobileBanner from './HilltopAdsMobileBanner';
 import DirectAnswer from './DirectAnswer';
 import { HOW_TO_START } from '../../lib/geo';
 import { buildHowToSchema, stringifyJsonLd } from '../../lib/seo';
