@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import DirectAnswer from '../components/DirectAnswer';
+import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
+import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 import { WHAT_IS_PARVAH } from '../../lib/geo';
@@ -147,6 +149,10 @@ export default function AboutPage() {
               Random video chat guide
             </Link>
           </div>
+
+          {/* Top banner ad below CTA buttons */}
+          <HilltopAdsTopBanner />
+
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 pt-2 text-sm font-semibold text-teal-800">
             <Link href="/omegle-alternative" className="hover:underline">Omegle alternative</Link>
             <Link href="/no-signup-video-chat" className="hover:underline">No signup chat</Link>
@@ -155,6 +161,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Mobile banner - upper middle section */}
+      <HilltopAdsMobileBanner />
 
       <section className="border-b border-slate-200/80 bg-white py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">

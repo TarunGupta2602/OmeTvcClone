@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import HilltopAdsTopBanner from './HilltopAdsTopBanner';
+import HilltopAdsMobileBanner from './HilltopAdsMobileBanner';
 import { SUPPORT_EMAIL, SAFETY_EMAIL } from '../../lib/constants';
 import { CONTACT_FAQS } from '../../data/contactFaqs';
 
@@ -49,6 +51,12 @@ export default function ContactPageContent() {
             </a>
           </div>
         </div>
+
+        {/* Top banner ad */}
+        <HilltopAdsTopBanner />
+
+        {/* Mobile banner - upper middle section */}
+        <HilltopAdsMobileBanner />
 
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>

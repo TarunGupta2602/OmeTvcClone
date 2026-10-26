@@ -6,7 +6,6 @@ import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import HilltopAdsPopunder from './HilltopAdsPopunder';
 import HilltopAdsMultiTag from './HilltopAdsMultiTag';
-import HilltopAdsTopBanner from './HilltopAdsTopBanner';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -19,7 +18,6 @@ function ShellInner({ children }) {
   return (
     <>
       {!hideChrome && <Navbar minimal={isHome && lobbyMode && !chatMode} />}
-      {!hideChrome && <HilltopAdsTopBanner />}
       <div className="flex-1 flex flex-col">{children}</div>
       {!hideFooter && <Footer />}
       <CookieConsent />

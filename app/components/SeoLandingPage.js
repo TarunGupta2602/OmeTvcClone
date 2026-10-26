@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import HilltopAdsInlineBanner from '../HilltopAdsInlineBanner';
+import HilltopAdsTopBanner from '../HilltopAdsTopBanner';
+import HilltopAdsMobileBanner from '../HilltopAdsMobileBanner';
 import DirectAnswer from './DirectAnswer';
 import { HOW_TO_START } from '../../lib/geo';
 import { buildHowToSchema, stringifyJsonLd } from '../../lib/seo';
@@ -60,8 +63,14 @@ export default function SeoLandingPage({
               Safety guidelines
             </Link>
           </div>
+
+          {/* Top banner ad below CTA buttons */}
+          <HilltopAdsTopBanner />
         </div>
       </section>
+
+      {/* Mobile banner - upper middle section */}
+      <HilltopAdsMobileBanner />
 
       <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto border-b border-teal-900/10">
         <DirectAnswer heading="Key facts" compact />
