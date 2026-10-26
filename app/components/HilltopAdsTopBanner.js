@@ -8,12 +8,15 @@ const BANNER_SRC =
 export default function HilltopAdsTopBanner() {
   const [visible, setVisible] = useState(true);
   const loaded = useRef(false);
+  const slotRef = useRef(null);
 
   useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
 
-    if (document.querySelector('script[data-htads="top-banner"]')) return;
+    // Remove old script if exists
+    const old = document.querySelector('script[data-htads="top-banner"]');
+    if (old) old.remove();
 
     const s = document.createElement('script');
     s.settings = {};
@@ -21,7 +24,13 @@ export default function HilltopAdsTopBanner() {
     s.async = true;
     s.referrerPolicy = 'no-referrer-when-downgrade';
     s.setAttribute('data-htads', 'top-banner');
-    document.body.appendChild(s);
+
+    // Inject script inside the slot div so MultiTag places ad here
+    if (slotRef.current) {
+      slotRef.current.appendChild(s);
+    } else {
+      document.body.appendChild(s);
+    }
   }, []);
 
   if (!visible) return null;
@@ -30,36 +39,66 @@ export default function HilltopAdsTopBanner() {
     <div
       style={{
         width: '100%',
+        background: '#0a0a0a',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        background: '#111',
-        minHeight: '60px',
+        padding: '6px 40px 6px 6px',
+        minHeight: '70px',
         position: 'relative',
-        zIndex: 40,
         overflow: 'hidden',
+        borderBottom: '1px solid #222',
       }}
       aria-label="Advertisement"
     >
+      {/* Close button */}
       <button
         onClick={() => setVisible(false)}
         style={{
           position: 'absolute',
-          top: 4,
+          top: 6,
           right: 8,
-          background: 'transparent',
+          background: 'rgba(255,255,255,0.1)',
           border: 'none',
-          color: '#888',
-          fontSize: '16px',
+          color: '#aaa',
+          fontSize: '12px',
           cursor: 'pointer',
-          lineHeight: 1,
-          zIndex: 1,
+          borderRadius: '3px',
+          padding: '2px 6px',
+          zIndex: 2,
         }}
         aria-label="Close ad"
       >
         ✕
       </button>
-      <div id="ht-top-banner-slot" style={{ minWidth: 300, minHeight: 50 }} />
+
+      {/* Small "Ad" label */}
+      <span
+        style={{
+          position: 'absolute',
+          top: 6,
+          left: 8,
+          fontSize: '10px',
+          color: '#555',
+          textTransform: 'uppercase',
+          letterSpacing: '1px',
+        }}
+      >
+        Ad
+      </span>
+
+      {/* Banner slot - centered, script injects here */}
+      <div
+        ref={slotRef}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          maxWidth: '728px',
+          minHeight: '50px',
+        }}
+      />
     </div>
   );
 }
