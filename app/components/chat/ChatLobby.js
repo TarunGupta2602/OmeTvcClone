@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
-import ExoClickBanner from '../ExoClickBanner';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -76,9 +75,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           <span>1-on-1 Video</span>
           <span>Worldwide</span>
         </div>
-
-        {/* Below CTA so Match button stays clear for US/UK visitors */}
-        <ExoClickBanner className="chat-lobby-ad mt-4 mb-1" />
       </div>
     </section>
   );

@@ -7,7 +7,6 @@ import BlogPostFAQ from '../../components/BlogPostFAQ';
 import BlogAuthorCard from '../../components/BlogAuthorCard';
 import BlogPostCover from '../../components/BlogPostCover';
 import { BlogCardThumbnail } from '../../components/BlogCard';
-import ExoClickBanner from '../../components/ExoClickBanner';
 import { SITE_NAME, SITE_URL } from '../../../lib/constants';
 import { blogPostsMap, blogPostsList } from '../../../data/blogPosts';
 import {
@@ -174,12 +173,10 @@ export default async function BlogPostPage({ params }) {
             readTime={post.readTime}
             alt={post.imageAlt}
           />
-          <ExoClickBanner className="mt-8" />
         </div>
 
         <div className="max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14">
           <BlogPostContent content={post.content} headings={post.headings} tagLinks={post.tagLinks} />
-          <ExoClickBanner className="my-10" />
           <BlogPostFAQ faqs={post.faqs} />
         </div>
 
