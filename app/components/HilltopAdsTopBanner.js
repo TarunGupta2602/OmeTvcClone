@@ -39,7 +39,6 @@ export default function HilltopAdsTopBanner() {
     <div
       style={{
         width: '100%',
-        background: '#0a0a0a',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -47,7 +46,6 @@ export default function HilltopAdsTopBanner() {
         minHeight: '70px',
         position: 'relative',
         overflow: 'hidden',
-        borderBottom: '1px solid #222',
       }}
       aria-label="Advertisement"
     >

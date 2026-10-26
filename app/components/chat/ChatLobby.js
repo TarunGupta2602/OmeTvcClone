@@ -3,9 +3,7 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
-import HilltopAdsInlineBanner from '../HilltopAdsInlineBanner';
 import HilltopAdsTopBanner from '../HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../HilltopAdsMobileBanner';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -54,9 +52,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           Free random video chat. Tap start — no signup, 18+ only.
         </p>
 
-        {/* Mobile banner - upper middle section */}
-        <HilltopAdsMobileBanner />
-
         {waitingCount > 0 && (
           <p className="chat-lobby-queue">
             {waitingCount === 1 ? '1 person is waiting' : `${waitingCount} people are waiting`} — start now and you match instantly.
@@ -71,11 +66,8 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           </button>
         </div>
 
-        {/* Top banner ad below Start Matching button */}
+        {/* Banner ad below Start Matching button */}
         <HilltopAdsTopBanner />
-
-        {/* Inline banner ad */}
-        <HilltopAdsInlineBanner className="mt-4 mb-2" />
 
         <InviteShare />
 
