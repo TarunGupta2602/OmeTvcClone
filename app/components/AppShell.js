@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import HilltopAdsPopunder from './HilltopAdsPopunder';
+import HilltopAdsInPagePush from './HilltopAdsInPagePush';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -21,6 +22,7 @@ function ShellInner({ children }) {
       {!hideFooter && <Footer />}
       <CookieConsent />
       <HilltopAdsPopunder />
+      <HilltopAdsInPagePush />
     </>
   );
 }
