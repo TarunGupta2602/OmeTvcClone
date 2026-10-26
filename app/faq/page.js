@@ -2,7 +2,6 @@ import Link from 'next/link';
 import FAQContent from './FAQContent';
 import DirectAnswer from '../components/DirectAnswer';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
@@ -196,9 +195,6 @@ export default function FAQPage() {
 
           {/* Top banner ad */}
           <HilltopAdsTopBanner />
-
-          {/* Mobile banner - upper middle section */}
-          <HilltopAdsMobileBanner />
 
           <FAQContent faqs={faqs} />
 

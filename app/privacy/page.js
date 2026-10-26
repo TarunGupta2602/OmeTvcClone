@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
@@ -133,9 +132,6 @@ To exercise any privacy rights, contact privacy@parvah.online.`,
 
         {/* Top banner ad */}
         <HilltopAdsTopBanner />
-
-        {/* Mobile banner - upper middle section */}
-        <HilltopAdsMobileBanner />
 
         {/* Policy Sections */}
         <div className="space-y-6">

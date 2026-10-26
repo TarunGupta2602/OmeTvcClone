@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd, buildWebPageSchema } from '../../lib/seo';
 
@@ -174,9 +173,6 @@ export default function SafetyPage() {
 
         {/* Top banner ad */}
         <HilltopAdsTopBanner />
-
-        {/* Mobile banner - upper middle section */}
-        <HilltopAdsMobileBanner />
 
         {/* Core Rules Section */}
         <div className="space-y-4 sm:space-y-6">

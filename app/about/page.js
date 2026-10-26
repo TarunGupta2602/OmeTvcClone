@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import DirectAnswer from '../components/DirectAnswer';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 import { WHAT_IS_PARVAH } from '../../lib/geo';
@@ -161,9 +160,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Mobile banner - upper middle section */}
-      <HilltopAdsMobileBanner />
 
       <section className="border-b border-slate-200/80 bg-white py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">

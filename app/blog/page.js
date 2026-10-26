@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 import { blogPostsList } from '../../data/blogPosts';
@@ -88,8 +87,6 @@ export default function BlogPage() {
               <Link href="/omegle-alternative" className="hover:underline">Omegle alternative</Link>
               <Link href="/no-signup-video-chat" className="hover:underline">No signup</Link>
               <Link href="/anonymous-video-chat" className="hover:underline">Anonymous chat</Link>
-              <Link href="/chatroulette-alternative" className="hover:underline">Chatroulette alternative</Link>
-              <Link href="/blog/best-omegle-alternatives-2026" className="hover:underline">Best alternatives 2026</Link>
             </div>
             <a href="/blog/rss.xml" className="inline-block text-sm font-semibold text-teal-700 hover:underline">
               Subscribe via RSS →
@@ -98,9 +95,6 @@ export default function BlogPage() {
 
           {/* Top banner ad */}
           <HilltopAdsTopBanner />
-
-          {/* Mobile banner - upper middle section */}
-          <HilltopAdsMobileBanner />
 
           <div className="flex flex-wrap justify-center gap-2">
             {BLOG_CATEGORIES.map((cat) => (

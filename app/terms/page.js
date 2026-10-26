@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsMobileBanner from '../components/HilltopAdsMobileBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
@@ -130,9 +129,6 @@ export default function TermsPage() {
 
         {/* Top banner ad */}
         <HilltopAdsTopBanner />
-
-        {/* Mobile banner - upper middle section */}
-        <HilltopAdsMobileBanner />
 
         {/* Sections */}
         <div className="space-y-6">
