@@ -20,6 +20,10 @@ const AD_SCRIPTS = [
     key: 'video-slider',
     src: '//unfortunateheart.com/btXqV/sjd.Gjlr0aY/WCcX/geymP9ku_ZeUjlokIPjTIcE1ENzTkQ_0TNjD/kpt/NtzhUB1/NqD/Qu1oMdwz',
   },
+  {
+    key: 'banner-300x100-mobile',
+    src: '//unfortunateheart.com/brXxV.sRdTGXli0AYeWFco/_e/mv9runZeUClrkIPCT/cb1QN/T/Q_0UMAjxEGtpNfzhUo1ZNDDHQdygN/Qt',
+  },
 ];
 
 export default function HilltopAdsMultiTag() {
