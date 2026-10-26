@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
+import JuicyAdsBanner from '../JuicyAdsBanner';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -75,6 +76,8 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           <span>1-on-1 Video</span>
           <span>Worldwide</span>
         </div>
+
+        <JuicyAdsBanner className="mt-4 mb-1" />
       </div>
     </section>
   );
