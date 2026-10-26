@@ -29,6 +29,9 @@ const AD_SCRIPTS = [
 export default function HilltopAdsMultiTag() {
   useEffect(() => {
     AD_SCRIPTS.forEach(({ key, src }) => {
+      // Skip video-slider on mobile
+      if (key === 'video-slider' && window.innerWidth < 768) return;
+
       if (document.querySelector(`script[data-htads="${key}"]`)) return;
 
       const s = document.createElement('script');
