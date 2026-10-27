@@ -1,32 +1,30 @@
 'use client';
 
 import { useEffect } from 'react';
+import {
+  HILLTOP_INPAGE_PUSH_SRC,
+  HILLTOP_VAST_VIDEO_SRC,
+  injectHilltopAdScript,
+} from '../../lib/hilltopAds';
 
-// All HilltopAds ad scripts - loaded once per page session
-const AD_SCRIPTS = [
-  {
-    key: 'mobile-popunder',
-    src: '//unfortunateheart.com/bcXxVKsRd.Gwl/0ZYnWTct/reEmb9Cu/ZAUKl/kJP/TIcL1cNiTbQf0AMQjZE/twNVzdUk1/NXD-QNyYNgQP',
-  },
-  {
-    key: 'in-page-push',
-    src: '//unfortunateheart.com/bOX/V.sTdVGzlH0tYzWAcD/PewmA9ouXZSUJl/kyPtT/cQ1-NaTMQOzHO/TicJt/NmzpUI1bNhDjQQwkMVQI',
-  },
-];
-
+/** Site-wide: in-page push (all devices) + VAST video (desktop). Loaded after page load for speed. */
 export default function HilltopAdsMultiTag() {
   useEffect(() => {
-    AD_SCRIPTS.forEach(({ key, src }) => {
-      if (document.querySelector(`script[data-htads="${key}"]`)) return;
+    const load = () => {
+      injectHilltopAdScript('in-page-push', HILLTOP_INPAGE_PUSH_SRC);
 
-      const s = document.createElement('script');
-      s.settings = {};
-      s.src = src;
-      s.async = true;
-      s.referrerPolicy = 'no-referrer-when-downgrade';
-      s.setAttribute('data-htads', key);
-      document.body.appendChild(s);
-    });
+      if (window.innerWidth >= 768) {
+        injectHilltopAdScript('vast-video', HILLTOP_VAST_VIDEO_SRC);
+      }
+    };
+
+    if (document.readyState === 'complete') {
+      load();
+      return undefined;
+    }
+
+    window.addEventListener('load', load, { once: true });
+    return () => window.removeEventListener('load', load);
   }, []);
 
   return null;

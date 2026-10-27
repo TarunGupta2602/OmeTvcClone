@@ -2,16 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const BANNER_SRC =
-  '//unfortunateheart.com/b/XXV.sKddG/l/0lYqWScE/QeamZ9/u/ZsUJlmk/P_Tqcx1pNLTRQ_0uMbzOMCtHNiz-Ua1eNfD/QfzGNhwP';
+import { HILLTOP_MULTITAG_BANNER_SRC, injectHilltopAdScript } from '../../lib/hilltopAds';
 
 export default function HilltopAdsBanner300x250() {
   const [visible, setVisible] = useState(true);
   const loaded = useRef(false);
   const slotRef = useRef(null);
-
-  // Hide on mobile
-  if (typeof window !== 'undefined' && window.innerWidth < 768) return null;
 
   useEffect(() => {
     if (loaded.current) return;
@@ -21,19 +17,11 @@ export default function HilltopAdsBanner300x250() {
     const old = document.querySelector('script[data-htads="banner-300x250"]');
     if (old) old.remove();
 
-    const s = document.createElement('script');
-    s.settings = {};
-    s.src = BANNER_SRC;
-    s.async = true;
-    s.referrerPolicy = 'no-referrer-when-downgrade';
-    s.setAttribute('data-htads', 'banner-300x250');
-
-    // Inject script inside the slot div
-    if (slotRef.current) {
-      slotRef.current.appendChild(s);
-    } else {
-      document.body.appendChild(s);
-    }
+    injectHilltopAdScript(
+      'banner-300x250',
+      HILLTOP_MULTITAG_BANNER_SRC,
+      slotRef.current || document.body,
+    );
   }, []);
 
   if (!visible) return null;

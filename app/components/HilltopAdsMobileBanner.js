@@ -1,43 +1,29 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { HILLTOP_MULTITAG_MOBILE_BANNER_SRC, injectHilltopAdScript } from '../../lib/hilltopAds';
 
-const MOBILE_BANNER_SRC =
-  '//unfortunateheart.com/brXxV.sRdTGXli0AYeWFco/_e/mv9runZeUClrkIPCT/cb1QN/T/Q_0UMAjxEGtpNfzhUo1ZNDDHQdygN/Qt';
-
-export default function HilltopAdsMobileBanner() {
+export default function HilltopAdsMobileBanner({ placement = 'default' }) {
   const [visible, setVisible] = useState(true);
   const loaded = useRef(false);
   const slotRef = useRef(null);
+  const scriptKey = `multitag-banner-mobile-${placement}`;
 
   useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
 
-    // Remove old script if exists
-    const old = document.querySelector('script[data-htads="mobile-banner"]');
-    if (old) old.remove();
-
-    const s = document.createElement('script');
-    s.settings = {};
-    s.src = MOBILE_BANNER_SRC;
-    s.async = true;
-    s.referrerPolicy = 'no-referrer-when-downgrade';
-    s.setAttribute('data-htads', 'mobile-banner');
-
-    // Inject script inside the slot div
-    if (slotRef.current) {
-      slotRef.current.appendChild(s);
-    } else {
-      document.body.appendChild(s);
-    }
-  }, []);
+    injectHilltopAdScript(
+      scriptKey,
+      HILLTOP_MULTITAG_MOBILE_BANNER_SRC,
+      slotRef.current || document.body,
+    );
+  }, [scriptKey]);
 
   if (!visible) return null;
 
   return (
     <div
-      className="md:hidden"
       style={{
         width: '100%',
         background: '#0a0a0a',
@@ -52,8 +38,8 @@ export default function HilltopAdsMobileBanner() {
       }}
       aria-label="Advertisement"
     >
-      {/* Close button */}
       <button
+        type="button"
         onClick={() => setVisible(false)}
         style={{
           position: 'absolute',
@@ -73,7 +59,6 @@ export default function HilltopAdsMobileBanner() {
         ✕
       </button>
 
-      {/* Small "Ad" label */}
       <span
         style={{
           position: 'absolute',
@@ -88,7 +73,6 @@ export default function HilltopAdsMobileBanner() {
         Ad
       </span>
 
-      {/* Banner slot - centered */}
       <div
         ref={slotRef}
         style={{
