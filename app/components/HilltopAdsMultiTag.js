@@ -32,6 +32,9 @@ export default function HilltopAdsMultiTag() {
       // Skip video-slider on mobile
       if (key === 'video-slider' && window.innerWidth < 768) return;
 
+      // Only load banner-300x100-mobile on mobile
+      if (key === 'banner-300x100-mobile' && window.innerWidth >= 768) return;
+
       if (document.querySelector(`script[data-htads="${key}"]`)) return;
 
       const s = document.createElement('script');
