@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import HilltopAdsBanner300x250 from './HilltopAdsBanner300x250';
-import HilltopAdsTopBanner from './HilltopAdsTopBanner';
 
 function TableOfContents({ headings, activeId, className = '' }) {
   if (!headings?.length) return null;
@@ -83,15 +81,6 @@ export default function BlogPostContent({ content, headings, tagLinks, tags }) {
         )}
 
         <div className="blog-prose" dangerouslySetInnerHTML={{ __html: content }} />
-
-        {/* Ad after blog content */}
-        <div className="my-8 flex justify-center">
-          <HilltopAdsTopBanner />
-        </div>
-
-        <div className="my-8 flex justify-center">
-          <HilltopAdsBanner300x250 />
-        </div>
 
         {topicLinks.length > 0 && (
           <footer className="mt-12 pt-8 border-t border-slate-200">

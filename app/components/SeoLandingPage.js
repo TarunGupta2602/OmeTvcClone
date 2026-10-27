@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from './HilltopAdsTopBanner';
-import HilltopAdsBanner300x250 from './HilltopAdsBanner300x250';
 import DirectAnswer from './DirectAnswer';
 import { HOW_TO_START } from '../../lib/geo';
 import { buildHowToSchema, stringifyJsonLd } from '../../lib/seo';
@@ -62,20 +61,12 @@ export default function SeoLandingPage({
               Safety guidelines
             </Link>
           </div>
-
-          {/* Top header ad below CTA buttons */}
-          <HilltopAdsTopBanner />
         </div>
       </section>
 
       <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto border-b border-teal-900/10">
         <DirectAnswer heading="Key facts" compact />
       </section>
-
-      {/* 300x250 banner ad */}
-      <div className="flex justify-center">
-        <HilltopAdsBanner300x250 />
-      </div>
 
       <section className="py-14 px-4 sm:px-6 max-w-3xl mx-auto space-y-10">
         <div className="space-y-2">
@@ -242,9 +233,6 @@ export default function SeoLandingPage({
         >
           Start matching now
         </Link>
-
-        {/* 300x250 banner ad */}
-        <HilltopAdsBanner300x250 />
       </section>
 
       {relatedLinks?.length > 0 && (

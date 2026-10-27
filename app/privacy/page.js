@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
-import HilltopAdsBanner300x250 from '../components/HilltopAdsBanner300x250';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
@@ -129,14 +128,6 @@ To exercise any privacy rights, contact privacy@parvah.online.`,
           <div className="text-xs text-slate-700 leading-relaxed">
             <strong className="font-extrabold text-slate-900">Key Takeaway:</strong> Parvah video and audio streams run directly peer-to-peer (P2P). Your video feed is transmitted directly to your chat partner's browser and is never recorded or stored on our servers.
           </div>
-        </div>
-
-        {/* Top banner ad */}
-        <HilltopAdsTopBanner />
-
-        {/* 300x250 banner ad */}
-        <div className="flex justify-center my-6">
-          <HilltopAdsBanner300x250 />
         </div>
 
         {/* Policy Sections */}
