@@ -6,6 +6,7 @@ import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import HilltopAdsPopunder from './HilltopAdsPopunder';
 import HilltopAdsMultiTag from './HilltopAdsMultiTag';
+import HilltopAdsStickyBanner from './HilltopAdsStickyBanner';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -23,6 +24,7 @@ function ShellInner({ children }) {
       <CookieConsent />
       <HilltopAdsPopunder />
       <HilltopAdsMultiTag />
+      {!hideChrome && <HilltopAdsStickyBanner />}
     </>
   );
 }
