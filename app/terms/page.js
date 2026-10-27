@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
+import AdsterraBanner300x250 from '../components/AdsterraBanner300x250';
 
 export const metadata = {
   title: {
@@ -115,6 +116,7 @@ export default function TermsPage() {
             Last Updated: <span className="text-slate-700 font-semibold">{lastUpdated}</span>
           </p>
         </div>
+        <AdsterraBanner300x250 />
 
         {/* Mandatory Age Notice */}
         <div className="p-5 rounded-2xl bg-rose-50 border border-rose-200 flex items-start gap-3 shadow-xs">

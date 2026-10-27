@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
+import AdsterraBanner300x250 from '../AdsterraBanner300x250';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -64,6 +65,8 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
             <span>{waitingCount > 0 ? 'Match now' : 'Start Matching'}</span>
           </button>
         </div>
+
+        <AdsterraBanner300x250 className="mt-6" />
 
         <InviteShare />
 

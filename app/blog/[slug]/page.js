@@ -6,6 +6,7 @@ import BlogPostContent from '../../components/BlogPostContent';
 import BlogPostFAQ from '../../components/BlogPostFAQ';
 import BlogAuthorCard from '../../components/BlogAuthorCard';
 import BlogPostCover from '../../components/BlogPostCover';
+import AdsterraBanner300x250 from '../../components/AdsterraBanner300x250';
 import { BlogCardThumbnail } from '../../components/BlogCard';
 import { SITE_NAME, SITE_URL } from '../../../lib/constants';
 import { blogPostsMap, blogPostsList } from '../../../data/blogPosts';
@@ -177,6 +178,7 @@ export default async function BlogPostPage({ params }) {
 
         <div className="max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14">
           <BlogPostContent content={post.content} headings={post.headings} tagLinks={post.tagLinks} />
+          <AdsterraBanner300x250 className="my-10" />
           <BlogPostFAQ faqs={post.faqs} />
         </div>
 

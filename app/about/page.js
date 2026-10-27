@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import DirectAnswer from '../components/DirectAnswer';
+import AdsterraBanner300x250 from '../components/AdsterraBanner300x250';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 import { WHAT_IS_PARVAH } from '../../lib/geo';
@@ -160,6 +161,7 @@ export default function AboutPage() {
       <section className="border-b border-slate-200/80 bg-white py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <DirectAnswer heading="Parvah at a glance" compact />
+          <AdsterraBanner300x250 className="mt-8" />
         </div>
       </section>
 

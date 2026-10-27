@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import AdsterraNativeBanner from './AdsterraNativeBanner';
+import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 const NAV_LINKS = [
   { href: '/', label: 'Live Video Chat' },
@@ -44,6 +46,9 @@ const LEGAL_LINKS = [
 export default function Footer() {
   return (
     <footer className="border-t border-teal-900/10 bg-[var(--page-bg)] text-slate-600 py-12 mt-auto">
+      <div className="px-4 sm:px-6 lg:px-8 mb-10">
+        <AdsterraNativeBanner />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10 border-b border-teal-900/10">
           <div className="space-y-4 col-span-2 md:col-span-1">
@@ -104,6 +109,14 @@ export default function Footer() {
             >
               Safety guidelines →
             </Link>
+            <a
+              href={ADSTERRA_SMARTLINK}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex pt-1 text-sm text-slate-400 hover:text-teal-800 transition-colors"
+            >
+              Offers
+            </a>
           </div>
         </div>
 

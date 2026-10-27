@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd, buildWebPageSchema } from '../../lib/seo';
+import AdsterraBanner300x250 from '../components/AdsterraBanner300x250';
 
 export const metadata = {
   title: 'Safety Guidelines for Adult Video Chat',
@@ -148,6 +149,7 @@ export default function SafetyPage() {
             Our mission is to create a safe, enjoyable, and respectful video chat environment for everyone on Parvah. Please review our mandatory safety rules below.
           </p>
         </div>
+        <AdsterraBanner300x250 />
 
         {/* 18+ Warning Banner */}
         <div className="p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-rose-50 via-white to-rose-50 border border-rose-200/60 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 shadow-xl shadow-rose-200/50 ring-1 ring-rose-200/50">
