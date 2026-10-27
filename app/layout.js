@@ -155,7 +155,7 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
-        <!-- Adsterra Social Bar -->
+
         <script data-cfasync="false" src="https://brijmohan.org/14/6a0eaf48169031e093bf3376bf7b0c33"></script>
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
