@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import HilltopAdsResponsiveBanner from './HilltopAdsResponsiveBanner';
 
 const NAV_LINKS = [
   { href: '/', label: 'Live Video Chat' },
@@ -45,11 +44,6 @@ const LEGAL_LINKS = [
 export default function Footer() {
   return (
     <footer className="border-t border-teal-900/10 bg-[var(--page-bg)] text-slate-600 py-12 mt-auto">
-      {/* Banner ad above footer */}
-      <div className="flex justify-center mb-8">
-        <HilltopAdsResponsiveBanner placement="footer" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10 border-b border-teal-900/10">
           <div className="space-y-4 col-span-2 md:col-span-1">

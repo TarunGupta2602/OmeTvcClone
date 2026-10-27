@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import HilltopAdsTopBanner from './HilltopAdsTopBanner';
 import DirectAnswer from './DirectAnswer';
 import { HOW_TO_START } from '../../lib/geo';
 import { buildHowToSchema, stringifyJsonLd } from '../../lib/seo';

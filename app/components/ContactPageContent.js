@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import HilltopAdsTopBanner from './HilltopAdsTopBanner';
 import { SUPPORT_EMAIL, SAFETY_EMAIL } from '../../lib/constants';
 import { CONTACT_FAQS } from '../../data/contactFaqs';
 

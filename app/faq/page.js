@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import FAQContent from './FAQContent';
 import DirectAnswer from '../components/DirectAnswer';
-import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 

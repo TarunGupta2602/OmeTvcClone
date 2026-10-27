@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
-import HilltopAdsResponsiveBanner from '../HilltopAdsResponsiveBanner';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -65,9 +64,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
             <span>{waitingCount > 0 ? 'Match now' : 'Start Matching'}</span>
           </button>
         </div>
-
-        {/* Banner ad below Start Matching button */}
-        <HilltopAdsResponsiveBanner placement="lobby" />
 
         <InviteShare />
 

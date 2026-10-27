@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
