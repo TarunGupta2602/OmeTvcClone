@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import HilltopAdsTopBanner from './HilltopAdsTopBanner';
+import HilltopAdsBanner300x250 from './HilltopAdsBanner300x250';
 import { SUPPORT_EMAIL, SAFETY_EMAIL } from '../../lib/constants';
 import { CONTACT_FAQS } from '../../data/contactFaqs';
 
@@ -53,6 +54,11 @@ export default function ContactPageContent() {
 
         {/* Top banner ad */}
         <HilltopAdsTopBanner />
+
+        {/* 300x250 banner ad */}
+        <div className="flex justify-center">
+          <HilltopAdsBanner300x250 />
+        </div>
 
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>

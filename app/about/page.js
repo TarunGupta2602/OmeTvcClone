@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DirectAnswer from '../components/DirectAnswer';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
+import HilltopAdsBanner300x250 from '../components/HilltopAdsBanner300x250';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 import { WHAT_IS_PARVAH } from '../../lib/geo';
@@ -166,6 +167,11 @@ export default function AboutPage() {
           <DirectAnswer heading="Parvah at a glance" compact />
         </div>
       </section>
+
+      {/* 300x250 banner ad */}
+      <div className="flex justify-center py-4">
+        <HilltopAdsBanner300x250 />
+      </div>
 
       {/* Stats Counter Bar */}
       <section className="border-b border-slate-200/80 bg-slate-100/50 py-10 px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
+import HilltopAdsBanner300x250 from '../components/HilltopAdsBanner300x250';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 
@@ -129,6 +130,11 @@ export default function TermsPage() {
 
         {/* Top banner ad */}
         <HilltopAdsTopBanner />
+
+        {/* 300x250 banner ad */}
+        <div className="flex justify-center my-6">
+          <HilltopAdsBanner300x250 />
+        </div>
 
         {/* Sections */}
         <div className="space-y-6">

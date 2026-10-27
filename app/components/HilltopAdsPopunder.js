@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const PROVIDER_SRC = '/hilltopads-pop.js';
 const LOAD_STORAGE_KEY = 'parvah:hilltopads-popunder-loaded-at';
-const LOAD_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24 hours
+const LOAD_INTERVAL_MS = 2 * 60 * 60 * 1000; // 2 hours
 
 export default function HilltopAdsPopunder() {
   useEffect(() => {

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HilltopAdsTopBanner from '../components/HilltopAdsTopBanner';
+import HilltopAdsBanner300x250 from '../components/HilltopAdsBanner300x250';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 import { stringifyJsonLd } from '../../lib/seo';
 import { blogPostsList } from '../../data/blogPosts';
@@ -95,6 +96,11 @@ export default function BlogPage() {
 
           {/* Top banner ad */}
           <HilltopAdsTopBanner />
+
+          {/* 300x250 banner ad */}
+          <div className="flex justify-center my-6">
+            <HilltopAdsBanner300x250 />
+          </div>
 
           <div className="flex flex-wrap justify-center gap-2">
             {BLOG_CATEGORIES.map((cat) => (
