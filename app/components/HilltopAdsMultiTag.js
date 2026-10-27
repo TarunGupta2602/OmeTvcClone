@@ -29,11 +29,18 @@ const AD_SCRIPTS = [
 export default function HilltopAdsMultiTag() {
   useEffect(() => {
     AD_SCRIPTS.forEach(({ key, src }) => {
-      // Skip video-slider on mobile
-      if (key === 'video-slider' && window.innerWidth < 768) return;
+      // On mobile: only load popunder and in-page push
+      const isMobile = window.innerWidth < 768;
 
-      // Only load banner-300x100-mobile on mobile
-      if (key === 'banner-300x100-mobile' && window.innerWidth >= 768) return;
+      if (isMobile) {
+        // Skip all banner ads on mobile
+        if (key === 'video-slider') return;
+        if (key === 'banner-300x250') return;
+        if (key === 'banner-300x100-mobile') return;
+      } else {
+        // On desktop: skip mobile banner
+        if (key === 'banner-300x100-mobile') return;
+      }
 
       if (document.querySelector(`script[data-htads="${key}"]`)) return;
 

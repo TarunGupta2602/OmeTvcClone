@@ -10,6 +10,9 @@ export default function HilltopAdsBanner300x250() {
   const loaded = useRef(false);
   const slotRef = useRef(null);
 
+  // Hide on mobile
+  if (typeof window !== 'undefined' && window.innerWidth < 768) return null;
+
   useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
