@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DirectAnswer from './DirectAnswer';
 import AdsterraBanner300x250 from './AdsterraBanner300x250';
+import AdsterraSmartlink from './AdsterraSmartlink';
 import { HOW_TO_START } from '../../lib/geo';
 import { buildHowToSchema, stringifyJsonLd } from '../../lib/seo';
 
@@ -67,6 +68,7 @@ export default function SeoLandingPage({
       <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto border-b border-teal-900/10">
         <DirectAnswer heading="Key facts" compact />
         <AdsterraBanner300x250 className="mt-8" />
+        <AdsterraSmartlink variant="prominent" className="mt-6 mx-auto" />
       </section>
 
       <section className="py-14 px-4 sm:px-6 max-w-3xl mx-auto space-y-10">
@@ -234,6 +236,7 @@ export default function SeoLandingPage({
         >
           Start matching now
         </Link>
+        <AdsterraSmartlink variant="prominent" className="mt-6 mx-auto" />
       </section>
 
       {relatedLinks?.length > 0 && (

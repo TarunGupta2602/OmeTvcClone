@@ -115,9 +115,9 @@ export default function Footer({ showNative = false }) {
               href={ADSTERRA_SMARTLINK}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex pt-1 text-sm text-slate-400 hover:text-teal-800 transition-colors"
+              className="inline-flex pt-1 text-sm font-semibold text-teal-700 hover:text-teal-800 transition-colors"
             >
-              Offers
+              🔥 Hot Offers
             </a>
           </div>
         </div>

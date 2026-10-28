@@ -68,7 +68,7 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
         </div>
 
         <AdsterraBanner300x250 className="mt-6" />
-        <AdsterraSmartlink className="mt-3" />
+        <AdsterraSmartlink variant="prominent" className="mt-3 mx-auto" />
 
         <InviteShare />
 
