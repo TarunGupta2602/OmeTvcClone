@@ -7,19 +7,19 @@ import {
 } from '../../lib/adsterra';
 
 export default function AdsterraNativeBanner({ className = '' }) {
-  const mounted = useRef(false);
+  const boxRef = useRef(null);
 
   useEffect(() => {
-    if (mounted.current) return;
-    if (document.querySelector(`script[src="${ADSTERRA_NATIVE_SRC}"]`)) return;
-    if (!document.getElementById(ADSTERRA_NATIVE_CONTAINER_ID)) return;
+    const box = boxRef.current;
+    if (!box) return;
+    if (document.querySelector(`script[data-adsterra="native"]`)) return;
 
-    mounted.current = true;
     const script = document.createElement('script');
     script.src = ADSTERRA_NATIVE_SRC;
     script.async = true;
     script.setAttribute('data-cfasync', 'false');
-    document.body.appendChild(script);
+    script.setAttribute('data-adsterra', 'native');
+    box.appendChild(script);
   }, []);
 
   return (
@@ -30,7 +30,7 @@ export default function AdsterraNativeBanner({ className = '' }) {
       <p className="mb-1 text-center text-[10px] uppercase tracking-wider text-slate-500">
         Advertisement
       </p>
-      <div id={ADSTERRA_NATIVE_CONTAINER_ID} />
+      <div ref={boxRef} id={ADSTERRA_NATIVE_CONTAINER_ID} />
     </aside>
   );
 }

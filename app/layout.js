@@ -156,6 +156,7 @@ export default function RootLayout({ children }) {
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
         <script data-cfasync="false" src="https://brijmohan.org/14/6a0eaf48169031e093bf3376bf7b0c33"></script>
+        <script data-cfasync="false" src="https://ahuramazda.org/1/e170b998166b796e22c620b5d3392de4"></script>
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--page-bg)] text-slate-900 selection:bg-teal-700 selection:text-white">
         <AppShell>{children}</AppShell>

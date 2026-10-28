@@ -1,39 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
 import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
-const STORAGE_KEY = 'parvah:adsterra-smartlink-at';
-const COOLDOWN_MS = 10 * 60 * 1000;
-
-function openSmartlink() {
-  let lastAt = 0;
-  try {
-    lastAt = Number(window.localStorage.getItem(STORAGE_KEY)) || 0;
-  } catch {
-    // private browsing
-  }
-
-  if (Date.now() - lastAt < COOLDOWN_MS) return;
-
-  try {
-    window.localStorage.setItem(STORAGE_KEY, String(Date.now()));
-  } catch {
-    // continue
-  }
-
-  window.open(ADSTERRA_SMARTLINK, '_blank', 'noopener,noreferrer');
-}
-
-export default function AdsterraSmartlink() {
-  useEffect(() => {
-    document.addEventListener('click', openSmartlink, { once: true, capture: true });
-    document.addEventListener('touchend', openSmartlink, { once: true, capture: true });
-    return () => {
-      document.removeEventListener('click', openSmartlink, { capture: true });
-      document.removeEventListener('touchend', openSmartlink, { capture: true });
-    };
-  }, []);
-
-  return null;
+export default function AdsterraSmartlink({ className = '' }) {
+  return (
+    <a
+      href={ADSTERRA_SMARTLINK}
+      target="_blank"
+      rel="noopener noreferrer sponsored"
+      className={`inline-flex min-h-12 w-full max-w-sm items-center justify-center rounded-xl bg-teal-800 px-5 text-sm font-bold text-white hover:bg-teal-900 ${className}`}
+    >
+      Featured offers
+    </a>
+  );
 }

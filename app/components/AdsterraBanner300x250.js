@@ -32,7 +32,7 @@ export default function AdsterraBanner300x250({ className = '' }) {
         height={250}
         scrolling="no"
         frameBorder="0"
-        sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-same-origin"
+        referrerPolicy="no-referrer-when-downgrade"
         className="h-[250px] w-[300px] max-w-full bg-transparent"
       />
     </aside>

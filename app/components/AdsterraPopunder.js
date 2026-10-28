@@ -9,9 +9,8 @@ export default function AdsterraPopunder() {
 
     const script = document.createElement('script');
     script.src = ADSTERRA_POPUNDER_SRC;
-    script.async = true;
     script.setAttribute('data-cfasync', 'false');
-    document.body.appendChild(script);
+    document.head.appendChild(script);
   }, []);
 
   return null;

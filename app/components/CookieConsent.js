@@ -31,7 +31,7 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[90] p-4 sm:p-6" role="presentation">
+    <div className="fixed bottom-0 left-0 right-0 z-40 p-4 sm:p-6" role="presentation">
       <div
         ref={panelRef}
         role="dialog"
