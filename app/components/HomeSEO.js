@@ -32,8 +32,8 @@ export default function HomeSEO() {
             </Link>
           </nav>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
-            Instant 1-on-1 webcam conversations with no account wall. This is 18+ adult video chat for
-            porn chat and nude chat searches too — random matching, adults only, skip anytime.
+            Instant 1-on-1 webcam conversations with no account wall. Random matching for adults 18+
+            only. Skip anytime.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
             <Link href="/ometv-alternative" className="hover:underline">

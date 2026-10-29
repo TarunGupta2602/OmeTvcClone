@@ -60,8 +60,6 @@ export const metadata = {
     'anonymous video chat',
     'adult video chat',
     '18+ adult video chat',
-    'porn chat',
-    'nude chat',
     'nsfw video chat',
     'free adult video chat',
     'meet people online',
