@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
-import AdsterraBanner300x250 from '../AdsterraBanner300x250';
 import AdsterraSmartlink from '../AdsterraSmartlink';
 
 function formatOnlineCount(count) {
@@ -67,8 +66,7 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           </button>
         </div>
 
-        <AdsterraBanner300x250 className="mt-6" />
-        <AdsterraSmartlink variant="prominent" className="mt-3 mx-auto" />
+        <AdsterraSmartlink variant="lobby" className="mt-4" />
 
         <InviteShare />
 

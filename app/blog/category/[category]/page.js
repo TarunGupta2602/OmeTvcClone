@@ -4,6 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../../../lib/constants';
 import { blogPostsList } from '../../../../data/blogPosts';
 import { BLOG_CATEGORIES, getCategoryBySlug, filterPostsByCategory } from '../../../../lib/blogCategories';
 import { BlogCard } from '../../../components/BlogCard';
+import AdsterraBanner300x250 from '../../../components/AdsterraBanner300x250';
 import { buildCollectionPageSchema, stringifyJsonLd } from '../../../../lib/seo';
 
 export function generateStaticParams() {
@@ -94,6 +95,7 @@ export default async function BlogCategoryPage({ params }) {
             ))}
           </div>
         )}
+        <AdsterraBanner300x250 />
       </div>
     </main>
     </>

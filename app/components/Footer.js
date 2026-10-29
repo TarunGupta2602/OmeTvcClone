@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import AdsterraNativeBanner from './AdsterraNativeBanner';
 import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 const NAV_LINKS = [
@@ -43,14 +42,9 @@ const LEGAL_LINKS = [
   { href: '/safety', label: 'Community Guidelines' },
 ];
 
-export default function Footer({ showNative = false }) {
+export default function Footer() {
   return (
     <footer className="border-t border-teal-900/10 bg-[var(--page-bg)] text-slate-600 py-12 mt-auto">
-      {showNative ? (
-        <div className="px-4 sm:px-6 lg:px-8 mb-10">
-          <AdsterraNativeBanner />
-        </div>
-      ) : null}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10 border-b border-teal-900/10">
           <div className="space-y-4 col-span-2 md:col-span-1">
@@ -117,7 +111,7 @@ export default function Footer({ showNative = false }) {
               rel="noopener noreferrer sponsored"
               className="inline-flex pt-1 text-sm font-semibold text-teal-700 hover:text-teal-800 transition-colors"
             >
-              🔥 Hot Offers
+              Sponsored offers
             </a>
           </div>
         </div>

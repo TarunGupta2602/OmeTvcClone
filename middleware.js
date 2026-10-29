@@ -12,7 +12,14 @@ export function middleware(request) {
   const hasJunk = JUNK_QUERY_KEYS.some((key) => url.searchParams.has(key));
 
   if (!hasJunk) {
-    return NextResponse.next();
+    const res = NextResponse.next();
+    // Let a CDN reuse the public HTML. Browser still revalidates.
+    // Titles, canonicals, and body copy are the same for every visitor.
+    res.headers.set(
+      'Cache-Control',
+      'public, max-age=0, s-maxage=600, stale-while-revalidate=86400',
+    );
+    return res;
   }
 
   const clean = url.clone();

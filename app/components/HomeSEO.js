@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import DirectAnswer from './DirectAnswer';
-import AdsterraNativeBanner from './AdsterraNativeBanner';
-import AdsterraSmartlink from './AdsterraSmartlink';
+import AdsterraBanner300x250 from './AdsterraBanner300x250';
 import { HOME_FAQS, HOW_TO_START_LINES } from '../../lib/geo';
 
 export default function HomeSEO() {
   return (
     <section className="border-t border-teal-900/10 bg-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto space-y-14">
-        <AdsterraNativeBanner />
-        <AdsterraSmartlink variant="prominent" className="mx-auto" />
+        <AdsterraBanner300x250 />
         <DirectAnswer />
 
         <div className="space-y-4 text-center sm:text-left">

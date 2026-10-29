@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useDialogA11y } from '../hooks/useDialogA11y';
 
-const STORAGE_KEY = 'parvah_age_confirmed';
+export const AGE_STORAGE_KEY = 'parvah_age_confirmed';
+const STORAGE_KEY = AGE_STORAGE_KEY;
 
 export function hasAgeConfirmation() {
   if (typeof window === 'undefined') return false;
@@ -57,6 +58,7 @@ export default function AgeGate({ onConfirm }) {
             type="button"
             onClick={() => {
               localStorage.setItem(STORAGE_KEY, 'true');
+              window.dispatchEvent(new Event('parvah-age-confirmed'));
               onConfirm();
             }}
             className="chat-cta-primary w-full py-3.5 rounded-xl font-black text-sm text-white"

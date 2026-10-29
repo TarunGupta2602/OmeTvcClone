@@ -45,8 +45,9 @@ export default function CookieConsent() {
             Cookies & analytics
           </p>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            We use essential cookies for age confirmation and chat preferences. Optional analytics
-            (Google Tag Manager) only loads if you accept. See our{' '}
+            We use essential cookies for age confirmation and chat preferences. Advertising
+            loads after you choose. Optional analytics (Google Tag Manager) only loads if you
+            accept. See our{' '}
             <Link href="/privacy" className="text-teal-700 font-semibold hover:underline">
               Privacy Policy
             </Link>

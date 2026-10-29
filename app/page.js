@@ -34,23 +34,7 @@ const baseMetadata = {
   },
 };
 
-export async function generateMetadata({ searchParams }) {
-  const params = await searchParams;
-  const hasJunkQuery = Boolean(params?.q || params?.search_term_string);
-
-  if (hasJunkQuery) {
-    return {
-      ...baseMetadata,
-      robots: {
-        index: false,
-        follow: false,
-        googleBot: { index: false, follow: false },
-      },
-    };
-  }
-
-  return baseMetadata;
-}
+export const metadata = baseMetadata;
 
 const homeJsonLd = buildJsonLdGraph([
   buildFaqSchema(HOME_FAQS),

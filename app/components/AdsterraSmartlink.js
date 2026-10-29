@@ -3,27 +3,23 @@
 import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 export default function AdsterraSmartlink({ className = '', variant = 'default' }) {
-  if (variant === 'prominent') {
-    return (
-      <a
-        href={ADSTERRA_SMARTLINK}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className={`inline-flex min-h-14 w-full max-w-md items-center justify-center rounded-2xl bg-gradient-to-r from-teal-600 to-teal-800 px-6 text-base font-bold text-white shadow-lg shadow-teal-900/20 hover:from-teal-700 hover:to-teal-900 hover:shadow-xl hover:shadow-teal-900/30 transition-all duration-200 animate-pulse ${className}`}
-      >
-        🔥 Hot Deals & Exclusive Offers
-      </a>
-    );
-  }
+  const dark = variant === 'lobby';
 
   return (
     <a
       href={ADSTERRA_SMARTLINK}
       target="_blank"
       rel="noopener noreferrer sponsored"
-      className={`inline-flex min-h-12 w-full max-w-sm items-center justify-center rounded-xl bg-teal-800 px-5 text-sm font-bold text-white hover:bg-teal-900 ${className}`}
+      className={`flex w-full max-w-md flex-col items-center gap-0.5 rounded-xl border px-5 py-3 text-center ${
+        dark
+          ? 'border-white/20 bg-white/5 text-white hover:bg-white/10'
+          : 'border-teal-900/15 bg-white text-teal-950 hover:border-teal-800'
+      } ${className}`}
     >
-      Featured offers
+      <span className={`text-[10px] font-semibold uppercase tracking-wider ${dark ? 'text-white/55' : 'text-slate-500'}`}>
+        Advertisement
+      </span>
+      <span className="text-sm font-bold">Hot deals and exclusive offers</span>
     </a>
   );
 }
