@@ -72,9 +72,9 @@ export default function AboutPage() {
       ),
     },
     {
-      title: 'Instant Smart Matchmaking',
+      title: 'Live queue matching',
       description:
-        'Our high-speed Socket.io signaling server matches you with available random users worldwide in milliseconds with zero wait times.',
+        'You join a live queue. A match starts when another adult is already waiting. If nobody is waiting, you stay in line until the next person taps Start.',
       icon: (
         <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -233,7 +233,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-extrabold text-slate-900 text-base">Click "Start Match"</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Our WebRTC signaling server finds an available random partner and connects your video feed instantly.
+                Tap Start Matching. Video connects when another adult is waiting in the queue.
               </p>
             </div>
 

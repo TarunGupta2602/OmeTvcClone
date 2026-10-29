@@ -5,18 +5,13 @@ import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
 import AdsterraSmartlink from '../AdsterraSmartlink';
 
-function formatOnlineCount(count) {
-  if (typeof count !== 'number' || count < 1) return null;
-  return count.toLocaleString();
-}
-
 export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, onStart }) {
-  const formattedCount = formatOnlineCount(onlineCount);
+  const othersOnline = typeof onlineCount === 'number' ? Math.max(onlineCount - 1, 0) : 0;
   const statusLabel = !isConnected
     ? 'Connecting…'
-    : formattedCount
-      ? `${formattedCount} online`
-      : 'People online now';
+    : othersOnline > 0
+      ? `${othersOnline.toLocaleString()} online`
+      : 'Waiting for someone to join';
 
   return (
     <section className="chat-lobby">
@@ -32,10 +27,10 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
           {statusLabel}
         </div>
 
-        <h1 className="chat-lobby-title">
+        <p className="chat-lobby-title">
           Parvah
           <span className="chat-lobby-title-glow"> — random video chat, no signup.</span>
-        </h1>
+        </p>
 
         <nav className="chat-lobby-query-links" aria-label="Related chats">
           <Link href="/video-chat-with-strangers">Video chat with strangers</Link>

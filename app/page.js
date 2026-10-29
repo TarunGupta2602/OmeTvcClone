@@ -50,6 +50,7 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(homeJsonLd) }} />
+      <h1 className="sr-only">Parvah — random video chat, no signup.</h1>
       <HomePageClient />
       <HomeCrawlLinks />
     </>

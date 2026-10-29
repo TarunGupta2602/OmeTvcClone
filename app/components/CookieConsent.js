@@ -28,10 +28,19 @@ export default function CookieConsent() {
     }
   }, []);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    if (visible) root.dataset.cookieBanner = 'open';
+    else delete root.dataset.cookieBanner;
+    return () => {
+      delete root.dataset.cookieBanner;
+    };
+  }, [visible]);
+
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 p-4 sm:p-6" role="presentation">
+    <div className="cookie-banner" role="presentation">
       <div
         ref={panelRef}
         role="dialog"
@@ -44,7 +53,7 @@ export default function CookieConsent() {
           <p id="cookie-consent-title" className="text-sm font-bold text-slate-900">
             Cookies & analytics
           </p>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p className="cookie-banner-copy text-xs sm:text-sm text-slate-600 leading-relaxed">
             We use essential cookies for age confirmation and chat preferences. Advertising
             loads after you choose. Optional analytics (Google Tag Manager) only loads if you
             accept. See our{' '}

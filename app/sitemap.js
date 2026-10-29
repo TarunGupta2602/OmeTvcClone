@@ -12,8 +12,11 @@ const HARDCODED_LANDING_SLUGS = new Set([
   'hot-video-chat',
 ]);
 
+const CONTENT_UPDATED = '2026-10-06';
+const HOME_AND_ABOUT_UPDATED = '2026-10-29';
+
 const staticRoutes = [
-  { path: '', changeFrequency: 'daily', priority: 1 },
+  { path: '', changeFrequency: 'daily', priority: 1, lastModified: HOME_AND_ABOUT_UPDATED },
   { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.95 },
   { path: '/video-chat-with-strangers', changeFrequency: 'weekly', priority: 0.95 },
   { path: '/chat-with-girls', changeFrequency: 'weekly', priority: 0.94 },
@@ -37,7 +40,7 @@ const staticRoutes = [
   })),
   { path: '/chatroulette-alternative', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/emerald-chat-alternative', changeFrequency: 'weekly', priority: 0.85 },
-  { path: '/about', changeFrequency: 'monthly', priority: 0.3 },
+  { path: '/about', changeFrequency: 'monthly', priority: 0.3, lastModified: HOME_AND_ABOUT_UPDATED },
   { path: '/safety', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/faq', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/contact', changeFrequency: 'monthly', priority: 0.3 },
@@ -47,20 +50,18 @@ const staticRoutes = [
 ];
 
 export default function sitemap() {
-  const now = new Date();
-
   // No image: entries — OG/social preview URLs were producing GSC sitemap
   // warnings (~28). Google still discovers OG images from page metadata.
-  const pages = staticRoutes.map(({ path, changeFrequency, priority }) => ({
+  const pages = staticRoutes.map(({ path, changeFrequency, priority, lastModified }) => ({
     url: `${SITE_URL}${path}`,
-    lastModified: now,
+    lastModified: lastModified || CONTENT_UPDATED,
     changeFrequency,
     priority,
   }));
 
   const categories = BLOG_CATEGORIES.map((cat) => ({
     url: `${SITE_URL}/blog/category/${cat.slug}`,
-    lastModified: now,
+    lastModified: CONTENT_UPDATED,
     changeFrequency: 'weekly',
     priority: 0.65,
   }));
