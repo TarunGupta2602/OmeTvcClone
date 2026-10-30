@@ -7,10 +7,10 @@ import { WHAT_IS_PARVAH } from '../../lib/geo';
 
 export const metadata = {
   title: {
-    absolute: 'About Us — Mission, Matching & Safety',
+    absolute: 'About Parvah — Free Random Video Chat',
   },
   description:
-    'How our free browser random video chat works for adults 18+: peer-to-peer WebRTC matching, privacy model, and the safety tools we ship (skip, report, age gate).',
+    'Parvah is free random video chat for adults 18+. No signup and no app. How matching, privacy, and safety tools work.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
@@ -19,18 +19,18 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'About Us — Mission, Matching & Safety',
-    description: 'How free random video chat matching works: WebRTC privacy, no signup, and safety tools for adults 18+.',
+    title: 'About Parvah — Free Random Video Chat',
+    description: 'Parvah is free random video chat for adults 18+. No signup and no app. How matching, privacy, and safety tools work.',
     url: `${SITE_URL}/about`,
     siteName: 'Parvah',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About us — matching and safety' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Parvah — free random video chat' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us — Mission, Matching & Safety',
-    description: 'How free random video chat matching works: WebRTC privacy, no signup, and safety tools for adults 18+.',
+    title: 'About Parvah — Free Random Video Chat',
+    description: 'Parvah is free random video chat for adults 18+. No signup and no app. How matching, privacy, and safety tools work.',
     images: ['/og-image.jpg'],
   },
 };
@@ -38,8 +38,8 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Us — Mission, Matching & Safety',
-  description: 'How free browser stranger video chat works for adults 18+ with WebRTC and safety tools.',
+  name: 'About Parvah — Free Random Video Chat',
+  description: 'Parvah is free random video chat for adults 18+. No signup and no app. How matching, privacy, and safety tools work.',
   url: `${SITE_URL}/about`,
   publisher: {
     '@type': 'Organization',
@@ -127,7 +127,7 @@ export default function AboutPage() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900">
-            About Us
+            About Parvah
           </h1>
 
           <p className="direct-answer text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
