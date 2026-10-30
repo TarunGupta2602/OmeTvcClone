@@ -127,21 +127,7 @@ export default function OmegleAlternativePage() {
             links: [
               { href: '/', label: 'Start matching now' },
               { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
-              { href: '/omegle-alternative-india', label: 'Omegle free video call India' },
               { href: '/random-video-chat', label: 'Random video chat' },
-            ],
-          },
-          {
-            title: 'Omegle alternative by country',
-            paragraphs: [
-              'Search demand splits by country. If you want the same free browser chat with local tips for mobile networks and peak hours, open the page for your region.',
-              'Matching stays global and random on every page — country pages explain how to start, not a fake local-only filter.',
-            ],
-            links: [
-              { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
-              { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
-              { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
-              { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
             ],
           },
           {
@@ -176,14 +162,10 @@ export default function OmegleAlternativePage() {
           { href: '/blog/omegle-adult-free-alternative', label: 'adult omegle' },
           { href: '/adult-video-chat', label: 'nsfw video chat' },
           { href: '/random-video-chat', label: 'random video chat' },
-          { href: '/omegle-alternative-usa', label: 'omegle alternative usa' },
         ]}
         faqs={faqs}
         relatedLinks={[
           { href: '/', label: 'Start free chat' },
-          { href: '/omegle-alternative-india', label: 'Omegle free video call' },
-          { href: '/omegle-alternative-usa', label: 'Omegle Alternative USA' },
-          { href: '/omegle-alternative-uk', label: 'Omegle Alternative UK' },
           { href: '/adult-video-chat', label: 'Adult Video Chat' },
           { href: '/random-video-chat', label: 'Random Video Chat' },
           { href: '/ometv-alternative', label: 'OmeTV Alternative' },

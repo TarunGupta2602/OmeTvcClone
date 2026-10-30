@@ -186,7 +186,7 @@ export const socialBlogPostsMap = {
     content: `
       <h2>Introduction</h2>
       <p>Omegle is gone, and in India the replacement people actually want is simple: a free video call with a stranger, on the phone, without another app. An Omegle alternative India search should land on a browser chat — not a Play Store download, not a login wall, and not a cam site pretending to be random.</p>
-      <p>Parvah is that browser chat. Adults 18+ only. You open Chrome, allow the camera, and match 1-on-1. The full page for this is <a href="/omegle-alternative-india">Omegle alternative India</a>.</p>
+      <p>Parvah is that browser chat. Adults 18+ only. You open Chrome, allow the camera, and match 1-on-1. The full page for this is <a href="/omegle-alternative">Omegle alternative India</a>.</p>
       <h2>What replaced the Omegle habit</h2>
       <p>The old habit was: open site, see a stranger, skip if it is wrong. That habit still works. What changed is the junk around it. Many “Omegle India” results are APKs, signup funnels, or pages that promise girls on demand. A random queue cannot promise gender. Anyone who does is selling something else.</p>
       <p>Parvah keeps the original loop:</p>

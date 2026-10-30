@@ -18,14 +18,8 @@ export default function HomeSEO() {
             Free random video chat — no signup
           </h2>
           <nav className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 text-sm font-semibold text-teal-800" aria-label="Related chats">
-            <Link href="/omegle-alternative-usa" className="hover:underline">
-              Omegle alternative USA
-            </Link>
-            <Link href="/omegle-alternative-uk" className="hover:underline">
-              Omegle alternative UK
-            </Link>
-            <Link href="/omegle-alternative-canada" className="hover:underline">
-              Omegle alternative Canada
+            <Link href="/omegle-alternative" className="hover:underline">
+              Omegle alternative
             </Link>
             <Link href="/video-chat-with-strangers" className="hover:underline">
               Video chat with strangers
@@ -47,18 +41,6 @@ export default function HomeSEO() {
             </Link>
             <Link href="/random-video-chat" className="hover:underline">
               Random webcam chat online free
-            </Link>
-            <Link href="/omegle-alternative-india" className="hover:underline">
-              Omegle alternative India
-            </Link>
-            <Link href="/omegle-alternative-usa" className="hover:underline">
-              Omegle alternative USA
-            </Link>
-            <Link href="/omegle-alternative-uk" className="hover:underline">
-              Omegle alternative UK
-            </Link>
-            <Link href="/omegle-alternative-canada" className="hover:underline">
-              Omegle alternative Canada
             </Link>
             <Link href="/random-video-chat" className="hover:underline">
               Random video chat

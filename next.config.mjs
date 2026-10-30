@@ -17,6 +17,26 @@ const nextConfig = {
         destination: '/blog/omegle-alternatives-why-parvah-is-better',
         permanent: true,
       },
+      {
+        source: '/omegle-alternative-india',
+        destination: '/omegle-alternative',
+        statusCode: 301,
+      },
+      {
+        source: '/omegle-alternative-usa',
+        destination: '/omegle-alternative',
+        statusCode: 301,
+      },
+      {
+        source: '/omegle-alternative-uk',
+        destination: '/omegle-alternative',
+        statusCode: 301,
+      },
+      {
+        source: '/omegle-alternative-canada',
+        destination: '/omegle-alternative',
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

@@ -1168,14 +1168,14 @@ export const gscBlogPostsMap = {
         <li>Strict 18+ age gate</li>
         <li>Skip and report on every chat</li>
       </ul>
-      <p>Peak hours often line up with US nights across Eastern, Central, Mountain, and Pacific time. Start here: <a href="/omegle-alternative-usa">Omegle alternative USA</a> or go straight to <a href="/">parvah.online</a>.</p>
+      <p>Peak hours often line up with US nights across Eastern, Central, Mountain, and Pacific time. Start here: <a href="/omegle-alternative">Omegle alternative USA</a> or go straight to <a href="/">parvah.online</a>.</p>
 
       <h2>Omegle alternative UK</h2>
       <p>UK searches like <strong>Omegle alternative UK</strong> and <strong>talk to strangers online</strong> mean the same thing: free stranger video chat after work, on home Wi‑Fi or mobile data, without another dating profile.</p>
-      <p>Parvah works in Chrome and Safari for users in England, Scotland, Wales, and Northern Ireland. The queue is worldwide — not UK-only. Details: <a href="/omegle-alternative-uk">Omegle alternative UK</a>.</p>
+      <p>Parvah works in Chrome and Safari for users in England, Scotland, Wales, and Northern Ireland. The queue is worldwide — not UK-only. Details: <a href="/omegle-alternative">Omegle alternative UK</a>.</p>
 
       <h2>Omegle alternative Canada</h2>
-      <p>Canadian evenings often overlap busy North American chat hours. If you searched from Canada for a free Omegle-style site, use <a href="/omegle-alternative-canada">Omegle alternative Canada</a> — same free matching, no signup, 18+ only.</p>
+      <p>Canadian evenings often overlap busy North American chat hours. If you searched from Canada for a free Omegle-style site, use <a href="/omegle-alternative">Omegle alternative Canada</a> — same free matching, no signup, 18+ only.</p>
 
       <h2>How to start (under one minute)</h2>
       <ol>
@@ -1306,7 +1306,7 @@ export const gscBlogPostsMap = {
       <p>More detail: <a href="/adult-video-chat">adult video chat</a> and <a href="/blog/adult-omegle-free-no-signup">adult Omegle free, no signup</a>.</p>
 
       <h2>USA, UK, and Canada</h2>
-      <p>Adult Omegle-style searches are common in the <a href="/omegle-alternative-usa">USA</a>, <a href="/omegle-alternative-uk">UK</a>, and <a href="/omegle-alternative-canada">Canada</a>. Matching is worldwide. Local evenings often feel busier. Full geo guide: <a href="/blog/omegle-alternative-usa-uk-canada">Omegle alternative USA, UK &amp; Canada</a>.</p>
+      <p>Adult Omegle-style searches are common in the <a href="/omegle-alternative">USA</a>, <a href="/omegle-alternative">UK</a>, and <a href="/omegle-alternative">Canada</a>. Matching is worldwide. Local evenings often feel busier. Full geo guide: <a href="/blog/omegle-alternative-usa-uk-canada">Omegle alternative USA, UK &amp; Canada</a>.</p>
 
       <h2>How to start</h2>
       <ol>
@@ -1352,13 +1352,13 @@ export const gscBlogPostsMap = {
       <p>Parvah is that queue: confirm 18+, allow camera, match. See also <a href="/adult-video-chat">adult video chat</a> and <a href="/">start free chat</a>.</p>
 
       <h2>Adult video chat in the USA</h2>
-      <p>US evenings (EST to PST) are peak hours for many adults. You do not get a USA-only filter. You get a global adult queue that often feels busier when America is awake. Landing page: <a href="/omegle-alternative-usa">Omegle alternative USA</a>.</p>
+      <p>US evenings (EST to PST) are peak hours for many adults. You do not get a USA-only filter. You get a global adult queue that often feels busier when America is awake. Landing page: <a href="/omegle-alternative">Omegle alternative USA</a>.</p>
 
       <h2>Adult video chat in the UK</h2>
-      <p>After work in the UK, free browser chat beats another app install. Use Chrome or Safari, confirm 18+, and start. Guide: <a href="/omegle-alternative-uk">Omegle alternative UK</a>.</p>
+      <p>After work in the UK, free browser chat beats another app install. Use Chrome or Safari, confirm 18+, and start. Guide: <a href="/omegle-alternative">Omegle alternative UK</a>.</p>
 
       <h2>Adult video chat in Canada</h2>
-      <p>Canadian nights often overlap US traffic. Same free rules — no signup, adults only. Guide: <a href="/omegle-alternative-canada">Omegle alternative Canada</a>.</p>
+      <p>Canadian nights often overlap US traffic. Same free rules — no signup, adults only. Guide: <a href="/omegle-alternative">Omegle alternative Canada</a>.</p>
 
       <h2>What free adult video chat includes (and does not)</h2>
       <ul>
@@ -1414,7 +1414,7 @@ export const gscBlogPostsMap = {
         <li>Honest about random gender and vibe</li>
         <li>Report and skip always available</li>
       </ul>
-      <p>Geo pages: <a href="/omegle-alternative-usa">USA</a> · <a href="/omegle-alternative-uk">UK</a> · <a href="/omegle-alternative-canada">Canada</a>. NSFW wording: <a href="/blog/omegle-nsfw-18-plus">Omegle NSFW / 18+</a>.</p>
+      <p>The queue is worldwide, including the USA, UK, and Canada. Start on the <a href="/omegle-alternative">Omegle alternative</a>. NSFW wording: <a href="/blog/omegle-nsfw-18-plus">Omegle NSFW / 18+</a>.</p>
 
       <h2>How a session works</h2>
       <ol>

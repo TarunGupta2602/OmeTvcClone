@@ -35,8 +35,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
         <nav className="chat-lobby-query-links" aria-label="Related chats">
           <Link href="/video-chat-with-strangers">Video chat with strangers</Link>
           <Link href="/omegle-alternative">Omegle alternative</Link>
-          <Link href="/omegle-alternative-usa">USA</Link>
-          <Link href="/omegle-alternative-uk">UK</Link>
         </nav>
 
         <p className="chat-lobby-sub chat-lobby-sub-desktop">
