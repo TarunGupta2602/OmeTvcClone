@@ -174,11 +174,11 @@ export default async function BlogPostPage({ params }) {
             readTime={post.readTime}
             alt={post.imageAlt}
           />
+          <AdsterraBanner300x250 className="mt-8" />
         </div>
 
         <div className="max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14">
           <BlogPostContent content={post.content} headings={post.headings} tagLinks={post.tagLinks} />
-          <AdsterraBanner300x250 className="my-10" />
           <BlogPostFAQ faqs={post.faqs} />
         </div>
 

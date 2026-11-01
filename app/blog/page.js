@@ -117,6 +117,8 @@ export default function BlogPage() {
             ))}
           </div>
 
+          <AdsterraBanner300x250 />
+
           <div className="p-8 rounded-2xl bg-indigo-600 text-white text-center">
             <h2 className="text-2xl font-bold mb-3">Ready to Start Chatting?</h2>
             <Link

@@ -20,13 +20,8 @@ export default function AdsterraPopunder() {
       document.body.appendChild(script);
     };
 
-    if ('requestIdleCallback' in window) {
-      const id = window.requestIdleCallback(inject, { timeout: 2500 });
-      return () => window.cancelIdleCallback(id);
-    }
-
-    const timer = window.setTimeout(inject, 1500);
-    return () => window.clearTimeout(timer);
+    // Load immediately for better ad fill rate
+    inject();
   }, [allowed]);
 
   return null;

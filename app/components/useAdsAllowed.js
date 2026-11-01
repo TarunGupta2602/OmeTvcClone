@@ -8,7 +8,30 @@ import { AGE_STORAGE_KEY } from './AgeGate';
 function readAllowed(pathname) {
   const consent = localStorage.getItem(CONSENT_STORAGE_KEY);
   const choseCookies = consent === 'accepted' || consent === 'declined';
-  const ageOk = pathname !== '/' || localStorage.getItem(AGE_STORAGE_KEY) === 'true';
+  
+  // Allow ads on blog and SEO pages without age confirmation
+  // Only require age gate on homepage (/)
+  const isBlogOrSeoPage = pathname.startsWith('/blog') || 
+                          pathname !== '/' && pathname.startsWith('/omegle') ||
+                          pathname !== '/' && pathname.startsWith('/adult') ||
+                          pathname !== '/' && pathname.startsWith('/random') ||
+                          pathname !== '/' && pathname.startsWith('/video-chat') ||
+                          pathname !== '/' && pathname.startsWith('/chat') ||
+                          pathname !== '/' && pathname.startsWith('/anonymous') ||
+                          pathname !== '/' && pathname.startsWith('/free') ||
+                          pathname !== '/' && pathname.startsWith('/meet') ||
+                          pathname !== '/' && pathname.startsWith('/talk') ||
+                          pathname !== '/' && pathname.startsWith('/live') ||
+                          pathname !== '/' && pathname.startsWith('/hot') ||
+                          pathname !== '/' && pathname.startsWith('/flirty') ||
+                          pathname !== '/' && pathname.startsWith('/dirty') ||
+                          pathname !== '/' && pathname.startsWith('/late') ||
+                          pathname !== '/' && pathname.startsWith('/girls') ||
+                          pathname !== '/' && pathname.startsWith('/emerald') ||
+                          pathname !== '/' && pathname.startsWith('/chatroulette') ||
+                          pathname !== '/' && pathname.startsWith('/ometv');
+  
+  const ageOk = isBlogOrSeoPage || localStorage.getItem(AGE_STORAGE_KEY) === 'true';
   return choseCookies && ageOk;
 }
 

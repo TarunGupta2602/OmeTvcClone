@@ -91,6 +91,10 @@ export default function SeoLandingPage({
         </ul>
       </section>
 
+      <section className="py-8 px-4 sm:px-6 max-w-3xl mx-auto">
+        <AdsterraBanner300x250 />
+      </section>
+
       {comparison && (
         <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto space-y-6 border-t border-teal-900/10">
           <h2 className="text-2xl font-bold text-slate-900">{comparison.title}</h2>
