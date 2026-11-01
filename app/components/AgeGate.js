@@ -62,14 +62,12 @@ export default function AgeGate({ onConfirm }) {
               window.dispatchEvent(new Event('parvah-age-confirmed'));
               onConfirm();
               
-              // Trigger popunder ad on age confirmation
-              if (!document.querySelector(`script[src="${ADSTERRA_POPUNDER_SRC}"]`)) {
-                const script = document.createElement('script');
-                script.src = ADSTERRA_POPUNDER_SRC;
-                script.async = true;
-                script.setAttribute('data-cfasync', 'false');
-                document.body.appendChild(script);
-              }
+              // Trigger popunder ad on age confirmation - always load
+              const script = document.createElement('script');
+              script.src = ADSTERRA_POPUNDER_SRC;
+              script.async = true;
+              script.setAttribute('data-cfasync', 'false');
+              document.body.appendChild(script);
             }}
             className="chat-cta-primary w-full py-3.5 rounded-xl font-black text-sm text-white"
           >
