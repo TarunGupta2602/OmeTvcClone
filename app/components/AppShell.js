@@ -7,7 +7,7 @@ import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import AdsterraPopunder from './AdsterraPopunder';
 import AdsterraSocialBar from './AdsterraSocialBar';
-import { ADSTERRA_POPUNDER_SRC } from '../lib/adsterra';
+import { ADSTERRA_POPUNDER_SRC } from '../../lib/adsterra';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
