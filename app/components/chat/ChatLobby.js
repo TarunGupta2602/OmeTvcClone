@@ -5,6 +5,7 @@ import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
 import AdsterraSmartlink from '../AdsterraSmartlink';
 import AdsterraBanner300x250 from '../AdsterraBanner300x250';
+import { ADSTERRA_POPUNDER_SRC } from '../../lib/adsterra';
 
 export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, onStart }) {
   const othersOnline = typeof onlineCount === 'number' ? Math.max(onlineCount - 1, 0) : 0;
@@ -13,6 +14,18 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
     : othersOnline > 0
       ? `${othersOnline.toLocaleString()} online`
       : 'Waiting for someone to join';
+
+  const handleStart = () => {
+    // Trigger popunder on start matching click
+    if (!document.querySelector(`script[src="${ADSTERRA_POPUNDER_SRC}"]`)) {
+      const script = document.createElement('script');
+      script.src = ADSTERRA_POPUNDER_SRC;
+      script.async = true;
+      script.setAttribute('data-cfasync', 'false');
+      document.body.appendChild(script);
+    }
+    onStart();
+  };
 
   return (
     <section className="chat-lobby">
@@ -54,7 +67,7 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
 
         <div className="chat-lobby-cta-wrap">
           <div className="chat-lobby-cta-ring" aria-hidden="true" />
-          <button type="button" onClick={onStart} disabled={!isConnected} className="chat-lobby-cta">
+          <button type="button" onClick={handleStart} disabled={!isConnected} className="chat-lobby-cta">
             <IconCamera className="w-6 h-6" />
             <span>{waitingCount > 0 ? 'Match now' : 'Start Matching'}</span>
           </button>
