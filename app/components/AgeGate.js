@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useDialogA11y } from '../hooks/useDialogA11y';
-import { ADSTERRA_POPUNDER_SRC } from '../../lib/adsterra';
+import { ADSTERRA_POPUNDER_SRC, ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 export const AGE_STORAGE_KEY = 'parvah_age_confirmed';
 const STORAGE_KEY = AGE_STORAGE_KEY;
@@ -62,12 +62,12 @@ export default function AgeGate({ onConfirm }) {
               window.dispatchEvent(new Event('parvah-age-confirmed'));
               onConfirm();
               
-              // Trigger popunder ad on age confirmation - always load
-              const script = document.createElement('script');
-              script.src = ADSTERRA_POPUNDER_SRC;
-              script.async = true;
-              script.setAttribute('data-cfasync', 'false');
-              document.body.appendChild(script);
+              // Trigger popunder ad on age confirmation - open smartlink in new window
+              const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+              if (popunder) {
+                popunder.blur();
+                window.focus();
+              }
             }}
             className="chat-cta-primary w-full py-3.5 rounded-xl font-black text-sm text-white"
           >

@@ -7,7 +7,7 @@ import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import AdsterraPopunder from './AdsterraPopunder';
 import AdsterraSocialBar from './AdsterraSocialBar';
-import { ADSTERRA_POPUNDER_SRC } from '../../lib/adsterra';
+import { ADSTERRA_POPUNDER_SRC, ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -20,17 +20,11 @@ function ShellInner({ children }) {
   // Global first-click listener to trigger popunder
   useEffect(() => {
     const handleClick = () => {
-      if (document.querySelector(`script[src="${ADSTERRA_POPUNDER_SRC}"]`)) {
-        document.removeEventListener('click', handleClick);
-        return;
+      const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+      if (popunder) {
+        popunder.blur();
+        window.focus();
       }
-      
-      const script = document.createElement('script');
-      script.src = ADSTERRA_POPUNDER_SRC;
-      script.async = true;
-      script.setAttribute('data-cfasync', 'false');
-      document.body.appendChild(script);
-      
       document.removeEventListener('click', handleClick);
     };
 

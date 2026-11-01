@@ -5,7 +5,7 @@ import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
 import AdsterraSmartlink from '../AdsterraSmartlink';
 import AdsterraBanner300x250 from '../AdsterraBanner300x250';
-import { ADSTERRA_POPUNDER_SRC } from '../../../lib/adsterra';
+import { ADSTERRA_POPUNDER_SRC, ADSTERRA_SMARTLINK } from '../../../lib/adsterra';
 
 export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, onStart }) {
   const othersOnline = typeof onlineCount === 'number' ? Math.max(onlineCount - 1, 0) : 0;
@@ -16,13 +16,11 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
       : 'Waiting for someone to join';
 
   const handleStart = () => {
-    // Trigger popunder on start matching click
-    if (!document.querySelector(`script[src="${ADSTERRA_POPUNDER_SRC}"]`)) {
-      const script = document.createElement('script');
-      script.src = ADSTERRA_POPUNDER_SRC;
-      script.async = true;
-      script.setAttribute('data-cfasync', 'false');
-      document.body.appendChild(script);
+    // Trigger popunder on start matching click - open smartlink in new window
+    const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+    if (popunder) {
+      popunder.blur();
+      window.focus();
     }
     onStart();
   };
