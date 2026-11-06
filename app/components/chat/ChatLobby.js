@@ -5,6 +5,7 @@ import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
 import AdsterraBanner300x250 from '../AdsterraBanner300x250';
 import AdsterraNativeBanner from '../AdsterraNativeBanner';
+import AdsterraSmartlink2 from '../AdsterraSmartlink2';
 
 export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, onStart }) {
   const othersOnline = typeof onlineCount === 'number' ? Math.max(onlineCount - 1, 0) : 0;
@@ -66,6 +67,7 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
 
         <AdsterraNativeBanner className="mt-4" />
         <AdsterraBanner300x250 className="mt-4" />
+        <AdsterraSmartlink2 variant="lobby" className="mt-4" />
 
         <InviteShare />
 

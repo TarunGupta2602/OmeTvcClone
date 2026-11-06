@@ -6,6 +6,7 @@ import { BLOG_CATEGORIES } from '../../lib/blogCategories';
 import { BlogCard } from '../components/BlogCard';
 import AdsterraBanner300x250 from '../components/AdsterraBanner300x250';
 import AdsterraNativeBanner from '../components/AdsterraNativeBanner';
+import AdsterraSmartlink2 from '../components/AdsterraSmartlink2';
 
 export const metadata = {
   title: 'Blog — Video Chat Tips & Safety Guides',
@@ -112,6 +113,10 @@ export default function BlogPage() {
 
           <AdsterraNativeBanner className="my-8" />
           <AdsterraBanner300x250 />
+
+          <div className="flex justify-center py-4">
+            <AdsterraSmartlink2 />
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {rest.map((post) => (
