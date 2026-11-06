@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useDialogA11y } from '../hooks/useDialogA11y';
+import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 export const AGE_STORAGE_KEY = 'parvah_age_confirmed';
 const STORAGE_KEY = AGE_STORAGE_KEY;
@@ -60,6 +61,21 @@ export default function AgeGate({ onConfirm }) {
               localStorage.setItem(STORAGE_KEY, 'true');
               window.dispatchEvent(new Event('parvah-age-confirmed'));
               onConfirm();
+
+              // Trigger popunder on age confirmation (once per hour - not too forced)
+              const POPUNDER_KEY = 'parvah_popunder_last_trigger';
+              const ONE_HOUR_MS = 60 * 60 * 1000;
+              const lastTrigger = localStorage.getItem(POPUNDER_KEY);
+              const now = Date.now();
+
+              if (!lastTrigger || now - parseInt(lastTrigger) > ONE_HOUR_MS) {
+                const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+                if (popunder) {
+                  popunder.blur();
+                  window.focus();
+                  localStorage.setItem(POPUNDER_KEY, now.toString());
+                }
+              }
             }}
             className="chat-cta-primary w-full py-3.5 rounded-xl font-black text-sm text-white"
           >
