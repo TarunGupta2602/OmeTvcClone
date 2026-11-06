@@ -3,6 +3,7 @@
 import ChatLoader from './ChatLoader';
 import HomeSEO from './HomeSEO';
 import AdsterraBanner300x250 from './AdsterraBanner300x250';
+import AdsterraNativeBanner from './AdsterraNativeBanner';
 import { useChatLayout } from '../context/ChatLayoutContext';
 
 export default function HomePageClient() {
@@ -14,6 +15,7 @@ export default function HomePageClient() {
       {!chatMode && (
         <>
           <HomeSEO />
+          <AdsterraNativeBanner className="mt-6" />
           <div className="flex justify-center py-8">
             <AdsterraBanner300x250 />
           </div>

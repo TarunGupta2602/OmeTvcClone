@@ -10,14 +10,14 @@ export default function AdsterraPopunder() {
   useEffect(() => {
     if (!allowed) return;
 
-    // Check if popunder was triggered in the last hour (from AppShell)
+    // Check if popunder was triggered in the last 30 minutes (from AppShell)
     const POPUNDER_KEY = 'parvah_popunder_last_trigger';
-    const ONE_HOUR_MS = 60 * 60 * 1000;
+    const THIRTY_MINUTES_MS = 30 * 60 * 1000;
     const lastTrigger = localStorage.getItem(POPUNDER_KEY);
     const now = Date.now();
 
     // Skip script injection if popunder was triggered recently
-    if (lastTrigger && now - parseInt(lastTrigger) < ONE_HOUR_MS) {
+    if (lastTrigger && now - parseInt(lastTrigger) < THIRTY_MINUTES_MS) {
       return;
     }
 

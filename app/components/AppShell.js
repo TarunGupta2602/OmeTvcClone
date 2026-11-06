@@ -17,17 +17,17 @@ function ShellInner({ children }) {
   const hideChrome = isHome && chatMode;
   const hideFooter = isHome && chatMode;
 
-  // Global first-click listener to trigger popunder (once per hour max)
+  // Global first-click listener to trigger popunder (once per 30 minutes max)
   useEffect(() => {
     const POPUNDER_KEY = 'parvah_popunder_last_trigger';
-    const ONE_HOUR_MS = 60 * 60 * 1000;
+    const THIRTY_MINUTES_MS = 30 * 60 * 1000;
 
     const handleClick = () => {
       const lastTrigger = localStorage.getItem(POPUNDER_KEY);
       const now = Date.now();
 
-      // Only trigger if not triggered in the last hour
-      if (!lastTrigger || now - parseInt(lastTrigger) > ONE_HOUR_MS) {
+      // Only trigger if not triggered in the last 30 minutes
+      if (!lastTrigger || now - parseInt(lastTrigger) > THIRTY_MINUTES_MS) {
         const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
         if (popunder) {
           popunder.blur();

@@ -7,6 +7,7 @@ import BlogPostFAQ from '../../components/BlogPostFAQ';
 import BlogAuthorCard from '../../components/BlogAuthorCard';
 import BlogPostCover from '../../components/BlogPostCover';
 import AdsterraBanner300x250 from '../../components/AdsterraBanner300x250';
+import AdsterraNativeBanner from '../../components/AdsterraNativeBanner';
 import { BlogCardThumbnail } from '../../components/BlogCard';
 import { SITE_NAME, SITE_URL } from '../../../lib/constants';
 import { blogPostsMap, blogPostsList } from '../../../data/blogPosts';
@@ -174,6 +175,7 @@ export default async function BlogPostPage({ params }) {
             readTime={post.readTime}
             alt={post.imageAlt}
           />
+          <AdsterraNativeBanner className="mt-8" />
           <AdsterraBanner300x250 className="mt-8" />
         </div>
 

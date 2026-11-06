@@ -5,6 +5,7 @@ import { blogPostsList } from '../../data/blogPosts';
 import { BLOG_CATEGORIES } from '../../lib/blogCategories';
 import { BlogCard } from '../components/BlogCard';
 import AdsterraBanner300x250 from '../components/AdsterraBanner300x250';
+import AdsterraNativeBanner from '../components/AdsterraNativeBanner';
 
 export const metadata = {
   title: 'Blog — Video Chat Tips & Safety Guides',
@@ -109,6 +110,7 @@ export default function BlogPage() {
             <BlogCard key={post.slug} post={post} featured />
           ))}
 
+          <AdsterraNativeBanner className="my-8" />
           <AdsterraBanner300x250 />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
