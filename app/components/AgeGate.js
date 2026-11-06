@@ -62,19 +62,11 @@ export default function AgeGate({ onConfirm }) {
               window.dispatchEvent(new Event('parvah-age-confirmed'));
               onConfirm();
 
-              // Trigger popunder on age confirmation (once per 30 minutes - not too forced)
-              const POPUNDER_KEY = 'parvah_popunder_last_trigger';
-              const THIRTY_MINUTES_MS = 30 * 60 * 1000;
-              const lastTrigger = localStorage.getItem(POPUNDER_KEY);
-              const now = Date.now();
-
-              if (!lastTrigger || now - parseInt(lastTrigger) > THIRTY_MINUTES_MS) {
-                const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
-                if (popunder) {
-                  popunder.blur();
-                  window.focus();
-                  localStorage.setItem(POPUNDER_KEY, now.toString());
-                }
+              // Trigger popunder on age confirmation
+              const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+              if (popunder) {
+                popunder.blur();
+                window.focus();
               }
             }}
             className="chat-cta-primary w-full py-3.5 rounded-xl font-black text-sm text-white"
