@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import AdsterraNativeBanner from './AdsterraNativeBanner';
-import AdsterraSmartlink from './AdsterraSmartlink';
 import { useAdsAllowed } from './useAdsAllowed';
 
 function bannerHasCreative(iframe) {
@@ -74,7 +73,6 @@ export default function AdsterraBanner300x250({ className = '' }) {
           />
         </aside>
       )}
-      <AdsterraSmartlink />
     </div>
   );
 }
