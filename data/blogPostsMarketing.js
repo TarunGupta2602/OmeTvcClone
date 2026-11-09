@@ -6,7 +6,7 @@ export const marketingBlogPostsMap = {
     excerpt:
       'Want free video chat with girls online? Learn how random webcam matching works, what is realistic, and how to start safely as an adult 18+ with no signup.',
     date: '2026-08-16',
-    dateModified: '2026-11-05',
+    dateModified: '2026-11-09',
     category: 'Tips',
     author: 'Parvah Team',
     readTime: '9 min read',
@@ -51,7 +51,7 @@ export const marketingBlogPostsMap = {
     excerpt:
       'Practical guide to talk to strangers online using free random video chat — openers, safety, and how to keep conversations going without an app.',
     date: '2026-08-16',
-    dateModified: '2026-11-05',
+    dateModified: '2026-11-09',
     category: 'Tips',
     author: 'Parvah Team',
     readTime: '8 min read',
@@ -94,7 +94,7 @@ export const marketingBlogPostsMap = {
     excerpt:
       'Need an Omegle alternative with no signup in 2026? Compare what matters after Omegle shut down — free random video chat, browser access, and adult safety.',
     date: '2026-08-16',
-    dateModified: '2026-11-05',
+    dateModified: '2026-11-09',
     category: 'Comparison',
     author: 'Parvah Team',
     readTime: '9 min read',
@@ -132,7 +132,7 @@ export const marketingBlogPostsMap = {
     excerpt:
       'Complete guide to free random video chat with strangers — how matching works, mobile tips, safety, and how to start with no signup in your browser.',
     date: '2026-08-16',
-    dateModified: '2026-11-05',
+    dateModified: '2026-11-09',
     category: 'Tips',
     author: 'Parvah Team',
     readTime: '10 min read',
@@ -172,7 +172,7 @@ export const marketingBlogPostsMap = {
     excerpt:
       'Tips for hot video chat and flirty video chat with strangers — how to open, how to escalate politely, and how to stay safe on free adult webcam chat.',
     date: '2026-08-16',
-    dateModified: '2026-11-05',
+    dateModified: '2026-11-09',
     category: 'Tips',
     author: 'Parvah Team',
     readTime: '8 min read',

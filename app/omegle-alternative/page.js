@@ -32,7 +32,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is the best free Omegle alternative in 2026?',
-    a: 'Parvah is a free Omegle alternative. Omegle shut down in 2023. This page is random 1-on-1 video chat in the browser: no signup, no app, adults 18+ only, with Next to skip and Report for abuse.',
+    a: 'Parvah is a free Omegle alternative. Omegle shut down in 2023. This page is random 1-on-1 video chat in the browser: no signup, no app, adults 18+ only, with Next to skip and Report for abuse. In 2026, WebRTC and browser capabilities make random video chat smoother than ever.',
   },
   {
     q: 'Is this adult Omegle?',

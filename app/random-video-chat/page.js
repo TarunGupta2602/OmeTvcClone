@@ -39,7 +39,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is free random video chat?',
-    a: 'Free random video chat pairs you with another adult for a live 1-on-1 webcam conversation. Matching is automatic — no friend requests, profiles, credits, or signup.',
+    a: 'Free random video chat pairs you with another adult for a live 1-on-1 webcam conversation. Matching is automatic — no friend requests, profiles, credits, or signup. In 2026, with AI bots becoming more common, authentic human connection through live video is increasingly valuable.',
   },
   {
     q: 'Is random video chat free?',
