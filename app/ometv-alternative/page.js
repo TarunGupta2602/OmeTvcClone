@@ -32,15 +32,15 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is the best free OmeTV alternative in 2026?',
-    a: 'A strong OmeTV alternative offers free random video chat in the browser, no forced app download, no signup, skip/report tools, and an 18+ age gate. This site is built for that checklist.',
+    a: 'A strong OmeTV alternative offers free random video chat in the browser, no forced app download, no signup, skip/report tools, and an 18+ age gate. In 2026, with AI bots becoming more common, authentic human connection through live video is increasingly valuable. This site is built for that checklist.',
   },
   {
     q: 'How is this different from OmeTV?',
-    a: 'Parvah runs entirely in your browser with WebRTC peer-to-peer video — no app install. Confirm you are 18+, allow camera, and start matching. Text chat works alongside video.',
+    a: 'Parvah runs entirely in your browser with WebRTC peer-to-peer video — no app install. Confirm you are 18+, allow camera, and start matching. Text chat works alongside video. In 2026, WebRTC and browser capabilities make random video chat smoother than ever.',
   },
   {
     q: 'Is there a free OmeTV alternative with no signup?',
-    a: 'Yes. This OmeTV alternative free option has no email wall and no credits for basic matching. Pass the 18+ age gate and tap Start Matching.',
+    a: 'Yes. This OmeTV alternative free option has no email wall and no credits for basic matching. Pass the 18+ age gate and tap Start Matching. No account means no data collection — just live human connection.',
   },
   {
     q: 'Can I use an Ome TV alternative in the browser?',
@@ -48,15 +48,15 @@ const faqs = [
   },
   {
     q: 'Does this OmeTV alternative work on mobile Chrome?',
-    a: 'Yes. Use Chrome or another modern mobile browser. Allow camera and microphone, then tap Start Matching — useful if you do not want another chat app on a mid-range Android phone.',
+    a: 'Yes. Use Chrome or another modern mobile browser. Allow camera and microphone, then tap Start Matching — useful if you do not want another chat app on a mid-range Android phone. Mobile browsers in 2026 support full WebRTC capabilities.',
   },
   {
     q: 'Do I need to sign up?',
-    a: 'No. No email, no credits for basic matching. Pass the age gate and start.',
+    a: 'No. No email, no credits for basic matching. Pass the age gate and start. In 2026, users prefer frictionless access to real human connections over profile-based apps.',
   },
   {
     q: 'Is flirty or adult chat allowed?',
-    a: 'Consenting adults 18+ can have flirty or intimate conversations. Non-consensual behavior, minors, and illegal content are banned — use Skip or Report anytime.',
+    a: 'Consenting adults 18+ can have flirty or intimate conversations. Non-consensual behavior, minors, and illegal content are banned — use Skip or Report anytime. Authentic mutual consent is what makes these chats memorable in 2026.',
   },
 ];
 
