@@ -7,6 +7,7 @@ import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import AdsterraPopunder from './AdsterraPopunder';
 import AdsterraSocialBar from './AdsterraSocialBar';
+import AdsterraSmartlink2 from './AdsterraSmartlink2';
 import { ADSTERRA_POPUNDER_SRC, ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
@@ -47,6 +48,7 @@ function ShellInner({ children }) {
       <CookieConsent />
       <AdsterraPopunder />
       <AdsterraSocialBar />
+      <AdsterraSmartlink2 variant="global" />
     </>
   );
 }
