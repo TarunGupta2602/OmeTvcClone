@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 const NAV_LINKS = [
   { href: '/', label: 'Live Video Chat' },
@@ -101,6 +102,14 @@ export default function Footer() {
             >
               Safety guidelines →
             </Link>
+            <a
+              href={ADSTERRA_SMARTLINK}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex pt-1 text-sm font-semibold text-teal-700 hover:text-teal-800 transition-colors"
+            >
+              Sponsored offers
+            </a>
           </div>
         </div>
 

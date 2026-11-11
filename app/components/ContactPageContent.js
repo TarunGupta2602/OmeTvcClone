@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { SUPPORT_EMAIL, SAFETY_EMAIL } from '../../lib/constants';
 import { CONTACT_FAQS } from '../../data/contactFaqs';
+import AdsterraBanner300x250 from './AdsterraBanner300x250';
 
 export default function ContactPageContent() {
   return (
@@ -49,6 +50,8 @@ export default function ContactPageContent() {
             </a>
           </div>
         </div>
+
+        <AdsterraBanner300x250 />
 
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>
