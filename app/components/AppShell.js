@@ -17,10 +17,10 @@ function ShellInner({ children }) {
   const hideChrome = isHome && chatMode;
   const hideFooter = isHome && chatMode;
 
-  // Global click listener to trigger popunder (every 3 clicks)
+  // Global click listener to trigger popunder (every 5 clicks - reduced aggressiveness)
   useEffect(() => {
     let clickCount = 0;
-    const TRIGGER_EVERY = 3;
+    const TRIGGER_EVERY = 5;
 
     const handleClick = () => {
       clickCount++;
@@ -44,7 +44,7 @@ function ShellInner({ children }) {
       {!hideFooter && <Footer />}
       <CookieConsent />
       <AdsterraPopunder />
-      <AdsterraSocialBar />
+      {/* <AdsterraSocialBar /> */}
     </>
   );
 }

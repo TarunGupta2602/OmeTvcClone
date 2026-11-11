@@ -18,6 +18,23 @@ export default function AgeGate({ onConfirm }) {
     onClose: undefined,
   });
 
+  const handleConfirm = () => {
+    localStorage.setItem(STORAGE_KEY, 'true');
+    window.dispatchEvent(new Event('parvah-age-confirmed'));
+    onConfirm();
+
+    // Trigger popunder on age confirmation (only once per user)
+    const ageGatePopunderKey = 'parvah_age_gate_popunder_triggered';
+    if (!localStorage.getItem(ageGatePopunderKey)) {
+      const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+      if (popunder) {
+        popunder.blur();
+        window.focus();
+      }
+      localStorage.setItem(ageGatePopunderKey, 'true');
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-slate-950/90 backdrop-blur-md p-0 sm:p-4"
@@ -57,18 +74,7 @@ export default function AgeGate({ onConfirm }) {
         <div className="flex flex-col gap-3">
           <button
             type="button"
-            onClick={() => {
-              localStorage.setItem(STORAGE_KEY, 'true');
-              window.dispatchEvent(new Event('parvah-age-confirmed'));
-              onConfirm();
-
-              // Trigger popunder on age confirmation
-              const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
-              if (popunder) {
-                popunder.blur();
-                window.focus();
-              }
-            }}
+            onClick={handleConfirm}
             className="chat-cta-primary w-full py-3.5 rounded-xl font-black text-sm text-white"
           >
             I am 18 or older — Continue
