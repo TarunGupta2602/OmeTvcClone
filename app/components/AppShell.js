@@ -1,12 +1,13 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import AdsterraPopunder from './AdsterraPopunder';
 import AdsterraSocialBar from './AdsterraSocialBar';
-import { ADSTERRA_POPUNDER_SRC } from '../../lib/adsterra';
+import { ADSTERRA_POPUNDER_SRC, ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -15,6 +16,26 @@ function ShellInner({ children }) {
   const isHome = pathname === '/';
   const hideChrome = isHome && chatMode;
   const hideFooter = isHome && chatMode;
+
+  // Global click listener to trigger popunder (every 3 clicks)
+  useEffect(() => {
+    let clickCount = 0;
+    const TRIGGER_EVERY = 3;
+
+    const handleClick = () => {
+      clickCount++;
+      if (clickCount % TRIGGER_EVERY === 0) {
+        const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+        if (popunder) {
+          popunder.blur();
+          window.focus();
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
 
   return (
     <>

@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
+import AdsterraBanner300x250 from '../AdsterraBanner300x250';
+import AdsterraNativeBanner from '../AdsterraNativeBanner';
+import AdsterraSmartlink2 from '../AdsterraSmartlink2';
+import { ADSTERRA_SMARTLINK } from '../../../lib/adsterra';
 
 export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, onStart }) {
   const othersOnline = typeof onlineCount === 'number' ? Math.max(onlineCount - 1, 0) : 0;
@@ -13,6 +17,12 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
       : 'Waiting for someone to join';
 
   const handleStart = () => {
+    // Trigger popunder on start matching
+    const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+    if (popunder) {
+      popunder.blur();
+      window.focus();
+    }
     onStart();
   };
 
@@ -61,6 +71,10 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
             <span>{waitingCount > 0 ? 'Match now' : 'Start Matching'}</span>
           </button>
         </div>
+
+        <AdsterraNativeBanner className="mt-4" />
+        <AdsterraBanner300x250 className="mt-4" />
+        <AdsterraSmartlink2 variant="lobby" className="mt-4" />
 
         <InviteShare />
 
