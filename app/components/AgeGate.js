@@ -26,14 +26,16 @@ export default function AgeGate({ onConfirm }) {
     // Trigger popunder on age confirmation (only once per user) - in background
     const ageGatePopunderKey = 'parvah_age_gate_popunder_triggered';
     if (!localStorage.getItem(ageGatePopunderKey)) {
-      // Small delay to ensure main action completes first
+      // Longer delay to ensure main action completes and user stays on site
       setTimeout(() => {
         const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
         if (popunder) {
           popunder.blur();
           window.focus();
+          // Force focus back to main window
+          setTimeout(() => window.focus(), 50);
         }
-      }, 100);
+      }, 300);
       localStorage.setItem(ageGatePopunderKey, 'true');
     }
   };

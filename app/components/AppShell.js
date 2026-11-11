@@ -29,6 +29,8 @@ function ShellInner({ children }) {
         if (popunder) {
           popunder.blur();
           window.focus();
+          // Force focus back to main window to ensure user stays on site
+          setTimeout(() => window.focus(), 50);
         }
       }
     };

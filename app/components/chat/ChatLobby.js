@@ -17,14 +17,16 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
     // First start the matching, then trigger popunder in background
     onStart();
     
-    // Small delay to ensure main action completes first
+    // Longer delay to ensure main action completes and user stays on site
     setTimeout(() => {
       const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
       if (popunder) {
         popunder.blur();
         window.focus();
+        // Force focus back to main window
+        setTimeout(() => window.focus(), 50);
       }
-    }, 100);
+    }, 300);
   };
 
   return (
