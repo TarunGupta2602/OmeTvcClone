@@ -44,7 +44,7 @@ function ShellInner({ children }) {
       {!hideFooter && <Footer />}
       <CookieConsent />
       <AdsterraPopunder />
-      <AdsterraSocialBar />
+      {/* <AdsterraSocialBar /> */}
     </>
   );
 }
