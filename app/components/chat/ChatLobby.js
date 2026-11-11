@@ -14,13 +14,17 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
       : 'Waiting for someone to join';
 
   const handleStart = () => {
-    // Trigger popunder on start matching
-    const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
-    if (popunder) {
-      popunder.blur();
-      window.focus();
-    }
+    // First start the matching, then trigger popunder in background
     onStart();
+    
+    // Small delay to ensure main action completes first
+    setTimeout(() => {
+      const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
+      if (popunder) {
+        popunder.blur();
+        window.focus();
+      }
+    }, 100);
   };
 
   return (
