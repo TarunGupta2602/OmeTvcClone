@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useDialogA11y } from '../hooks/useDialogA11y';
+import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 
 export const AGE_STORAGE_KEY = 'parvah_age_confirmed';
 const STORAGE_KEY = AGE_STORAGE_KEY;
@@ -21,6 +22,20 @@ export default function AgeGate({ onConfirm }) {
     localStorage.setItem(STORAGE_KEY, 'true');
     window.dispatchEvent(new Event('parvah-age-confirmed'));
     onConfirm();
+
+    // Trigger smartlink on age confirmation (only once per user) - in background
+    const ageGateSmartlinkKey = 'parvah_age_gate_smartlink_triggered';
+    if (!localStorage.getItem(ageGateSmartlinkKey)) {
+      setTimeout(() => {
+        const smartlink = window.open(ADSTERRA_SMARTLINK, '_blank');
+        if (smartlink) {
+          smartlink.blur();
+          window.focus();
+          setTimeout(() => window.focus(), 50);
+        }
+      }, 200);
+      localStorage.setItem(ageGateSmartlinkKey, 'true');
+    }
   };
 
   return (
