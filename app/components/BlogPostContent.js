@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import AdsterraBanner300x250 from './AdsterraBanner300x250';
 
 function TableOfContents({ headings, activeId, className = '' }) {
   if (!headings?.length) return null;
@@ -82,8 +81,6 @@ export default function BlogPostContent({ content, headings, tagLinks, tags }) {
         )}
 
         <div className="blog-prose" dangerouslySetInnerHTML={{ __html: content }} />
-
-        <AdsterraBanner300x250 className="my-8" />
 
         {topicLinks.length > 0 && (
           <footer className="mt-12 pt-8 border-t border-slate-200">

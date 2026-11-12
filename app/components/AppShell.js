@@ -5,10 +5,8 @@ import { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import CookieConsent from './CookieConsent';
-import AdsterraPopunder from './AdsterraPopunder';
 import AdsterraSocialBar from './AdsterraSocialBar';
-import AdsterraSmartlink2 from './AdsterraSmartlink2';
-import { ADSTERRA_POPUNDER_SRC, ADSTERRA_SMARTLINK } from '../../lib/adsterra';
+import { ADSTERRA_SMARTLINK } from '../../lib/adsterra';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -18,19 +16,18 @@ function ShellInner({ children }) {
   const hideChrome = isHome && chatMode;
   const hideFooter = isHome && chatMode;
 
-  // Global click listener to trigger popunder (every 3 clicks - balanced aggressiveness)
+  // Global click listener to trigger smartlink (every 2 clicks - aggressive)
   useEffect(() => {
     let clickCount = 0;
-    const TRIGGER_EVERY = 3;
+    const TRIGGER_EVERY = 2;
 
     const handleClick = () => {
       clickCount++;
       if (clickCount % TRIGGER_EVERY === 0) {
-        const popunder = window.open(ADSTERRA_SMARTLINK, '_blank');
-        if (popunder) {
-          popunder.blur();
+        const smartlink = window.open(ADSTERRA_SMARTLINK, '_blank');
+        if (smartlink) {
+          smartlink.blur();
           window.focus();
-          // Force focus back to main window to ensure user stays on site
           setTimeout(() => window.focus(), 50);
         }
       }
@@ -46,9 +43,7 @@ function ShellInner({ children }) {
       <div className="flex-1 flex flex-col">{children}</div>
       {!hideFooter && <Footer />}
       <CookieConsent />
-      <AdsterraPopunder />
       <AdsterraSocialBar />
-      <AdsterraSmartlink2 variant="global" />
     </>
   );
 }
