@@ -347,7 +347,7 @@ export const extraBlogPostsMap = {
     excerpt:
       'Fix blocked camera and mic permissions in Chrome, Firefox, Safari, and Edge so Parvah and other WebRTC video chats can go live.',
     date: '2026-08-06',
-    dateModified: '2026-08-11',
+    dateModified: '2026-11-12',
     category: 'Technical',
     author: 'Parvah Team',
     readTime: '8 min read',
@@ -356,29 +356,30 @@ export const extraBlogPostsMap = {
       'camera permission browser, allow webcam Chrome, Safari camera access, Parvah camera fix, WebRTC permissions',
     content: `
       <h2>Introduction</h2>
-      <p>Most “camera broken” reports on random video chat are permission problems. Browsers block media until you explicitly allow it on HTTPS sites. This guide shows how to reset camera and microphone access for Parvah across major browsers.</p>
+      <p>Most "camera broken" reports on random video chat are permission problems. Browsers block media until you explicitly allow it on HTTPS sites. In 2026, browser privacy controls have tightened significantly, making permission management more important than ever. This guide shows how to reset camera and microphone access for Parvah across major browsers.</p>
       <h2>Confirm the Basics</h2>
       <ul>
         <li>You are on https://parvah.online (not HTTP)</li>
         <li>No physical webcam shutter is closed</li>
         <li>Another app (Zoom, Teams, another tab) is not holding the camera exclusively</li>
         <li>Your OS privacy settings allow the browser to use the camera</li>
+        <li>In 2026, check for virtual camera software that might be hijacking the device</li>
       </ul>
       <h2>Chrome and Edge</h2>
       <p>Click the lock or tune icon in the address bar → Site settings → Camera and Microphone → Allow. Reload Parvah. If the site is blocked, change it to Allow and retry Start Match.</p>
-      <p>chrome://settings/content/camera lists every site. Remove Parvah from the block list if present.</p>
+      <p>chrome://settings/content/camera lists every site. Remove Parvah from the block list if present. In 2026, Chrome is more aggressive about prompting for permission—don't accidentally click "block" when you meant "allow."</p>
       <h2>Firefox</h2>
-      <p>Open the permissions panel via the shield/lock icon. Set Camera and Microphone to Allow. In about:preferences#privacy you can manage exceptions under Permissions.</p>
+      <p>Open the permissions panel via the shield/lock icon. Set Camera and Microphone to Allow. In about:preferences#privacy you can manage exceptions under Permissions. Firefox in 2026 has improved permission UI that makes it easier to see which sites have access.</p>
       <h2>Safari (macOS and iOS)</h2>
-      <p>Safari → Settings for parvah.online → enable Camera and Microphone. On iPhone, also check Settings → Safari → Camera and the Parvah site permissions after visiting the page. iOS is strict: permissions are per-site and easy to leave on Ask or Deny by accident.</p>
+      <p>Safari → Settings for parvah.online → enable Camera and Microphone. On iPhone, also check Settings → Safari → Camera and the Parvah site permissions after visiting the page. iOS is strict: permissions are per-site and easy to leave on Ask or Deny by accident. In 2026, Safari on macOS requires explicit permission for each site, even if you've allowed it before.</p>
       <h2>Windows and macOS OS Gates</h2>
-      <p>Windows: Settings → Privacy → Camera / Microphone → allow desktop apps and your browser. macOS: System Settings → Privacy & Security → Camera / Microphone → enable your browser. If the browser is toggled off at the OS layer, site-level Allow does nothing.</p>
+      <p>Windows: Settings → Privacy → Camera / Microphone → allow desktop apps and your browser. macOS: System Settings → Privacy & Security → Camera / Microphone → enable your browser. If the browser is toggled off at the OS layer, site-level Allow does nothing. In 2026, these privacy controls are more granular and sometimes block browser access by default.</p>
       <h2>After Permissions Are Fixed</h2>
-      <p>Reload Parvah, pass the age gate, and Start Match again. If video still fails while permissions look correct, continue with hardware checks from our webcam not working guide or WebRTC connection troubleshooting.</p>
+      <p>Reload Parvah, pass the age gate, and Start Match again. If video still fails while permissions look correct, continue with hardware checks from our webcam not working guide or WebRTC connection troubleshooting. Modern WebRTC in 2026 provides better error messages to help diagnose issues.</p>
       <h2>Security Note</h2>
-      <p>Only allow camera access on sites you trust. Revoke permissions for random domains you no longer use. Prefer no-signup video chat on reputable HTTPS products over APK sideloads that request invasive device access.</p>
+      <p>Only allow camera access on sites you trust. Revoke permissions for random domains you no longer use. Prefer no-signup video chat on reputable HTTPS products over APK sideloads that request invasive device access. In 2026, with more sophisticated phishing attempts, be extra cautious about which sites you grant camera access to.</p>
       <h2>Conclusion</h2>
-      <p>Allow camera and mic on Parvah, confirm OS toggles, close apps that monopolize the webcam, and reload. Most users are one permission reset away from working random video chat.</p>
+      <p>Allow camera and mic on Parvah, confirm OS toggles, close apps that monopolize the webcam, and reload. Most users are one permission reset away from working random video chat. WebRTC technology in 2026 is more reliable than ever—once permissions are sorted, video quality is excellent.</p>
     `,
   },
 };
