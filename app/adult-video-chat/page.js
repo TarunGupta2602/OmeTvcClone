@@ -30,7 +30,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'Is this video chat 18+?',
-    a: 'Yes. Video chat 18+ here is free random matching for adults. Confirm your age, then match 1-on-1. Nude chat is never guaranteed.',
+    a: 'Yes. Video chat 18+ here is free random matching for adults. Confirm your age, then match 1-on-1. Nude chat is never guaranteed. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
   },
   {
     q: 'What is adult video chat?',
@@ -102,7 +102,7 @@ export default function AdultVideoChatPage() {
             title: 'Adult random video chat built for chemistry',
             paragraphs: [
               'This is free 18+ adult video chat. People searching porn chat or nude chat land here for live 1-on-1 matching with another adult — not a porn archive and not a paid nude show. Open the site, confirm you are 18+, and match. Nude chat only happens if both adults want it.',
-              'Because matching is random, every session is different. Some chats stay playful. Some turn hot. Some become genuine conversations that feel like the start of something. Keep Next handy and protect your privacy.',
+              'Because matching is random, every session is different. Some chats stay playful. Some turn hot. Some become genuine conversations that feel like the start of something. Keep Next handy and protect your privacy. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
             ],
             bullets: [
               'Free adult webcam chat in the browser',

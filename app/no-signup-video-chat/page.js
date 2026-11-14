@@ -30,7 +30,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'Is this video chat 18+ with no sign up?',
-    a: 'Yes. Video chat no sign up here is free and 18+ only. Confirm your age, allow the camera, and start. No email and no account.',
+    a: 'Yes. Video chat no sign up here is free and 18+ only. Confirm your age, allow the camera, and start. No email and no account. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
   },
   {
     q: 'Can I video chat without creating an account?',

@@ -30,7 +30,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'What is a good Emerald Chat alternative?',
-    a: 'Parvah is a strong option if you want instant stranger video chat without creating an account, plus WebRTC peer-to-peer video and clear 18+ safety controls.',
+    a: 'Parvah is a strong option if you want instant stranger video chat without creating an account, plus WebRTC peer-to-peer video and clear 18+ safety controls. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
   },
   {
     q: 'Does Parvah require interests or filters to start?',
@@ -67,7 +67,7 @@ export default function EmeraldChatAlternativePage() {
           {
             title: 'If you want Emerald Chat energy without the account wall',
             paragraphs: [
-              'Some chat apps lean on interests, filters, or profiles. Parvah stays closer to classic random matching: confirm you are 18+, allow camera access, and Start Match. Use it as a free Emerald Chat alternative when you want speed over setup.',
+              'Some chat apps lean on interests, filters, or profiles. Parvah stays closer to classic random matching: confirm you are 18+, allow camera access, and Start Match. Use it as a free Emerald Chat alternative when you want speed over setup. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
             ],
             links: [
               { href: '/no-signup-video-chat', label: 'No signup video chat' },

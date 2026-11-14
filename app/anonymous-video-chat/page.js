@@ -30,7 +30,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'Is Parvah anonymous video chat?',
-    a: 'Parvah requires no registration, so you chat without a named public profile. You should still avoid sharing personal details on camera — anonymity depends on your habits too.',
+    a: 'Parvah requires no registration, so you chat without a named public profile. You should still avoid sharing personal details on camera — anonymity depends on your habits too. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
   },
   {
     q: 'Can I talk to strangers online without creating an account?',
@@ -75,7 +75,7 @@ export default function AnonymousVideoChatPage() {
           {
             title: 'Anonymous video chat vs private video chat',
             paragraphs: [
-              'Anonymous usually means no named profile. Private is about who can access or store your media. Parvah aims for both: no signup plus WebRTC peer-to-peer when networks allow — and you still decide what appears on camera.',
+              'Anonymous usually means no named profile. Private is about who can access or store your media. Parvah aims for both: no signup plus WebRTC peer-to-peer when networks allow — and you still decide what appears on camera. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
               'If you searched for video chat with strangers and want minimal identity friction, start here. If you need interest filters or dating profiles, a different product shape may fit better.',
             ],
             links: [
