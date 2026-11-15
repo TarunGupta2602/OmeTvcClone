@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Random Video Chat & Random Webcam Chat Online Free';
 const description =
-  'Random video chat and random webcam chat online free — instant 1-on-1 matching in your browser, no signup. Skip anytime. Adults 18+ only.';
+  'Free random video chat with strangers — instant 1-on-1 webcam matching, no signup required. Meet new people worldwide. Adults 18+ only. Start now.';
 
 export const metadata = {
   title: {
