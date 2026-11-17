@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'NSFW Video Chat & Adult Video Chat 18+ — Free, No Signup';
 const description =
-  'NSFW video chat and adult video chat 18+ with strangers — free, no signup. Intimate chat only when both adults want it. Random 1-on-1 matching, skip anytime.';
+  'Free NSFW video chat & adult video chat 18+ — instant random matching, no signup. Consenting adults only. Works on mobile. Start now.';
 
 export const metadata = {
   title: { absolute: title },

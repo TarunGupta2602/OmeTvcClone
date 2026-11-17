@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Omegle NSFW & Omegle 18+ — Free Adult Omegle, No Signup';
 const description =
-  'Omegle NSFW, NSFW Omegle, Omegle 18+, and adult Omegle — free with no signup. 18+ random video chat in the browser. No app. Matches are random — gender and nude chat are not guaranteed.';
+  'Free Omegle NSFW & Omegle 18+ alternative — no signup, instant random video chat. Adults 18+ only. Works on mobile. Start now.';
 
 export const metadata = {
   title: {
