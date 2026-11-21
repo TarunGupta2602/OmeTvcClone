@@ -2,7 +2,7 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Omegle NSFW & Omegle 18+ — Free Adult Omegle, No Signup';
+const title = 'Omegle NSFW & Omegle 18+ — Free Adult Omegle, No Signup (2026)';
 const description =
   'Free Omegle NSFW & Omegle 18+ alternative — no signup, instant random video chat. Adults 18+ only. Works on mobile. Start now.';
 

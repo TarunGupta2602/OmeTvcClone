@@ -2,7 +2,7 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'NSFW Video Chat & Adult Video Chat 18+ — Free, No Signup';
+const title = 'NSFW Video Chat & Adult Video Chat 18+ — Free, No Signup (2026)';
 const description =
   'Free NSFW video chat & adult video chat 18+ — instant random matching, no signup. Consenting adults only. Works on mobile. Start now.';
 

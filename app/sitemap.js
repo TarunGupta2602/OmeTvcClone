@@ -12,8 +12,8 @@ const HARDCODED_LANDING_SLUGS = new Set([
   'hot-video-chat',
 ]);
 
-const CONTENT_UPDATED = '2026-11-15';
-const HOME_AND_ABOUT_UPDATED = '2026-11-15';
+const CONTENT_UPDATED = '2026-11-21';
+const HOME_AND_ABOUT_UPDATED = '2026-11-21';
 
 const staticRoutes = [
   { path: '', changeFrequency: 'daily', priority: 1, lastModified: HOME_AND_ABOUT_UPDATED },
@@ -64,7 +64,7 @@ export default function sitemap() {
 
   // Blog copy was refreshed on this date. Keep lastmod at least this new
   // so Google recrawls posts that are already in the sitemap.
-  const copyUpdated = new Date('2026-11-15');
+  const copyUpdated = new Date('2026-11-21');
 
   const posts = blogPostsList.map((post) => {
     const full = blogPostsMap[post.slug];

@@ -2,7 +2,7 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Random Video Chat & Random Webcam Chat Online Free';
+const title = 'Random Video Chat & Random Webcam Chat Online Free (2026)';
 const description =
   'Free random video chat with strangers — instant 1-on-1 webcam matching, no signup required. Meet new people worldwide. Adults 18+ only. Start now.';
 
