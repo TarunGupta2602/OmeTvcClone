@@ -7,10 +7,10 @@ import { WHAT_IS_PARVAH } from '../../lib/geo';
 
 export const metadata = {
   title: {
-    absolute: 'About Parvah — Free Random Video Chat',
+    absolute: 'About Parvah — Free Random Video Chat (2026)',
   },
   description:
-    'Parvah is free random video chat for adults 18+. No signup and no app. How matching, privacy, and safety tools work.',
+    'Parvah is free random video chat for adults 18+. No signup and no app. How matching, privacy, and safety tools work. In 2026, with AI bots flooding chat platforms, authentic human connections are increasingly valuable.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },

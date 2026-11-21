@@ -2,7 +2,7 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Emerald Chat Alternative — Free Random Video Chat';
+const title = 'Emerald Chat Alternative — Free Random Video Chat (2026)';
 const description =
   'Looking for an Emerald Chat alternative? Parvah offers free 1-on-1 random video chat with no signup, WebRTC privacy, and built-in safety tools for adults 18+.';
 

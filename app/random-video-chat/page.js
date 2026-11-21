@@ -61,6 +61,10 @@ const faqs = [
     q: 'Do I need a webcam?',
     a: 'A working camera and microphone improve the experience. Allow permissions when your browser asks.',
   },
+  {
+    q: 'How is this different from AI chat bots?',
+    a: 'Parvah connects you with real humans, not AI. In 2026, many chat platforms are flooded with bots. Parvah focuses on authentic human connections through live video.',
+  },
 ];
 
 const jsonLd = buildJsonLdGraph([

@@ -56,6 +56,10 @@ const faqs = [
     q: 'How do I stay safe during adult chat?',
     a: 'Only chat with people who feel respectful, never share financial or address details, use Report for abuse, and leave any chat that is not consensual. Peer video streams are not recorded on our servers.',
   },
+  {
+    q: 'How is this different from AI chat bots?',
+    a: 'Parvah connects you with real humans, not AI. In 2026, many chat platforms are flooded with bots. Parvah focuses on authentic human connections through live video.',
+  },
 ];
 
 const jsonLd = buildJsonLdGraph([

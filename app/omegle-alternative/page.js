@@ -62,6 +62,10 @@ const faqs = [
     q: 'Is flirty or adult chat allowed?',
     a: 'Yes between consenting adults 18+. Non-consent, underage users, and illegal content are banned.',
   },
+  {
+    q: 'How is this different from AI chat bots?',
+    a: 'Parvah connects you with real humans, not AI. In 2026, many chat platforms are flooded with bots. Parvah focuses on authentic human connections through live video.',
+  },
 ];
 
 const jsonLd = buildJsonLdGraph([

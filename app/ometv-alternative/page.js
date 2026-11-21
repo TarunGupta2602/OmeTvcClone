@@ -58,6 +58,10 @@ const faqs = [
     q: 'Is flirty or adult chat allowed?',
     a: 'Consenting adults 18+ can have flirty or intimate conversations. Non-consensual behavior, minors, and illegal content are banned — use Skip or Report anytime. Authentic mutual consent is what makes these chats memorable in 2026.',
   },
+  {
+    q: 'How is this different from AI chat bots?',
+    a: 'Parvah connects you with real humans, not AI. In 2026, many chat platforms are flooded with bots. Parvah focuses on authentic human connections through live video.',
+  },
 ];
 
 const jsonLd = buildJsonLdGraph([
