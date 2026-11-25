@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { IconCamera } from './ChatIcons';
 import InviteShare from './InviteShare';
-import ExoClickBanner from '../ExoClickBanner';
 
 function formatOnlineCount(count) {
   if (typeof count !== 'number' || count < 1) return null;
@@ -65,8 +64,6 @@ export default function ChatLobby({ isConnected, onlineCount, waitingCount = 0, 
         </div>
 
         <InviteShare />
-
-        <ExoClickBanner className="chat-lobby-ad mt-2 mb-1" />
 
         <p className="chat-lobby-fine">18+ only · No signup · Skip anytime</p>
 

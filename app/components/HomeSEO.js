@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import DirectAnswer from './DirectAnswer';
-import ExoClickBanner from './ExoClickBanner';
 import { HOME_FAQS, HOW_TO_START_LINES } from '../../lib/geo';
 
 export default function HomeSEO() {
@@ -8,7 +7,6 @@ export default function HomeSEO() {
     <section className="border-t border-teal-900/10 bg-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto space-y-14">
         <DirectAnswer />
-        <ExoClickBanner />
 
         <div className="space-y-4 text-center sm:text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-800/80">
