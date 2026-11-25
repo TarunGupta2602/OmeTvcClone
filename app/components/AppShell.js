@@ -23,9 +23,9 @@ function ShellInner({ children }) {
       <div className="flex-1 flex flex-col">{children}</div>
       {!hideFooter && <Footer />}
       <CookieConsent />
-      <AdsterraPopunder />
+      {/* <AdsterraPopunder /> */}
       <AdsterraSmartlink />
-      <AdsterraSocialBar />
+      {/* <AdsterraSocialBar /> */}
       <AdsterraNativeBanner />
     </>
   );
