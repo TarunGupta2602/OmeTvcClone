@@ -67,7 +67,7 @@ export default function sitemap() {
 
   // Blog copy was refreshed on this date. Keep lastmod at least this new
   // so Google recrawls posts that are already in the sitemap.
-  const copyUpdated = new Date('2026-10-06');
+  const copyUpdated = new Date('2026-11-25');
 
   const posts = blogPostsList.map((post) => {
     const full = blogPostsMap[post.slug];
