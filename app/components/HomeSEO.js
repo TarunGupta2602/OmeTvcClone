@@ -8,7 +8,6 @@ export default function HomeSEO() {
     <section className="border-t border-teal-900/10 bg-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto space-y-14">
         <DirectAnswer />
-        <AdsterraNativeBanner />
 
         <div className="space-y-4 text-center sm:text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-800/80">
@@ -76,6 +75,10 @@ export default function HomeSEO() {
               Safety
             </Link>
           </div>
+        </div>
+
+        <div className="py-4">
+          <AdsterraNativeBanner />
         </div>
 
         <div className="space-y-10">

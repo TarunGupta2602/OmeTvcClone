@@ -46,7 +46,6 @@ export default function Footer() {
   return (
     <footer className="border-t border-teal-900/10 bg-[var(--page-bg)] text-slate-600 py-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdsterraNativeBanner className="mb-8" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10 border-b border-teal-900/10">
           <div className="space-y-4 col-span-2 md:col-span-1">
             <Link href="/" className="inline-flex items-baseline gap-2 group">
@@ -107,6 +106,10 @@ export default function Footer() {
               Safety guidelines →
             </Link>
           </div>
+        </div>
+
+        <div className="py-6">
+          <AdsterraNativeBanner />
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
