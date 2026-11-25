@@ -25,7 +25,7 @@ function ShellInner({ children }) {
       <CookieConsent />
       <AdsterraPopunder />
       <AdsterraSmartlink />
-      {/* <AdsterraSocialBar /> */}
+      <AdsterraSocialBar />
       {/* <AdsterraNativeBanner /> */}
     </>
   );
