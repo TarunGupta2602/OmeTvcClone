@@ -197,6 +197,15 @@ export const marketingBlogPostsMap = {
   },
 };
 
+const CONTENT_REFRESH_DATE = '2026-11-25';
+Object.entries(marketingBlogPostsMap).forEach(([, post]) => {
+  if (!post.dateModified || post.dateModified === post.date) {
+    post.dateModified =
+      post.date >= CONTENT_REFRESH_DATE ? post.date : CONTENT_REFRESH_DATE;
+  }
+  if (!post.imageAlt) post.imageAlt = `${post.title} | Parvah Blog Cover Image`;
+});
+
 export const marketingBlogPostsList = [
   {
     slug: 'free-video-chat-with-girls-online',

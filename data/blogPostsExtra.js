@@ -382,6 +382,15 @@ export const extraBlogPostsMap = {
   },
 };
 
+const CONTENT_REFRESH_DATE = '2026-11-25';
+Object.entries(extraBlogPostsMap).forEach(([, post]) => {
+  if (!post.dateModified || post.dateModified === post.date) {
+    post.dateModified =
+      post.date >= CONTENT_REFRESH_DATE ? post.date : CONTENT_REFRESH_DATE;
+  }
+  if (!post.imageAlt) post.imageAlt = `${post.title} | Parvah Blog Cover Image`;
+});
+
 export const extraBlogPostsList = [
   {
     slug: 'best-adult-video-chat-sites-2026',
