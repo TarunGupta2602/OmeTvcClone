@@ -1062,6 +1062,15 @@ export const blogPostsList = [
       <p>It depends on what you want. AI filters can help find specific types of connections, but pure randomness offers surprise and serendipity that algorithms cannot replicate.</p>
     `,
   },
+  {
+    slug: 'ai-in-random-video-chat-2026-trends',
+    title: 'AI in Random Video Chat: What to Expect in 2026',
+    excerpt: 'How AI is transforming random video chat in 2026 — from smart matching to safety moderation. What works, what doesn\'t, and why human connection still matters. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    date: '2026-11-25',
+    category: 'Technology',
+    readTime: '10 min read',
+    featured: true,
+  },
 ];
 
 // Per-post cover images are generated at /blog/[slug]/opengraph-image
