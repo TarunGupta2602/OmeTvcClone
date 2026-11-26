@@ -62,6 +62,22 @@ const faqs = [
     q: 'Is flirty or adult chat allowed?',
     a: 'Yes between consenting adults 18+. Non-consent, underage users, and illegal content are banned.',
   },
+  {
+    q: 'What if someone is inappropriate?',
+    a: 'Hit Next immediately. You do not owe anyone an explanation. If the behavior violates the rules, use the report button. The platform is for consenting adults only.',
+  },
+  {
+    q: 'Why do people skip me?',
+    a: 'Common reasons: bad lighting, poor audio, silence, or asking for socials too early. Check your camera angle, face a light source, and start with a friendly greeting.',
+  },
+  {
+    q: 'How do I improve my camera quality?',
+    a: 'Face a light source, position the camera at eye level, use a clean background, and ensure your internet connection is stable. Avoid backlighting from windows.',
+  },
+  {
+    q: 'What are the peak hours?',
+    a: 'Evenings in the US, UK, and India typically have more users. Weekends are generally busier than weekday afternoons.',
+  },
 ];
 
 const jsonLd = buildJsonLdGraph([
@@ -105,6 +121,7 @@ export default function OmegleAlternativePage() {
             paragraphs: [
               'Omegle adult, adult Omegle, 18+ Omegle, and Omegle 18+ are the same request: the old stranger-video button, only for adults. Omegle itself is gone. This page is the free replacement — open the browser, confirm you are 18+, and match. There is no app and no account.',
               'It is random. You will not get a guaranteed face, gender, or nude chat. Flirty talk is fine when both adults want it. Use Next when you do not, and Report for abuse. That is the whole product behind those searches.',
+              'Unlike Omegle, Parvah has modern safety features including report buttons, clear community guidelines, and WebRTC peer-to-peer video for better privacy. Mobile traffic from India, the US, and UK dominates — and our browser-based approach works on Chrome and Safari without Play Store installs.',
             ],
             links: [
               { href: '/', label: 'Start 18+ Omegle-style chat' },
@@ -117,6 +134,7 @@ export default function OmegleAlternativePage() {
             paragraphs: [
               'Omegle closed, but search demand never left. Queries like “Omegle alternative 2026”, “adult Omegle”, “omegle adults”, and “what is the new Omegle” all point to the same need: free random video chat with strangers without another heavy app.',
               'This Omegle alternative focuses on browser matching, no signup, and clear adult rules — so you can talk, flirt, or just meet someone new in seconds. Adults 18+ only.',
+              'Many people use random video chat for language practice, making friends, or casual conversation. The matching is random by design — you meet people you would never algorithmically select. That serendipity is why people keep coming back.',
             ],
             bullets: [
               'Free random video chat with strangers',
@@ -129,6 +147,36 @@ export default function OmegleAlternativePage() {
               { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
               { href: '/omegle-alternative-india', label: 'Omegle free video call India' },
               { href: '/random-video-chat', label: 'Random video chat' },
+            ],
+          },
+          {
+            title: 'What to say in your first Omegle-style chat',
+            paragraphs: [
+              'Most people skip within the first 10 seconds. A simple, friendly greeting makes a huge difference. Here are some openers that work:',
+            ],
+            bullets: [
+              '"Hey — where are you chatting from, roughly?"',
+              '"You caught me mid-evening. Good time or should I let you skip?"',
+              '"Quick check — is my audio coming through okay?"',
+              '"What brings you to random video chat today?"',
+              '"I\'m new here — how does this usually go for you?"',
+            ],
+            links: [
+              { href: '/blog/talk-to-strangers-video-chat', label: 'How to talk to strangers on video chat' },
+              { href: '/blog/language-practice-video-chat', label: 'Language practice on video chat' },
+            ],
+          },
+          {
+            title: 'Tips for better video chat matches',
+            paragraphs: [
+              'Small setup changes make a big difference in how long people stay:',
+            ],
+            bullets: [
+              'Lighting: Face a lamp or ring light. Avoid having a bright window behind you — it silhouettes your face.',
+              'Camera angle: Position the camera at eye level. Looking down at the camera is unflattering.',
+              'Background: A clean, neutral background works best. Cluttered rooms can be distracting.',
+              'Audio: Use headphones if possible. It reduces echo and makes conversation clearer.',
+              'Eye contact: Look at the camera, not yourself on the screen. It feels more natural to the other person.',
             ],
           },
           {
