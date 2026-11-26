@@ -19,6 +19,10 @@ export default function AdsterraNativeBanner() {
   }, []);
 
   return (
-    <div id="container-8e9118693176419a5825d08eeb5ea088" />
+    <div 
+      id="container-8e9118693176419a5825d08eeb5ea088"
+      className="w-full min-h-[250px] sm:min-h-[100px]"
+      style={{ contain: 'layout' }}
+    />
   );
 }

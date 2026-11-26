@@ -14,11 +14,15 @@ import {
 const outfit = Outfit({
   variable: '--font-outfit',
   subsets: ['latin'],
+  display: 'swap',
+  adjustFontFallback: 'Arial',
 });
 
 const sourceSerif = Source_Serif_4({
   variable: '--font-source-serif',
   subsets: ['latin'],
+  display: 'swap',
+  adjustFontFallback: 'Georgia',
 });
 
 export const viewport = {
