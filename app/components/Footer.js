@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import AdsterraNativeBanner from './AdsterraNativeBanner';
 
 const NAV_LINKS = [
   { href: '/', label: 'Live Video Chat' },
@@ -106,10 +105,6 @@ export default function Footer() {
               Safety guidelines →
             </Link>
           </div>
-        </div>
-
-        <div className="py-6">
-          <AdsterraNativeBanner />
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">

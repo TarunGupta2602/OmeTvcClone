@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import DirectAnswer from './DirectAnswer';
-import AdsterraNativeBanner from './AdsterraNativeBanner';
 import { HOME_FAQS, HOW_TO_START_LINES } from '../../lib/geo';
 
 export default function HomeSEO() {
@@ -75,10 +74,6 @@ export default function HomeSEO() {
               Safety
             </Link>
           </div>
-        </div>
-
-        <div className="py-4">
-          <AdsterraNativeBanner />
         </div>
 
         <div className="space-y-10">
