@@ -92,6 +92,9 @@ export default function HomeSEO() {
               </Link>{' '}
               page.
             </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Since Omegle shut down in 2023, people are looking for browser-based alternatives that work without app downloads. Parvah uses WebRTC peer-to-peer technology to route video directly between browsers when networks allow it, giving you lower latency and better privacy.
+            </p>
           </article>
 
           <article className="space-y-3">
@@ -108,6 +111,9 @@ export default function HomeSEO() {
                 video chat with strangers
               </Link>
               .
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Many people use random video chat for language practice, making friends, or just casual conversation. The matching is random by design — you meet people you would never algorithmically select. That serendipity is why people keep coming back.
             </p>
           </article>
 
@@ -129,6 +135,9 @@ export default function HomeSEO() {
               </Link>{' '}
               guide.
             </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Consent is everything. Flirty chat is allowed when mutual, but harassment, demands, or pressure get you reported. Use Next immediately if a chat feels wrong — you do not owe anyone an explanation.
+            </p>
           </article>
 
           <article className="space-y-3">
@@ -149,6 +158,44 @@ export default function HomeSEO() {
               </Link>
               .
             </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Unlike Omegle, Parvah has modern safety features including report buttons, clear community guidelines, and WebRTC peer-to-peer video for better privacy. Mobile traffic from India, the US, and UK dominates — and our browser-based approach works on Chrome and Safari without Play Store installs.
+            </p>
+          </article>
+
+          <article className="space-y-3">
+            <h2 className="text-2xl font-bold text-slate-900">What to say in your first video chat</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Most people skip within the first 10 seconds. A simple, friendly greeting makes a huge difference. Here are some openers that work:
+            </p>
+            <ul className="space-y-2 text-sm text-slate-600">
+              <li>“Hey — where are you chatting from, roughly?”</li>
+              <li>“You caught me mid-evening. Good time or should I let you skip?”</li>
+              <li>“Quick check — is my audio coming through okay?”</li>
+              <li>“What brings you to random video chat today?”</li>
+              <li>“I'm new here — how does this usually go for you?”</li>
+            </ul>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Skip the demand for socials, photos, or money. People who want a conversation will stay for a normal hello. For more conversation tips, check out our guide on{' '}
+              <Link href="/blog/talk-to-strangers-video-chat" className="font-semibold text-teal-800 hover:underline">
+                how to talk to strangers on video chat
+              </Link>
+              .
+            </p>
+          </article>
+
+          <article className="space-y-3">
+            <h2 className="text-2xl font-bold text-slate-900">Tips for better video chat matches</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Small setup changes make a big difference in how long people stay:
+            </p>
+            <ul className="space-y-2 text-sm text-slate-600">
+              <li><strong>Lighting:</strong> Face a lamp or ring light. Avoid having a bright window behind you — it silhouettes your face.</li>
+              <li><strong>Camera angle:</strong> Position the camera at eye level. Looking down at the camera is unflattering.</li>
+              <li><strong>Background:</strong> A clean, neutral background works best. Cluttered rooms can be distracting.</li>
+              <li><strong>Audio:</strong> Use headphones if possible. It reduces echo and makes conversation clearer.</li>
+              <li><strong>Eye contact:</strong> Look at the camera, not yourself on the screen. It feels more natural to the other person.</li>
+            </ul>
           </article>
         </div>
 
@@ -204,9 +251,9 @@ export default function HomeSEO() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-slate-900">Quick FAQ</h3>
-            <div className="space-y-5">
-              {HOME_FAQS.filter((faq) => faq.q !== 'What is Parvah?').map((faq) => (
+            <h3 className="text-lg font-bold text-slate-900">Frequently Asked Questions</h3>
+            <div className="space-y-4">
+              {HOME_FAQS.slice(1, 8).map((faq) => (
                 <div key={faq.q} className="space-y-1.5">
                   <p className="text-sm font-bold text-slate-900">{faq.q}</p>
                   <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
