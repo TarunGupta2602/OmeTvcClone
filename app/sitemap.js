@@ -10,6 +10,17 @@ const HARDCODED_LANDING_SLUGS = new Set([
   'talk-to-strangers',
   'flirty-video-chat',
   'hot-video-chat',
+  'nsfw-omegle',
+  'nsfw-video-chat',
+  'omegle-18',
+  'video-chat-18',
+  'random-cam-chat',
+  'omegle-adult',
+  'free-adult-video-chat',
+  'random-video-call',
+  'omegle-free',
+  'omegle-alternatives',
+  'videochat',
 ]);
 
 const staticRoutes = [
@@ -30,6 +41,17 @@ const staticRoutes = [
   { path: '/no-signup-video-chat', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/anonymous-video-chat', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/adult-video-chat', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/nsfw-omegle', changeFrequency: 'weekly', priority: 0.93 },
+  { path: '/nsfw-video-chat', changeFrequency: 'weekly', priority: 0.93 },
+  { path: '/omegle-18', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/video-chat-18', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/random-cam-chat', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/omegle-adult', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/free-adult-video-chat', changeFrequency: 'weekly', priority: 0.92 },
+  { path: '/random-video-call', changeFrequency: 'weekly', priority: 0.91 },
+  { path: '/omegle-free', changeFrequency: 'weekly', priority: 0.91 },
+  { path: '/omegle-alternatives', changeFrequency: 'weekly', priority: 0.91 },
+  { path: '/videochat', changeFrequency: 'weekly', priority: 0.91 },
   ...SEO_LANDING_SLUGS.filter((slug) => !HARDCODED_LANDING_SLUGS.has(slug)).map((slug) => ({
     path: `/${slug}`,
     changeFrequency: 'weekly',
@@ -67,7 +89,7 @@ export default function sitemap() {
 
   // Blog copy was refreshed on this date. Keep lastmod at least this new
   // so Google recrawls posts that are already in the sitemap.
-  const copyUpdated = new Date('2026-11-25');
+  const copyUpdated = new Date('2026-11-26');
 
   const posts = blogPostsList.map((post) => {
     const full = blogPostsMap[post.slug];

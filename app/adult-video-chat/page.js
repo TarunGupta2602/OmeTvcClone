@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Video Chat 18+ — Free Adult Video Chat, No Signup';
+const title = 'Adult Video Chat 18+ — Free, No Signup';
 const description =
-  'Video chat 18+ with strangers — free, no signup. Porn chat and nude chat happen only when both adults want them. Random 1-on-1 matching, skip anytime.';
+  'Free adult video chat with strangers — no signup. 18+ video chat with random 1-on-1 webcam matching. Porn chat and nude chat happen only when both adults want them. Skip anytime. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.';
 
 export const metadata = {
   title: { absolute: title },
@@ -103,6 +103,7 @@ export default function AdultVideoChatPage() {
             paragraphs: [
               'This is free 18+ adult video chat. People searching porn chat or nude chat land here for live 1-on-1 matching with another adult — not a porn archive and not a paid nude show. Open the site, confirm you are 18+, and match. Nude chat only happens if both adults want it.',
               'Because matching is random, every session is different. Some chats stay playful. Some turn hot. Some become genuine conversations that feel like the start of something. Keep Next handy and protect your privacy.',
+              'Users also search free adult video chat, adult video chat free, and adult video chat no signup. All refer to the same experience: random 1-on-1 webcam chat for consenting adults.',
             ],
             bullets: [
               'Free adult webcam chat in the browser',
@@ -114,6 +115,8 @@ export default function AdultVideoChatPage() {
               { href: '/', label: 'Start adult video chat' },
               { href: '/random-video-chat', label: 'Random video chat guide' },
               { href: '/omegle-alternative', label: 'Adult Omegle alternative' },
+              { href: '/free-adult-video-chat', label: 'Free adult video chat' },
+              { href: '/nsfw-video-chat', label: 'NSFW video chat' },
             ],
           },
           {

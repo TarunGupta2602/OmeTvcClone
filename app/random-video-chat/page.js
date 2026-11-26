@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Free Random Video Chat Online — Instant 1-on-1 Matching';
+const title = 'Free Random Video Chat — No Signup, Instant Matching';
 const description =
-  'How free random video chat works: instant 1-on-1 webcam matching in your browser, no signup. Skip anytime, WebRTC peer video, adults 18+ only.';
+  'Free random video chat with strangers — no signup. Instant 1-on-1 webcam matching in your browser. Skip anytime, WebRTC peer video, adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.';
 
 export const metadata = {
   title: {
@@ -108,11 +108,13 @@ export default function RandomVideoChatPage() {
             paragraphs: [
               'Free random video chat, random video chat with strangers, and random video chat with no sign up are one flow here. You do not build a profile. You do not wait for a match request. The queue pairs you with another adult who is online at the same time.',
               'Use it on a phone or a laptop. Chrome, Safari, Firefox, and Edge all work if you allow the camera. When you are done, close the tab — there is no account left behind.',
+              'People also search random video chat free, free random video chat with strangers, and random video chat online. All lead to the same experience: instant 1-on-1 matching without signup.',
             ],
             links: [
               { href: '/', label: 'Start random video chat' },
               { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
               { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
+              { href: '/random-cam-chat', label: 'Random cam chat' },
             ],
           },
           {
