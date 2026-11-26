@@ -17,7 +17,7 @@ export default function AdsterraSmartlink() {
     document.body.appendChild(script);
 
     // Global click listener with rate limiting (once per hour)
-    const handleClick = () => {
+    const handleClick = (e) => {
       const STORAGE_KEY = 'parvah_smartlink_last_trigger';
       const ONE_HOUR = 60 * 60 * 1000; // 1 hour in milliseconds
 
@@ -26,7 +26,10 @@ export default function AdsterraSmartlink() {
 
       // Check if 1 hour has passed since last trigger
       if (!lastTrigger || now - parseInt(lastTrigger) > ONE_HOUR) {
-        // Trigger smartlink (Adsterra script handles this)
+        // Open smartlink in new window
+        const smartlinkUrl = 'https://asiaso.org/4/21cdaddde629d944fa248872c3071fda';
+        window.open(smartlinkUrl, '_blank');
+        
         localStorage.setItem(STORAGE_KEY, now.toString());
         console.log('Smartlink triggered');
       }
