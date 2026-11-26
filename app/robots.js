@@ -1,6 +1,6 @@
 import { SITE_URL } from '../lib/constants';
 
-const DISALLOW = ['/api/', '/chat', '/*?q=', '/*?*search_term*'];
+const DISALLOW = ['/api/', '/chat$', '/chat/', '/*?q=', '/*?*search_term*'];
 
 const AI_CRAWLERS = [
   'GPTBot',

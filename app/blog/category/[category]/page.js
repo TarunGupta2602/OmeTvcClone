@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
       description,
       images: ['/og-image.jpg'],
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
   };
 }
 

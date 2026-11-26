@@ -17,6 +17,16 @@ const nextConfig = {
         destination: '/blog/omegle-alternatives-why-parvah-is-better',
         permanent: true,
       },
+      {
+        source: '/video-chat-with-girls',
+        destination: '/chat-with-girls',
+        permanent: true,
+      },
+      {
+        source: '/girls-video-chat',
+        destination: '/chat-with-girls',
+        permanent: true,
+      },
     ];
   },
   async headers() {

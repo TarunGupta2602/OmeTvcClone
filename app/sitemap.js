@@ -6,7 +6,6 @@ import { SEO_LANDING_SLUGS } from '../lib/seoLandings';
 const HARDCODED_LANDING_SLUGS = new Set([
   'video-chat-with-strangers',
   'chat-with-girls',
-  'video-chat-with-girls',
   'talk-to-strangers',
   'flirty-video-chat',
   'hot-video-chat',
@@ -21,6 +20,7 @@ const HARDCODED_LANDING_SLUGS = new Set([
   'omegle-free',
   'omegle-alternatives',
   'videochat',
+  'girls-video-chat',
 ]);
 
 const staticRoutes = [
@@ -28,7 +28,6 @@ const staticRoutes = [
   { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.95 },
   { path: '/video-chat-with-strangers', changeFrequency: 'weekly', priority: 0.95 },
   { path: '/chat-with-girls', changeFrequency: 'weekly', priority: 0.94 },
-  { path: '/video-chat-with-girls', changeFrequency: 'weekly', priority: 0.94 },
   { path: '/omegle-alternative', changeFrequency: 'weekly', priority: 0.93 },
   { path: '/omegle-alternative-india', changeFrequency: 'weekly', priority: 0.92 },
   { path: '/omegle-alternative-usa', changeFrequency: 'weekly', priority: 0.92 },
