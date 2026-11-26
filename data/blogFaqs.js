@@ -671,6 +671,29 @@ export const blogFaqsMap = {
       a: 'Close other apps using the webcam, confirm HTTPS, reload Parvah, and review our webcam troubleshooting guide if the issue continues.',
     },
   ],
+
+  'make-real-friends-random-video-chat': [
+    {
+      q: 'Can random video chat really lead to real friendships?',
+      a: 'Yes. Video lets you see expressions and hear tone, which builds trust faster than text. It takes patience, because most chats are short, but genuine friendships do form.',
+    },
+    {
+      q: 'How long should I wait before asking for someone\'s Instagram or Snapchat?',
+      a: 'A good rule is to wait until you have had a long, two-way conversation, ideally 20 to 30 minutes or more, and until they have shown respect for your boundaries.',
+    },
+    {
+      q: 'What should I do if someone asks for my Snapchat right away?',
+      a: 'You can politely say no, or just skip. Someone who rushes you to another platform in the first minute is usually not looking for friendship.',
+    },
+    {
+      q: 'How do I stay friends with someone in another country?',
+      a: 'Agree on a simple routine, use shared activities like movies or games, respect time zones, and keep the conversation honest and relaxed.',
+    },
+    {
+      q: 'Is it normal to feel lonely and open a random chat?',
+      a: 'Very normal. Just stay safe, keep your expectations realistic, and also invest in people around you.',
+    },
+  ],
 };
 
 export function getBlogFaqs(slug) {
