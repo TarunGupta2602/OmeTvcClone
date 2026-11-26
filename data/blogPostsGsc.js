@@ -7,7 +7,7 @@ export const gscBlogPostsMap = {
     excerpt:
       'Free random video chat with no signup and no app. See how browser matching works in 2026, what to expect from the queue, and how to start on Parvah in under a minute. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
     date: '2026-09-28',
-    dateModified: '2026-11-25',
+    dateModified: '2026-11-26',
     category: 'Tips',
     author: 'Parvah Team',
     readTime: '11 min read',

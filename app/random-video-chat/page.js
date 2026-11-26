@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Free Random Video Chat — No Signup, Instant Matching';
+const title = 'Random Video Chat Free — Instant Stranger Matching';
 const description =
-  'Free random video chat with strangers — no signup. Instant 1-on-1 webcam matching in your browser. Skip anytime, WebRTC peer video, adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.';
+  'Random video chat free with strangers — no signup. Instant 1-on-1 webcam matching in your browser. Skip anytime, WebRTC peer video, adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.';
 
 export const metadata = {
   title: {
@@ -74,7 +74,7 @@ export default function RandomVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Random Video Chat"
-        title="Free Random Video Chat Online — Instant Matching"
+        title="Random Video Chat Free — Instant Stranger Matching"
         description={description}
         highlights={[
           {
@@ -115,6 +115,7 @@ export default function RandomVideoChatPage() {
               { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
               { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
               { href: '/random-cam-chat', label: 'Random cam chat' },
+              { href: '/blog/free-random-video-chat', label: 'Learn more about free random video chat' },
             ],
           },
           {
