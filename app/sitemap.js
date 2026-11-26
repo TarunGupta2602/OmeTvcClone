@@ -24,80 +24,67 @@ const HARDCODED_LANDING_SLUGS = new Set([
 ]);
 
 const staticRoutes = [
-  { path: '', changeFrequency: 'daily', priority: 1 },
-  { path: '/random-video-chat', changeFrequency: 'weekly', priority: 0.95 },
-  { path: '/video-chat-with-strangers', changeFrequency: 'weekly', priority: 0.95 },
-  { path: '/chat-with-girls', changeFrequency: 'weekly', priority: 0.94 },
-  { path: '/omegle-alternative', changeFrequency: 'weekly', priority: 0.93 },
-  { path: '/omegle-alternative-india', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/omegle-alternative-usa', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/omegle-alternative-uk', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/omegle-alternative-canada', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/ometv-alternative', changeFrequency: 'weekly', priority: 0.93 },
-  { path: '/talk-to-strangers', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/flirty-video-chat', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/hot-video-chat', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/no-signup-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/anonymous-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/adult-video-chat', changeFrequency: 'weekly', priority: 0.9 },
-  { path: '/nsfw-omegle', changeFrequency: 'weekly', priority: 0.93 },
-  { path: '/nsfw-video-chat', changeFrequency: 'weekly', priority: 0.93 },
-  { path: '/omegle-18', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/video-chat-18', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/random-cam-chat', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/omegle-adult', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/free-adult-video-chat', changeFrequency: 'weekly', priority: 0.92 },
-  { path: '/random-video-call', changeFrequency: 'weekly', priority: 0.91 },
-  { path: '/omegle-free', changeFrequency: 'weekly', priority: 0.91 },
-  { path: '/omegle-alternatives', changeFrequency: 'weekly', priority: 0.91 },
-  { path: '/videochat', changeFrequency: 'weekly', priority: 0.91 },
+  { path: '', lastModified: '2026-11-26' },
+  { path: '/random-video-chat', lastModified: '2026-11-26' },
+  { path: '/video-chat-with-strangers', lastModified: '2026-11-26' },
+  { path: '/chat-with-girls', lastModified: '2026-11-26' },
+  { path: '/omegle-alternative', lastModified: '2026-11-26' },
+  { path: '/omegle-alternative-india', lastModified: '2026-11-26' },
+  { path: '/omegle-alternative-usa', lastModified: '2026-11-26' },
+  { path: '/omegle-alternative-uk', lastModified: '2026-11-26' },
+  { path: '/omegle-alternative-canada', lastModified: '2026-11-26' },
+  { path: '/ometv-alternative', lastModified: '2026-11-26' },
+  { path: '/talk-to-strangers', lastModified: '2026-11-26' },
+  { path: '/flirty-video-chat', lastModified: '2026-11-26' },
+  { path: '/hot-video-chat', lastModified: '2026-11-26' },
+  { path: '/no-signup-video-chat', lastModified: '2026-11-26' },
+  { path: '/anonymous-video-chat', lastModified: '2026-11-26' },
+  { path: '/adult-video-chat', lastModified: '2026-11-26' },
+  { path: '/nsfw-omegle', lastModified: '2026-11-26' },
+  { path: '/nsfw-video-chat', lastModified: '2026-11-26' },
+  { path: '/omegle-18', lastModified: '2026-11-26' },
+  { path: '/video-chat-18', lastModified: '2026-11-26' },
+  { path: '/random-cam-chat', lastModified: '2026-11-26' },
+  { path: '/omegle-adult', lastModified: '2026-11-26' },
+  { path: '/free-adult-video-chat', lastModified: '2026-11-26' },
+  { path: '/random-video-call', lastModified: '2026-11-26' },
+  { path: '/omegle-free', lastModified: '2026-11-26' },
+  { path: '/omegle-alternatives', lastModified: '2026-11-26' },
+  { path: '/videochat', lastModified: '2026-11-26' },
   ...SEO_LANDING_SLUGS.filter((slug) => !HARDCODED_LANDING_SLUGS.has(slug)).map((slug) => ({
     path: `/${slug}`,
-    changeFrequency: 'weekly',
-    priority: 0.88,
+    lastModified: '2026-11-26',
   })),
-  { path: '/chatroulette-alternative', changeFrequency: 'weekly', priority: 0.85 },
-  { path: '/emerald-chat-alternative', changeFrequency: 'weekly', priority: 0.85 },
-  { path: '/about', changeFrequency: 'monthly', priority: 0.3 },
-  { path: '/safety', changeFrequency: 'weekly', priority: 0.7 },
-  { path: '/faq', changeFrequency: 'weekly', priority: 0.8 },
-  { path: '/contact', changeFrequency: 'monthly', priority: 0.3 },
-  { path: '/privacy', changeFrequency: 'yearly', priority: 0.2 },
-  { path: '/terms', changeFrequency: 'yearly', priority: 0.2 },
-  { path: '/blog', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/chatroulette-alternative', lastModified: '2026-11-26' },
+  { path: '/emerald-chat-alternative', lastModified: '2026-11-26' },
+  { path: '/about', lastModified: '2026-09-01' },
+  { path: '/safety', lastModified: '2026-11-26' },
+  { path: '/faq', lastModified: '2026-11-26' },
+  { path: '/contact', lastModified: '2026-09-01' },
+  { path: '/privacy', lastModified: '2026-09-01' },
+  { path: '/terms', lastModified: '2026-09-01' },
+  { path: '/blog', lastModified: '2026-11-26' },
 ];
 
 export default function sitemap() {
-  const now = new Date();
-
   // No image: entries — OG/social preview URLs were producing GSC sitemap
   // warnings (~28). Google still discovers OG images from page metadata.
-  const pages = staticRoutes.map(({ path, changeFrequency, priority }) => ({
+  const pages = staticRoutes.map(({ path, lastModified }) => ({
     url: `${SITE_URL}${path}`,
-    lastModified: now,
-    changeFrequency,
-    priority,
+    lastModified: new Date(lastModified),
   }));
 
   const categories = BLOG_CATEGORIES.map((cat) => ({
     url: `${SITE_URL}/blog/category/${cat.slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.65,
+    lastModified: new Date('2026-11-26'),
   }));
-
-  // Blog copy was refreshed on this date. Keep lastmod at least this new
-  // so Google recrawls posts that are already in the sitemap.
-  const copyUpdated = new Date('2026-11-26');
 
   const posts = blogPostsList.map((post) => {
     const full = blogPostsMap[post.slug];
     const published = new Date(full?.dateModified || post.date);
     return {
       url: `${SITE_URL}/blog/${post.slug}`,
-      lastModified: published > copyUpdated ? published : copyUpdated,
-      changeFrequency: 'weekly',
-      priority: post.featured || full?.featured ? 0.75 : 0.7,
+      lastModified: published,
     };
   });
 
