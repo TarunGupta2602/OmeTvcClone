@@ -35,7 +35,7 @@ const staticRoutes = [
   { path: '/omegle-alternative-canada', lastModified: '2026-11-26' },
   { path: '/ometv-alternative', lastModified: '2026-11-26' },
   { path: '/talk-to-strangers', lastModified: '2026-11-26' },
-  { path: '/flirty-video-chat', lastModified: '2026-11-26' },
+  { path: '/flirty-video-chat', lastModified: '2026-11-27' },
   { path: '/hot-video-chat', lastModified: '2026-11-26' },
   { path: '/no-signup-video-chat', lastModified: '2026-11-26' },
   { path: '/anonymous-video-chat', lastModified: '2026-11-26' },
