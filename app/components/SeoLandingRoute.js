@@ -5,13 +5,13 @@ import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSc
 
 const DEFAULT_POPULAR = [
   { href: '/random-video-chat', label: 'random video chat' },
-  { href: '/video-chat-with-strangers', label: 'video chat with strangers' },
+  { href: '/random-video-chat', label: 'video chat with strangers' },
   { href: '/chat-with-girls', label: 'chat with girls' },
   { href: '/flirty-video-chat', label: 'flirty video chat' },
-  { href: '/hot-video-chat', label: 'hot video chat' },
+  { href: '/adult-video-chat', label: 'hot video chat' },
   { href: '/omegle-alternative', label: 'omegle alternative' },
-  { href: '/talk-to-strangers', label: 'talk to strangers' },
-  { href: '/live-video-chat', label: 'live video chat' },
+  { href: '/random-video-chat', label: 'talk to strangers' },
+  { href: '/random-video-chat', label: 'live video chat' },
 ];
 
 export default function SeoLandingRoute({ slug }) {

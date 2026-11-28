@@ -3,6 +3,21 @@ import { marketingBlogPostsMap, marketingBlogPostsList } from './blogPostsMarket
 import { gscBlogPostsMap, gscBlogPostsList } from './blogPostsGsc.js';
 import { socialBlogPostsMap, socialBlogPostsList } from './blogPostsSocial.js';
 
+export const BLOG_NOINDEX_SLUGS = new Set([
+  'uhmegle-alternative-2026',
+  'omoggle-alternative-2026',
+  'thundr-alternative-2026',
+  'komegle-alternative-2026',
+  'onegle-alternative-2026',
+  'camgo-alternative-2026',
+  'tumile-alternative-2026',
+  'chatrandom-alternative-2026',
+  'chatspin-alternative-2026',
+  'camsurf-alternative-2026',
+  'monkey-alternative-2026',
+  'tinychat-alternative-2026',
+]);
+
 const coreBlogPostsMap = {
   'how-to-stay-safe-on-video-chat-platforms': {
     title: 'How to Stay Safe on Video Chat Platforms: Essential Tips',
@@ -782,7 +797,7 @@ const coreBlogPostsMap = {
         <li><strong>Age gate + report button:</strong> adult community boundaries with mid-chat controls</li>
         <li><strong>Browser-first:</strong> desktop or mobile — no required app store install</li>
       </ul>
-      <p>If your priority is no signup video chat with modern safety basics, <a href="/">start matching on Parvah</a>. For the product page Google tests for “omegle alternative”, use the <a href="/omegle-alternative">Omegle alternative</a> landing. Also see <a href="/random-video-chat">random video chat</a> and <a href="/anonymous-video-chat">anonymous video chat</a>.</p>
+      <p>If your priority is no signup video chat with modern safety basics, <a href="/">start matching on Parvah</a>. For the product page Google tests for “omegle alternative”, use the <a href="/omegle-alternative">Omegle alternative</a> landing. Also see <a href="/random-video-chat">random video chat</a> and <a href="/no-signup-video-chat">anonymous video chat</a>.</p>
 
       <h2>2. OmeTV — Popular app-scale alternative</h2>
       <p>OmeTV remains widely used, especially via mobile apps, with quick matching and large pools. Tradeoffs can include app-only features, sign-in prompts, and privacy policies you should read carefully.</p>
@@ -815,7 +830,7 @@ const coreBlogPostsMap = {
             <td>Free random video chat, 18+, skip/report</td>
           </tr>
           <tr>
-            <td><a href="/ometv-alternative">OmeTV-style apps</a></td>
+            <td><a href="/omegle-alternative">OmeTV-style apps</a></td>
             <td>Often prompted</td>
             <td>App-first</td>
             <td>Large mobile pool if you accept an install</td>

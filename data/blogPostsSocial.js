@@ -28,7 +28,7 @@ export const socialBlogPostsMap = {
         <li>Tap Start and stay on the screen while it searches</li>
         <li>Say hello in the first second, then use Next if it is flat</li>
       </ol>
-      <p>The same flow lives on the <a href="/talk-to-strangers">talk to strangers</a> page. Related reading: <a href="/video-chat-with-strangers">video chat with strangers</a> and <a href="/blog/random-video-chat-with-strangers-guide">random video chat with strangers</a>.</p>
+      <p>The same flow lives on the <a href="/random-video-chat">talk to strangers</a> page. Related reading: <a href="/random-video-chat">video chat with strangers</a> and <a href="/blog/random-video-chat-with-strangers-guide">random video chat with strangers</a>.</p>
       <h2>Openers that get a reply</h2>
       <p>A blank stare makes the other person hit Next. A short, specific opener gives them something to answer.</p>
       <ul>
@@ -150,7 +150,7 @@ export const socialBlogPostsMap = {
         <li>Trade one concrete detail each — a city vibe, a job in one sentence, a show you are watching</li>
         <li>If you both want another topic, stay. If not, Next</li>
       </ol>
-      <p>The landing page for this intent is <a href="/meet-people-online">meet people online</a>.</p>
+      <p>The landing page for this intent is <a href="/random-video-chat">meet people online</a>.</p>
       <h2>How to make a stranger stay past hello</h2>
       <p>People stay when the call feels specific. “How are you?” is easy to ignore. “What is the best thing you ate this week?” is not. Give an answer of your own first so they are not doing all the work.</p>
       <p>Light helps more than a clever line. Sit facing a window or a lamp. Mute TV audio. If your camera is a black rectangle, the other person assumes the product is broken and leaves — even when the match already succeeded.</p>
@@ -186,7 +186,7 @@ export const socialBlogPostsMap = {
     content: `
       <h2>Introduction</h2>
       <p>Omegle is gone, and in India the replacement people actually want is simple: a free video call with a stranger, on the phone, without another app. An Omegle alternative India search should land on a browser chat — not a Play Store download, not a login wall, and not a cam site pretending to be random.</p>
-      <p>Parvah is that browser chat. Adults 18+ only. You open Chrome, allow the camera, and match 1-on-1. The full page for this is <a href="/omegle-alternative-india">Omegle alternative India</a>.</p>
+      <p>Parvah is that browser chat. Adults 18+ only. You open Chrome, allow the camera, and match 1-on-1. The full page for this is <a href="/omegle-alternative">Omegle alternative India</a>.</p>
       <h2>What replaced the Omegle habit</h2>
       <p>The old habit was: open site, see a stranger, skip if it is wrong. That habit still works. What changed is the junk around it. Many “Omegle India” results are APKs, signup funnels, or pages that promise girls on demand. A random queue cannot promise gender. Anyone who does is selling something else.</p>
       <p>Parvah keeps the original loop:</p>

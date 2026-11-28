@@ -77,17 +77,17 @@ export default function NoSignupVideoChatPage() {
         highlights={[
           { title: 'Zero Forms', desc: 'No email verification loops before your first match.' },
           { title: 'Instant Lobby', desc: 'Age gate, permissions, Start Match — that is the whole onboarding.' },
-          { title: 'Privacy Friendly', desc: 'Less account data collected compared with social chat apps.' },
+          { title: 'No account profile', desc: 'No email address, username, or password is needed to start basic matching.' },
           { title: 'Same Safety Tools', desc: 'Skip and report still work even without a username.' },
           { title: 'Works Everywhere', desc: 'Desktop and mobile browsers — no app store account required either.' },
           { title: 'Free Access', desc: 'Chat without buying credits to unlock strangers.' },
         ]}
         sections={[
           {
-            title: 'Free video chat with no registration — what to expect',
+            title: 'What no-signup video chat means',
             paragraphs: [
-              'No-signup products trade profiles for speed. You get faster starts and less permanent identity linkage, but you also own your habits: blur backgrounds if needed, skip rude matches, and never share personal numbers on camera.',
-              'Parvah is built for people who searched free video chat no signup / no registration and want a browser session — not another social account.',
+              'No signup means you can start basic matching without creating a profile, username, email address, or password. Open Parvah in a supported browser, confirm you are 18+, allow camera and microphone access, and join the queue. No app is needed.',
+              'It does not mean no technical information is processed or that you are anonymous to your match. A temporary connection is needed to place you in the queue, and the other person can see and hear what you choose to share. When finished, leave the chat and close the tab; there is no account profile to deactivate.',
             ],
             links: [
               { href: '/', label: 'Start video chat' },
@@ -96,17 +96,41 @@ export default function NoSignupVideoChatPage() {
             ],
           },
           {
-            title: '3 steps to start without an account',
+            title: 'Information used to provide the service',
             paragraphs: [
-              'Open parvah.online → confirm 18+ → allow camera → Start Match. That is the entire funnel. When you are done, close the tab; there is no profile to delete.',
+              'The Privacy Policy lists temporary socket session IDs, room IDs and timestamps, plus IP address, browser type, operating system and WebRTC capability for matching and site operation. These are technical details, not a signup profile.',
+              'Text messages are held temporarily in memory during a chat and discarded at disconnect. The policy says report details are not stored on the servers. Essential local storage supports age confirmation and cookie consent; optional analytics load only if you accept the banner. Read the Privacy Policy for details.',
             ],
             bullets: [
-              'No email or phone verification',
-              'No credits to unlock strangers',
-              'Report and Next available during chat',
+              'No account, username, email, or password is needed for basic matching.',
+              'Temporary connection and technical details operate the service.',
+              'Optional analytics depend on your cookie choice.',
             ],
             links: [
-              { href: '/omegle-alternative', label: 'Omegle alternative' },
+              { href: '/privacy', label: 'Read the Privacy Policy' },
+            ],
+          },
+          {
+            title: 'Practical anonymity tips',
+            paragraphs: [
+              'A camera can reveal identifying details even without a profile. Use a neutral background and keep documents, workplace or school identifiers, and your address out of view. Do not share your full name, phone number, schedule, payment information, passwords, or one-time codes.',
+              'Be wary of requests to move to another app or send money. Press Next if uncomfortable and Report rule-breaking behavior. Do not record or share another person’s video.',
+            ],
+            links: [{ href: '/safety', label: 'Safety guidelines' }],
+          },
+          {
+            title: 'Browser and device requirements',
+            paragraphs: [
+              'Use a current WebRTC-capable browser such as Chrome, Safari, Firefox, or Edge, plus a working camera, microphone, and stable connection. On mobile, use the regular browser if an in-app browser does not show camera controls.',
+              'Allow Parvah to use your camera and microphone when prompted. If you previously blocked access, change it in the browser’s site settings before trying again.',
+            ],
+          },
+          {
+            title: 'Camera and microphone troubleshooting',
+            paragraphs: [
+              'For a blank preview, allow camera access in the address bar or site settings, select the intended camera, and close other apps or tabs using it. Reload and grant permission again if prompted.',
+              'For silent audio, check microphone permission, input selection, and operating-system mute or privacy settings. Headphones can reduce echo; confirm their microphone is selected.',
+              'If it still fails, restart the browser, try another current browser, and check the connection. Stop other apps using the camera before retrying.',
             ],
           },
           {

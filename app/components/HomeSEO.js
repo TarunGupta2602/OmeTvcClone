@@ -54,14 +54,6 @@ export default function HomeSEO() {
               email wall. If the chat is not a fit, Next finds someone else.
             </p>
             <p className="text-sm text-slate-600 leading-relaxed">
-              The same queue covers free random video chat, video chat with strangers, and random video chat
-              with no sign up. A full walkthrough is on the{' '}
-              <Link href="/random-video-chat" className="font-semibold text-teal-800 hover:underline">
-                random video chat
-              </Link>{' '}
-              page.
-            </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
               Since Omegle shut down in 2023, people are looking for browser-based alternatives that work without app downloads. Parvah uses WebRTC peer-to-peer technology to route video directly between browsers when networks allow it, giving you lower latency and better privacy.
             </p>
           </article>
@@ -74,25 +66,12 @@ export default function HomeSEO() {
               whenever you want.
             </p>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Searches like video chat strangers, free video chat with strangers, and cam chat with strangers all
-              describe this same start. Details are on{' '}
-              <Link href="/random-video-chat" className="font-semibold text-teal-800 hover:underline">
-                random video chat
-              </Link>
-              .
-            </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
               Many people use random video chat for language practice, making friends, or just casual conversation. The matching is random by design — you meet people you would never algorithmically select. That serendipity is why people keep coming back.
             </p>
           </article>
 
           <article className="space-y-3">
             <h2 className="text-2xl font-bold text-slate-900">18+ adult video chat</h2>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              Adult video chat, video chat 18+, and free adult video chat are for people who are 18 or older. The age
-              gate runs before matching. NSFW video chat is not a catalog and is not guaranteed —
-              both adults have to want that, and you can skip the moment you do not.
-            </p>
             <p className="text-sm text-slate-600 leading-relaxed">
               Read the rules on{' '}
               <Link href="/adult-video-chat" className="font-semibold text-teal-800 hover:underline">
@@ -109,24 +88,6 @@ export default function HomeSEO() {
             </p>
           </article>
 
-          <article className="space-y-3">
-            <h2 className="text-2xl font-bold text-slate-900">Adult Omegle and 18+ Omegle</h2>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              Omegle closed in 2023. Adult Omegle, Omegle adult, 18+ Omegle, and Omegle 18+ are still searched every
-              day by people who want that old random button back. Parvah is a free browser version: no app, no
-              signup, adults only, with Next and Report.
-            </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              The country notes and the shut-down story are on the{' '}
-              <Link href="/omegle-alternative" className="font-semibold text-teal-800 hover:underline">
-                Omegle alternative
-              </Link>{' '}
-              page.
-            </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              Unlike Omegle, Parvah has modern safety features including report buttons, clear community guidelines, and WebRTC peer-to-peer video for better privacy. Mobile traffic from India, the US, and UK dominates — and our browser-based approach works on Chrome and Safari without Play Store installs.
-            </p>
-          </article>
 
           <article className="space-y-3">
             <h2 className="text-2xl font-bold text-slate-900">What to say in your first video chat</h2>
@@ -164,7 +125,7 @@ export default function HomeSEO() {
           </article>
 
           <div className="pt-4 border-t border-teal-900/10">
-            <p className="text-xs text-slate-500">Last reviewed: November 26, 2026</p>
+            <p className="text-xs text-slate-500">Last reviewed: November 28, 2026</p>
           </div>
         </div>
 

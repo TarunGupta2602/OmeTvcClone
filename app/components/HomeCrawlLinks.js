@@ -1,45 +1,18 @@
 import Link from 'next/link';
-import { blogPostsList } from '../../data/blogPosts';
+import { BLOG_NOINDEX_SLUGS, blogPostsList } from '../../data/blogPosts';
 
 const MONEY_PAGES = [
   { href: '/random-video-chat', label: 'Random video chat' },
-  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
-  { href: '/talk-to-strangers', label: 'Talk to strangers' },
-  { href: '/chat-with-girls', label: 'Chat with girls' },
-  { href: '/video-chat-with-girls', label: 'Video chat with girls' },
-  { href: '/girls-video-chat', label: 'Girls video chat' },
-  { href: '/flirty-video-chat', label: 'Flirty video chat' },
-  { href: '/hot-video-chat', label: 'Hot video chat' },
-  { href: '/dirty-talk-video-chat', label: 'Dirty talk video chat' },
-  { href: '/live-video-chat', label: 'Live video chat' },
-  { href: '/free-webcam-chat', label: 'Free webcam chat' },
-  { href: '/late-night-video-chat', label: 'Late night video chat' },
-  { href: '/meet-people-online', label: 'Meet people online' },
   { href: '/adult-video-chat', label: 'Adult video chat' },
   { href: '/omegle-alternative', label: 'Omegle alternative' },
-  { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
-  { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
-  { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
-  { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
   { href: '/no-signup-video-chat', label: 'No signup video chat' },
-  { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
-  { href: '/ometv-alternative', label: 'OmeTV alternative' },
-  { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
-  { href: '/emerald-chat-alternative', label: 'Emerald Chat alternative' },
-  { href: '/nsfw-omegle', label: 'NSFW Omegle alternative' },
-  { href: '/nsfw-video-chat', label: 'NSFW video chat' },
-  { href: '/omegle-18', label: 'Omegle 18+ alternative' },
-  { href: '/video-chat-18', label: 'Video chat 18+' },
-  { href: '/random-cam-chat', label: 'Random cam chat' },
-  { href: '/omegle-adult', label: 'Omegle adult alternative' },
-  { href: '/free-adult-video-chat', label: 'Free adult video chat' },
-  { href: '/random-video-call', label: 'Random video call' },
-  { href: '/omegle-free', label: 'Omegle free alternative' },
-  { href: '/omegle-alternatives', label: 'Omegle alternatives' },
-  { href: '/videochat', label: 'Videochat' },
-  { href: '/faq', label: 'FAQ' },
+  { href: '/flirty-video-chat', label: 'Flirty video chat' },
   { href: '/safety', label: 'Safety' },
 ];
+
+const featuredPosts = blogPostsList
+  .filter((post) => post.featured && !BLOG_NOINDEX_SLUGS.has(post.slug))
+  .slice(0, 6);
 
 /** Server-rendered links so crawlers always find key URLs from the homepage. */
 export default function HomeCrawlLinks() {
@@ -49,7 +22,7 @@ export default function HomeCrawlLinks() {
         <h2 id="home-pages-heading" className="text-sm font-bold text-slate-900 mb-1">
           Explore video chat
         </h2>
-        <p className="text-xs text-slate-500 mb-4">Popular searches, alternatives, and safety pages.</p>
+        <p className="text-xs text-slate-500 mb-4">Explore key pages and safety guidance.</p>
         <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm mb-8">
           {MONEY_PAGES.map((page) => (
             <li key={page.href}>
@@ -65,7 +38,7 @@ export default function HomeCrawlLinks() {
         </h2>
         <p className="text-xs text-slate-500 mb-4">Safety tips, Omegle alternatives, and WebRTC help from Parvah.</p>
         <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
-          {blogPostsList.map((post) => (
+          {featuredPosts.map((post) => (
             <li key={post.slug}>
               <Link href={`/blog/${post.slug}`} className="text-teal-700 hover:text-teal-900 hover:underline leading-snug">
                 {post.title}
@@ -77,12 +50,6 @@ export default function HomeCrawlLinks() {
           <Link href="/blog" className="text-slate-600 hover:text-teal-700">
             All blog articles →
           </Link>
-          <a href="/sitemap.xml" className="text-slate-500 hover:text-teal-700">
-            Sitemap
-          </a>
-          <a href="/llms.txt" className="text-slate-500 hover:text-teal-700">
-            llms.txt
-          </a>
         </div>
       </div>
     </section>

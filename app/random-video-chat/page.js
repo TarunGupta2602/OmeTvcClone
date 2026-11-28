@@ -77,7 +77,7 @@ export default function RandomVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Random Video Chat"
-        title="Random Video Chat with Strangers — Free, No Signup | Parvah"
+        title="Free Random Video Chat with Strangers"
         description={description}
         highlights={[
           {

@@ -145,22 +145,6 @@ export default function AdultVideoChatPage() {
             ],
           },
           {
-            title: 'Parvah vs other random video chat sites',
-            paragraphs: [
-              'See how Parvah compares to other random chat platforms:',
-            ],
-            comparison: {
-              headers: ['Feature', 'Parvah', 'Other random chat sites'],
-              rows: [
-                ['Signup', 'None', 'Often required'],
-                ['Price', 'Free', 'Free or paid filters'],
-                ['Age check', 'Required before chat', 'Varies'],
-                ['Report tool', 'Yes', 'Varies'],
-                ['App download', 'No', 'Sometimes'],
-              ],
-            },
-          },
-          {
             title: 'Who this is for, and who it is not for',
             paragraphs: [
               'For: adults who want a quick, free way to meet new people by video.',

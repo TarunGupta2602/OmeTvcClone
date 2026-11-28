@@ -78,8 +78,8 @@ export default function OmegleAlternativePage() {
         description={description}
         highlights={[
           { title: 'No registration', desc: 'Start instantly — no email, username, or password.' },
-          { title: 'Adult Omegle energy', desc: '1-on-1 random matching like classic Omegle — rebuilt for modern browsers, 18+ only.' },
-          { title: 'Works on phones', desc: 'Popular with users in India and worldwide who want no-app video chat.' },
+          { title: 'Familiar random 1-on-1 matching', desc: 'Meet one person at a time through random browser matching, for adults 18+.' },
+          { title: 'Works on phones', desc: 'Use a modern mobile or desktop browser without installing an app.' },
           { title: 'WebRTC privacy', desc: 'Peer-to-peer video when networks allow — streams are not archived on our servers.' },
           { title: 'Safety built in', desc: '18+ age gate, report button, and skip anytime.' },
           { title: '100% free matching', desc: 'No credits, no premium unlock to meet strangers.' },
@@ -152,18 +152,11 @@ export default function OmegleAlternativePage() {
             paragraphs: [
               'OmeTV is a popular random video chat platform that often requires an app download. Parvah offers a browser-based alternative that works without installing anything. Both platforms connect users randomly for 1-on-1 video conversations, but Parvah focuses on a no-signup experience in the browser.',
             ],
-            links: [
-              { href: '/ometv-alternative', label: 'OmeTV alternative' },
-            ],
           },
           {
             title: 'Chatroulette and Emerald Chat alternatives',
             paragraphs: [
               'Chatroulette and Emerald Chat are other well-known random video chat platforms. Chatroulette was one of the original random video chat sites, while Emerald Chat has gained popularity with its modern interface. Parvah provides a similar random matching experience with a focus on browser-based access and no signup requirement.',
-            ],
-            links: [
-              { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
-              { href: '/emerald-chat-alternative', label: 'Emerald Chat alternative' },
             ],
           },
           {

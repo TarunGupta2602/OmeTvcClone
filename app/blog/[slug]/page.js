@@ -8,7 +8,7 @@ import BlogAuthorCard from '../../components/BlogAuthorCard';
 import BlogPostCover from '../../components/BlogPostCover';
 import { BlogCardThumbnail } from '../../components/BlogCard';
 import { SITE_NAME, SITE_URL } from '../../../lib/constants';
-import { blogPostsMap, blogPostsList } from '../../../data/blogPosts';
+import { BLOG_NOINDEX_SLUGS, blogPostsMap, blogPostsList } from '../../../data/blogPosts';
 import {
   enrichPost,
   getRelatedPosts,
@@ -37,6 +37,7 @@ export async function generateMetadata({ params }) {
 
   const post = enrichPost(slug, raw);
   const seoTitle = post.seoTitle;
+  const shouldIndex = !BLOG_NOINDEX_SLUGS.has(slug);
 
   return {
     title: seoTitle,
@@ -83,10 +84,10 @@ export async function generateMetadata({ params }) {
       images: [`${SITE_URL}/blog/${slug}/twitter-image`],
     },
     robots: {
-      index: true,
+      index: shouldIndex,
       follow: true,
       googleBot: {
-        index: true,
+        index: shouldIndex,
         follow: true,
         'max-image-preview': 'large',
         'max-snippet': -1,

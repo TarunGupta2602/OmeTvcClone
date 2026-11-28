@@ -26,7 +26,7 @@ export const marketingBlogPostsMap = {
         <li>Click Start Matching</li>
         <li>Use Next until the conversation feels right</li>
       </ol>
-      <p>No email. No credits for basic matching. See also <a href="/video-chat-with-girls">video chat with girls</a> and <a href="/chat-with-girls">chat with girls</a>.</p>
+      <p>No email. No credits for basic matching. See also <a href="/chat-with-girls">video chat with girls</a> and <a href="/chat-with-girls">chat with girls</a>.</p>
       <h2>Tips that actually get better chats</h2>
       <ul>
         <li>Lead with respect — pressure makes women skip faster</li>
@@ -38,7 +38,7 @@ export const marketingBlogPostsMap = {
       <h2>Safety rules (non-negotiable)</h2>
       <p>Adults only. If you suspect someone is under 18, leave and report. Intimate talk is allowed only when mutual. Recording without consent is banned.</p>
       <h2>Related searches</h2>
-      <p>People who land here also look for <a href="/flirty-video-chat">flirty video chat</a>, <a href="/hot-video-chat">hot video chat</a>, and <a href="/random-video-chat">random video chat with strangers</a>.</p>
+      <p>People who land here also look for <a href="/flirty-video-chat">flirty video chat</a>, <a href="/adult-video-chat">hot video chat</a>, and <a href="/random-video-chat">random video chat with strangers</a>.</p>
       <h2>Conclusion</h2>
       <p>Free video chat with girls online works best when you treat it as random adult matching — not a cam catalog. Start free, stay 18+, and skip until the vibe is mutual.</p>
     `,
@@ -190,7 +190,7 @@ export const marketingBlogPostsMap = {
         <li>Never demand photos or socials</li>
       </ul>
       <h2>Where to go on this site</h2>
-      <p><a href="/hot-video-chat">Hot video chat</a>, <a href="/flirty-video-chat">flirty video chat</a>, <a href="/dirty-talk-video-chat">dirty talk video chat</a>, and <a href="/late-night-video-chat">late night video chat</a> are intent pages for the same free adult matching lobby.</p>
+      <p><a href="/adult-video-chat">Hot video chat</a>, <a href="/flirty-video-chat">flirty video chat</a>, <a href="/adult-video-chat">dirty talk video chat</a>, and <a href="/random-video-chat">late night video chat</a> are intent pages for the same free adult matching lobby.</p>
       <h2>Conclusion</h2>
       <p>Hot and flirty video chat is fun when it is mutual. Stay 18+, stay respectful, and skip until the spark is shared.</p>
     `,
