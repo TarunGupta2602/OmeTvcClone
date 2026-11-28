@@ -72,6 +72,11 @@ check('CookieConsent supports decline', () => {
   assert.match(src, /declined/);
 });
 
+check('Sitewide app shell does not trigger click-based ad windows', () => {
+  const src = readFileSync(join(root, 'app/components/AppShell.js'), 'utf8');
+  assert.doesNotMatch(src, /Adsterra(?:Smartlink|Popunder)/);
+});
+
 check('server validates room membership for messages', () => {
   const src = readFileSync(join(root, 'server.js'), 'utf8');
   assert.match(src, /peersShareRoom/);

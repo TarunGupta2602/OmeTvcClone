@@ -4,8 +4,6 @@ import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import CookieConsent from './CookieConsent';
-import AdsterraSmartlink from './AdsterraSmartlink';
-import AdsterraPopunder from './AdsterraPopunder';
 import { ChatLayoutProvider, useChatLayout } from '../context/ChatLayoutContext';
 
 function ShellInner({ children }) {
@@ -21,8 +19,6 @@ function ShellInner({ children }) {
       <div className="flex-1 flex flex-col">{children}</div>
       {!hideFooter && <Footer />}
       <CookieConsent />
-      <AdsterraSmartlink />
-      <AdsterraPopunder />
     </>
   );
 }
