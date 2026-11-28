@@ -6,6 +6,7 @@ import {
   buildFaqSchema,
   buildHowToSchema,
   buildJsonLdGraph,
+  buildOrganizationSchema,
   stringifyJsonLd,
 } from '../lib/seo';
 
@@ -53,6 +54,11 @@ export async function generateMetadata({ searchParams }) {
 }
 
 const homeJsonLd = buildJsonLdGraph([
+  buildOrganizationSchema({
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+  }),
   buildFaqSchema(HOME_FAQS),
   buildHowToSchema({
     name: 'How to start free random video chat on Parvah',

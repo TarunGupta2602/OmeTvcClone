@@ -17,6 +17,7 @@ const nextConfig = {
         destination: '/blog/omegle-alternatives-why-parvah-is-better',
         permanent: true,
       },
+      // Girls pages -> /chat-with-girls
       {
         source: '/video-chat-with-girls',
         destination: '/chat-with-girls',
@@ -25,6 +26,85 @@ const nextConfig = {
       {
         source: '/girls-video-chat',
         destination: '/chat-with-girls',
+        permanent: true,
+      },
+      // Omegle alternative pages -> /omegle-alternative
+      {
+        source: '/omegle-alternative-usa',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
+        source: '/omegle-alternative-uk',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
+        source: '/omegle-alternative-canada',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
+        source: '/ometv-alternative',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
+        source: '/chatroulette-alternative',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
+        source: '/emerald-chat-alternative',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      // 18+ chat pages -> /adult-video-chat
+      {
+        source: '/hot-video-chat',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/dirty-talk-video-chat',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      // No signup pages -> /no-signup-video-chat
+      {
+        source: '/anonymous-video-chat',
+        destination: '/no-signup-video-chat',
+        permanent: true,
+      },
+      // General random chat pages -> /random-video-chat
+      {
+        source: '/video-chat-with-strangers',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/talk-to-strangers',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/live-video-chat',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/free-webcam-chat',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/late-night-video-chat',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/meet-people-online',
+        destination: '/random-video-chat',
         permanent: true,
       },
     ];
