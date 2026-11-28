@@ -1,5 +1,5 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Video Chat No Sign Up — Free 18+ Video Chat';
@@ -54,8 +54,15 @@ const faqs = [
   },
 ];
 
+const url = `${SITE_URL}/no-signup-video-chat`;
+const breadcrumbs = [
+  { name: 'Home', url: SITE_URL },
+  { name: title, url },
+];
+
 const jsonLd = buildJsonLdGraph([
-  buildWebPageSchema({ title, description, url: `${SITE_URL}/no-signup-video-chat` }),
+  buildWebPageSchema({ title, description, url }),
+  buildBreadcrumbSchema({ items: breadcrumbs }),
   buildFaqSchema(faqs),
 ]);
 
@@ -83,9 +90,9 @@ export default function NoSignupVideoChatPage() {
               'Parvah is built for people who searched free video chat no signup / no registration and want a browser session — not another social account.',
             ],
             links: [
-              { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
+              { href: '/', label: 'Start video chat' },
               { href: '/random-video-chat', label: 'Random video chat' },
-              { href: '/blog/how-to-use-parvah', label: 'How to use Parvah' },
+              { href: '/safety', label: 'Safety guidelines' },
             ],
           },
           {
@@ -100,19 +107,14 @@ export default function NoSignupVideoChatPage() {
             ],
             links: [
               { href: '/omegle-alternative', label: 'Omegle alternative' },
-              { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
             ],
+          },
+          {
+            title: 'Last reviewed',
+            paragraphs: ['November 26, 2026'],
           },
         ]}
         faqs={faqs}
-        relatedLinks={[
-          { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
-          { href: '/random-video-chat', label: 'Random Video Chat' },
-          { href: '/blog/how-to-use-parvah', label: 'How to Use Parvah' },
-          { href: '/omegle-alternative', label: 'Omegle Alternative' },
-          { href: '/chatroulette-alternative', label: 'Chatroulette Alternative' },
-          { href: '/faq', label: 'FAQ' },
-        ]}
       />
     </>
   );

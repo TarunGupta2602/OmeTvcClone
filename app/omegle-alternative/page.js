@@ -1,10 +1,10 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Omegle Adult — Free Adult Omegle, No Signup (18+)';
 const description =
-  'Omegle adult and adult Omegle, free with no signup. 18+ random video chat with strangers in the browser. No app. Matches are random — gender and nude chat are not guaranteed.';
+  'Omegle adult and adult Omegle, free with no signup. 18+ random video chat with strangers in the browser. No app. Matches are random — gender is not guaranteed.';
 
 export const metadata = {
   title: {
@@ -80,8 +80,15 @@ const faqs = [
   },
 ];
 
+const url = `${SITE_URL}/omegle-alternative`;
+const breadcrumbs = [
+  { name: 'Home', url: SITE_URL },
+  { name: title, url },
+];
+
 const jsonLd = buildJsonLdGraph([
-  buildWebPageSchema({ title, description, url: `${SITE_URL}/omegle-alternative` }),
+  buildWebPageSchema({ title, description, url }),
+  buildBreadcrumbSchema({ items: breadcrumbs }),
   buildFaqSchema(faqs),
 ]);
 
@@ -120,13 +127,13 @@ export default function OmegleAlternativePage() {
             title: 'Omegle adult, adult Omegle, and 18+ Omegle',
             paragraphs: [
               'Omegle adult, adult Omegle, 18+ Omegle, and Omegle 18+ are the same request: the old stranger-video button, only for adults. Omegle itself is gone. This page is the free replacement — open the browser, confirm you are 18+, and match. There is no app and no account.',
-              'It is random. You will not get a guaranteed face, gender, or nude chat. Flirty talk is fine when both adults want it. Use Next when you do not, and Report for abuse. That is the whole product behind those searches.',
+              'It is random. You will not get a guaranteed face or gender. Flirty talk is fine when both adults want it. Use Next when you do not, and Report for abuse. That is the whole product behind those searches.',
               'Unlike Omegle, Parvah has modern safety features including report buttons, clear community guidelines, and WebRTC peer-to-peer video for better privacy. Mobile traffic from India, the US, and UK dominates — and our browser-based approach works on Chrome and Safari without Play Store installs.',
             ],
             links: [
               { href: '/', label: 'Start 18+ Omegle-style chat' },
               { href: '/adult-video-chat', label: 'Adult video chat' },
-              { href: '/blog/adult-omegle-free-no-signup', label: 'Adult Omegle guide' },
+              { href: '/safety', label: 'Safety guidelines' },
             ],
           },
           {
@@ -144,8 +151,6 @@ export default function OmegleAlternativePage() {
             ],
             links: [
               { href: '/', label: 'Start matching now' },
-              { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
-              { href: '/omegle-alternative-india', label: 'Omegle free video call India' },
               { href: '/random-video-chat', label: 'Random video chat' },
             ],
           },
@@ -180,50 +185,11 @@ export default function OmegleAlternativePage() {
             ],
           },
           {
-            title: 'Omegle alternative by country',
-            paragraphs: [
-              'Search demand splits by country. If you want the same free browser chat with local tips for mobile networks and peak hours, open the page for your region.',
-              'Matching stays global and random on every page — country pages explain how to start, not a fake local-only filter.',
-            ],
-            links: [
-              { href: '/omegle-alternative-india', label: 'Omegle alternative India' },
-              { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
-              { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
-              { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
-            ],
+            title: 'Last reviewed',
+            paragraphs: ['November 26, 2026'],
           },
-          {
-            title: 'Omegle alternative vs OmeTV vs Chatroulette',
-            paragraphs: [
-              'OmeTV is often app-first. Chatroulette is the classic roulette brand. If you want a lightweight browser Omegle alternative with no account wall, start here and compare from experience — not ads.',
-              'Keep personal info private on every platform you try.',
-            ],
-            links: [
-              { href: '/ometv-alternative', label: 'OmeTV alternative' },
-              { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
-              { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
-            ],
-          },
-        ]}
-        popularSearches={[
-          { href: '/adult-video-chat', label: 'adult video chat' },
-          { href: '/random-video-chat', label: 'random video chat' },
-          { href: '/omegle-alternative-india', label: 'omegle alternative india' },
-          { href: '/omegle-alternative-usa', label: 'omegle alternative usa' },
-          { href: '/omegle-alternative-uk', label: 'omegle alternative uk' },
-          { href: '/talk-to-strangers', label: 'talk to strangers' },
         ]}
         faqs={faqs}
-        relatedLinks={[
-          { href: '/', label: 'Start free chat' },
-          { href: '/omegle-alternative-india', label: 'Omegle free video call' },
-          { href: '/omegle-alternative-usa', label: 'Omegle Alternative USA' },
-          { href: '/omegle-alternative-uk', label: 'Omegle Alternative UK' },
-          { href: '/adult-video-chat', label: 'Adult Video Chat' },
-          { href: '/random-video-chat', label: 'Random Video Chat' },
-          { href: '/ometv-alternative', label: 'OmeTV Alternative' },
-          { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle Alternatives 2026' },
-        ]}
       />
     </>
   );

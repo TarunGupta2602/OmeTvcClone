@@ -1,10 +1,10 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Random Video Chat Free — Instant Stranger Matching';
 const description =
-  'Random video chat free with strangers — no signup. Instant 1-on-1 webcam matching in your browser. Skip anytime, WebRTC peer video, adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.';
+  'Random video chat free with strangers — no signup. Instant 1-on-1 webcam matching in your browser. Skip anytime, WebRTC peer video, adults 18+ only.';
 
 export const metadata = {
   title: {
@@ -57,14 +57,17 @@ const faqs = [
     q: 'Can I use random video chat on mobile?',
     a: 'Yes. It works in modern mobile browsers on Wi‑Fi or mobile data. Allow camera and microphone access — no app download required.',
   },
-  {
-    q: 'Do I need a webcam?',
-    a: 'A working camera and microphone improve the experience. Allow permissions when your browser asks.',
-  },
+];
+
+const url = `${SITE_URL}/random-video-chat`;
+const breadcrumbs = [
+  { name: 'Home', url: SITE_URL },
+  { name: title, url },
 ];
 
 const jsonLd = buildJsonLdGraph([
-  buildWebPageSchema({ title, description, url: `${SITE_URL}/random-video-chat` }),
+  buildWebPageSchema({ title, description, url }),
+  buildBreadcrumbSchema({ items: breadcrumbs }),
   buildFaqSchema(faqs),
 ]);
 
@@ -106,16 +109,14 @@ export default function RandomVideoChatPage() {
           {
             title: 'Free random video chat with strangers, no sign up',
             paragraphs: [
-              'Free random video chat, random video chat with strangers, and random video chat with no sign up are one flow here. You do not build a profile. You do not wait for a match request. The queue pairs you with another adult who is online at the same time.',
+              'Free random video chat, video chat with strangers, and random video chat with no sign up are one flow here. You do not build a profile. You do not wait for a match request. The queue pairs you with another adult who is online at the same time.',
               'Use it on a phone or a laptop. Chrome, Safari, Firefox, and Edge all work if you allow the camera. When you are done, close the tab — there is no account left behind.',
               'People also search random video chat free, free random video chat with strangers, and random video chat online. All lead to the same experience: instant 1-on-1 matching without signup.',
             ],
             links: [
               { href: '/', label: 'Start random video chat' },
-              { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
               { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
-              { href: '/random-cam-chat', label: 'Random cam chat' },
-              { href: '/blog/free-random-video-chat', label: 'Learn more about free random video chat' },
+              { href: '/safety', label: 'Safety guidelines' },
             ],
           },
           {
@@ -130,8 +131,6 @@ export default function RandomVideoChatPage() {
               'Safety: report, skip, and published guidelines',
             ],
             links: [
-              { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
-              { href: '/ometv-alternative', label: 'OmeTV alternative' },
               { href: '/omegle-alternative', label: 'Omegle alternative' },
               { href: '/no-signup-video-chat', label: 'No signup video chat' },
             ],
@@ -143,18 +142,28 @@ export default function RandomVideoChatPage() {
               'If you need filters or social profiles, other products may fit better. If you want talk-to-strangers energy with modern safety basics, start on the homepage.',
             ],
           },
+          {
+            title: 'Conversation tips for random video chat',
+            paragraphs: [
+              'Most people skip within the first 10 seconds. A simple greeting makes a huge difference. Try asking where they are from, commenting on their background, or asking what brought them to random video chat today.',
+              'Keep it light at first. Heavy topics or demands for personal information usually lead to an immediate skip. Mutual interest builds naturally — do not force it.',
+            ],
+            bullets: [
+              'Say hello in the first second',
+              'Avoid demanding socials or photos',
+              'Use Next freely if the vibe is off',
+              'Report harassment immediately',
+            ],
+            links: [
+              { href: '/safety', label: 'Safety guidelines' },
+            ],
+          },
+          {
+            title: 'Last reviewed',
+            paragraphs: ['November 26, 2026'],
+          },
         ]}
         faqs={faqs}
-        relatedLinks={[
-          { href: '/', label: 'Start free chat' },
-          { href: '/ometv-alternative', label: 'OmeTV Alternative' },
-          { href: '/omegle-alternative', label: 'Omegle Alternative' },
-          { href: '/video-chat-with-strangers', label: 'Video Chat with Strangers' },
-          { href: '/anonymous-video-chat', label: 'Anonymous Video Chat' },
-          { href: '/no-signup-video-chat', label: 'No Signup Video Chat' },
-          { href: '/adult-video-chat', label: 'Adult Video Chat' },
-          { href: '/faq', label: 'FAQ' },
-        ]}
       />
     </>
   );

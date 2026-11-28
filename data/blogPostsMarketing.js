@@ -80,7 +80,7 @@ export const marketingBlogPostsMap = {
       <h2>Safety while you talk to strangers</h2>
       <p>Never share your address, workplace, or financial apps. Use Report for harassment. Leave non-consensual chats immediately. Read the <a href="/safety">safety guidelines</a>.</p>
       <h2>Where to start</h2>
-      <p>Try <a href="/talk-to-strangers">talk to strangers</a>, <a href="/video-chat-with-strangers">video chat with strangers</a>, or the free homepage lobby.</p>
+      <p>Try <a href="/random-video-chat">random video chat</a> or the free homepage lobby.</p>
       <h2>Conclusion</h2>
       <p>Talking to strangers online is simple: be curious, be respectful, and keep Next ready. Free browser video chat removes the account wall so you can practice real conversation tonight.</p>
     `,
@@ -156,7 +156,7 @@ export const marketingBlogPostsMap = {
         <li>Leave immediately if someone may be underage</li>
       </ul>
       <h2>Start here</h2>
-      <p>Use the homepage lobby, or open <a href="/random-video-chat">random video chat</a> and <a href="/video-chat-with-strangers">video chat with strangers</a>.</p>
+      <p>Use the homepage lobby, or open <a href="/random-video-chat">random video chat</a>.</p>
       <h2>Conclusion</h2>
       <p>Free random video chat with strangers is still the simplest way to meet someone new online. Keep expectations honest, keep Next ready, and protect your privacy.</p>
     `,

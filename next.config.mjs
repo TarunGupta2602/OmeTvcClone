@@ -30,6 +30,11 @@ const nextConfig = {
       },
       // Omegle alternative pages -> /omegle-alternative
       {
+        source: '/omegle-alternative-india',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
         source: '/omegle-alternative-usa',
         destination: '/omegle-alternative',
         permanent: true,

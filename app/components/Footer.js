@@ -1,45 +1,26 @@
 import Link from 'next/link';
 
 const NAV_LINKS = [
-  { href: '/', label: 'Live Video Chat' },
+  { href: '/', label: 'Home' },
+  { href: '/random-video-chat', label: 'Random video chat' },
+  { href: '/adult-video-chat', label: 'Adult video chat' },
+  { href: '/omegle-alternative', label: 'Omegle alternative' },
+  { href: '/no-signup-video-chat', label: 'No signup video chat' },
+  { href: '/flirty-video-chat', label: 'Flirty video chat' },
+  { href: '/chat-with-girls', label: 'Chat with girls' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 
 const EXPLORE_LINKS = [
-  { href: '/random-video-chat', label: 'Random video chat' },
-  { href: '/video-chat-with-strangers', label: 'Video chat with strangers' },
-  { href: '/talk-to-strangers', label: 'Talk to strangers' },
-  { href: '/chat-with-girls', label: 'Chat with girls' },
-  { href: '/video-chat-with-girls', label: 'Video chat with girls' },
-  { href: '/girls-video-chat', label: 'Girls video chat' },
-  { href: '/flirty-video-chat', label: 'Flirty video chat' },
-  { href: '/hot-video-chat', label: 'Hot video chat' },
-  { href: '/dirty-talk-video-chat', label: 'Dirty talk video chat' },
-  { href: '/live-video-chat', label: 'Live video chat' },
-  { href: '/free-webcam-chat', label: 'Free webcam chat' },
-  { href: '/late-night-video-chat', label: 'Late night video chat' },
-  { href: '/meet-people-online', label: 'Meet people online' },
-  { href: '/adult-video-chat', label: 'Adult video chat' },
-  { href: '/omegle-alternative', label: 'Omegle alternative' },
-  { href: '/omegle-alternative-usa', label: 'Omegle alternative USA' },
-  { href: '/omegle-alternative-uk', label: 'Omegle alternative UK' },
-  { href: '/omegle-alternative-canada', label: 'Omegle alternative Canada' },
-  { href: '/no-signup-video-chat', label: 'No signup video chat' },
-  { href: '/anonymous-video-chat', label: 'Anonymous video chat' },
-  { href: '/ometv-alternative', label: 'OmeTV alternative' },
-  { href: '/chatroulette-alternative', label: 'Chatroulette alternative' },
-  { href: '/emerald-chat-alternative', label: 'Emerald Chat alternative' },
-  { href: '/blog/best-omegle-alternatives-2026', label: 'Best Omegle alternatives 2026' },
-];
-
-const LEGAL_LINKS = [
+  { href: '/safety', label: 'Safety guidelines' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Service' },
-  { href: '/safety', label: 'Community Guidelines' },
 ];
+
+const LEGAL_LINKS = [];
 
 export default function Footer() {
   return (
@@ -90,20 +71,14 @@ export default function Footer() {
           <div className="space-y-3">
             <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Trust & Legal</h3>
             <ul className="space-y-2 text-sm">
-              {LEGAL_LINKS.map((link) => (
+              {LEGAL_LINKS.length > 0 ? LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-teal-800 transition-colors">
                     {link.label}
                   </Link>
                 </li>
-              ))}
+              )) : <li className="text-slate-400">See links in Navigate</li>}
             </ul>
-            <Link
-              href="/safety"
-              className="inline-flex pt-1 text-sm font-semibold text-teal-800 hover:underline underline-offset-2"
-            >
-              Safety guidelines →
-            </Link>
           </div>
         </div>
 

@@ -16,62 +16,31 @@ export default function HomeSEO() {
             Free random video chat — no signup
           </h2>
           <nav className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 text-sm font-semibold text-teal-800" aria-label="Related chats">
-            <Link href="/video-chat-with-strangers" className="hover:underline">
-              Video chat with strangers
+            <Link href="/random-video-chat" className="hover:underline">
+              Random video chat
             </Link>
             <Link href="/omegle-alternative" className="hover:underline">
               Omegle alternative
             </Link>
           </nav>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
-            Instant 1-on-1 webcam conversations with no account wall. This is 18+ adult video chat for
-            porn chat and nude chat searches too — random matching, adults only, skip anytime.
+            Instant 1-on-1 webcam conversations with no account wall. Confirm you are 18+, allow camera, and start matching with adults worldwide. Skip anytime.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 pt-1 text-sm font-semibold text-teal-800">
-            <Link href="/ometv-alternative" className="hover:underline">
-              OmeTV alternative
+            <Link href="/random-video-chat" className="hover:underline">
+              Random video chat
             </Link>
             <Link href="/omegle-alternative" className="hover:underline">
               Omegle alternative
             </Link>
-            <Link href="/omegle-alternative-india" className="hover:underline">
-              Omegle alternative India
-            </Link>
-            <Link href="/omegle-alternative-usa" className="hover:underline">
-              Omegle alternative USA
-            </Link>
-            <Link href="/omegle-alternative-uk" className="hover:underline">
-              Omegle alternative UK
-            </Link>
-            <Link href="/omegle-alternative-canada" className="hover:underline">
-              Omegle alternative Canada
-            </Link>
-            <Link href="/random-video-chat" className="hover:underline">
-              Random video chat
-            </Link>
-            <Link href="/video-chat-with-strangers" className="hover:underline">
-              Video chat with strangers
+            <Link href="/adult-video-chat" className="hover:underline">
+              Adult video chat
             </Link>
             <Link href="/chat-with-girls" className="hover:underline">
               Chat with girls
             </Link>
-            <Link href="/flirty-video-chat" className="hover:underline">
-              Flirty video chat
-            </Link>
-            <Link href="/hot-video-chat" className="hover:underline">
-              Hot video chat
-            </Link>
-            <Link href="/adult-video-chat" className="hover:underline">
-              18+ adult video chat
-            </Link>
-            <Link href="/blog/free-live-porn-chat" className="hover:underline">
-              Porn chat
-            </Link>
-            <Link href="/blog/nsfw-video-chat-with-strangers-18-plus" className="hover:underline">
-              Nude chat
-            </Link>
             <Link href="/safety" className="hover:underline">
-              Safety
+              Safety guidelines
             </Link>
           </div>
         </div>
@@ -85,7 +54,7 @@ export default function HomeSEO() {
               email wall. If the chat is not a fit, Next finds someone else.
             </p>
             <p className="text-sm text-slate-600 leading-relaxed">
-              The same queue covers free random video chat, random video chat with strangers, and random video chat
+              The same queue covers free random video chat, video chat with strangers, and random video chat
               with no sign up. A full walkthrough is on the{' '}
               <Link href="/random-video-chat" className="font-semibold text-teal-800 hover:underline">
                 random video chat
@@ -107,8 +76,8 @@ export default function HomeSEO() {
             <p className="text-sm text-slate-600 leading-relaxed">
               Searches like video chat strangers, free video chat with strangers, and cam chat with strangers all
               describe this same start. Details are on{' '}
-              <Link href="/video-chat-with-strangers" className="font-semibold text-teal-800 hover:underline">
-                video chat with strangers
+              <Link href="/random-video-chat" className="font-semibold text-teal-800 hover:underline">
+                random video chat
               </Link>
               .
             </p>
@@ -121,19 +90,19 @@ export default function HomeSEO() {
             <h2 className="text-2xl font-bold text-slate-900">18+ adult video chat</h2>
             <p className="text-sm text-slate-600 leading-relaxed">
               Adult video chat, video chat 18+, and free adult video chat are for people who are 18 or older. The age
-              gate runs before matching. NSFW video chat and nude chat are not a catalog and are not guaranteed —
+              gate runs before matching. NSFW video chat is not a catalog and is not guaranteed —
               both adults have to want that, and you can skip the moment you do not.
             </p>
             <p className="text-sm text-slate-600 leading-relaxed">
               Read the rules on{' '}
               <Link href="/adult-video-chat" className="font-semibold text-teal-800 hover:underline">
-                18+ adult video chat
+                adult video chat
               </Link>{' '}
               and the{' '}
-              <Link href="/blog/nsfw-video-chat-with-strangers-18-plus" className="font-semibold text-teal-800 hover:underline">
-                NSFW video chat
-              </Link>{' '}
-              guide.
+              <Link href="/safety" className="font-semibold text-teal-800 hover:underline">
+                safety guidelines
+              </Link>
+              .
             </p>
             <p className="text-sm text-slate-600 leading-relaxed">
               Consent is everything. Flirty chat is allowed when mutual, but harassment, demands, or pressure get you reported. Use Next immediately if a chat feels wrong — you do not owe anyone an explanation.
@@ -152,11 +121,7 @@ export default function HomeSEO() {
               <Link href="/omegle-alternative" className="font-semibold text-teal-800 hover:underline">
                 Omegle alternative
               </Link>{' '}
-              page. If you were comparing the OmeTV app, use the{' '}
-              <Link href="/ometv-alternative" className="font-semibold text-teal-800 hover:underline">
-                OmeTV alternative
-              </Link>
-              .
+              page.
             </p>
             <p className="text-sm text-slate-600 leading-relaxed">
               Unlike Omegle, Parvah has modern safety features including report buttons, clear community guidelines, and WebRTC peer-to-peer video for better privacy. Mobile traffic from India, the US, and UK dominates — and our browser-based approach works on Chrome and Safari without Play Store installs.
@@ -197,6 +162,10 @@ export default function HomeSEO() {
               <li><strong>Eye contact:</strong> Look at the camera, not yourself on the screen. It feels more natural to the other person.</li>
             </ul>
           </article>
+
+          <div className="pt-4 border-t border-teal-900/10">
+            <p className="text-xs text-slate-500">Last reviewed: November 26, 2026</p>
+          </div>
         </div>
 
         <div className="space-y-8">

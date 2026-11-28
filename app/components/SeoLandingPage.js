@@ -185,26 +185,6 @@ export default function SeoLandingPage({
         </section>
       ))}
 
-      {popularSearches?.length > 0 && (
-        <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto space-y-4 border-t border-teal-900/10">
-          <h2 className="text-2xl font-bold text-slate-900">People also search for</h2>
-          <p className="text-sm text-slate-600">
-            Related free video chat topics — open a page that matches what you want.
-          </p>
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
-            {popularSearches.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold text-teal-800 hover:underline"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
       {faqs?.length > 0 && (
         <section className="py-14 px-4 sm:px-6 border-y border-teal-900/10 bg-white/50">
           <div className="max-w-3xl mx-auto space-y-8">
@@ -233,23 +213,6 @@ export default function SeoLandingPage({
           Start matching now
         </Link>
       </section>
-
-      {relatedLinks?.length > 0 && (
-        <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto space-y-4 border-t border-teal-900/10">
-          <p className="text-sm text-slate-500">Related pages</p>
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
-            {relatedLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold text-teal-800 hover:underline"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
     </main>
   );
 }

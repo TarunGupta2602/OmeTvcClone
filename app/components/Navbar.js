@@ -9,22 +9,22 @@ export default function Navbar({ minimal = false }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Chat Now', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Safety & Rules', href: '/safety' },
+    { name: 'Chat', href: '/' },
+    { name: 'Random', href: '/random-video-chat' },
+    { name: 'Adult 18+', href: '/adult-video-chat' },
+    { name: 'Omegle Alternative', href: '/omegle-alternative' },
+    { name: 'Flirty', href: '/flirty-video-chat' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
   ];
 
   const mainNavItems = [
-    { name: 'Random Chat', href: '/random-video-chat' },
-    { name: 'Strangers', href: '/video-chat-with-strangers' },
-    { name: 'Chat Girls', href: '/chat-with-girls' },
+    { name: 'Random', href: '/random-video-chat' },
+    { name: 'Adult 18+', href: '/adult-video-chat' },
+    { name: 'Omegle Alternative', href: '/omegle-alternative' },
     { name: 'Flirty', href: '/flirty-video-chat' },
     { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   useEffect(() => {

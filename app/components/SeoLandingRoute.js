@@ -1,7 +1,7 @@
 import SeoLandingPage from './SeoLandingPage';
 import { SITE_URL } from '../../lib/constants';
 import { getSeoLanding } from '../../lib/seoLandings';
-import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSchema, stringifyJsonLd } from '../../lib/seo';
 
 const DEFAULT_POPULAR = [
   { href: '/random-video-chat', label: 'random video chat' },
@@ -19,8 +19,13 @@ export default function SeoLandingRoute({ slug }) {
   if (!landing) return null;
 
   const url = `${SITE_URL}/${slug}`;
+  const breadcrumbs = [
+    { name: 'Home', url: SITE_URL },
+    { name: landing.h1, url },
+  ];
   const jsonLd = buildJsonLdGraph([
     buildWebPageSchema({ title: landing.h1, description: landing.description, url }),
+    buildBreadcrumbSchema({ items: breadcrumbs }),
     buildFaqSchema(landing.faqs),
   ]);
 
@@ -34,9 +39,7 @@ export default function SeoLandingRoute({ slug }) {
         highlights={landing.highlights}
         sections={landing.sections}
         faqs={landing.faqs}
-        relatedLinks={landing.related}
         howToSteps={landing.howToSteps}
-        popularSearches={landing.popularSearches || DEFAULT_POPULAR}
       />
     </>
   );

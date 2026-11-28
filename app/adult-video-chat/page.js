@@ -1,5 +1,5 @@
 import SeoLandingPage from '../components/SeoLandingPage';
-import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, stringifyJsonLd } from '../../lib/seo';
+import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
 const title = 'Adult Video Chat 18+ — Free, No Signup | Parvah';
@@ -54,8 +54,15 @@ const faqs = [
   },
 ];
 
+const url = `${SITE_URL}/adult-video-chat`;
+const breadcrumbs = [
+  { name: 'Home', url: SITE_URL },
+  { name: title, url },
+];
+
 const jsonLd = buildJsonLdGraph([
-  buildWebPageSchema({ title, description, url: `${SITE_URL}/adult-video-chat` }),
+  buildWebPageSchema({ title, description, url }),
+  buildBreadcrumbSchema({ items: breadcrumbs }),
   buildFaqSchema(faqs),
 ]);
 
@@ -103,6 +110,10 @@ export default function AdultVideoChatPage() {
               'Talk, flirt, or just have a normal conversation for as long as you both want.',
               'Use Next to move on, or Report if someone breaks the rules.',
             ],
+            links: [
+              { href: '/', label: 'Start free video chat' },
+              { href: '/safety', label: 'Safety guidelines' },
+            ],
           },
           {
             title: 'What kind of conversations happen here',
@@ -129,6 +140,9 @@ export default function AdultVideoChatPage() {
               'Use a neutral background and keep personal documents out of the camera view.',
               'If a chat makes you uncomfortable, leave immediately and use Report.',
               'Parvah does not record or store your video chats.',
+            ],
+            links: [
+              { href: '/safety', label: 'Safety guidelines' },
             ],
           },
           {
@@ -160,14 +174,12 @@ export default function AdultVideoChatPage() {
               'Not for: anyone under 18, or anyone who wants a paid cam show or guaranteed content.',
             ],
           },
+          {
+            title: 'Last reviewed',
+            paragraphs: ['November 26, 2026'],
+          },
         ]}
         faqs={faqs}
-        relatedLinks={[
-          { href: '/', label: 'Start free video chat' },
-          { href: '/random-video-chat', label: 'Random video chat' },
-          { href: '/omegle-alternative', label: 'Omegle alternative' },
-          { href: '/safety', label: 'Safety guidelines' },
-        ]}
       />
     </>
   );
