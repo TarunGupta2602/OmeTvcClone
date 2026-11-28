@@ -10,6 +10,7 @@ const staticRoutes = [
   { path: '/no-signup-video-chat', lastModified: '2026-11-28' },
   { path: '/flirty-video-chat', lastModified: '2026-11-28' },
   { path: '/chat-with-girls', lastModified: '2026-11-28' },
+  { path: '/nsfw-omegle', lastModified: '2026-11-28' },
   { path: '/about', lastModified: '2026-09-01' },
   { path: '/safety', lastModified: '2026-11-26' },
   { path: '/faq', lastModified: '2026-11-26' },

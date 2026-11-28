@@ -53,6 +53,13 @@ check('app/sitemap.js exports default', () => {
   assert.match(src, /blogPostsList/);
 });
 
+check('NSFW Omegle landing is indexable without a redirect', () => {
+  const config = readFileSync(join(root, 'next.config.mjs'), 'utf8');
+  const sitemap = readFileSync(join(root, 'app/sitemap.js'), 'utf8');
+  assert.doesNotMatch(config, /source:\s*['"]\/nsfw-omegle['"]/);
+  assert.match(sitemap, /path:\s*['"]\/nsfw-omegle['"]/);
+});
+
 check('GTM is not hardcoded in layout', () => {
   const layout = readFileSync(join(root, 'app/layout.js'), 'utf8');
   assert.doesNotMatch(layout, /GTM-MF9GKBNC/);

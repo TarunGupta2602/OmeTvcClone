@@ -91,11 +91,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/nsfw-omegle',
-        destination: '/adult-video-chat',
-        permanent: true,
-      },
-      {
         source: '/omegle-18',
         destination: '/adult-video-chat',
         permanent: true,

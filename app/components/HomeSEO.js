@@ -22,6 +22,9 @@ export default function HomeSEO() {
             <Link href="/omegle-alternative" className="hover:underline">
               Omegle alternative
             </Link>
+            <Link href="/ometv-alternative" className="hover:underline">
+              OmeTV alternative
+            </Link>
           </nav>
           <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
             Instant 1-on-1 webcam conversations with no account wall. Confirm you are 18+, allow camera, and start matching with adults worldwide. Skip anytime.
@@ -32,6 +35,9 @@ export default function HomeSEO() {
             </Link>
             <Link href="/omegle-alternative" className="hover:underline">
               Omegle alternative
+            </Link>
+            <Link href="/ometv-alternative" className="hover:underline">
+              OmeTV alternative
             </Link>
             <Link href="/adult-video-chat" className="hover:underline">
               Adult video chat
