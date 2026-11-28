@@ -64,6 +64,16 @@ const nextConfig = {
         destination: '/omegle-alternative',
         permanent: true,
       },
+      {
+        source: '/omegle-alternatives',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
+      {
+        source: '/omegle-free',
+        destination: '/omegle-alternative',
+        permanent: true,
+      },
       // 18+ chat pages -> /adult-video-chat
       {
         source: '/hot-video-chat',
@@ -72,6 +82,36 @@ const nextConfig = {
       },
       {
         source: '/dirty-talk-video-chat',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/omegle-adult',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/nsfw-omegle',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/omegle-18',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/nsfw-video-chat',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/free-adult-video-chat',
+        destination: '/adult-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/video-chat-18',
         destination: '/adult-video-chat',
         permanent: true,
       },
@@ -109,6 +149,21 @@ const nextConfig = {
       },
       {
         source: '/meet-people-online',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/random-cam-chat',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/random-video-call',
+        destination: '/random-video-chat',
+        permanent: true,
+      },
+      {
+        source: '/videochat',
         destination: '/random-video-chat',
         permanent: true,
       },

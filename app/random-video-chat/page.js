@@ -2,9 +2,9 @@ import SeoLandingPage from '../components/SeoLandingPage';
 import { buildFaqSchema, buildJsonLdGraph, buildWebPageSchema, buildBreadcrumbSchema, stringifyJsonLd } from '../../lib/seo';
 import { SITE_URL, SITE_NAME } from '../../lib/constants';
 
-const title = 'Random Video Chat Free — Instant Stranger Matching';
+const title = 'Random Video Chat with Strangers — Free, No Signup | Parvah';
 const description =
-  'Random video chat free with strangers — no signup. Instant 1-on-1 webcam matching in your browser. Skip anytime, WebRTC peer video, adults 18+ only.';
+  'Free random video chat with strangers. No signup, no app: confirm you are 18+, match 1-on-1 and skip anytime. Safety tips and rules included.';
 
 export const metadata = {
   title: {
@@ -77,7 +77,7 @@ export default function RandomVideoChatPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }} />
       <SeoLandingPage
         badge="Random Video Chat"
-        title="Random Video Chat Free — Instant Stranger Matching"
+        title="Random Video Chat with Strangers — Free, No Signup | Parvah"
         description={description}
         highlights={[
           {
@@ -107,28 +107,10 @@ export default function RandomVideoChatPage() {
         ]}
         sections={[
           {
-            title: 'Free random video chat with strangers, no sign up',
-            paragraphs: [
-              'Free random video chat, video chat with strangers, and random video chat with no sign up are one flow here. You do not build a profile. You do not wait for a match request. The queue pairs you with another adult who is online at the same time.',
-              'Use it on a phone or a laptop. Chrome, Safari, Firefox, and Edge all work if you allow the camera. When you are done, close the tab — there is no account left behind.',
-              'People also search random video chat free, free random video chat with strangers, and random video chat online. All lead to the same experience: instant 1-on-1 matching without signup.',
-            ],
-            links: [
-              { href: '/', label: 'Start random video chat' },
-              { href: '/no-signup-video-chat', label: 'Video chat no sign up' },
-              { href: '/safety', label: 'Safety guidelines' },
-            ],
-          },
-          {
             title: 'How free random video chat works',
             paragraphs: [
               'Open the site, confirm you are 18+, allow camera access, and click Start Matching. You are paired with another available adult for a live 1-on-1 session. Click Next anytime to meet someone new.',
               'Unlike app-only platforms, this random video chat runs in the browser — useful on a laptop or phone without another download.',
-            ],
-            bullets: [
-              'Primary search intent: free random video chat',
-              'No signup + WebRTC peer-to-peer when networks allow',
-              'Safety: report, skip, and published guidelines',
             ],
             links: [
               { href: '/omegle-alternative', label: 'Omegle alternative' },
@@ -136,10 +118,24 @@ export default function RandomVideoChatPage() {
             ],
           },
           {
-            title: 'Random video chat vs dating apps',
+            title: 'Talk to strangers online',
             paragraphs: [
-              'People searching for random video chat usually want spontaneity — not profiles, swipes, or paid boosts. Temporary sessions, skip anytime, and no public bio to maintain.',
-              'If you need filters or social profiles, other products may fit better. If you want talk-to-strangers energy with modern safety basics, start on the homepage.',
+              'Talking to strangers online through random video chat offers a unique way to meet people you would never encounter in your daily life. The randomness means every conversation is unpredictable — you might connect with someone across the world or someone in your own city. This serendipity is what keeps people coming back. Whether you are looking for casual conversation, language practice, or just a way to pass time, random matching removes the pressure of curated social profiles.',
+              'The key to successful stranger conversations is approaching each match with an open mind. Most people skip within the first few seconds, so a simple friendly greeting can make the difference between an immediate disconnect and a meaningful exchange. Remember that the other person is also deciding whether to stay — mutual respect and genuine interest go a long way.',
+            ],
+          },
+          {
+            title: 'Live webcam chat features',
+            paragraphs: [
+              'Live webcam chat provides real-time face-to-face interaction that text-based communication cannot match. Seeing the other person adds layers of communication — facial expressions, tone of voice, and body language all contribute to understanding. This makes conversations feel more natural and helps build rapport faster than typing alone. The video connection also adds authenticity — you know you are talking to a real person in the moment.',
+              'The technology behind live webcam chat uses WebRTC to establish direct peer-to-peer connections when possible. This means video travels directly between browsers rather than through a central server, which can reduce latency and improve privacy. When network conditions prevent direct connections, the system falls back to relay servers to maintain the connection. Either way, the experience remains seamless for users.',
+            ],
+          },
+          {
+            title: 'Meeting people online safely',
+            paragraphs: [
+              'Meeting people online requires basic safety awareness. Random video chat platforms have built-in tools like skip and report buttons, but your own behavior matters most. Never share personal information such as your full name, address, phone number, workplace, or financial details. Be cautious about anyone who asks you to move to another app or send money — these are common scam patterns.',
+              'Your physical environment also matters. Use a neutral background and keep personal documents, valuables, or identifying information out of the camera view. If a conversation makes you uncomfortable, use Next immediately without explanation. The platform is designed for adults 18+, and respecting these boundaries helps create a safer environment for everyone.',
             ],
           },
           {
@@ -160,7 +156,7 @@ export default function RandomVideoChatPage() {
           },
           {
             title: 'Last reviewed',
-            paragraphs: ['November 26, 2026'],
+            paragraphs: ['28 November 2026'],
           },
         ]}
         faqs={faqs}

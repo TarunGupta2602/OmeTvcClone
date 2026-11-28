@@ -20,8 +20,6 @@ const EXPLORE_LINKS = [
   { href: '/terms', label: 'Terms of Service' },
 ];
 
-const LEGAL_LINKS = [];
-
 export default function Footer() {
   return (
     <footer className="border-t border-teal-900/10 bg-[var(--page-bg)] text-slate-600 py-12 mt-auto">
@@ -65,19 +63,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          <div className="space-y-3">
-            <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Trust & Legal</h3>
-            <ul className="space-y-2 text-sm">
-              {LEGAL_LINKS.length > 0 ? LEGAL_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="hover:text-teal-800 transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              )) : <li className="text-slate-400">See links in Navigate</li>}
             </ul>
           </div>
         </div>

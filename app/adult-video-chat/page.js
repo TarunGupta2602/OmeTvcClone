@@ -103,13 +103,6 @@ export default function AdultVideoChatPage() {
               'Parvah\'s adult video chat connects you 1-on-1 with another adult who is online right now. There is no account to create and nothing to download. You confirm you are 18 or older, allow your camera, and the matcher pairs you with someone. If the conversation is not for you, press Next and you are matched with a new person.',
               'This page explains how adult video chat on Parvah works, what is and is not allowed, and how to stay safe.',
             ],
-            bullets: [
-              'Confirm you are 18 or older.',
-              'Allow camera and microphone access in your browser.',
-              'Join the queue. You are paired with another adult who is waiting.',
-              'Talk, flirt, or just have a normal conversation for as long as you both want.',
-              'Use Next to move on, or Report if someone breaks the rules.',
-            ],
             links: [
               { href: '/', label: 'Start free video chat' },
               { href: '/safety', label: 'Safety guidelines' },
@@ -176,7 +169,7 @@ export default function AdultVideoChatPage() {
           },
           {
             title: 'Last reviewed',
-            paragraphs: ['November 26, 2026'],
+            paragraphs: ['28 November 2026'],
           },
         ]}
         faqs={faqs}

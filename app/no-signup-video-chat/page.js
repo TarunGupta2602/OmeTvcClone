@@ -111,7 +111,7 @@ export default function NoSignupVideoChatPage() {
           },
           {
             title: 'Last reviewed',
-            paragraphs: ['November 26, 2026'],
+            paragraphs: ['28 November 2026'],
           },
         ]}
         faqs={faqs}

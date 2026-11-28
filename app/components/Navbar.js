@@ -146,7 +146,6 @@ export default function Navbar({ minimal = false }) {
             {[
               { name: 'Chat', href: '/' },
               ...mainNavItems,
-              { name: 'Contact', href: '/contact' },
             ].map((item) => {
               const isActive = pathname === item.href;
               return (
