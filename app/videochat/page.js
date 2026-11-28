@@ -39,7 +39,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'Videochat Free — Random Video Chat No Signup', 
-    description: 'Free videochat with strangers — no signup. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Free videochat with strangers — no signup. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only.',
     url: `${SITE_URL}/videochat` 
   }),
   buildFaqSchema(faqs),
@@ -52,7 +52,7 @@ export default function VideochatPage() {
       <SeoLandingPage
         badge="Videochat · 18+"
         title="Videochat Free — Random 1-on-1 Video Chat"
-        description="Free videochat with strangers — no signup. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Free videochat with strangers — no signup. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only."
         highlights={[
           { title: 'Random videochat', desc: 'Get paired with another adult for live 1-on-1 video chat.' },
           { title: 'No signup', desc: 'Confirm 18+ and start without an account.' },

@@ -42,7 +42,6 @@ export async function generateMetadata({ params }) {
   return {
     title: seoTitle,
     description: post.excerpt,
-    keywords: post.keywords,
     authors: [{ name: post.author, url: SITE_URL }],
     creator: post.author,
     publisher: SITE_NAME,
@@ -103,10 +102,10 @@ export default async function BlogPostPage({ params }) {
   if (!raw) notFound();
 
   const post = enrichPost(slug, raw);
-  const related = getRelatedPosts(slug, post.category, blogPostsMap, 3).map(([s, p]) =>
-    enrichPost(s, p)
+  const related = getRelatedPosts(slug, post.category, blogPostsMap, 3, BLOG_NOINDEX_SLUGS).map(
+    ([s, p]) => enrichPost(s, p)
   );
-  const { prev, next } = getAdjacentPosts(slug, blogPostsList);
+  const { prev, next } = getAdjacentPosts(slug, blogPostsList, BLOG_NOINDEX_SLUGS);
   const jsonLd = buildBlogJsonLd(post);
   const categoryStyle = CATEGORY_STYLES[post.category] || 'bg-slate-100 text-slate-700 ring-slate-200';
 

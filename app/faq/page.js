@@ -52,7 +52,7 @@ const faqs = [
     category: 'General',
   },
   {
-    question: 'Will I always match with women or get nude chats?',
+    question: 'Will I always match with women or get intimate chats?',
     answer: 'No. Matches are random adults in the live queue. This is not a cam-model catalog and does not guarantee gender, looks, or explicit content. Skip until you find a mutual vibe.',
     category: 'General',
   },

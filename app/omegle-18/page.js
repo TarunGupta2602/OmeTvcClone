@@ -43,7 +43,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'Omegle 18+ Alternative — Free Adult Video Chat', 
-    description: 'Omegle 18+ alternative with free adult video chat — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Omegle 18+ alternative with free adult video chat — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime.',
     url: `${SITE_URL}/omegle-18` 
   }),
   buildFaqSchema(faqs),
@@ -56,7 +56,7 @@ export default function Omegle18Page() {
       <SeoLandingPage
         badge="Omegle 18+ Alternative · Adults Only"
         title="Omegle 18+ Alternative — Free Adult Video Chat"
-        description="Omegle 18+ alternative with free adult video chat — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Omegle 18+ alternative with free adult video chat — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime."
         highlights={[
           { title: '18+ only matching', desc: 'Strict age gate before chat. Minors are prohibited.' },
           { title: 'Omegle-style random chat', desc: 'Instant 1-on-1 webcam matching with strangers.' },
@@ -129,7 +129,7 @@ export default function Omegle18Page() {
             title: 'Popular searches for Omegle 18+ alternatives',
             paragraphs: [
               'Users also search Omegle 18+, 18+ Omegle, Omegle adult, adult Omegle, and Omegle 18. All these searches lead to the same experience: free 18+ random video chat.',
-              'Other related searches include adult video chat, NSFW video chat, porn chat, nude chat, and 18+ video chat. Parvah covers all these intents with strict age verification.',
+              'Other related searches include adult video chat, NSFW video chat, adult chat, intimate chat, and 18+ video chat. Parvah covers all these intents with strict age verification.',
             ],
             bullets: [
               'Omegle 18+',

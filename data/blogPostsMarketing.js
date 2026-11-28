@@ -174,7 +174,7 @@ export const marketingBlogPostsMap = {
     readTime: '8 min read',
     featured: false,
     keywords:
-      'hot video chat, flirty video chat, dirty talk video chat, late night video chat, adult random video chat tips',
+      'flirty video chat, late night video chat, adult random video chat tips',
     content: `
       <h2>Introduction</h2>
       <p>Searches for hot video chat, flirty video chat, dirty talk video chat, and late night video chat all share one rule: chemistry only works when both adults consent.</p>

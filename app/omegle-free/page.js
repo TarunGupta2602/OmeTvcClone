@@ -39,7 +39,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'Omegle Free Alternative — No Signup Video Chat', 
-    description: 'Omegle free alternative with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Omegle free alternative with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only.',
     url: `${SITE_URL}/omegle-free` 
   }),
   buildFaqSchema(faqs),
@@ -52,7 +52,7 @@ export default function OmegleFreePage() {
       <SeoLandingPage
         badge="Omegle Free Alternative"
         title="Omegle Free Alternative — No Signup Required"
-        description="Omegle free alternative with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Omegle free alternative with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only."
         highlights={[
           { title: 'Free like Omegle', desc: 'No credits, subscriptions, or signup for basic matching.' },
           { title: 'Random matching', desc: 'Instant 1-on-1 webcam chat with strangers.' },

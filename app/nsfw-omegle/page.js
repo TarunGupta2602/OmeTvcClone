@@ -43,7 +43,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'NSFW Omegle Alternative — Free Adult Video Chat', 
-    description: 'NSFW Omegle alternative with free 18+ video chat — no signup. Random adult matching, WebRTC privacy, and skip anytime. Adults only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'NSFW Omegle alternative with free 18+ video chat — no signup. Random adult matching, WebRTC privacy, and skip anytime. Adults only.',
     url: `${SITE_URL}/nsfw-omegle` 
   }),
   buildFaqSchema(faqs),
@@ -56,7 +56,7 @@ export default function NsfwOmeglePage() {
       <SeoLandingPage
         badge="NSFW Omegle Alternative · 18+"
         title="NSFW Omegle Alternative — Free Adult Video Chat"
-        description="NSFW Omegle alternative with free 18+ video chat — no signup. Random adult matching, WebRTC privacy, and skip anytime. Adults only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="NSFW Omegle alternative with free 18+ video chat — no signup. Random adult matching, WebRTC privacy, and skip anytime. Adults only."
         highlights={[
           { title: 'Adult-only matching', desc: '18+ age gate before chat. Minors are prohibited.' },
           { title: 'NSFW-friendly space', desc: 'Consenting adults can keep chats flirty or intimate when mutual.' },
@@ -128,7 +128,7 @@ export default function NsfwOmeglePage() {
             title: 'Popular searches for NSFW Omegle alternatives',
             paragraphs: [
               'Users also search NSFW Omegle, Omegle NSFW, NSFW Omegle alternative, adult Omegle, and Omegle adult. All these searches lead to the same experience: free 18+ random video chat.',
-              'Other related searches include NSFW video chat, adult video chat, porn chat, nude chat, and 18+ video chat. Parvah covers all these intents with consent-first design.',
+              'Other related searches include NSFW video chat, adult video chat, adult chat, intimate chat, and 18+ video chat. Parvah covers all these intents with consent-first design.',
             ],
             bullets: [
               'NSFW Omegle',

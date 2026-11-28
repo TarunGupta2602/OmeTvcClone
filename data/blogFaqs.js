@@ -100,7 +100,7 @@ export const blogFaqsMap = {
   ],
   'free-live-porn-chat': [
     {
-      q: 'Is there a free live porn chat with no signup?',
+      q: 'Is there a free live adult chat with no signup?',
       a: 'Parvah is free 18+ live video chat with strangers and no signup. It is a random adult conversation, not a porn tube or a paid cam menu.',
     },
     {
@@ -108,7 +108,7 @@ export const blogFaqsMap = {
       a: 'No. Some adults want a flirty chat, some want a normal talk, and some leave immediately. Ask first and skip if it is not mutual.',
     },
     {
-      q: 'Does Parvah have an archive of porn chats?',
+      q: 'Does Parvah have an archive of adult chats?',
       a: 'No. Chats are live only. Parvah does not host recorded videos of strangers.',
     },
   ],
@@ -182,7 +182,7 @@ export const blogFaqsMap = {
       a: 'Yes on Parvah — free matching with no signup for adults 18+. Intimate talk is only OK when both people consent.',
     },
     {
-      q: 'Is this the same as free live porn chat?',
+      q: 'Is this the same as free live adult chat?',
       a: 'No. Parvah is live 1-on-1 adult webcam chat with strangers, not a porn video library or paid cam catalog.',
     },
     {
@@ -365,7 +365,7 @@ export const blogFaqsMap = {
       a: 'On Parvah, basic adult matching is free with no credits or signup. Confirm you are 18+ and start.',
     },
     {
-      q: 'Do I get guaranteed nude chats?',
+      q: 'Do I get guaranteed intimate chats?',
       a: 'No. Matches are random adults. Intimate chat only happens with mutual consent — never as a guarantee.',
     },
     {

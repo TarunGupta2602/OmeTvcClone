@@ -39,7 +39,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'Free Adult Video Chat — No Signup 18+', 
-    description: 'Free adult video chat with strangers — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Free adult video chat with strangers — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime.',
     url: `${SITE_URL}/free-adult-video-chat` 
   }),
   buildFaqSchema(faqs),
@@ -52,7 +52,7 @@ export default function FreeAdultVideoChatPage() {
       <SeoLandingPage
         badge="Free Adult Video Chat · 18+"
         title="Free Adult Video Chat — No Signup Required"
-        description="Free adult video chat with strangers — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Free adult video chat with strangers — no signup. Random 1-on-1 webcam matching for adults 18+, WebRTC privacy, skip anytime."
         highlights={[
           { title: 'Truly free', desc: 'No credits, subscriptions, or signup for basic matching.' },
           { title: '18+ only', desc: 'Age gate before chat. Minors prohibited.' },
@@ -105,7 +105,7 @@ export default function FreeAdultVideoChatPage() {
             title: 'Popular searches for free adult video chat',
             paragraphs: [
               'Users also search free adult video chat, adult video chat free, adult video chat no signup, and free adult webcam chat. All these searches lead to the same experience.',
-              'Other related searches include adult video chat, NSFW video chat, porn chat, nude chat, and 18+ video chat. Parvah covers all these intents with free matching.',
+              'Other related searches include adult video chat, NSFW video chat, adult chat, intimate chat, and 18+ video chat. Parvah covers all these intents with free matching.',
             ],
             bullets: [
               'Free adult video chat',

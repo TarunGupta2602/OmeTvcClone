@@ -43,7 +43,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'NSFW Video Chat Free — Adult Webcam 18+', 
-    description: 'Free NSFW video chat with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, and skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Free NSFW video chat with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, and skip anytime. Adults 18+ only.',
     url: `${SITE_URL}/nsfw-video-chat` 
   }),
   buildFaqSchema(faqs),
@@ -56,7 +56,7 @@ export default function NsfwVideoChatPage() {
       <SeoLandingPage
         badge="NSFW Video Chat · 18+"
         title="NSFW Video Chat — Free Adult Webcam Chat"
-        description="Free NSFW video chat with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, and skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Free NSFW video chat with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, and skip anytime. Adults 18+ only."
         highlights={[
           { title: 'Adult-only space', desc: 'Strict 18+ age gate. Minors are banned.' },
           { title: 'NSFW when mutual', desc: 'Consenting adults can keep chats flirty, steamy, or explicit together.' },
@@ -108,14 +108,14 @@ export default function NsfwVideoChatPage() {
           {
             title: 'Popular searches for NSFW video chat',
             paragraphs: [
-              'Users also search NSFW video chat, adult video chat, porn chat, nude chat, and 18+ video chat. All these searches lead to the same experience: free 18+ random video chat.',
+              'Users also search NSFW video chat, adult video chat, adult chat, intimate chat, and 18+ video chat. All these searches lead to the same experience: free 18+ random video chat.',
               'Other related searches include NSFW Omegle, Omegle NSFW, adult Omegle, and Omegle adult. Parvah covers all these intents with consent-first design.',
             ],
             bullets: [
               'NSFW video chat',
               'Adult video chat',
-              'Porn chat',
-              'Nude chat',
+              'adult chat',
+              'intimate chat',
               '18+ video chat',
             ],
             links: [

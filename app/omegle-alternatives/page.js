@@ -39,7 +39,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'Omegle Alternatives Free — No Signup Video Chat', 
-    description: 'Free Omegle alternatives with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Free Omegle alternatives with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only.',
     url: `${SITE_URL}/omegle-alternatives` 
   }),
   buildFaqSchema(faqs),
@@ -52,7 +52,7 @@ export default function OmegleAlternativesPage() {
       <SeoLandingPage
         badge="Omegle Alternatives"
         title="Omegle Alternatives — Free Random Video Chat"
-        description="Free Omegle alternatives with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Free Omegle alternatives with no signup video chat. Random 1-on-1 webcam matching, WebRTC privacy, skip anytime. Adults 18+ only."
         highlights={[
           { title: 'Top Omegle alternative', desc: 'Parvah is a leading free alternative to Omegle.' },
           { title: 'No signup', desc: 'Confirm 18+ and start without an account.' },

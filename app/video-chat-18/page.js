@@ -39,7 +39,7 @@ const faqs = [
 const jsonLd = buildJsonLdGraph([
   buildWebPageSchema({ 
     title: 'Video Chat 18+ Free — Adult Webcam No Signup', 
-    description: 'Free video chat 18+ with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only.',
+    description: 'Free video chat 18+ with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, skip anytime. Adults 18+ only.',
     url: `${SITE_URL}/video-chat-18` 
   }),
   buildFaqSchema(faqs),
@@ -52,7 +52,7 @@ export default function VideoChat18Page() {
       <SeoLandingPage
         badge="Video Chat 18+ · Adults Only"
         title="Video Chat 18+ — Free Adult Webcam Chat"
-        description="Free video chat 18+ with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, skip anytime. Adults 18+ only. 18+ adult video chat, porn chat, and nude chat with strangers — free, no signup, adults only."
+        description="Free video chat 18+ with strangers — no signup. Random 1-on-1 adult webcam matching, WebRTC privacy, skip anytime. Adults 18+ only."
         highlights={[
           { title: '18+ verified', desc: 'Age gate before matching. Minors prohibited.' },
           { title: 'Random adult matching', desc: 'Instant 1-on-1 webcam chat with other adults.' },
