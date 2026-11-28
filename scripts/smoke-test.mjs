@@ -72,9 +72,16 @@ check('CookieConsent supports decline', () => {
   assert.match(src, /declined/);
 });
 
-check('Sitewide app shell does not trigger click-based ad windows', () => {
-  const src = readFileSync(join(root, 'app/components/AppShell.js'), 'utf8');
-  assert.doesNotMatch(src, /Adsterra(?:Smartlink|Popunder)/);
+check('Only the hourly-capped popunder is wired site-wide', () => {
+  const appShell = readFileSync(join(root, 'app/components/AppShell.js'), 'utf8');
+  const popunder = readFileSync(join(root, 'app/components/ExoClickPopunder.js'), 'utf8');
+  const adConfig = readFileSync(join(root, 'public/ads/exoclick-popunder.js'), 'utf8');
+  assert.match(appShell, /ExoClickPopunder/);
+  assert.doesNotMatch(appShell, /Adsterra(?:Smartlink|Popunder)/);
+  assert.match(popunder, /NEXT_PUBLIC_EXOCLICK_ADS/);
+  assert.match(adConfig, /"frequency_period": 60/);
+  assert.match(adConfig, /"frequency_count": 1/);
+  assert.match(adConfig, /"capping_enabled": true/);
 });
 
 check('server validates room membership for messages', () => {
